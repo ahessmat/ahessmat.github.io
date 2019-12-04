@@ -1,0 +1,6 @@
+
+To run locally, navigate to myblog and type:
+jekyll serve
+
+This will spin up a local site on:
+localhost:4000
