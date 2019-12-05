@@ -1,4 +1,15 @@
 
+Do your work on the gh-pages branch:
+git checkout gh-pages
+
+When you are finished, commit your changes.
+After commiting your changes merge your gh-pages branch to master:
+git checkout master
+git merge gh-pages
+git commit -m "comment"
+git push
+
+
 To run locally, navigate to myblog and type:
 jekyll serve
 
