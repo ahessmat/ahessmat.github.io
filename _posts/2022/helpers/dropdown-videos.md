@@ -1,0 +1,9 @@
+## Videos
+
+Like many people, you might turn to video walkthroughs, online personalities, or otherwise entertaining video streaming content from time-to-time. There's a lot that video has to offer someone interested in cybersecurity, so I thought I'd share some of the resources I've engaged:
+
+* [HACKING GOOGLE](https://www.youtube.com/playlist?list=PL590L5WQmH8dsxxz7ooJAgmijwOz0lh2H): This YouTube playlist was produced and published by Google in late 2022. It's a docu-series dedicated to each of the teams that make up Google's cybersecurity arm. It's really well-produced and has a lot of entertaining stories tied in with it.
+* [How Hackers Learn Their Craft](https://youtu.be/6vj96QetfTg): This is a presentation done by a Carnegie Mellon professor showing the benefits of Capture-the-Flag training events. Carnegie Mellon is a university in the U.S. that is host to the Plaid Parliament of Pwning, a group that holds the most wins overall (and most consecutive wins) at the DEFCON head-to-head CTF.
+* [John Hammond](https://www.youtube.com/c/JohnHammond010): Hammond is a notable figure in cybersecurity for putting together easy-to-follow content across a diverse array of subjects. His channel helps many people learn cybersecurity in a pragmatic way.
+* [Mr. Robot](https://www.amazon.com/Mr-Robot-Season-1/dp/B00YBX664Q): This TV Drama is notable for inclusion because throughout its production the show's producers consulted real cybersecurity professionals to better represent them onscreen. Consequentially, it's received a number of accolades for its realistic portrayals.
+* [Laurie Kirk](https://www.youtube.com/@lauriewired): Kirk's content is phenomenally in-depth for reverse engineering malware - particularly on mobile devices. Her content is delightfully edited in a retro fashion, and its really informative.

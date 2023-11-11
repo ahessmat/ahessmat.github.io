@@ -1,0 +1,10 @@
+## Miscellaneous
+
+For everything else that doesn't quite so neatly fit into the above.
+
+* [Hackercool Magazine](https://www.hackercoolmagazine.com/): I love this online 'zine, having stumbled upon it in my local library (I don't know who at my local branch discovered/subscribed, but I'm glad they did!). It covers some interesting techniques and emergent exploits, recreating them step-by-step for the reader. Though a small publication, it offers some quality content in its clearly written articles.
+* [MIT's OpenCourseWare](https://ocw.mit.edu/search/): the Massachusetts Institute of Technology has made publicly (and freely) available a fair number of their courses. While auditing the coursework won’t count towards college credit (nor confers you a “student” status with the university), the available knowledge is there for getting engaged with Computer/IT fundamentals.
+* [Router Alley](https://routeralley.com/index.html): A fantastic resource from Aaron Balchunas for all things related to routing, including guides to Cisco certifications and equipment (though slightly dated). There are a few “Labs” available to help contextualize the book knowledge as well.
+* [ICS Security Resources](https://github.com/hslatman/awesome-industrial-control-system-security): This GitHub repo is an awesome collection of resources to help orient someone towards Operational Technology (OT).
+* [Pocket Admin](https://github.com/krakrukra/PocketAdmin): I love this keystroke injection device. This is a cost-effective alternative to Hak5's Rubber Ducky, even going so far as to provide you the instructions for building one yourself. The creator of the technology used to be able to sell the assembled tech directly to you, but - in residing in Russia - can no longer do official sales to Western buyers due to sanctions.
+* **Throwaway Email Accounts**: sometimes you just need a throwaway email account. For those instances, I love tapping into either [10 Minute Mail](https://10minutemail.com/) or [TempMail](https://temp-mail.org/en/). 
