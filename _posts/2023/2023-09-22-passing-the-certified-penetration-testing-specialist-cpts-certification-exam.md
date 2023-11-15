@@ -1,7 +1,7 @@
 ---
 title: Passing the Certified Penetration Testing Specialist (CPTS) Certification Exam
 date: 2023-09-22 00:00:00 +/-0000
-categories: [general]
+categories: [general,certification]
 tags: [cpts,hack the box, htb, certification, pentest, popular]     # TAG names should always be lowercase
 image:
     path: /assets/images/cert-cpts.png

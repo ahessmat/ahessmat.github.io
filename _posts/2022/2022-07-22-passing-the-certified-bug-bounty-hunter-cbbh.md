@@ -1,7 +1,7 @@
 ---
 title: Passing the Certified Bug Bounty Hunter (CBBH) Certification Exam
 date: 2022-07-22 00:00:00 +/-0000
-categories: [general]
+categories: [general,certification]
 tags: [cbbh,hack the box, htb, certification, bug bounty, popular]     # TAG names should always be lowercase
 image:
     path: /assets/images/cert-cbbh.png

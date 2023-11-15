@@ -3,6 +3,8 @@ title: Hacking Helpers
 date: 2022-02-06 00:00:00 +/-0000
 categories: [career guidance]
 tags: [resources]     # TAG names should always be lowercase
+image:
+    path: /assets/images/helper_featured.png
 ---
 
 <style>

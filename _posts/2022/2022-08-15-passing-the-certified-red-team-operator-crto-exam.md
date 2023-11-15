@@ -1,7 +1,7 @@
 ---
 title: Passing the Certified Red Team Operator (CRTO) exam
 date: 2022-08-15 00:00:00 +/-0000
-categories: [general]
+categories: [general,certification]
 tags: [cpts, certification]     # TAG names should always be lowercase
 image:
     path: /assets/images/cert-crto.png
