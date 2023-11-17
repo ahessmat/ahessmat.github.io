@@ -132,7 +132,7 @@ Even still, at a glance there’s little to tell. However, there are some intere
 
 “uuil.ranso”
 
-We might be able to infer some of the URL as “http://mnuuil.ransommethis.ne”, but such an inference – while close – is incorrect.
+We might be able to infer some of the URL as “https://mnuuil.ransommethis.ne”, but such an inference – while close – is incorrect.
 
 A better way is running the functions in the browser’s console on the loaded page, particularly what’s listed on line 53:
 
