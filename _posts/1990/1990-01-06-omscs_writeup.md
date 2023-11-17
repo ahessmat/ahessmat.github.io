@@ -15,7 +15,7 @@ In an effort to be helpful to those getting oriented to the program in general, 
 * [List of associated Slack Channels and amplifying info for classes](https://docs.google.com/spreadsheets/d/e/2PACX-1vRyHrRhH2V52bsYFEtm-8oJDaFOlyGYz6AKXm8WwsthN3fNP3KGkEx7O7D9ZHV3j2iKnzU2XHqoh4pQ/pubhtml)
 * [Historical data for when select courses have been (not) available semester-by-semester.](https://omscs.gatech.edu/sites/default/files/documents/Other_docs/historical-course-offerings-sp23.pdf)
 * [The list of courses currently offered by OMSCS](https://omscs.gatech.edu/current-courses)
-* [List of course abbreviations/shorthands](https://www.reddit.com/r/OMSCS/comments/hiqlf8/course_abbreviations_cheat_sheet/); these help eplain what abbreviations like "GA", "DC", or "IIS" mean, for example.
+* [List of course abbreviations/shorthands](https://www.reddit.com/r/OMSCS/comments/hiqlf8/course_abbreviations_cheat_sheet/); these help explain what abbreviations like "GA", "DC", or "IIS" mean, for example.
 * [The GaTech Academic Calendar](https://registrar.gatech.edu/calendar/)
 * [Peer reviews of OMSCS courses](https://www.omscentral.com/)
 * [Alternative option for peer reviews](https://www.omshub.org/).
