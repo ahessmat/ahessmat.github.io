@@ -23,6 +23,7 @@ While the vast majority of roles in cybersecurity don't explicitly require you t
 * [LeetCode](https://leetcode.com/): This is less of a resource about how to learn to code and more of how to learn to perform coding *interviews*; this site presents an array of toy problems for you to implement solutions to in your choice of programming language(s). If you're planning on applying to work at Big Tech, this is a resource you cannot ignore.
 * [The Python Challenge](https://www.pythonchallenge.com/): This is a gamified series of puzzles that were built to encourage learning Python through practical application.
 * [SQL Murder Mystery](https://mystery.knightlab.com/): This is my favorite resource to recommend folks getting innoculated to SQL syntax. It's a gamified murder mystery, and the only way to solve the mystery is through the use of SQL queries. The initial steps are quite basic, but getting to the end requires understanding and stringing together increasingly complex SQL statements.
+* [Sad Server](https://sadservers.com/scenarios): This was a neat find recently; it helps promote code literacy by setting up some small debugging problems (and a handful of classic CTF challenges) for you to puzzle through.
 
 ### General Cybersecurity Training
 
