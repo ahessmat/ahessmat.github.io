@@ -1,6 +1,6 @@
 ---
 title: OMSCS Graduation Writeup
-date: 1990-01-06 00:00:00 +/-0000
+date: 2023-12-11 00:00:00 +/-0000
 categories: [personal]
 tags: [omscs,school]     # TAG names should always be lowercase
 ---

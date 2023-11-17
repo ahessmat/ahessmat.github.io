@@ -1,3 +1,15 @@
+# Organizational notes for self
+
+* The Chirpy Starter splits content between the root project directory and the corresponding gem (jekyll-theme-chirpy*).
+  * Content/folders placed into the root directory override what's in the theme.
+* The assets directory contains:
+  * images: which hosts images accessible site-wide
+  * img: which hosts the requisite favicon information
+* The _includes directory was updated to include footer.html so as to override the Jekyll default footer.
+* The _layouts directory was copied from the gem theme and altered to include Google Analytics code.
+  * Chirpy's default configuration was designed for UA, which became deprecated in July 2023
+* Went through and updated instances of http:// to https:// to mitigate mixed-content errors.
+
 # Chirpy Starter
 
 [![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
