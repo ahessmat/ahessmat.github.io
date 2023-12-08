@@ -63,16 +63,25 @@ As a career-changer from an unrelated, non-technical discipline the preparatory 
 
 Unless otherwise noted, classes were taken sequentially one-per-semester (Fall, Spring, Summer). No semesters were skipped.
 
-1. CS6262 (Network Security)
+1. CS6262 (Network Security [NetSec])
 2. CS6200 (Graduate Intro to OS [GIOS])
-3. CS6250 (Computer Networks)
+3. CS6250 (Computer Networks [CN])
 4. CS6290 (High Performance Computer Architectures [HPCA])
 5. CS6515 (Intro to Graduate Algorithms [GA])
 6. CS6035 (Intro to Info Security [IIS])
-7. CS6265 (Info Sec Lab: Binary Exploitation)
-8. CS8803 (Quantum Computing) & CS8001 (Seminar: Usable Privacy and Security)
-9. CS6747 (Advanced Malware Analysis)
+7. CS6265 (Info Sec Lab: Binary Exploitation [ISL])
+8. CS8803 (Quantum Computing [QC]) & CS8001 (Seminar: Usable Privacy and Security)
+9. CS6747 (Advanced Malware Analysis [AMA])
 10. CS6601 (Artificial Intelligence [AI])
+
+![OMSCS graphic](/assets/images/omscs_graph.PNG)_Graphical overview of my OMSCS experience_
+
+The graphic above is meant to be a succinct summary of my OMSCS experience, including notable life events for context. I tracked the relative amount of effort I felt I had to put in for a class (blue), how happy I was with my course experience (red), how tired I was going *into* the semester (yellow), and how valuable I found the class to be coming *out of* it (green). In brief:
+
+* Generally speaking, I slated easier courses for Summer semesters (CN, IIS).
+* I found I was generally happier with my Free electives (ISL, QC, AMA) than my other courses.
+* I had more energy for OMSCS earlier on in my program experience than towards the end of it. This was aggravated by life's externalities (chiefly: parenthood).
+* As I have worked in cybersecurity throughout the program, I generally found the courses related to such subject-matter less challenging, more rewarding, and more enjoyable.
 
 ### 1. CS6262: Network Security
 
@@ -133,7 +142,7 @@ Entering my final Summer Semester, I was weighing the pragmatism of engaging in 
 
 ### 10. CS6601: Artificial Intelligence
 
-I really was unsure about getting into this course this late into my OMSCS experience; the reviews and impressions of the course material was a little intimidating, and I felt the strong temptation to simply "coast" out on some more approachable subject-matter. Since none of my other courses really fed-into or otherwise overlapped with CS6601 (e.g. ML4T or KBAI), it was hard for me to evaluate my own aptitude going in. Ultimately however, I ended up going with AI to close out my program experience. The course is consistently quite a bit of work, with the underlying mathematics comprehension and need for numpy-based vectorization optimization escalating as the semester progresses; that said, I did come away with a more general understanding of classical AI algorithms. I didn't care for how the course was administratively handled; things felt very adversarial between TAs and students. Administrative policies aside, I'm also not sure this course was the best fit for my broader educational objectives in cybersecurity, nor effectively interesting enough to stave-off the pervasive "senior-itis" as graduation loomed. It had its moments, but I was both leery about enrolling in it at the onset and glad for it to be over when I was finished.
+I really was unsure about getting into this course this late into my OMSCS experience; the reviews and impressions of the course material was a little intimidating, and I felt the strong temptation to simply "coast" out on some more approachable subject-matter. Since none of my other courses really fed-into or otherwise overlapped with CS6601 (e.g. ML4T or KBAI), it was hard for me to evaluate my own aptitude going in. Ultimately however, I ended up going with AI to close out my program experience. The course is consistently quite a bit of work, with the underlying mathematics comprehension and need for numpy-based vectorization optimization escalating as the semester progresses; that said, I did come away with a more general understanding of classical AI algorithms. I ended up front-loading my work, completing the first five projects and abandoning the sixth (the course drops your lowest project grade). This effectively gave me a month off between when I finished project 5 and the final exam, which was nice. I didn't care for how the course was administratively handled; things felt very adversarial between staff and students. Administrative policies aside, I'm also not sure this course was the best fit for my broader educational objectives in cybersecurity, nor effectively interesting enough to stave-off the pervasive "senior-itis" as graduation loomed. It had its moments, but I was both leery about enrolling in it at the onset and glad for it to be over when I was finished.
 
 ## **REFLECTIONS**
 
