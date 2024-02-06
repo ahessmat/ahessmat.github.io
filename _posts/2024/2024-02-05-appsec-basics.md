@@ -1,6 +1,6 @@
 ---
 title: Java Application Security Examples
-date: 2023-12-12 00:00:00 +/-0000
+date: 2024-02-05 00:00:00 +/-0000
 categories: [general,notes]
 tags: [resources]     # TAG names should always be lowercase
 image:
