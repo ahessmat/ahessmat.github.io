@@ -17,4 +17,4 @@ Throughout his career, he has:
 
 He also has fostered an interest in many tangentially-related subjects, including Artificial Intelligence, Reverse Engineering, and Space Platforms.
 
-Asa holds a B.A. in Politics from the University of California, Santa Cruz and is currently enrolled with the Georgia Institute of Technology pursuing a Masters in Computer Science.
+Asa holds a B.A. in Politics from the University of California, Santa Cruz and a Masters in Computer Science from the Georgia Institute of Technology. Additionally, he holds a number of industry certifications including the OSCP, GPEN, CRTO, and more.

@@ -1,0 +1,11 @@
+#### JWT
+
+If you've never encountered a JSON Web Token (JWT) before, then this is the section for you. It goes over what it is and the common misconfigurations/vulnerabilities that can stem from them. However, I think this section - with the exception of **Insecure KID Parameter Processing** - isn't Tier 3 content. What's covered isn't difficult to comprehend nor novel; unlike other modules, you're not really being presented anything new or in a way that isn't covered just as well/succintly elsewhere, which was a little disappointing. The exercises are straightforward and simple enough to complete.
+
+#### OAuth
+
+OAuth is a subject that always seems to trip people up, myself included. This is clear when half of the subsections are dedicated just to explaining OAuth's nuances before you arrive at a practical application exercise. Even still, I think that the exercises are presented in the wrong order; I would suggest users do the **Open Redirect** subsection *before* the **redirect_uri misconfiguration** - it's a simpler exercise and more effectually eases you into the practical application.
+
+#### SAML
+
+The SAML section was interesting to me. I had never used **SAML Raider** as a Burp extension before; consequentially, there was a fair amount of back-and-forth where I didn't understand what was happening and was encountering errors that I found to be frustrating. While the subsections like **Weak Public/Private Keys** do a great job of providing many screenshots to step-by-step you through the process, there were still times where I got hung-up on troubleshooting an issue. For example, I didn't realize I needed to navigate away from the SAML Raider pane and then return back again in Burp Repeater after configuring an updated cert for it to refresh properly. I made a note to seek out additional training concerning SAML in the future; I think the Academy does a good job of describing the vulnerability, but the exercises themselves didn't help solidify the knowledge - I felt very tool-bound by the section's end (i.e. if the tool fails, I wouldn't know what to do).

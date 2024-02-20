@@ -1,5 +1,5 @@
 ---
-title: Web Scrapping With Python and Selenium
+title: Web Scraping With Python and Selenium
 date: 2022-03-09 00:00:00 +/-0000
 categories: [general]
 tags: [project]     # TAG names should always be lowercase
