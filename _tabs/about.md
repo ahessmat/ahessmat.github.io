@@ -8,7 +8,7 @@ Byte Breach is the personal blog of Asa Hess-Matsumoto, a cybersecurity professi
 
 Having originally graduated from university with a degree in Politics and served overseas as a U.S. Marine Corps officer, Asa’s transitioned entry into the domains of information technology and computer science is non-traditional. As such, he is a strong advocate for continued professional education and development, seeking new and innovative ways to both learn and share what he has learned.
 
-Throughout his career, he has:
+Throughout his cybersecurity career, he has:
 
 * Identified vulnerabilities and assessed risk in large-scale U.S. Department of Defense systems as well as Research, Development, Test, and Evaluation (RDT&E) laboratories.
 * Secured Industrial Control Systems against cyber attacks on behalf of the Department of the Navy.
