@@ -8,3 +8,4 @@ This section was pretty challenging in the way that the section author(s) struct
 
 #### HTTP/2 Downgrading
 
+This section has some interesting content, but only 1 exercise (which is fairly straightforward to perform given the examples). The section primarily denotes a number of ways where differences in protocols between layered components can introduce vulnerabilities. The exercise specifically focuses on instances where an intermediary proxy receives requests in **HTTP/2**, but then passes along requests in **HTTP/1.1** (e.g. **H2.CL** vulnerability). This is a real shame, considering the variations they put forward in **Further H2 Vulnerabilities**; in the future, I would hope that additional exercises are introduced to reflect these other vulnerabilities as well. Alternatvely, it wouldn't surprise me to learn that some of the techniques described in the "Further H2 Vulnerabilities" are instead reserved for the CWEE exam.
