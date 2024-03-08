@@ -4,3 +4,7 @@ I'll admit, I thought that this section was pretty weak from the onset. The **Lo
 
 #### HTTP Request Smuggling/Desync Attacks
 
+This section was pretty challenging in the way that the section author(s) structured the exercises, but the content itself was pretty good. On its face, the material provides you several different ways of how subtle differences in how layered technologies can desynchronize HTTP requests from responses. Specifically, it looks at how they interpret where the end of a given HTTP request is (creating confusion between headers like **Content-Length** and **Transfer-Encoding**, which both can specify how long a message is, but may not correctly be handled by RFC standards correctly for a given proxy/web server configuration). While the material was sufficient in its coverage, the challenge to the exercises came from what went unspoken (e.g. changing HTTP verbs and/or combining multiple different **TE.TE** techniques together).
+
+#### HTTP/2 Downgrading
+
