@@ -1,3 +1,12 @@
+# TODO
+* Posts
+  * D&D app
+  * Blog on DNS records
+  * HTB Tier 3 Content
+  * CWEE
+  * Web Cache Vuln Demo
+  * HTB machine submission
+
 # Organizational notes for self
 
 * The Chirpy Starter splits content between the root project directory and the corresponding gem (jekyll-theme-chirpy*).
