@@ -65,7 +65,7 @@ My last check was to validate the student's listed ID. Georgia Tech provides a d
 > Note: The above checks don't definitively prove that the sender isn't themselves malicious, nor that the email wasn't otherwise spoofed. However, this was enough evidence to suggest to me that the sender *likely* wasn't voluntarily executing the attack, which was what I wanted to figure out. Some people have speculated that this is a coordinated research/class project (for example, **PUBP 6725** has a project deliberately designed around having students attempt to phish a TA), however - as we'll see in a bit - I don't believe that's the case.
 {: .prompt-info }
 
-On Sunday evening (14 April 2024), several other students began reporting seeing the same email. A few of them chose to share their emails with me to help with this research. Those emails showed similar results as above, albeit from different users. Interestingly, the (admittedly small) sample size seemed to come from undergraduate Computer Science students; however, my sample size is far too small to suggest that this is deliberate (vs. coincidental). My inference instead is that other students are falling victim to the attack, perpetuating/spreading the impact.
+On Sunday evening (14 April 2024), several other students began reporting seeing the same email. A few of them chose to share their emails with me to help with this research. Those emails showed similar results as above, albeit from different users across multiple departments.
 
 ## Looking into the payload
 
