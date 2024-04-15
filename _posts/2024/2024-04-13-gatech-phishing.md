@@ -189,3 +189,9 @@ The attack chain also appears really brittle; the malicious URL listed in the or
 While the architecture doesn't lend itself to being a de-fanged, student-lead project, I'm not quite sure what the endgame of the attackers is. Still, you should remain alert and ensure you protect yourself from possible harm, reporting the email to OIT if you encounter it.
 
 If you'd like to share any additional insights you might have, feel free to reach out.
+
+### Update 15 Apr 2024
+
+Apparently, this is not the first time the OMSCS community has seen this exact phishing attack before. Someone shared a screenshot of a similar email from 2022:
+
+![](/assets/images/gaphish13.png)
