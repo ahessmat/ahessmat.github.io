@@ -22,11 +22,7 @@ At-a-glance, the indicators to me that something was awry were:
 
 ## Looking into the email
 
-On a lark, I started by looking into the headers belonging to the malicious email to learn some more information. My first goal was to determine whether or not the person who sent this email was themselves malicious (vs. being a victim caught along in perpetuating the phishing campaign). First, I wanted to look at the byte-by-byte characters of the sender's address to the assure that there weren't any homoglyphs being used (i.e. g00gle.com vs. google.com):
-
-![](/assets/images/gaphish2.png)_A byte-by-byte comparison of the sender's address against one I manually entered_
-
-It was the same, as expected. If there had been any variation from a non-gatech.edu domain, Outlook likely would have flagged it as having come from an external sender, but we want to be thorough.
+On a lark, I started by looking into the headers belonging to the malicious email to learn some more information. My first goal was to determine whether or not the person who sent this email was themselves malicious (vs. being a victim caught along in perpetuating the phishing campaign). First, I wanted to look at the byte-by-byte characters of the sender's address to the assure that there weren't any homoglyphs being used (i.e. g00gle.com vs. google.com). It was the same, as expected. If there had been any variation from a non-gatech.edu domain, Outlook likely would have flagged it as having come from an external sender, but we want to be thorough.
 
 The next thing I wanted to do was look at the email's headers. Email headers are additional information attached to an email message that provide details about the email's transmission and routing; they're not typically visible when reading an email from your inbox (including Outlook and Gmail), but can be accessed like so:
 
@@ -156,7 +152,7 @@ If you're not otherwise aware, the `*.sa.com` and `*.za.com` domains are owned b
 
 ![](/assets/images/gaphish10.png)
 
-The problem for us is that we lack the transparency afforded by registrars to see who owns `vandeettaios.sa.com` and `puchara.za.com`; officially, they're owned by the same people who own `sa.com` and `za.com`, respectively. The only people who might have any additional insights are the owners of those domains, but they've yet to respond ([and have a history of hosting spammers and other malicious actors](https://www.reddit.com/r/sysadmin/comments/v8u1nl/conclusions_after_manually_reviewing_spam/)). They offer [their own form of WHOIS lookups](https://www.centralnicdomains.com/services/whoisSearchPage), but it doesn't offer any insight.
+The problem for us is that we lack the transparency afforded by registrars to see who owns `vandeettaios.sa.com` and `puchara.za.com`; officially, they're owned by the same people who own `sa.com` and `za.com`, respectively. The only people who might have any additional insights are the owners of those domains, but they've yet to respond ([and unlikely to soon](https://www.reddit.com/r/sysadmin/comments/v8u1nl/conclusions_after_manually_reviewing_spam/)). They offer [their own form of WHOIS lookups](https://www.centralnicdomains.com/services/whoisSearchPage), but it doesn't offer any insight.
 
 > Note: as of 15 April 2024, the routing appears to have changed. Now traffic passes from `GTLogin.htm` to `jdsuite.mx`, then `dalpiero.nl`, and then `puchara.za.com`.
 {: .prompt-info }
