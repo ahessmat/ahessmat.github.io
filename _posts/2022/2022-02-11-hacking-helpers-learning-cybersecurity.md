@@ -60,7 +60,7 @@ There are a lot of resources available online to learn cybersecurity. You can wa
 <hr>
 <div class="custom-dropdown">
 <details markdown=block>
-<summary markdown=span>Podcasts</summary>
+<summary markdown=span>Miscellaneous</summary>
 {% include_relative helpers/dropdown-misc.md %}
 </details>
 </div>
