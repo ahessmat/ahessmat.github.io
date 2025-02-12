@@ -1,7 +1,7 @@
 ---
 title: "Binary Exploitation Writeup - Space Pirate: Going Deeper"
 published: true
-date: 2025-02-06 00:00:00 +/-0000
+date: 2025-02-10 00:00:00 +/-0000
 categories: [general,ctf]
 tags: [ctf,htb,binexp,binary exploitation,reverse engineering]     # TAG names should always be lowercase
 image:
