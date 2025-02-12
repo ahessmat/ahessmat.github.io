@@ -3,7 +3,7 @@ title: Where are all of the cybersecurity jobs?
 published: true
 date: 2025-02-09 00:00:00 +/-0000
 categories: [career guidance]
-tags: []     # TAG names should always be lowercase
+tags: [resources,jobs]     # TAG names should always be lowercase
 image:
     path: /assets/images/malware.jpg
 ---
