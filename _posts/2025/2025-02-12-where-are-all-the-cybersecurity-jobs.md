@@ -86,7 +86,7 @@ This is backed by others polling sentiment as well. According to Karat's' latest
 
 # No Saturation...Yet
 
-The good news in all of this is that despite all of these issues, the myth that the professional domain is over-saturated with qualified professionals doesn't appear to be true. Despite all of the layoffs in Technology, [the unemployment rate for tech occupations is still low at 2.2%](http://archive.today/Jcd0e), which suggests most of the the workforce was reabsorbed. 
+The good news in all of this is that despite all of these issues, the myth that the professional domain is over-saturated with qualified professionals doesn't appear to be true. Despite all of the layoffs in Technology, [the unemployment rate for tech occupations is still low at 2.2%](https://archive.today/Jcd0e), which suggests most of the the workforce was reabsorbed. 
 
 According to [eSentire's Cybersecurity Jobs report](https://www.esentire.com/resources/library/2023-official-cybersecurity-jobs-report), there are just over 94,000 CISSP holders nationwide, but more than 134,000 job openings requiring the certification; there are also just over 37,000 CISA holders nationwide, but more than 87,500 jobs advertised requesting the certification. Moreover, just because people hold those certifications doesn't mean they are actively looking for work, so the gap is likely wider than that.
 
