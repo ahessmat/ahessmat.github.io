@@ -56,7 +56,7 @@ Cyberseek does disclose however that any single job opening can align to more th
 
 The early-career cybersecurity job hunt has always been hard, but it's important to contextualize the labor market with relation to the broader economy. Typically organizations have viewed cybersecurity as a *cost-sink* vs. a revenue-generating asset; this - in turn - contributes to leaner budgets for cybersecurity teams for discretionary hiring budgets. When employers face economic hardship, so too does the cybersecurity job market.
 
-<img src="https://edge.sitecorecloud.io/internationf173-xmc4e73-prodbc0f-9660/media/Project/ISC2/Main/Media/insights/Features/2024/10/01-fig-1.png?h=503&w=463" style="display: block; margin: auto;">
+<img src="https://edge.sitecorecloud.io/internationf173-xmc4e73-prodbc0f-9660/media/Project/ISC2/Main/Media/insights/Features/2024/10/01-fig-1.png?h=503&w=463" style="display: block; margin: auto;" alt="infographic">
 
 From 2020-2022, we observed one of the most labor-friendly job markets in decades - denoted at the time as the so-called "[Great Resignation](https://en.wikipedia.org/wiki/Great_Resignation)". Interest rates were low, businesses were borrowing/growing fast, and one could generally jockey for better employment conditions relatively easily. Once the Fed began to raise interest rates to combat inflation, there came a cascading series of dominos that made job hunting much harder:
 
@@ -76,7 +76,7 @@ All told, the cybersecurity job market is not immune from economic recessions an
 
 Within ISC2's [2024 Cybersecurity Workforce Study](https://www.isc2.org/Insights/2024/10/ISC2-2024-Cybersecurity-Workforce-Study), there was an interesting insight made in the below graphic:
 
-<img src="https://edge.sitecorecloud.io/internationf173-xmc4e73-prodbc0f-9660/media/Project/ISC2/Main/Media/insights/Features/2024/10/02-fig-2.png?h=334&w=494" style="display: block; margin: auto;">
+<img src="https://edge.sitecorecloud.io/internationf173-xmc4e73-prodbc0f-9660/media/Project/ISC2/Main/Media/insights/Features/2024/10/02-fig-2.png?h=334&w=494" style="display: block; margin: auto;" alt="infographic">
 
 They note that the global number of cybersecurity roles grew only 0.1%, staying relatively flat. However, North America, Europe, and South America collectively lost roughly 51,000 jobs while the Middle East, Africa, and the Asia-Pacific gained roughly 65,000. 
 
