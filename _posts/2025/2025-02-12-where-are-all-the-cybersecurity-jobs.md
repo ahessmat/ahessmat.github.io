@@ -4,8 +4,6 @@ published: true
 date: 2025-02-09 00:00:00 +/-0000
 categories: [career guidance]
 tags: [resources,jobs]     # TAG names should always be lowercase
-image:
-    path: /assets/images/malware.jpg
 ---
 
 If you're interested in working in cybersecurity, you've probably seen at some point or another the plethora of articles, blogs, videos, etc. suggesting that there is a growing gap in the cybersecurity workforce. A cursory Google search turns up results like:
