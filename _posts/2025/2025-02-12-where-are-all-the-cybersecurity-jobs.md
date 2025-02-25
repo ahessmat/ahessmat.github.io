@@ -1,7 +1,7 @@
 ---
 title: Where are all of the cybersecurity jobs?
 published: true
-date: 2025-02-09 00:00:00 +/-0000
+date: 2025-02-12 00:00:00 +/-0000
 categories: [career guidance]
 tags: [resources,jobs]     # TAG names should always be lowercase
 ---
