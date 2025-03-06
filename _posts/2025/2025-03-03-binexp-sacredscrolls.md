@@ -1,6 +1,6 @@
 ---
-title: Binary Exploitation Writeup - Regularity
-published: true
+title: "Binary Exploitation Writeup - Sacred Scrolls: Revenge"
+published: false
 date: 2025-02-25 00:00:00 +/-0000
 categories: [general,ctf]
 tags: [ctf,htb,binexp,binary exploitation,reverse engineering]     # TAG names should always be lowercase
@@ -171,4 +171,163 @@ from pwn import *
 val = b'\xf0\x9f\x91\x93\x00\xe2\x9a\xa1'
 print(val.decode())
 ```
-:eyeglasses: \x00 &#9889;
+This outputs emojis like: &#128374; \x00 &#9889; (alluding the binary's overall theme: Harry Potter).
+
+## spell_upload()
+
+```c
+
+/* WARNING: Type propagation algorithm not settling */
+
+void spell_upload(void)
+
+{
+  char cVar1;
+  long lVar2;
+  ulong uVar3;
+  undefined8 *puVar4;
+  undefined4 *puVar5;
+  byte bVar6;
+  undefined auStack_1230 [8];
+  undefined local_1228 [15];
+  undefined8 uStack_1219;
+  undefined2 auStack_1211 [2036];
+  char cStack_229;
+  undefined8 local_228 [65];
+  FILE *local_20;
+  ulong local_18;
+  ulong local_10;
+  
+  bVar6 = 0;
+  puVar4 = local_228;
+  for (lVar2 = 0x40; lVar2 != 0; lVar2 = lVar2 + -1) {
+    *puVar4 = 0;
+    puVar4 = puVar4 + 1;
+  }
+  puVar4 = (undefined8 *)local_1228;
+  for (lVar2 = 0x200; lVar2 != 0; lVar2 = lVar2 + -1) {
+    *puVar4 = 0;
+    puVar4 = puVar4 + 1;
+  }
+  auStack_1230 = (undefined  [8])0x400aa5;
+  printf("\n[*] Enter file (it will be named spell.zip): ");
+  auStack_1230 = (undefined  [8])0x400abe;
+  local_18 = read(0,local_228,0x1ff);
+  *(undefined *)((long)local_228 + (local_18 - 1)) = 0;
+  for (local_10 = 0; local_10 < local_18; local_10 = local_10 + 1) {
+    if (((((*(char *)((long)local_228 + local_10) < 'a') ||
+          ('z' < *(char *)((long)local_228 + local_10))) &&
+         ((*(char *)((long)local_228 + local_10) < 'A' ||
+          ('Z' < *(char *)((long)local_228 + local_10))))) &&
+        ((((*(char *)((long)local_228 + local_10) < '0' ||
+           ('9' < *(char *)((long)local_228 + local_10))) &&
+          (*(char *)((long)local_228 + local_10) != '.')) &&
+         ((*(char *)((long)local_228 + local_10) != '\0' &&
+          (*(char *)((long)local_228 + local_10) != '+')))))) &&
+       (*(char *)((long)local_228 + local_10) != '=')) {
+      auStack_1230 = (undefined  [8])0x400bea;
+      printf("\n%s[-] File contains invalid charcter: [%c]\n",&DAT_0040127f,
+             (ulong)(uint)(int)*(char *)((long)local_228 + local_10));
+                    /* WARNING: Subroutine does not return */
+      auStack_1230 = (undefined  [8])0x400bf4;
+      exit(0x14);
+    }
+  }
+  local_1228._0_4_ = 0x6f686365;
+  local_1228._4_2_ = 0x2720;
+  local_1228[6] = 0;
+  auStack_1230 = (undefined  [8])0x400c32;
+  strcat(local_1228,(char *)local_228);
+  uVar3 = 0xffffffffffffffff;
+  puVar5 = (undefined4 *)local_1228;
+  do {
+    if (uVar3 == 0) break;
+    uVar3 = uVar3 - 1;
+    cVar1 = *(char *)puVar5;
+    puVar5 = (undefined4 *)((long)puVar5 + (ulong)bVar6 * -2 + 1);
+  } while (cVar1 != '\0');
+  uVar3 = ~uVar3;
+  *(undefined8 *)(auStack_1230 + uVar3 + 7) = 0x65736162207c2027;
+  *(undefined8 *)((long)local_1228 + uVar3 + 7) = 0x203e20642d203436;
+  *(undefined8 *)((long)auStack_1211 + (uVar3 - 8)) = 0x697a2e6c6c657073;
+  *(undefined2 *)((long)auStack_1211 + uVar3) = 0x70;
+  auStack_1230 = (undefined  [8])0x400c9f;
+  system(local_1228);
+  auStack_1230 = (undefined  [8])0x400cb2;
+  local_20 = fopen("spell.zip","rb");
+  if (local_20 == (FILE *)0x0) {
+    auStack_1230 = (undefined  [8])0x400cd5;
+    printf("%s\n[-] There is no such file!\n\n",&DAT_0040127f);
+                    /* WARNING: Subroutine does not return */
+    auStack_1230 = (undefined  [8])0x400cdf;
+    exit(-0x45);
+  }
+  auStack_1230 = (undefined  [8])0x400cfe;
+  printf("%s\n[+] Spell has been added!\n%s",&DAT_00401202,&DAT_004011fa);
+  auStack_1230 = (undefined  [8])0x400d09;
+  close((int)local_20);
+  return;
+}
+```
+
+The first part of `spell_upload()` calls `read()` to take in input from the user. This input is checked as only containing `A-Z`, `a-z`, `0-9`, and/or the characters `.`, `\0`, `+`, and `=`; anything else throws an error and terminates the program.
+
+Next, `spell_upload()` makes use of `strcat()` to build a system command: `echo (input) | base64 -d > spell.zip` and runs the command. This would suggest input needs to be base64 encoded to begin with.
+
+Finally, `spell_upload()` verifies that `spell.zip` exists before returning.
+
+## spell_save()
+
+```c
+void spell_save(void *param_1)
+
+{
+  undefined local_28 [32];
+  
+  memcpy(local_28,param_1,600);
+  printf("%s\n[-] This spell is not quiet effective, thus it will not be saved!\n",&DAT_0040127f);
+  return;
+}
+```
+
+Spell save is particularly interesting, since will `memcpy()` more bytes than what the `local_28` buffer is sized to hold, allowing a buffer overflow to take place.
+
+# Vulnerability
+
+So a couple of things stood out to me immediately as interesting:
+
+* There's a clear buffer overflow present in `spell_save()`. That function is only called from a successful execution of `spell_read()`, which passes the resulting data as an argument to the former. So if I want to overflow the buffer, I'll need to correctly format/execute `spell_read()`.
+  * The unique bytes for the emojis need to be present to pass `spell_read()`.
+  * I need to be mindful however that `NX` is enabled (per our checksec review at the top), which means I'll need to find some way to leak memory addresses from the binary to perform a `ret2libc` attack.
+* Having us pass raw input to `spell_upload()` is interesting, but it doesn't look like a straightforward command injection attack is viable given the screening.
+
+So my first goal was getting `spell_read()` setup.
+
+I initially toyed around with something to the effect of:
+
+```python
+data = b'\xf0\x9f\x91\x93\xe2\x9a\xa1'
+with open("spell.txt", "wb") as f:
+    f.write(data)
+    f.write(b'BBBBBBBBBBBBBBBBBBBBBBBBBBBBB') 
+
+zip = zipfile.ZipFile("spell.zip", "w", zipfile.ZIP_DEFLATED)
+zip.write("spell.txt")
+zip.close()
+```
+
+and was going bonkers trying to figure out why the binary was throwing an error of `[-] There is no such file!`. Only upon looking at `clear()` did I realize what was happening:
+
+```c
+void clean(void)
+
+{
+  system("rm -rf spell.txt");
+  system("rm -rf spell.zip");
+  printf(&DAT_00401210,&DAT_00401202,&DAT_004011fa);
+  return;
+}
+```
+
+So I cannot just simply have an exploit file resident on the system to read in; in hindsight, that makes sense since we'll ultimately need to target a remote instance of this running process (and cannot control the local files on that system).
+
