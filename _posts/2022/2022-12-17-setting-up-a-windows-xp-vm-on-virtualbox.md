@@ -17,6 +17,15 @@ Through Google and other searches, [I found an archived copy of Windows XP store
 
 ![ISO image](/assets/images/xp1.png)_Screenshot showing the serial key and ISO file download link_
 
+> I found later versions of VirtualBox really struggled with setting up this VM ISO in 2025. I've since shifted to importing [the OVA setup here](https://github.com/lucianoferrari/winxpimage). However, this OVA does throw an "Error loading operating system" error; this can be resolved by resizing the VDI and VMDK files post-import, respectively:
+>
+> `vbox-img.exe geometry --filename "C:\Users\Asa\VirtualBox VMs\vm\Windows_XP_Professional-disk1.vdi" --format VDI --cylinders 5874 --heads 255 --sectors 56`
+> 
+> `vbox-img.exe geometry --filename "C:\Users\Asa\VirtualBox VMs\vm\Windows_XP_Professional-disk1.vmdk" --format VMDK --cylinders 5874 --heads 255 --sectors 56`
+>
+> ...where `vbox-img.exe` (in Windows) resides in `C:\Program Files\Oracle\VirtualBox` by default.
+{: .prompt-info }
+
 ## 2. Create a new Windows XP VM and mount the ISO image
 
 Within Virtualbox, select the Machine dropdown menu and click New. Give the new VM an arbitrary (but recognizable) name and select the following values:
