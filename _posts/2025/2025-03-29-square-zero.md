@@ -1,6 +1,6 @@
 ---
 title: "Square Zero: How do I get started in cybersecurity?"
-published: true
+published: false
 date: 2025-03-27 00:00:00 +/-0000
 categories: [career guidance]
 tags: [jobs]     # TAG names should always be lowercase
