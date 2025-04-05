@@ -23,7 +23,7 @@ details[open] > *:not(summary) {
 
 There are a lot of resources available online to learn cybersecurity. You can watch lectures recorded from top universities, practice your skills in labs, and much, much more. This content is often at little or no cost to you and supplements your formal education/certifications. Below is a list of some of the resources that I've come across and used in the course of my career. Click on the any of the dropdown menu options below to see the respective resources.
 
-**Updated November 2023.**
+**Updated February 2025**
 
 <hr>
 <div class="custom-dropdown">
