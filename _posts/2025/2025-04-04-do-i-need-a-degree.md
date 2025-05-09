@@ -10,7 +10,7 @@ image:
 
 ## Starting Point
 
-At one point or another, most people looking to carve out a career in cybersecurity look to figure out whether or not they need to go to university for a degree (and if so, what kind). According to the National Center for Science and Engineering Statistics, "more than two-thirds of workers in cybersecurity fields hold a bachelor's degree or higher..."
+At one point or another, most people looking to carve out a career in cybersecurity look to figure out whether or not they need to go to university for a degree (and if so, what kind). [According to the National Center for Science and Engineering Statistics](https://ncses.nsf.gov/760/assets/0/files/ncses-cwdi-supply-demand-report.pdf), "more than two-thirds of workers in cybersecurity fields hold a bachelor's degree or higher..."
 
 However, pursuing a degree is a non-trivial decision, taking years to complete and - in the U.S. - [quite expensive](https://www.bestcolleges.com/research/average-student-loan-debt/#fn-3). As a result, not everyone has access to a university degree as an option. Naturally, this leads aspiring cybersecurity professionals to weigh alternate approaches. 
 
