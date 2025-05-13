@@ -6,6 +6,7 @@
   * CWEE
   * Web Cache Vuln Demo
   * HTB machine submission
+  * [Common mistakes](https://old.reddit.com/r/cybersecurity/comments/1kkf01d/mentorship_monday_post_all_career_education_and/ms5qgp1/)
 
 # Organizational notes for self
 
