@@ -5,7 +5,7 @@ date: 2025-06-24 00:00:00 +/-0000
 categories: [general, notes]
 tags: [anti-cheat, cheat]     # TAG names should always be lowercase
 image:
-    path: /assets/images/2025/ac-banner.png
+    path: /assets/images/2025/hyperv-ac.png
 ---
 
 ## Starting Point
