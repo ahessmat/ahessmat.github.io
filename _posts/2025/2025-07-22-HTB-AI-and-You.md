@@ -14,7 +14,7 @@ I'm interested in becoming more proficient in the security of AI and - more narr
 
 https://academy.hackthebox.com/course/preview/fundamentals-of-ai
 
-> ### Snapshot:
+> At-a-glance:
 > 
 > * 6 chapters
 > * 23 pages
