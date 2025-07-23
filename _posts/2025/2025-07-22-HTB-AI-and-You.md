@@ -14,11 +14,13 @@ I'm interested in becoming more proficient in the security of AI and - more narr
 
 https://academy.hackthebox.com/course/preview/fundamentals-of-ai
 
-> At-a-glance:
+> Module at-a-glance:
 > 
 > * 6 chapters
+>   * Introduction of Machine Learning
+>   * Supervised Learning Algorithms
 > * 23 pages
 > * (1) Skill Assessment
 {: .prompt-info }
 
-asdasd
+This module
