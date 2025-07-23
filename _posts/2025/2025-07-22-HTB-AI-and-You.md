@@ -1,7 +1,7 @@
 ---
 title: HTB Tier 3 Path Review
 published: false
-date: 2024-02-05 00:00:00 +/-0000
+date: 2024-07-21 00:00:00 +/-0000
 categories: [general,notes]
 tags: [resources]     # TAG names should always be lowercase
 image:
