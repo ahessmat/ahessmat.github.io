@@ -67,6 +67,11 @@ $ bundle
 
 Please see the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy#documentation).
 
+sudo apt update && sudo apt upgrade -y
+sudo apt install ruby-full build-essential zlib1g-dev -y
+sudo bundle install
+bundle exec jekyll serve
+
 ## License
 
 This work is published under [MIT][mit] License.
