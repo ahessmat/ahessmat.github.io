@@ -11,9 +11,7 @@ In the post below, I’ll go over some of the steps you can adopt in crafting yo
 
 ## ATS-friendly formatting
 
-If you haven’t built a professional resume recently, you may be unfamiliar with Applicant Tracking Systems (ATS). Most large companies and recruiting agencies don’t manually parse through the hundreds of resumes they receive for every position they open-up. Instead, they rely on ATS software to automate the process of ingesting, parsing, and flagging resumes that match the qualities they’re looking for.
-
-This all takes place before a human reader ever looks at your resume. If your resume doesn’t get past ATS or gets mangled by ATS’ ingestion, your resume can get discarded early in the process.
+If you haven’t built a professional resume recently, you may be unfamiliar with Applicant Tracking Systems (ATS). Most large companies and recruiting agencies don’t rely on manually parsing through the hundreds of resumes they receive for every position they open-up. Instead, they utilize ATS software to automate the process of ingesting, parsing, and flagging resumes that match the qualities they’re looking for.
 
 ![ATS ingestion](/assets/images/resume-ats.png)_Example of how a multi-columned resume can get processed by ATS_
 
@@ -29,7 +27,7 @@ When choosing a resume template, you want to make sure that your format can reas
 * Adopt predictable headings/orderings; ATS is looking for typical block areas, such as “Education” or “Work Experience”, not “Level-ups” or “Previous Tasks”. Ordering of blocks is typically your contact information, summary, skills, work experience (or alternatively flipped in position with education), education, projects, and certifications; it’s important to note that not every one of these sections necessarily needs to be included in your final draft. Headings may be different sizes (and even different colors) but should not be different fonts or denoted by banners, symbols, or graphics.
 * Text only; ATS resumes are free from images, symbols, or graphics. This includes headshots.
 
-Assuming your resume makes it past ATS filtering, it will likely be reviewed at least two (2) more times by human eyes. ATS filtering can reduce a resume pile from hundreds to dozens, but those dozens still need to be narrowed down to a handful that actually get interviewed. Therefore, the first set of human eyes that look at your resume are generally looking not just for positive qualities but reasons to discard your resume from further consideration.
+After ATS ingestion, it will likely be reviewed at least two (2) more times by human eyes: once by an initial screener (who generally is the first human point of contact in the interview cycle) and at least once more by someone closer to the work. In the first pass, we're talking about a person with a resume pile of hundreds to dozens who needs to narrow down the count to a handful that actually get interviewed. Therefore, the first set of human eyes that look at your resume are generally looking not just for positive qualities but reasons to discard your resume from further consideration.
 
 Humans who glance over English resumes (vs. automated software that ingest/scan keywords) allocate between 6-12 seconds to review your entire document. Their eyes follow a kind of “F-pattern”, seen in the heatmap below:
 
