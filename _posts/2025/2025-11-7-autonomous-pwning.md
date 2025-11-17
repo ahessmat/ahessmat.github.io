@@ -24,13 +24,13 @@ A lot of mainstream agents today are packaged as coding assistants (junior devs)
 
 [Researchers from NYU made a benchmark for evaluating LLMs' ability to solve CTF challenges](https://arxiv.org/pdf/2406.05590). The intent here was in using CTFs as a novel kind of security-based benchmarking for LLMs altogether. They organize the challenge categories in the classic Jeopardy style (e.g. pwn, web, forensics, etc.).
 
-![alt text](../../assets/images/2025/paper-table2.png)
+![alt text](/assets/images/2025/paper-table2.png)
 
 [Researchers out of the University of Singapore evaluated LLMs' ability to evaluate CTF challenges and Cybersecurity Certification Exam questions](https://arxiv.org/pdf/2308.10443). This wasn't so much an agentic-paper as much as evaluating LLMs' ability to directly figure out solutions to CTF problems with user-provided inputs (think of the LLM as coaching the competitor vs. being the competitor). Interestingly, the research did highlight the need for jailbreaking models to most most effective, as models occassionally interpreted user requests as being malicious (vs. serving the gamified CTF).
 
 [Researchers out of Hong Kong University of Science and Technology determined that AI Agent performance in CTFs could be improved dramatically through the use of retrieval augmented generation (RAG)](https://arxiv.org/pdf/2506.17644). For the layperson, RAG is a technique that enhances AI models by feeding them relevant information from a custom knowledge base before they generate responses. Think of it like giving an AI agent access to your personal security documentation, tool manuals, or past CTF writeups – when you ask it a question, it first searches this knowledge base for relevant context, then uses that information to give you more accurate, contextual answers. This helps the AI avoid hallucinations and ground its responses in real, verified information.
 
-![alt text](../../assets/images/2025/paper-table1.png)
+![alt text](/assets/images/2025/paper-table1.png)
 
 [Alias Robotics and researchers out of the University of Naples Frederico II put together the open-source Cybersecurity AI (CAI) framework for security testing through AI Agents](https://arxiv.org/pdf/2504.06017). Their work demonstrated a model for how AI agents could perform exceedingly well in gamified CTF challenges and even discovering real-world bug bounties. I found this really intriguing and was really grateful to be able to look over [their Github repo](https://github.com/aliasrobotics/cai/tree/main) while getting oriented on this; their structure (reductively) can be described as using a collection of specialized agents geared towards particular types of actions (e.g. reverse engineering) working in concert.
 
@@ -70,7 +70,7 @@ Our next significant set piece for testing is the configuration of the [HTB Mode
 
 To do this, we'll first need to generate an API token from our HTB profile on https://ctf.hackthebox.com/, clicking on the `MCP Access` tab, and creating a new token:
 
-![alt text](../../assets/images/2025/htb-profile.png)
+![alt text](/assets/images/2025/htb-profile.png)
 
 And then passing the following command to `Claude Code` on the VM to get it configured to our local project:
 
@@ -94,7 +94,7 @@ source agentenv/bin/activate
 
 Running this setup out-of-the-box showed that while the agent generally could identify the vulnerability within the `Very Easy` and `Easy` binaries, they struggled to cobble together a working exploit. There was only 1 of the 4 pwn challenges hosted in the `MCP Tryout` CTF that were solved without any configuration adjustment. Below is an example of the agent attempting to solve the `Regularity` challenge, which is solved by way of shellcode injection.
 
-![alt text](../../assets/images/2025/claude-pwn1.png)
+![alt text](/assets/images/2025/claude-pwn1.png)
 
 There were some other observations I made as well: 
 
@@ -122,7 +122,7 @@ Finally, I coded-together a Retrieval-Augmented Generation (RAG) MCP server and 
 
 With these measures in place, `Claude Code` was now able to solve 3 out of 4 of the `MCP Tryout` pwn problems completely on their own.
 
-![alt text](../../assets/images/2025/pwn-solve.png)
+![alt text](/assets/images/2025/pwn-solve.png)
 
 ## Setback
 
@@ -140,7 +140,7 @@ Options/alternatives are limited:
 
 I figured I'd try the cheapest testing alternatives first, now that I had a growing sense of what 'right' looked like. Leaning on Alias Robotics' research, I combined [their CAI framework](https://github.com/aliasrobotics/cai/tree/main) with a locally provisioned LLM (first [qwen3:32b](https://ollama.com/library/qwen3), then [llama3.1:70b](https://ollama.com/library/llama3.1)). Because my Kali Linux VM was where I wanted to keep the agents' work sandboxed (and most of the CTF binaries would be Linux-compatible), this meant I had to stand-up the Ollama model on the Windows Host machine and expose the port to the Kali Linux VM ([not unlike what I did in a previous post](https://bytebreach.com/posts/reverse-engineering-binaries-with-ai/)).
 
-![alt text](../../assets/images/2025/OllamaCAI.png)
+![alt text](/assets/images/2025/OllamaCAI.png)
 
 To accomplish this, first we had to pull the appropriate models and serve them up for our networked machine to reach them:
 
@@ -168,7 +168,7 @@ CAI_MODEL = ollama/qwen3:32b
 
 The results were predictable. The `qwen3:32b` model - while fast on my GTX 3090 GPU - just didn't have the nuance to really do anything substantive with the problems that were presented to it. When tasked with solving the easiest of the HTB `MCP Tryout` pwn problems, it flailed - neither solving the problem nor producing any actionable follow-up. In one instance, it settled for reading the stand-in local flag (i.e. `cat flag.txt`) as a solution.
 
-![alt text](../../assets/images/2025/CAIoutput.png)
+![alt text](/assets/images/2025/CAIoutput.png)
 
 Loading-in a larger model (i.e. `llama3.1:70b`) faired little better; I knew my GPU wouldn't be able to fully load the model nor the context of the problems it would work so responses would be *much* slower, but I had hoped doubling the number of parameters might help contribute to some more logical problem solving. It did, somewhat. The model demonstrated some better initial actions (utilizing `checksec` and `file` commands) and gravitated towards the eventual drafting of a `pwntools` exploit, but the ultimate end result was the same: nothing.
 
@@ -178,7 +178,7 @@ There is likely *considerable* levels of customization that can be had with CAI 
 
 One last low-cost alternative I had to consider was `OpenCode`, an AI coding agent built for the terminal. OpenCode is compatible with all of the major AI players out there and likewise supports the creation of sub-agents (much like `Claude Code`); unlike `Claude Code` however, I could mix/match agents between model producers. I could set OpenAI's chatGPT for one agent, Anthropic's sonnet for another, Google's Gemini for a third, etc. More importantly however is that - at the time of writing this post - `OpenCode` has a partnership with [Grok Code Fast 1](https://blog.promptlayer.com/grok-code-fast-1-first-react/) for data collection, which grants me some additional (limited) model access to experiment with.
 
-![alt text](../../assets/images/2025/grokpwn.png)
+![alt text](/assets/images/2025/grokpwn.png)
 
 `Grok Code Fast 1` (hereafter simply referred to as "Grok") was - as the name implies - insanely fast out-of-the-box. However - just as reviews suggest - it's also pretty prone to tangents, side-tracking, and just being wrong. Like the Ollama models before, it was likewise prone to pointing to our local faux flag, but also would do things like:
 
@@ -190,7 +190,7 @@ Despite this, it still did better than the local LLMs, solving 1 out of 4 of the
 
 `OpenCode` also incidentally shipped with the `Big Pickle` model from Ideavo.ai. This model proved to be much more reliable (though understandably slower):
 
-![alt text](../../assets/images/2025/bigpicklepwn.png)
+![alt text](/assets/images/2025/bigpicklepwn.png)
 
 A few things I took away from using OpenCode was that - generally speaking - the agents/subagents were retiscent to use the custom RAG server I had developed; unless I explicitly told them to use it, they often didn't bother. Agents were manageable, but it was a lot less consistent. Overall, the experience had me miss the `Claude Code` Sonnet model experience, but it did make for a decent (free) backup in order to continue the experiment and move it forward.
 
@@ -198,7 +198,7 @@ A few things I took away from using OpenCode was that - generally speaking - the
 
 I will briefly mention that I also tried pointing OpenAI's `Codex` at these problems too; `Codex` is a similar service to `Claude Code` and `OpenCode`, but leveraging OpenAI's proprietary model(s) for coding more narrowly. Performance-wise, it was pretty comparable to what `Claude Code` could achieve - better, in fact. Initially, I was put-off by the lack of sub-agents and more challenging interface/configuration options; like the `OpenCode` tests preceding it, `Codex` was really hesitant to reach for its MCP RAG references unless explicitly told to do so. More generally, adding MCP servers (local and remote) to `Codex` is not as intuitive as its documentation would suggest.
 
-![alt text](../../assets/images/2025/nomcpcodex.png)
+![alt text](/assets/images/2025/nomcpcodex.png)
 
 However, I ended up adding `Codex` to my test list since the first month of service (at the time of writing this) is free. As testing progressed, I found myself more-and-more impressed with what it could accomplish (and immensely appreciated the expanded context windows and usage limits compared to `Claude Code`).
 
