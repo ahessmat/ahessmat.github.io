@@ -1,11 +1,11 @@
 ---
-title: Autonomous Pwning: Using AI Agents for Binary Exploitation
+title: "Autonomous Pwning: Using AI Agents for Binary Exploitation"
 published: true
 date: 2025-11-07 00:00:00 +/-0000
 categories: [research,notes]
 tags: [resources, reverse engineering, binary exploitation, project, ai, agents]     # TAG names should always be lowercase
 image:
-    path: /assets/images/2025/TaeJune15.jpg
+    path: /assets/images/2025/ai1.png
 ---
 
 In my ongoing series of posts looking into AI's applications to cybersecurity, this ones going to talk about Agentic AI.
