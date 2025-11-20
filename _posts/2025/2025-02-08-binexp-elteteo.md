@@ -5,7 +5,7 @@ date: 2025-02-08 00:00:00 +/-0000
 categories: [general,ctf]
 tags: [ctf,htb,binexp,binary exploitation,reverse engineering]     # TAG names should always be lowercase
 image:
-    path: /assets/images/malware.jpg
+    path: /assets/images/2025/malware.jpg
 ---
 
 # HTB - El Teteo
@@ -14,7 +14,7 @@ This was a delightful dip back into the domain of shellcode. Rated "Very Easy" b
 
 This challenge is shipped without any source code, so we're meant to both reverse engineer the binary and develop an exploit for it. Our first job is to understand how it works. If we run the `el_teteo` binary from the command line, we can see a slew of colorized output making some ASCII art:
 
-![alt text](/assets/images/elteteo.png)
+![alt text](/assets/images/2025/elteteo.png)
 
 Opening the challenge in `ghidra` shows a slew of `rand()` calls contributing to the colorization output. At the bottom, however we can see the code responsible for the user input:
 
@@ -55,7 +55,7 @@ payload = asm(shellcraft.amd64.linux.cat('./flag.txt'))
 
 So this was my first attempt at crafting shellcode (spoiler: it didn't work). Shellcraft can be evoked both within `pwntools` and without along the commandline; below is an example of how we can do the above like so.
 
-![alt text](/assets/images/shellcraft.png)
+![alt text](/assets/images/2025/shellcraft.png)
 
 What I found however was that the shellcode would initiate, then fail to execute fully time and time again. It was maddening. I thought initially it was some [bad bytes](https://youtu.be/7ob-6Wg1JRk?si=9ydijnLf53QNRjSx) that `read()` didn't like, but that didn't end up being the case.
 
@@ -119,11 +119,11 @@ This yielded the following bytestring, which I could include in my exploit scrip
 
 For readability, I dumped the hex running `objdump -d shellcode`:
 
-![alt text](/assets/images/shellcraft-objdump.png)
+![alt text](/assets/images/2025/shellcraft-objdump.png)
 
 You can see under `<_start>` the column of bytes mapping to the above bytestring. With the shellcode as a known good, I tried passing the bytes directly and they STILL were getting cut-off.
 
-![alt text](/assets/images/elteteo-pwndbg.png)
+![alt text](/assets/images/2025/elteteo-pwndbg.png)
 
 If the above output doesn't make sense, it's a screenshot of `GDB` running with the `pwndbg` plugin. I've captured the state at which the shellcode has just started. In the topmost panel, we can see the disassembled shellcode and - most notably - observe that the bytes following the `syscall` just...vanish. This is most evident in the `hexdump` call, where there's quite literally nothing but null bytes (contrary to our above output from `objdump -d shellcode`).
 

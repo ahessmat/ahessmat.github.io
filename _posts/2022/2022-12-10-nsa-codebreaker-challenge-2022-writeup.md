@@ -4,7 +4,7 @@ date: 2022-08-15 00:00:00 +/-0000
 categories: [writeup]
 tags: [nsa, codebreaker, ctf]     # TAG names should always be lowercase
 image:
-    path: /assets/images/codebreaker-award.png
+    path: /assets/images/2022/codebreaker-award.png
 ---
 
 Each year, the National Security Agency (NSA) hosts an open invitation capture-the-flag (CTF) event for high school and university students and staff. The event, typically denoted by a series of 10 increasingly difficult challenges, doubles as a means for the agency to identify potential candidates for recruitment; high performers and solvers are invited to apply to the agency’s open jobs listings and are encouraged to denote their performance in the event. This year’s challenge included subjects such as:
@@ -21,7 +21,7 @@ Each year, the National Security Agency (NSA) hosts an open invitation capture-t
 
 The Codebreaker Challenge was open for several months (August 2022 through early December 2022), and in that time over 2,700 people participated in an effort to solve the problem set. Of them, fewer than 100 solved all 10 of the Codebreaker Challenge’s problems.
 
-![Tasks](/assets/images/codebreaker-tasks.png)
+![Tasks](/assets/images/2022/codebreaker-tasks.png)
 
 I was very fortunate to count myself among this year’s solvers, starting the challenges in mid-September and intermittently working on them up to just 6 days before the challenge window closed in December.
 
@@ -38,7 +38,7 @@ Below is a writeup of my work:
 
 This task was trivial, primarily serving as a means for directing participants to the challenge’s Discord chat. As the task suggests, once you were in the Discord server, you supplied the appropriate commands to the correct channel to get the flag:
 
-![Chat](/assets/images/codebreaker-chat.png)
+![Chat](/assets/images/2022/codebreaker-chat.png)
 
 ## Task A1 - Initial Access
 
@@ -51,7 +51,7 @@ In addition to the above prompt, we were given a vpn.log file, which was the acc
 
 First, it was important to recognize that the vpn.log file was presented in the form of a comma-separated values (CSV) file.
 
-![CSV file](/assets/images/codebreaker-csv.png)
+![CSV file](/assets/images/2022/codebreaker-csv.png)
 
 As you might guess from the above screenshot, trying to manually parse through this data in a program like Notepad is really painful. Fortunately, CSV is a standard that is readily parse-able by modern spreadsheet programs, including MS Excel.
 
@@ -59,7 +59,7 @@ At first, there isn’t anything that immediately leaps out as me as indicative 
 
 The lone standout was with user Sarah.K:
 
-![Unusual login](/assets/images/codebreaker-sarah.png)
+![Unusual login](/assets/images/2022/codebreaker-sarah.png)
 
 This user logged in twice in the same day with overlapping durations. Their first session started at 07:57:33, lasted 20,112 seconds (or more than 4 hours), but they were simultaneously logged in at 09:03:04. This (coupled with distinctly different Real IP values) suggested someone was piggy-backing off of the legitimate user’s credentials to login to the network.
 
@@ -87,17 +87,17 @@ Examining the PCAP file straightaway in a program like Wireshark does little goo
 tar -xf root.tar.bz2
 ```
 
-![TAR archive](/assets/images/codebreaker-tar.png)
+![TAR archive](/assets/images/2022/codebreaker-tar.png)
 
 Among the zipped archives [hidden files](https://www.linuxfordevices.com/tutorials/linux/hidden-files-in-linux) include a .cert.pem file. This is of interest to us, because PEM files can be ASCII representations of TLS certificates, which would be useful for decrypting the traffic we observe in the PCAP file.
 
-![Wireshark TLS](/assets/images/codebreaker-wireshark1.png)
+![Wireshark TLS](/assets/images/2022/codebreaker-wireshark1.png)
 
 In the screenshot above, we’ve updated Wireshark’s preferences to include our discovered PEM file for the TLS protocol. This will automatically decrypt any TLS traffic from the malicious user’s IP address.
 
 Following the TLS stream of traffic afterwards shows a GET request pulling a tools.tar file from the malicious server onto the victim machine. Within the response data, we can observe a human-readable string which turned out was the author of the software: RoughWaryHook.
 
-![Wireshark details](/assets/images/codebreaker-wireshark2.png)
+![Wireshark details](/assets/images/2022/codebreaker-wireshark2.png)
 
 ## Task B1 - Information Gathering
 
@@ -118,11 +118,11 @@ The demand note read as:
 
 Navigating to the URL mentioned in the note leads us to a ransomware payment page:
 
-![Landing page](/assets/images/codebreaker-unlockmyfiles.png)
+![Landing page](/assets/images/2022/codebreaker-unlockmyfiles.png)
 
 There’s nothing for us to interact with, but looking at the page’s source code reveals a custom Javascript file (connect.js). The connect.js file is pretty well obfuscated, but using a service like https://deobfuscate.io/ allows us to make a little more sense of the code:
 
-![Connect JS](/assets/images/codebreaker-connectjs.png)
+![Connect JS](/assets/images/2022/codebreaker-connectjs.png)
 
 Even still, at a glance there’s little to tell. However, there are some interesting strings we can see in line 36, including:
 
@@ -138,7 +138,7 @@ A better way is running the functions in the browser’s console on the loaded p
 
 _0x412e(428, 1181) + “uuljkvybss” + _0x412e(459, 937) + _0x412e(429, 1208) + “t/demand?c” + _0x412e(448, 1221), function (_0x1f4c21, _0x2cbd12)
 
-![Deobfuscated](/assets/images/codebreaker-deobfuscate.png)
+![Deobfuscated](/assets/images/2022/codebreaker-deobfuscate.png)
 
 Pieced together:
 
@@ -163,7 +163,7 @@ This challenge tests our ability to enumerate a page for vulnerabilities as well
 
 Using an intermediary proxy tool – such as Burpsuite – we’re able to intercept the traffic to-and-from our browser and the ransommethis.net server.
 
-![Burp request](/assets/images/codebreaker-burp.png)
+![Burp request](/assets/images/2022/codebreaker-burp.png)
 
 To the untrained eye, there’s nothing that may stand out. However, the presence of the X-Git-Commit-Hash in the response is non-standard. Using a tool such as Nikto would likewise point this out:
 
@@ -173,7 +173,7 @@ nikto -host https://mnuuljkvybssuuil.ransommethis.net/iujabmzkfszmmoai/
 
 The X-Git-Commit-Hash header is suggestive that a git repository exists for the web app. Navigating to https://mnuuljkvybssuuil.ransommethis.net/.git/ suggests that this is correct, since we’re presented with a directory listing denial message (rather than yet another 403 or 404):
 
-![Directory Error Message](/assets/images/codebreaker-dirdenial.png)
+![Directory Error Message](/assets/images/2022/codebreaker-dirdenial.png)
 
 There’s a particular tool that’s been designed for pulling git repositories in situations like these called git-dumper. You can see it demonstrated in IppSec’s Devzat video:
 
@@ -189,7 +189,7 @@ sudo git-dumper https://mnuuljkvybssuuil.ransommethis.net/.git/ .
 
 In essence, git-dumper copies the contents of the git repository to our local machine, allowing us to review the web app’s source code for ourselves. The repository itself has a number of files about it, but we’re chiefly looking for the login page URL.
 
-![Git contents](/assets/images/codebreaker-git.png)
+![Git contents](/assets/images/2022/codebreaker-git.png)
 
 Within the app directory, there is a server.py file. Under the assumption it’s reflective of the ransommethis.net site, we can see a string for a pathkey on line 20:
 
@@ -200,7 +200,7 @@ def expected_pathkey():
 
 And a use for that pathkey to get at the login page on line 166:
 
-![Pathkey](/assets/images/codebreaker-pathkey.png)
+![Pathkey](/assets/images/2022/codebreaker-pathkey.png)
 
 Navigating to that destination (https://mnuuljkvybssuuil.ransommethis.net/iujabmzkfszmmoai/login) in our browser affirms the working login page.
 
@@ -269,11 +269,11 @@ When parsing through the coredump, we’ll want to start by looking for the sock
 
 Following the steps outlined [in this writeup](https://vnhacker.blogspot.com/2009/09/sapheads-hackjam-2009-challenge-6-or.html), I used the bless hex editor to search for the socket_name, which I found as /tmp/ssh-F3p3ViqOCjFE/agent.17.
 
-![Bless output](/assets/images/codebreaker-bless.png)
+![Bless output](/assets/images/2022/codebreaker-bless.png)
 
 This means one of the first addresses we encounter when walking back through the memory should be the pointer to the idtable (we’d also expect to cross paths with the cleanup_pid, parent_alive_interval, parent_pid, and max_fd variables, but all of these are static numbers whereas we’re looking for the format of a pointer address):
 
-![More output](/assets/images/codebreaker-pointer.png)
+![More output](/assets/images/2022/codebreaker-pointer.png)
 
 Accounting for endianness, this would point to the address 0x559DECFC83C0.
 
@@ -294,11 +294,11 @@ Running the above generated a number of error messages, but that’s alright.
 
 I found this next part a lot more easy to navigate by referencing [this writeup here](https://circleous.blogspot.com/2021/04/why.html). First, we’ll use GDB to look at that address we pulled out from the hex editor:
 
-![GDB wrangling](/assets/images/codebreaker-hex1.png)
+![GDB wrangling](/assets/images/2022/codebreaker-hex1.png)
 
 So far, this aligns with what we were expecting from the source code. The first value in memory is 1, the number of entries stored to nentries in the idtable struct. The next 2 are the same, point to the head/tail of the TAILQ linked list struct within idtable; since there’s only 1 entry, both point to the same identity pointer at 0x559DECFCD120.
 
-![GDB wrangling](/assets/images/codebreaker-hex2.png)
+![GDB wrangling](/assets/images/2022/codebreaker-hex2.png)
 
 Within the identity pointer, we see the first two values allocated once again for the TAILQ linked list, then an address for the sshkey struct pointer at 0x559DECFCBEE0. At this point, we need to understand the layout of the sshkey struct, which we thankfully are able to see here. For brevity’s sake, I’ve highlighted the relevant code below:
 
@@ -339,7 +339,7 @@ struct sshkey {
 
 Within GDB:
 
-![GDB wrangling](/assets/images/codebreaker-hex3.png)
+![GDB wrangling](/assets/images/2022/codebreaker-hex3.png)
 
 Here I expected the first two addresses to be integer values. I suspect that the reason for the discrepancy may rest with a version difference between the source code I was referencing and the actual source code used; it’s possible that a later version of openssh added one of the two variables (either type or flags).
 
@@ -366,7 +366,7 @@ struct rsa_st
 
 Within the RSA pointer, we’re presented even more pointers which reflect the various BIGNUM structs:
 
-![GDB wrangling](/assets/images/codebreaker-hex4.png)
+![GDB wrangling](/assets/images/2022/codebreaker-hex4.png)
 
 To check if we are in the right place, the 5th QWORD (0x559DECFCBCA0) should be the (e) BIGNUM struct with a value of 65,537 (0x10001). This aligns with the openssl documentation. First we enter the BIGNUM struct:
 
@@ -384,21 +384,21 @@ To check if we are in the right place, the 5th QWORD (0x559DECFCBCA0) should be 
         };
 ```
 
-![GDB wrangling](/assets/images/codebreaker-hex5.png)
+![GDB wrangling](/assets/images/2022/codebreaker-hex5.png)
 
 And now we enter the BN_ULONG address in position 1:
 
-![GDB wrangling](/assets/images/codebreaker-hex6.png)
+![GDB wrangling](/assets/images/2022/codebreaker-hex6.png)
 
 This affirms we’ve correctly mapped the memory layout. However, we still have a problem. Although we can view the RSA struct, the values we need to dump the RSA key (p,q) are NULL within the RSA struct; all we have are E and N.
 
-![GDB wrangling](/assets/images/codebreaker-hex7.png)
+![GDB wrangling](/assets/images/2022/codebreaker-hex7.png)
 
 This is because back in 2019, openssh [implemented a Key Shielding technique](https://xorhash.gitlab.io/xhblog/0010.html). Functionally, this meant that SSH private keys are held in a shielded form in memory, with all secrets zeroed out. Fortunately, someone has done the legwork in detailing [how to go about retrieving the private key from the shielded parts of memory in this writeup](https://security.humanativaspa.it/openssh-ssh-agent-shielded-private-key-extraction-x86_64-linux/).
 
 We can note that the sshkey struct should have the necessary variables stored towards the bottom of the struct by reviewing the source code. By reading out a few more lines of memory from the sshkey struct in the core file, we can find pointers to both the shielded_private and shield_prekey values.
 
-![GDB wrangling](/assets/images/codebreaker-hex9.png)
+![GDB wrangling](/assets/images/2022/codebreaker-hex9.png)
 
 Per the source code, the values in memory are arranged as:
 
@@ -411,7 +411,7 @@ To further affirm that we are – in fact – looking at the right information, 
 
 At this point, I was trying to figure out how to effectively pull or copy/paste the contents of each pointer to a file. I couldn’t exactly follow the script that the writeup had, so I thought initially to manually copy/paste the contents output by GDB and convert the format in Python. But with a little research, it turns out that GDB natively has a command that will do all this for us. We just need the start/end places in memory (which we can calculate given the sizes of each variable!).
 
-![GDB wrangling](/assets/images/codebreaker-hex10.png)
+![GDB wrangling](/assets/images/2022/codebreaker-hex10.png)
 
 ```bash
 GDB> dump memory private.bin 0x0000559decfceab0 0x559decfcf020
@@ -470,7 +470,7 @@ Then we decrypted the file using the command provided by the challenge:
 openssl pkeyutl -decrypt -inkey plaintext_private_key -in data.enc
 ```
 
-![Results](/assets/images/codebreaker-cookie.png)
+![Results](/assets/images/2022/codebreaker-cookie.png)
 
 This showed us that the file was a cookie (https://curl.se/docs/http-cookies.html); copy/pasting the hash at the end of the file was the answer to the challenge.
 
@@ -487,11 +487,11 @@ Building off of the last challenge, we have a decoded data.enc file from Task 5 
 
 The cookie isn’t valid; putting it in our browser’s cookies in the ransommethis.net site discovered in Task B1 doesn’t give us a login:
 
-![Bad cookies](/assets/images/codebreaker-cookie1.png)
+![Bad cookies](/assets/images/2022/codebreaker-cookie1.png)
 
 At this point, I figured I needed to find a way to make sense of the cookie itself. [Hash analyzer](https://www.tunnelsup.com/hash-analyzer/) didn’t come up with anything, but [this cipher detection](https://www.dcode.fr/cipher-identifier) had ideas: the data appears partially encoded in base64.
 
-![Bad cookies](/assets/images/codebreaker-cookie2.png)
+![Bad cookies](/assets/images/2022/codebreaker-cookie2.png)
 
 The first part of the token appears to be a base64-encoded JSON Web Token (JWT). [Referencing this article](https://medium.com/swlh/hacking-json-web-tokens-jwts-9122efe91e4a), I learned the structure of JWT tokens and how they could be cracked. A JWT token is made up of 3 parts: the header, the payload, and the signature.
 
@@ -507,11 +507,11 @@ The JWT signature validates that nothing about the token’s header or payload w
 
 Since we have the backend code from Task B2, looking through util.py shows the HS256 secret used in the HMAC signature, as well as how the tokens are validated:
 
-![JWT secret](/assets/images/codebreaker-jwt.png)
+![JWT secret](/assets/images/2022/codebreaker-jwt.png)
 
 With this information, we can trivially create a valid token using the information we pulled from the cookie in T5. [I used the following site to make the JWT](https://dinochiesa.github.io/jwt/).
 
-![JWT crafting](/assets/images/codebreaker-jwt1.png)
+![JWT crafting](/assets/images/2022/codebreaker-jwt1.png)
 
 Note: I updated the exp value to be far flung in the future, since my rudimentary JWT testing script showed the value from the cookie was producing an error. Below is my code and the subsequent errors:
 
@@ -529,11 +529,11 @@ claim = jwt.decode(token, hmac_key(), algorithms=['HS256'])['uid']
 print(claim)
 ```
 
-![JWT crafting](/assets/images/codebreaker-jwt2.png)
+![JWT crafting](/assets/images/2022/codebreaker-jwt2.png)
 
 Then I copied the updated cookie into Chrome and navigated to the /forum endpoint from the ransommethis.net site (note: we knew the endpoint existed from examining the server.py file from Task B2).
 
-![Forum page](/assets/images/codebreaker-app.png)
+![Forum page](/assets/images/2022/codebreaker-app.png)
 
 ## Task 7 – Privilege Escalation
 
@@ -543,15 +543,15 @@ Then I copied the updated cookie into Chrome and navigated to the /forum endpoin
 
 In this problem, we’re meant to build off our understanding of the JWT token from Task 6 in order to produce a token that will grant us administrator access. If we were to navigate to the Admin panel on the ransommethis.net domain with the existing token we have for the RealShipyard user, we’d be blocked out:
 
-![Admin page](/assets/images/codebreaker-app1.png)
+![Admin page](/assets/images/2022/codebreaker-app1.png)
 
 This section of the web app is accessible only to Administrators, all of whom are listed in the Admin List tab:
 
-![Admin page](/assets/images/codebreaker-app2.png)
+![Admin page](/assets/images/2022/codebreaker-app2.png)
 
 Fortunately, we have access to the source code underpinning the web app from Task B2. Taking a closer look at server.py shows an interesting bug:
 
-![Vulnerability](/assets/images/codebreaker-app3.png)
+![Vulnerability](/assets/images/2022/codebreaker-app3.png)
 
 We can see that the default behavior kicks off only if the user parameter is undefined (see lines 28-30 in the above screenshot). What happens if we explicitly define the user parameter to a known user (such as FinickyAdvice)? Looking at the source code, we see that the value is appended to a SQL request, with 4 values returned as integers.
 
@@ -561,7 +561,7 @@ We can actually construct a SQL injection attack from this with the following pa
 ' union select 1,uid,3,4 FROM Accounts WHERE userName = 'FinickyAdvice' -- 
 ```
 
-![Burp request](/assets/images/codebreaker-app4.png)
+![Burp request](/assets/images/2022/codebreaker-app4.png)
 
 In the response, we can see that the user’s UID is returned (30904). I will note that arriving at the above SQL injection is not intuitive; this writeup glosses over the time spent trying to figure out how to manually write the payload (as well as scrubbing over the util.py and server.py source code for table/column name insight).
 
@@ -570,17 +570,17 @@ In the response, we can see that the user’s UID is returned (30904). I will no
 > If you’re not familiar with SQL injection, it would be worth your while to invest some time in understanding the attack mechanism and SQL syntax. If you don’t understand SQL as a language, try stepping through the [SQL Murder Mystery](https://mystery.knightlab.com/). After that, Portswigger has some excellent training material to help get you oriented on SQL injection.
 {: .prompt-info }
 
-![SQL vulnerability](/assets/images/codebreaker-app5.png)
+![SQL vulnerability](/assets/images/2022/codebreaker-app5.png)
 
 From the validate_token() method, we can see that user’s secret values appear to be stored in the Accounts table. While this is exciting, it’s not totally ideal; since the source code in server.py only renders integers, anything with ASCII characters produces server-side errors. Fortunately, ASCII is just a symbolic representation of a number.
 
-![ASCII table](/assets/images/codebreaker-app6.png)
+![ASCII table](/assets/images/2022/codebreaker-app6.png)
 
 Moreover, SQL is flexible enough to be able to convert values in the midst of a query. We can actually pass an ASCII character as an integer and then re-encode that integer as an ASCII character on our side. The source code already reveals the backend database as being SQLite3, so with a little bit of research, I determined that SQLite3 stores characters in unicode.
 
 Below is the SQL injection in the request header. The portion in bold is what parses out the ASCII characters one at a time. The RED number (1) delineates which character position we’re evaluating. We just need to iterate one character at a time, denote the decimal value against an ASCII table, and proceed until we hit a 500 server error (indicating the string is over). Assuming the secret is roughly the same length as the one for RealShipyard, that’s about 32.
 
-![Request](/assets/images/codebreaker-app7.png)
+![Request](/assets/images/2022/codebreaker-app7.png)
 
 The list of integers was:
 
@@ -603,13 +603,13 @@ In this challenge, we’re meant to uncover a vulnerability in the web applicati
 
 To start, we examine the interactivity available to us on the newly available Admin tab on the ransommethis.net web app:
 
-![Dashboard](/assets/images/codebreaker-t8.png)
+![Dashboard](/assets/images/2022/codebreaker-t8.png)
 
 Most of the interactivity is error-ridden or temporarily out of action, save for the Retrieve List button in the Key Generation Log. Clicking the button prompts a download for a keygeneration.log file, containing a historical record of user’s interactivity with the web app.
 
 However, once again the source code discovered in Task B2 proves useful by showing us another exploitable vulnerability:
 
-![Vulnerability](/assets/images/codebreaker-vuln.png)
+![Vulnerability](/assets/images/2022/codebreaker-vuln.png)
 
 Since the user’s input isn’t sanitized, we can perform a directory traversal by submitting malicious input to the log parameter. From examining both server.py and util.py, we know of at least a few files that may be of interest. Since the challenge specifically is looking for information concerning keys, I was interested in /opt/keyMaster/keyMaster, which appeared to have a heavy-hand in the lock() and unlock() methods of the web app.
 
@@ -631,7 +631,7 @@ My first attempt looked as such:
 ./keyMaster lock 94031 10 RealShipYard
 ```
 
-![keymaster](/assets/images/codebreaker-km1.png)
+![keymaster](/assets/images/2022/codebreaker-km1.png)
 
 Interestingly, it appeared that the binary was looking for a particular column value in a database I didn’t have. It likewise created a keyMaster.db file in the home directory I invoked it in. Under the assumption that it usually looked for such an existing file in its own home directory on the web host, I leveraged the same fetchlog() exploit to try and download keyMaster.db.
 
@@ -643,13 +643,13 @@ It worked!
 
 The keyMaster.db database contained 2 tables: customers and hackers. The hackers table had a single entry: RealShipyard. The customers table was more interesting, containing numerous entries, including a particularly interesting column named encryptedKey:
 
-![keymaster](/assets/images/codebreaker-km2.png)
+![keymaster](/assets/images/2022/codebreaker-km2.png)
 
 At this point, I figured out that the lock flag for the keyMaster binary required the valid user (RealShipyard) to have credits listed, so I modified the database I had copied to give the user a huge number of credits (under the prescient assumption that I would try-and-try again to debug and understand the keyMaster binary).
 
 Re-running the lock command produced different results this time:
 
-![keymaster](/assets/images/codebreaker-km3.png)
+![keymaster](/assets/images/2022/codebreaker-km3.png)
 
 It not only output a plainKey, but added a new entry in customers, reflecting my inputs; notably, the plainKey was nowhere to be found (and instead was a presumed encryptedKey in its place within the table).
 
@@ -659,7 +659,7 @@ The problem (for me) was that the keyMaster binary wasn’t a standard C-compile
 
 Ghidra does many things really well, but decompiling GoLang programs isn’t chief among them. Fortunately, [Dorka Palotay has done an extensive amount of work in creating some extended capabilities for Ghidra with regard to GoLang](https://cujo.com/reverse-engineering-go-binaries-with-ghidra/). I began by loading the program into Ghidra and – using Palotay’s Ghidra-imported go_func.py script – was able to identify/navigate through the binary’s functions a lot more clearly:
 
-![keymaster](/assets/images/codebreaker-km4.png)
+![keymaster](/assets/images/2022/codebreaker-km4.png)
 
 While this didn’t immediately solve my problems, it did make navigating about the binary considerably more manageable by removing a fair amount of guesswork. Now, at least, I could lookup the various GoLang modules to understand what was being performed.
 
@@ -669,25 +669,25 @@ Fortunately, it was easy enough to get oriented quickly by using GDB. With the d
 
 Through this approach, I eventually looked at the Ghidra-labeled main.mtH06enMvyA() method:
 
-![keymaster](/assets/images/codebreaker-km5.png)
+![keymaster](/assets/images/2022/codebreaker-km5.png)
 
 My first clue to look here (besides the fact that GDB led to this function invocation), was that it was invoking GoLang‘s() standard crypto module library; this implied that some encryption was coming into play around this area and – I knew – must mean the the KEK wasn’t too far off. The main.mtH06enMvyA() method also took place just before some other method in main.main got called which would write the encryptedKey to the keyMaster.db database, so I knew that the KEK wouldn’t be used after this method.
 
 Unfortunately, the crypto/rand.Read() method was simply a seeding function, but in looking at the assembly instructions, I noticed it fed into yet more interesting method calls:
 
-![keymaster](/assets/images/codebreaker-km6.png)
+![keymaster](/assets/images/2022/codebreaker-km6.png)
 
 Where the crypto/rand.Read() method was a seeding function, crypto/aes.NewCipher() was creating a new cipher block using a given AES key! This meant that the KEK had to be getting returned from somewhere in the intermediary main.p4hsJ3Ke0vw() method.
 
-![keymaster](/assets/images/codebreaker-km7.png)
+![keymaster](/assets/images/2022/codebreaker-km7.png)
 
 Stepping into the method call leads to our next breadcrumb: the crypto/pbkdf2.Key method call derives a key from the password, salt, and iteration count, returning a string of bytes to be used as a cryptographic key. AES-256 needs a 32-byte key, so our next step was to set a breakpoint at 0x005b8598 and read out the key from memory:
 
-![keymaster](/assets/images/codebreaker-km8.png)
+![keymaster](/assets/images/2022/codebreaker-km8.png)
 
 In 64-bit architectures, methods return their outputs to the RAX register, so we can read what’s stored in there:
 
-![keymaster](/assets/images/codebreaker-km9.png)
+![keymaster](/assets/images/2022/codebreaker-km9.png)
 
 Despite having values written 64-bytes long, the key is only 32 bytes in length. Ergo, we can safely dump from 0xc000146100 through 0xc000146120:
 
@@ -697,7 +697,7 @@ pwndbg> dump memory test.bin 0xc000146100 0xc000146120
 
 We could then submit a base64 encoded version of these bytes to complete the challenge:
 
-![keymaster](/assets/images/codebreaker-km10.png)
+![keymaster](/assets/images/2022/codebreaker-km10.png)
 
 ## Task 9 - The End of the Road
 
@@ -712,20 +712,20 @@ From the onset, the roadmap to this problem was pretty clear. In order to decryp
 
 The first problem required figuring out how the malicious actors were executing their ransomware. Fortunately, we got a clue back in Task A2 when we decrypted the TLS traffic.
 
-![TLS secret](/assets/images/codebreaker-crypto0.png)
+![TLS secret](/assets/images/2022/codebreaker-crypto0.png)
 
 In the request header, we can clearly see the malicious actor downloading a tools.tar archive onto the victim machine. The blue messaging that follows the response header is the data that makes up that archive. Within Wireshark, we can limit the viewed data to just the response (in blue):
 
-![TLS secret](/assets/images/codebreaker-crypto1.png)
+![TLS secret](/assets/images/2022/codebreaker-crypto1.png)
 
 And then show the data in its raw format, saving it to a local file. This saved raw data still includes the HTTP header, so we need to update the raw bytes in a hex editor (I used Bless from Task 5). We look to delete the bytes highlighted below:
 
-![TLS secret](/assets/images/codebreaker-crypto2.png)
+![TLS secret](/assets/images/2022/codebreaker-crypto2.png)
 
 Which yields a usable tar download which we can unpack:
 
-![Crypto secret](/assets/images/codebreaker-crypto4.png)
-![Crypto secret](/assets/images/codebreaker-crypto3.png)
+![Crypto secret](/assets/images/2022/codebreaker-crypto4.png)
+![Crypto secret](/assets/images/2022/codebreaker-crypto3.png)
 
 From the ransom.sh script, I saw that it would do the following:
 
@@ -738,7 +738,7 @@ From the ransom.sh script, I saw that it would do the following:
 
 To affirm that the ransom.sh script was used, I examined the important_data.pdf.enc file within my hex editor to see that the IV was – in fact – in the leading bytes of the file:
 
-![Crypto secret](/assets/images/codebreaker-crypto5.png)
+![Crypto secret](/assets/images/2022/codebreaker-crypto5.png)
 
 Since I saw it there, I saved the IV, and then deleted those bytes, saving this altered file as id.pdf.enc (since the decryption process wouldn’t include those leading bytes).
 
@@ -797,7 +797,7 @@ for e in mylist:
   print(e)
 ```
 
-![Crypto secret](/assets/images/codebreaker-crypto6.png)
+![Crypto secret](/assets/images/2022/codebreaker-crypto6.png)
 
 The first character in the first 4-digit group is consistently ascending in value (rolling over from “f” to “0”) in line with time passing. Also, the first 2 characters in the second 4-digit group are consistently the same (“11”).
 
@@ -814,7 +814,7 @@ os.system("date --set '23 MARCH 2022 08:03:38'")
 os.system("./keyMaster lock 91320 10 RealShipyard")
 ```
 
-![Crypto secret](/assets/images/codebreaker-crypto7.png)
+![Crypto secret](/assets/images/2022/codebreaker-crypto7.png)
 
 Now we know – with relative certainty – that the number of places we need to brute force are within:
 
@@ -960,4 +960,4 @@ with open("decipher.pdf", "wb") as f:
 
 Within a few minutes, my code found the correct key (which I wrote into the key variable in the last script) which produced the right decrypted PDF:
 
-![Crypto secret](/assets/images/codebreaker-crypto8.png)
+![Crypto secret](/assets/images/2022/codebreaker-crypto8.png)

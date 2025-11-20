@@ -7,7 +7,7 @@ tags: [phishing,email,school]     # TAG names should always be lowercase
 
 Recently, I encountered an interesting phishing atttempt that I wanted to share. Note that this phishing campaign is on-going, with students continuing to report similar instances as of writing this article. The attack against me originally took place late on Friday, 12 April 2024 and looked as such:
 
-![](/assets/images/gaphish1.png)
+![](/assets/images/2024/gaphish1.png)
 
 ## Indicators
 
@@ -26,7 +26,7 @@ On a lark, I started by looking into the headers belonging to the malicious emai
 
 The next thing I wanted to do was look at the email's headers. Email headers are additional information attached to an email message that provide details about the email's transmission and routing; they're not typically visible when reading an email from your inbox (including Outlook and Gmail), but can be accessed like so:
 
-![](/assets/images/gaphish3.png)
+![](/assets/images/2024/gaphish3.png)
 
 Below is a snippet of what such headers might look like:
 
@@ -60,7 +60,7 @@ We might be alarmed to see that the `Authentication-Results` shows no DKIM or DM
 
 My last check was to validate the student's listed ID. Georgia Tech provides a directory (https://directory.gatech.edu/) that you can use to look up students and staff. The email showed the senders full name, so it was trivial to validate that they existed (and that their email ID matched):
 
-![](/assets/images/gaphish4.png)
+![](/assets/images/2024/gaphish4.png)
 
 > Note: The above checks don't definitively prove that the sender isn't themselves malicious, nor that the email wasn't otherwise spoofed. However, this was enough evidence to suggest to me that the sender *likely* wasn't voluntarily executing the attack, which was what I wanted to figure out. Some people have speculated that this is a coordinated research/class project (for example, **PUBP 6725** has a project deliberately designed around having students attempt to phish a TA), however - as we'll see in a bit - I don't believe that's the case.
 {: .prompt-info }
@@ -74,11 +74,11 @@ On Sunday evening (14 April 2024), several other students began reporting seeing
 
 At-a-glance, the attached file (`GTLogin.htm`) was a clone of the Georgia Tech login page:
 
-![](/assets/images/gaphish5.png)
+![](/assets/images/2024/gaphish5.png)
 
 However, inspecting the HTML shows a discrepancy in where the user's form data is submitted to upon hitting the "Login" button:
 
-![](/assets/images/gaphish6.png)
+![](/assets/images/2024/gaphish6.png)
 
 In essence, this is a look-a-like page designed to social engineer GaTech usernames/passwords, submitting that data to a malicious website for collection and follow-on action. To demonstrate, we can trivially spin-up a python HTTP server:
 
@@ -119,7 +119,7 @@ And edit `GTLogin.htm` to point at the server:
 <form method="post" id="fm1" action="http://127.0.0.1:8000">
 ```
 
-![](/assets/images/gaphish7.png)_Demonstrating how the username and password of SOMEUSER:SOMEPASS is transmitted_
+![](/assets/images/2024/gaphish7.png)_Demonstrating how the username and password of SOMEUSER:SOMEPASS is transmitted_
 
 ## Examining the server
 
@@ -127,7 +127,7 @@ I was curious about learning more about the malicious actor, so I thought to inv
 
 The `*.nl` top-level domain (TLD) corresponds to sites in the Netherlands. The `dalpiero.nl` website itself appears as belonging to a Dutch chef who makes Italian food:
 
-![](/assets/images/gaphish8.png)
+![](/assets/images/2024/gaphish8.png)
 
 Some cursory OSINT also shows:
 
@@ -144,13 +144,13 @@ Based on this data and the behavior of the malware/phishing attack, I think it's
 
 My next step was to try and trace the requests back and see where the malicious activity was actually originating from. Using BurpSuite, it was trivial to observe the redirections:
 
-![](/assets/images/gaphish9.png)
+![](/assets/images/2024/gaphish9.png)
 
 When a user enters their credentials into the attached `GTLogin.htm` page, they submit their credentials to the `dalpiero.nl` PHP page, which redirects the request first to an intermediary `vandeettaios.sa.com` and then again over to `puchara.za.com`.
 
 If you're not otherwise aware, the `*.sa.com` and `*.za.com` domains are owned by CentralNIC. CentralNIC creates unofficial TLDs by renting-out subdomains for others to use; it's an insecure practice for the consumer, but performing a trivial subdomain enumeration shows that plenty of businesses (both legitimate and otherwise) opt to use it:
 
-![](/assets/images/gaphish10.png)
+![](/assets/images/2024/gaphish10.png)
 
 The problem for us is that we lack the transparency afforded by registrars to see who owns `vandeettaios.sa.com` and `puchara.za.com`; officially, they're owned by the same people who own `sa.com` and `za.com`, respectively. The only people who might have any additional insights are the owners of those domains, but they've yet to respond ([and unlikely to soon](https://www.reddit.com/r/sysadmin/comments/v8u1nl/conclusions_after_manually_reviewing_spam/)). They offer [their own form of WHOIS lookups](https://www.centralnicdomains.com/services/whoisSearchPage), but it doesn't offer any insight.
 
@@ -159,14 +159,14 @@ The problem for us is that we lack the transparency afforded by registrars to se
 
 Fortunately for us, the malicious actors have permitted directory listings on their pages, which allow us to view/download the contents hosted there:
 
-![](/assets/images/gaphish11.png)
+![](/assets/images/2024/gaphish11.png)
 
 Looking through the files, there's a variety of interesting things:
 
 * The `gytowpcr.php` page appears to be some kind of login portal
 * The `ubsntvww.php` page hosts an MD5 hashed key. My presumption is that this is related to `gytowpcr.php`, but I wasn't able to trivially crack the hash.
 
-![](/assets/images/gaphish12.png)_Hash: b50b16e580ba1e49354b5b351aa8228c_
+![](/assets/images/2024/gaphish12.png)_Hash: b50b16e580ba1e49354b5b351aa8228c_
 
 * The directories seem to explicitly be targeting GaTech; while there is a UGA directory, there's no contents in there yet. Perhaps GaTech is meant to be some kind of proof-of-concept?
 * Notably, most of the files appear to be pretty new/recent based on the timestamps (some were less than an hour old from when I first received the email).
@@ -194,4 +194,4 @@ If you'd like to share any additional insights you might have, feel free to reac
 
 Apparently, this is not the first time the OMSCS community has seen this exact phishing attack before. Someone shared a screenshot of a similar email from 2022:
 
-![](/assets/images/gaphish13.png)
+![](/assets/images/2024/gaphish13.png)

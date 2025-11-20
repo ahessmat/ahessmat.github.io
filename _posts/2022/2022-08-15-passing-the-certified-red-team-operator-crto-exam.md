@@ -4,7 +4,7 @@ date: 2022-08-15 00:00:00 +/-0000
 categories: [general,certification]
 tags: [cpts, certification]     # TAG names should always be lowercase
 image:
-    path: /assets/images/cert-crto.png
+    path: /assets/images/2022/cert-crto.png
 ---
 
 When I got interested in a career in offensive cybersecurity, [I looked around for some resources that would help train and develop my technical competencies]({% post_url 2022/2022-02-11-hacking-helpers-learning-cybersecurity %}). Besides some of the obvious big-ticket items – such as Offensive Security’s OSCP certification – I quickly zeroed-in on Daniel Duggan’s [Certified Red Team Operator (CRTO) certification](https://training.zeropointsecurity.co.uk/courses/red-team-ops).
@@ -33,13 +33,13 @@ While the content from the CRTO is phenomenal, the lab environment is easily acc
 
 Most of my problems are ultimately tied to the supporting infrastructure that the CRTO is served on: Snap Labs. At the time of writing, your Snap Labs instances will automatically stop running after so many hours; this – I imagine – was intended as a means to prevent someone from burning too many hours of lab time if they were to forget to stop their lab and walk away from their computer. However, if – like me – you were in the middle of stepping through a really complicated portion of the lab, it was quite frustrating. Author’s note: Duggan reached out after publishing this article and informed me that the auto-shutdown can be mitigated by refreshing the dashboard periodically.
 
-![Cobalt Strike Interface](/assets/images/crto-dash.png)_Cobalt Strike GUI_
+![Cobalt Strike Interface](/assets/images/2022/crto-dash.png)_Cobalt Strike GUI_
 
 Another issue that manifested was some perceived bugs in the lab machines themselves; while in most cases problems I encountered were the consequence of (my) user error, there were a handful of instances where things simply didn’t work…until they did work. There really wasn’t much rhyme or reason as to why. This manifested once during my exam, which I could understand being a really huge source of friction for others who might fail because of such a circumstance.
 
 Finally, while this course is truly a testament to the hard work that Duggan puts in, he is also the sole person responding to inquiries, trouble tickets, etc. This makes him the single point of failure for responding to any trouble you might be experiencing throughout your lab and exam. I greatly appreciate his dedication/effort, but anyone considering engaging with this work should be mindful of how thin the underlying ‘staff’ is to respond to problems.
 
-![Discord Chat](/assets/images/crto-discord.png)
+![Discord Chat](/assets/images/2022/crto-discord.png)
 
 ## CRTO: The Exam
 

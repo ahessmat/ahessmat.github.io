@@ -5,7 +5,7 @@ date: 2025-02-25 00:00:00 +/-0000
 categories: [general,ctf]
 tags: [ctf,htb,binexp,binary exploitation,reverse engineering]     # TAG names should always be lowercase
 image:
-    path: /assets/images/malware.jpg
+    path: /assets/images/2025/malware.jpg
 ---
 
 Running the program through `checksec` shows:
@@ -330,4 +330,5 @@ void clean(void)
 ```
 
 So I cannot just simply have an exploit file resident on the system to read in; in hindsight, that makes sense since we'll ultimately need to target a remote instance of this running process (and cannot control the local files on that system).
+
 

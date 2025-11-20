@@ -4,7 +4,7 @@ date: 2023-09-22 00:00:00 +/-0000
 categories: [general,certification]
 tags: [cpts,hack the box, htb, certification, pentest, popular]     # TAG names should always be lowercase
 image:
-    path: /assets/images/cert-cpts.png
+    path: /assets/images/2023/cert-cpts.png
 ---
 
 About one year ago HackTheBox (HTB) announced its second certification available to the public: the Certified Penetration Testing Specialist (CPTS).
@@ -101,4 +101,4 @@ You don’t necessarily need to understand how to write code before you begin th
 
 The journey towards attaining my CPTS certification broadened my offensive capabilities, made me better at my job, and had me re-evaluate what I thought I knew. It was a phenomenal introduction to penetration testing techniques and best practices and a great learning opportunity overall.
 
-![My CPTS cert](/assets/images/cert-cpts.png)_My CPTS Certification_
+![My CPTS cert](/assets/images/2023/cert-cpts.png)_My CPTS Certification_

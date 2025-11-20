@@ -23,13 +23,13 @@ There's a couple of interleaving explanations that are likely contributors to th
 
 One of the most commonly parroted responses is that cybersecurity is often viewed by employers as requiring experience even for early-career roles. Each year, [ISACA prepares a State of Cybersecurity report](https://www.isaca.org/resources/reports/state-of-cybersecurity-2024) which includes - among other things - survey data from employers/hiring managers. Consistently year-over-year, employers *strongly* weigh an applicant's work experience above all else:
 
-![ISACA Survey Results](/assets/images/isaca_survey.PNG)_Candidate Qualifications_
+![ISACA Survey Results](/assets/images/2025/isaca_survey.PNG)_Candidate Qualifications_
 
 This generally coincides with demographic information from the 2024 report; less than 10% of workers are under the age of 35. That's just slightly more than what the [Office of Personnel Management](https://www.opm.gov/data/data-products/cyber-workforce-dashboard/) reports for the US federal gov't workforce (11.7% under 35). If we extrapolate the data to suggest that older == more experienced, then the assertion that "experience is king" might be true; put another way, an older workforce might *suggest* that more experienced workers tend to fill the open roles (though causation != correlation, there could be other factors explaining the elevated age statistic). This aligns with at least [one anonymous redditor](https://old.reddit.com/r/cybersecurity/comments/1eramou/the_problematic_perception_of_the_cybersecurity/lhxf81c/) who said:
 
 > *As someone who hires cybersecurity professionals...(w)hen articles talking about cybersecurity jobs and the surplus, I would say its true for senior roles, not so much for junior roles...There aren't many actual "entry level" security roles because ideally the person has been in IT/networking/development for some time before getting into security.*
 
-![alt text](/assets/images/isaca_survey-2.png)
+![alt text](/assets/images/2025/isaca_survey-2.png)
 
 Generally speaking, I encourage folks interested in pursuing a career in cybersecurity to start cultivating work experiences as soon as possible for this reason. This includes internships/workstudy for students, cyber-adjacent employment (e.g. helpdesk, webdev, etc.), and/or military service.
 
@@ -90,7 +90,7 @@ According to [eSentire's Cybersecurity Jobs report](https://www.esentire.com/res
 
 Job seekers worried when seeing hundreds of applicants apply for the job they want on LinkedIn also need not be worried, [as most appear to be unqualified applicants](https://old.reddit.com/r/cybersecurity/comments/1icx6y4/struggling_to_find_a_job_with_over_600700/m9v46jl/). Most reviewers find more than 50% of applicants are not well qualified for the positions that they apply for, with most saying it takes 3-6 months to find a qualified applicant to employ for entry-level positions.
 
-![alt text](/assets/images/isaca_survey-3.png)
+![alt text](/assets/images/2025/isaca_survey-3.png)
 
 However, one thing to keep an eye on in the coming years are the number of new graduates emerging. Computer & Information Science degree graduates were already at record highs in 2022 ([there were double the number of bachelors degrees conferred compared to just five years prior](https://nces.ed.gov/programs/digest/d23/tables/dt23_325.35.asp)). We're just now starting to see signs of even greater numbers coming, largely owed to the optimism that these students had at the time of their enrollment (circa the 2020-2022 boom times). We should anticipate an increase in the number of degree-holding applicants competing for early-career roles compared to recent history.
 

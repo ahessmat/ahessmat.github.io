@@ -4,7 +4,7 @@ date: 2024-02-05 00:00:00 +/-0000
 categories: [general,notes]
 tags: [resources]     # TAG names should always be lowercase
 image:
-    path: /assets/images/appsec.jpg
+    path: /assets/images/2024/appsec.jpg
 ---
 
 ## Introduction
@@ -407,3 +407,4 @@ In the above example, we assume the code is dynamically pulling from a supplied 
 * In the modified code, an additional check is introduced which performs input validation against the `name` variable.
 * Javascript's `match()` method performs a regex search, identifying non-alphanumeric characters common in such injections.
 * We've also embraced javascript's `document.createTextNode()` method, which interprets the submitted contents as text, regardless of whether what gets passed is HTML-formatted.
+

@@ -6,7 +6,7 @@ This was an interesting section. Unlike related modules like **SQL Injection Fun
 
 This section was a natural extension off of what was presented in the previous one, focusing on our ability to understand nuances in the SQL injection vulnerabilities present within the target application by way of whitebox assessments. Unfortunately, I couldn't get the first exercise working in the **Common Character Bypasses** subsection; the specified endpoint appeared accessible only if you already were logged into the application (and we weren't supplied any credentials for the web app); I had to step over that subsection and use the vulnerability present in the next subsection (**Error-Based SQL Injection**) instead in order to answer it. Incidentally, the **Error-Based SQL Injection** section would have been made much easier if I had been able to get the **Live-debugging Java Applications** section working; instead, I had to draft my own Java code to reverse-engineer the correct answer; I reached for https://www.programiz.com/java-programming/online-compiler/ to help make the mock-up, which turned into something like this:
 
-![](/assets/images/asi1.png)
+![](/assets/images/2024/asi1.png)
 
 Note: we had to draft a new `md5DigestAsHex()` method because Progamiz doesn't include the Spring framework `DigestUtils` library.
 

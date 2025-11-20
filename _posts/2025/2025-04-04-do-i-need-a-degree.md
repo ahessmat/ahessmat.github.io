@@ -43,7 +43,7 @@ Either way, you should speak with service recruiters if interested.
 
 Another path that people have found success in is working first in cyber-adjacent lines of work, then specializing or otherwise pivoting into dedicated cybersecurity roles later. Examples of cyber-adjacent work includes (but isn't limited to): systems administration, network engineering, web development, software engineering, etc. Employers *strongly* prioritize a relevant work history among applicants, so cultivating work experiences in fields like Information Technology significantly improve your chances.
 
-![ISACA employer survey](/assets/images/isaca_survey.PNG)_2024 ISACA State of Cybersecurity Survey, employer preferences_
+![ISACA employer survey](/assets/images/2025/isaca_survey.PNG)_2024 ISACA State of Cybersecurity Survey, employer preferences_
 
 Moreover, [some employers have dedicated budgets set-aside for employees to tap into to further their education](https://www.investopedia.com/companies-pay-college-6829220). These kinds of funds typically incur a debt of service (i.e. a commitment to work for X years for the employer or the employee owes back some percentage of the loaned funds), with the debt forgiven once the employee has worked with them for so much time. Employers may also allow for those funds to be used for pursuing certifications, which is useful for pursuing some of the more expensive offerings out there (such as those offered by SANS).
 

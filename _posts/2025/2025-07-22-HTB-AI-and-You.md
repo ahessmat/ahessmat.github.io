@@ -89,3 +89,4 @@ To start: while I eventually will want to tie-in larger, more powerful models as
 I recently upgraded my decade-old GPU for an [NVIDIA RTX 3090](https://www.nvidia.com/en-us/geforce/graphics-cards/30-series/rtx-3090-3090ti/) (not the most performant, but pretty good for the pricepoint).
 
 Now - ultimately - I want this agent to interact with tools available on a [virtualized instance of Kali Linux](https://www.kali.org/get-kali/#kali-platforms); with my host machine being Windows OS, this brings some complications:
+

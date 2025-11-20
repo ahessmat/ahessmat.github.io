@@ -5,7 +5,7 @@ date: 2025-02-06 00:00:00 +/-0000
 categories: [general,ctf]
 tags: [ctf,htb,binexp,binary exploitation,reverse engineering]     # TAG names should always be lowercase
 image:
-    path: /assets/images/malware.jpg
+    path: /assets/images/2025/malware.jpg
 ---
 
 # HTB - Racecar
@@ -14,7 +14,7 @@ This was a great way to get back into the swing of things. Rated "Very Easy" by 
 
 This challenge is shipped without any source code, so we're meant to both reverse engineer the binary and develop an exploit for it. Our first job then is to understand how it works. If we run the `racecar` binary from the command line, we can see that we're prompted with a series of menus to select a car to race with and earn some coins.
 
-![alt text](/assets/images/racecar.png)
+![alt text](/assets/images/2025/racecar.png)
 
 The prompts include:
 
@@ -184,11 +184,11 @@ Ergo, we can go with either the first or second bullet(s) to land in our desired
 
 So now that we're able to get the code to load the code into memory, we need to figure out a way to pwn the binary and read it out. To that end, a close reading of the above decompiled code shows a format string vulnerability in the `printf(__format)` call.
 
-![alt text](/assets/images/format-string.png)
+![alt text](/assets/images/2025/format-string.png)
 
 Passing a number of pointers to print out addresses verifies the vulnerability. Our final check at this point is setting a localized `flag.txt` file to a known value (I set AAAABBBBCCCC), then incrementally looking for that value by swapping out %p with %x instead. Since I know that the hex values of A, B, and C are 0x41, 0x42, and 0x43 respectively, I was just looking for it to get leaked:
 
-![alt text](/assets/images/format-string2.png)
+![alt text](/assets/images/2025/format-string2.png)
 
 My last step was working with `pwntools` to automate the exploit and connect to the binary being hosted on Hack The Box. The resulting exploit looked as such:
 

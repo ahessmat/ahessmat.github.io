@@ -113,7 +113,7 @@ Understandably, not everyone will be able to land their dream internship; for th
 
 Another path that people have found success in is working first in cyber-adjacent lines of work, then specializing or otherwise pivoting into dedicated cybersecurity roles later. Examples of cyber-adjacent work includes (but isn't limited to): systems administration, network engineering, web development, software engineering, etc. Employers *strongly* prioritize a relevant work history among applicants, so cultivating work experiences in fields like Information Technology significantly improve your chances.
 
-![ISACA employer survey](/assets/images/isaca_survey.PNG)_2024 ISACA State of Cybersecurity Survey, employer preferences_
+![ISACA employer survey](/assets/images/2025/isaca_survey.PNG)_2024 ISACA State of Cybersecurity Survey, employer preferences_
 
 Once you've acquired several years of experience this way, most will look to supplement their employability with things like certifications or degrees. You might also consider looking into things like CTF participation, homelabbing, and projects.
 
@@ -179,6 +179,7 @@ Cybersecurity bootcamps are a common consideration for folks looking to break in
 Cybersecurity bootcamps gained popularity as a considered option following the commercial success of parallel programs in fields like software engineering in the mid 2010s. Some of the more prominent vendors today include ThriveDX, Flatiron, etc.
 
 However, there is considerable risk to pursuing a cybersecurity bootcamp. 
+
 
 
 

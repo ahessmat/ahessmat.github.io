@@ -5,7 +5,7 @@ date: 2025-02-10 00:00:00 +/-0000
 categories: [general,ctf]
 tags: [ctf,htb,binexp,binary exploitation,reverse engineering]     # TAG names should always be lowercase
 image:
-    path: /assets/images/malware.jpg
+    path: /assets/images/2025/malware.jpg
 ---
 
 # HTB - Space Pirate: Going Deeper
@@ -100,7 +100,7 @@ LAB_00400b38:
 
 The vulnerability in this process rests with the `read(0, local_38, 0x39)` call. The value `0x39` is hex for 57, which is more than what `local_38` is allocated (40). This allows for a buffer overflow to take place. However, the overflow is pretty well constrained. Testing it with payloads of "A" and then "B" shows that we only really control the last byte of the `ret` address (in this case from 0x41 "A" to 0x42 "B"):
 
-![alt text](/assets/images/ret-overflow.png)
+![alt text](/assets/images/2025/ret-overflow.png)
 
 With this in mind, we're constrained to addresses in the `0x400bXX` space. Fortunately looking over the assembly reveals a great option here:
 
@@ -151,3 +151,4 @@ p.interactive()
 ```
 
 The one bit that was frustrating was that the exploit performed inconsistently. While everything worked locally, I had to perform this exploit *many* times over the remote connection before it worked. Not sure what was happening; some people said the connection was unstable, but I'm not sure.
+

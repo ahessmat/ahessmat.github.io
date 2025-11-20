@@ -5,7 +5,7 @@ date: 2025-02-25 00:00:00 +/-0000
 categories: [general,ctf]
 tags: [ctf,htb,binexp,binary exploitation,reverse engineering]     # TAG names should always be lowercase
 image:
-    path: /assets/images/malware.jpg
+    path: /assets/images/2025/malware.jpg
 ---
 
 This ended up being a good introductory exercise to injecting shellcode. Rated "Very Easy" by Hack The Box, this `pwn` binary, this challenge took only a few minutes to exploit having got back into the swing of things.

@@ -13,7 +13,7 @@ In the post below, I’ll go over some of the steps you can adopt in crafting yo
 
 If you haven’t built a professional resume recently, you may be unfamiliar with Applicant Tracking Systems (ATS). Most large companies and recruiting agencies don’t rely on manually parsing through the hundreds of resumes they receive for every position they open-up. Instead, they utilize ATS software to automate the process of ingesting, parsing, and flagging resumes that match the qualities they’re looking for.
 
-![ATS ingestion](/assets/images/resume-ats.png)_Example of how a multi-columned resume can get processed by ATS_
+![ATS ingestion](/assets/images/2022/resume-ats.png)_Example of how a multi-columned resume can get processed by ATS_
 
 When choosing a resume template, you want to make sure that your format can reasonably be expected to be appropriately handled by ATS.
 
@@ -31,7 +31,7 @@ After ATS ingestion, it will likely be reviewed at least two (2) more times by h
 
 Humans who glance over English resumes (vs. automated software that ingest/scan keywords) allocate between 6-12 seconds to review your entire document. Their eyes follow a kind of “F-pattern”, seen in the heatmap below:
 
-![Resume Heatmap](/assets/images/resume-heatmap.png)_Heatmap study showing where a screener's eyes were focused the longest_
+![Resume Heatmap](/assets/images/2022/resume-heatmap.png)_Heatmap study showing where a screener's eyes were focused the longest_
 
 The key takeaways from this research are: lead with your most important/relevant/impactful information and be succinct.
 
@@ -68,7 +68,7 @@ Your format for your skills block can adopt a number of layouts.
 
 1. **A Bulletized List**: the most straightforward way to list skills. It’s also one of the most space-expensive in a standard linear layout, since you’re dedicating a handful of words for each newline drop. You might consider inviting some risk and using a table for exclusively your skills bullets, but you’re still inviting a non-zero amount of ATS risk in doing so. An example of what this might look like below:
 
-![Resume Heatmap](/assets/images/resume-skills.png)_Example of a multi-columned skills block_
+![Resume Heatmap](/assets/images/2022/resume-skills.png)_Example of a multi-columned skills block_
 
 2. **A comma-separated list, sorted by category**: this is similar to the previous listing but instead of dedicating 1 skill per bullet, you list a category of skills per bullet and follow it with a list of related skills. An example might look like:
 
@@ -195,11 +195,11 @@ Treat every word in every line on every page as needing to deliver as much value
 
 From your LinkedIn profile, click on the “More” dropdown menu and select “Build a resume”.
 
-![LinkedIn Tool](/assets/images/resume-li1.png)_Build tool_
+![LinkedIn Tool](/assets/images/2022/resume-li1.png)_Build tool_
 
 After uploading your resume and selecting “Next”, click on the “Review formatting” button on the right-side menu.
 
-![LinkedIn Tool](/assets/images/resume-li2.png)_Format check_
+![LinkedIn Tool](/assets/images/2022/resume-li2.png)_Format check_
 
 This will prompt you with a series of pop-ups, showing how their service has ingested your resume.
 
@@ -209,7 +209,7 @@ Let's go over some examples of some real cybersecurity resumes and how these rul
 
 ### First Resume
 
-![First resume](/assets/images/resume-doc1.png)_Resume 1_
+![First resume](/assets/images/2022/resume-doc1.png)_Resume 1_
 
 This CV does several things right, including having a languages section. However, there’s a few things they could improve upon:
 
@@ -225,7 +225,7 @@ This CV does several things right, including having a languages section. However
 
 ### Second Resume
 
-![Second resume](/assets/images/resume-doc2.png)_Resume 2_
+![Second resume](/assets/images/2022/resume-doc2.png)_Resume 2_
 
 As before, this one also does several things right: they are a new graduate looking to pivot into InfoSec, so leading early in their CV with an education section is great. However, as with the last, there’s room for improvement:
 
@@ -239,7 +239,7 @@ As before, this one also does several things right: they are a new graduate look
 
 ### Third Resume
 
-![Third resume](/assets/images/resume-doc3.jpeg)_Resume 3_
+![Third resume](/assets/images/2022/resume-doc3.jpeg)_Resume 3_
 
 Like those before it, this one does several things right! First, they were able to constrain the CV to just one page. They also endeavored to include relevant metrics and keywords in their experience and projects sections. So how could we improve upon this?
 
@@ -250,7 +250,7 @@ Like those before it, this one does several things right! First, they were able 
 
 ### Fourth Resume
 
-![Fourth resume](/assets/images/resume-doc4.jpeg)_Resume 4_
+![Fourth resume](/assets/images/2022/resume-doc4.jpeg)_Resume 4_
 
 As the others before it, this CV has done many things appropriately. They’ve highlighted their work experience prominently, they’ve constrained their CV to a single page, and they’ve created a recognizable block for their certifications. That being said, there is still some room for improvement:
 

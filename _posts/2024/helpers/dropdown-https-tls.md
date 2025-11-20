@@ -8,7 +8,7 @@ This portion of the module introduces some interesting tools such as **padbuster
 
 I was annoyed at the **Bleichenbacher & Drown** section; I got hung-up on tool setup and configuration, initially being stymied by getting **TLS-Breaker** setup (needing to alter the **pom.xml** file to point towards where the **javadoc** binary was on my machine). Then after that I was frustrated by this error message:
 
-![](/assets/images/bleichenbacher.PNG)
+![](/assets/images/2024/bleichenbacher.PNG)
 
 While the module section specifies you need Java to use **TLS-Breaker**, it's [only in the wiki](https://github.com/tls-attacker/TLS-Breaker/wiki/1.-TLS_Breaker-Configuration) that we learn you explicitly need JDK 11 (the above errors being thrown by my default JDK 17). Changing this fixed the errors.
 

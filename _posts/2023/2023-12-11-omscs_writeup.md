@@ -4,7 +4,7 @@ date: 2023-12-11 00:00:00 +/-0000
 categories: [personal]
 tags: [omscs,school]     # TAG names should always be lowercase
 image:
-    path: /assets/images/gt.png
+    path: /assets/images/2023/gt.png
 ---
 
 I'm finally graduating from [Georgia Tech's Online Master of Science Computer Science (OMSCS)](https://omscs.gatech.edu/home). For those of you interested, I've summarized my venture below (including pre-application preparatory actions for the many prospective students who lurk about [the subreddit](https://old.reddit.com/r/OMSCS/)). For those of you wanting to jump straight to the course impressions, skip down to the "OMSCS COURSES TAKEN & EXPERIENCES" section; for those of you wanting a more broader take about the program as a whole, skip down to "REFLECTIONS". You can also skip all the way to the bottom to "OUTCOMES" if you just want to know the pre- and post-OMSCS impacts.
@@ -76,7 +76,7 @@ Unless otherwise noted, classes were taken sequentially one-per-semester (Fall, 
 9. CS6747 (Advanced Malware Analysis [AMA])
 10. CS6601 (Artificial Intelligence [AI])
 
-![OMSCS graphic](/assets/images/omscs_graph.PNG)_Graphical overview of my OMSCS experience_
+![OMSCS graphic](/assets/images/2023/omscs_graph.PNG)_Graphical overview of my OMSCS experience_
 
 The graphic above is meant to be a succinct summary of my OMSCS experience, including notable life events for context. I tracked the relative amount of effort I felt I had to put in for a class (blue), how happy I was with my course experience (red), how tired I was going *into* the semester (yellow), and how valuable I found the class to be coming *out of* it (green). In brief:
 
@@ -152,7 +152,7 @@ When I was initially interested in OMSCS, I had envisioned a future where I coul
 
 I also became a parent roughly around the same time I enrolled into OMSCS. Through that, the pandemic (which also kicked-off at roughly the same time), and both my spouse and I working throughout, we were stretched pretty thin at times. I am enormously grateful for having the support structure at home that I do: my spouse who was always supportive, parents/in-laws to help periodically watch the kids, employers who afforded me the flexibility to action what I needed, etc. In my circumstances, working full-time and having 2 young children didn't make the program prohibitive, but it did have a hand in guiding my enrollment decisions semester-by-semester. Additionally, there were some self-preserving actions I took at times during semesters as well: the pandemic and transition into parenthood were pretty intense experiences during my first semester, so I elected to skip the final exam altogether and start my break early (i.e. taking a 0 on the exam and settling for a B in the class overall); later when I had my second child midway through, I likewise calculated the cutoff score for passing in that class and preemptively haulted my engagement once I met that threshold (although I ended up getting sucked into the NSA Codebreaker challenge, which elevated the overall grade to an A); other examples can be found in my course experiences above. More academically-intensive courses were probably manageable, but would have placed an undue burden on that support structure and my children - being absent both mentally and physically; I think I still got a phenomenal return on my investment in OMSCS, but a number of concessions were made that I think our peers at different points in their lives wouldn't have to.
 
-![OMSCS Stats](/assets/images/omscs_stats_2022-3.jpg)_Source: https://omscs.gatech.edu/_
+![OMSCS Stats](/assets/images/2023/omscs_stats_2022-3.jpg)_Source: https://omscs.gatech.edu/_
 
 Hindsight being what it is, I wish I had taken CS8803 (Compilers), CS6210 (AOS), and CS6211 (SDCC); I think that those courses offer some really phenomenal value to the broader CompSci education; and while I could delay graduation to accomodate, I have access to alternative resources that can help me learn what I want from those courses (just not with the same structure/staff/rigor/support that's available in graduate school). I saw diminished returns in value in CS6250 (CN) and CS6035 (IIS), but they both were irreplaceable at their points in time relative to where I was in the program (being easier Summer semester courses, satisfying my specialization requirements, and - in the case of CS6035 - flexible for family and playing to my professional strengths); that said, I don't regret taking them nor do I discourage you from considering them. They're good courses - especially if you're a CompSci career-changer like myself or otherwise unfamiliar with the material; they just weren't as transformative/enthralling to me in juxtaposition to other courses I took.
 
@@ -162,7 +162,7 @@ The program more broadly speaking has some phenomenal content for instructing yo
 * Didn't utilize the resources that were made available by staff, including office hours and the assorted engagement platforms, such as the Ed Discussion forums, Slack Channels, Email correspondence, etc.
 * Couldn't be bothered to ensure their assumptions about the program aligned with the realities/expectations set forward by staff (i.e. didn't allocate reasonable time windows for responses to questions, didn't read the syllabus or project documentation, didn't begin working on projects/homework until the submission deadline loomed, etc.).
 
-![Canvas Screenshot](/assets/images/canvas_screenshot.PNG)_Screenshot of the Canvas platform, which most courses are administered through_
+![Canvas Screenshot](/assets/images/2023/canvas_screenshot.PNG)_Screenshot of the Canvas platform, which most courses are administered through_
 
 In juxtaposition to my brick-and-mortar undergraduate experience, being online-only didn't really instill/engender any sense of identity with the school or my peers; I never set foot on the campus, never bought a student ID, and didn't go to the graduation ceremony. I forwarded all of my student emails to my personal account, didn't meet any of our peers/staff in-person, and spent a considerable amount of time looking into external resources outside of buzzport/canvas to supplement the lesson materials. Someone in a job interview once responded to my student status with "Go Yellow Jackets!" and it took me a second to realize that - notionally - I was one. For me OMSCS felt like a distinct, bottled experience; there wasn't anyone in my immediate circles to really talk to about it while I was a student and - when finished - there wasn't anyone interested in talking about it after. Having said that, I will acknowledge that Georgia Tech does *try* to create spaces for more interactive discourse to occur: there are semester-by-semester showcases of student work through the Canvas-based Student Center, nominations for [student spotlights](https://omscs.gatech.edu/student-spotlight-asa-hess-matsumoto), smaller seminar cohorts, etc. Moreover some of the students do [independently make efforts to meet their local peers](https://old.reddit.com/r/OMSCS/search?q=meetup&restrict_sr=on&sort=relevance&t=all). Overall however, these opportunities to network felt superficial and tenuous to me (which undercut my notion that this program really helps with professional networking). That's okay for me, but it may be important for you depending on what you want out of your time in university (in which case, you're probably better off not pursuing an online program).
 
@@ -200,6 +200,7 @@ Truth be told, I felt like I needed the degree a whole lot less as my time in OM
 Now that I'm on the other side of this program, I'm really grateful for the opportunity to have been a part of it. Looking forward, this probably marks my last engagement with academia as a student - I have no plans now or in the future of pursuing a PhD and am unlikely to consider another graduate-level degree (such as an MBA). I'm a better engineer, I'm better at my research, and I'm more capable at solving problems that I couldn't before. And although I'm not working in AI/ML or as a SWE (both of which had been my original intentions when starting the program), I was able to make the program serve my professional interests all the same in the cybersecurity space (all-the-while being remote in a way that enabled me to be with my family). 
 
 Best of luck to you all, gang!
+
 
 
 

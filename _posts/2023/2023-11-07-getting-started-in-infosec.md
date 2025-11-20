@@ -100,7 +100,7 @@ Once you've decided you want to work in cybersecurity, come up with a plan on de
 
 According to [ISACA's State of Cybersecurity 2023](https://www.isaca.org/resources/reports/state-of-cybersecurity-2023) survey report, hiring managers prioritize the following factors among qualified applicants:
 
-![ISACA Survey Results](/assets/images/isaca_survey.PNG)_Candidate Qualifications_
+![ISACA Survey Results](/assets/images/2023/isaca_survey.PNG)_Candidate Qualifications_
 
 The above results have held relatively unchanged year-over-year with employers consistently prioritizing:
 
@@ -136,3 +136,4 @@ Actions to improve your employability may include:
 Interested in leaping immediately into getting your hands dirty and exploring cybersecurity training? 
 
 [Check out this related post!]( {% post_url 2022/2022-02-11-hacking-helpers-learning-cybersecurity %} )
+

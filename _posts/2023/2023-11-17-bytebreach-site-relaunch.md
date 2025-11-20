@@ -14,9 +14,10 @@ For those who periodically have visited this site, you may notice I've adopted a
 * The look and feel of the site felt a little too on-the-nose for cybersecurity topics.
 * The novelty of DALLE-2 featured imagery felt gauche.
 
-![Changes over time](/assets/images/sites.png)_Changes to presentation over time_
+![Changes over time](/assets/images/2023/sites.png)_Changes to presentation over time_
 
 In order to address these and other issues while also being mindful of my own preferences in the blog's management, I've made some significant backend changes to improve performance and modernize the blog's aesthetics. Things should now load faster, look nicer, and be more organized.
 
 If you encounter any issues, let me know!
+
 

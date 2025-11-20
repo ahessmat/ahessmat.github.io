@@ -49,7 +49,7 @@ In March 2022, [I hastily wrote a Selenium-based python script that was designed
 
 ### Cybersecurity jobs
 
-![Cybersecurity Certifications](/assets/images/cyber_certs.jpeg)_Results for "cybersecurity" jobs_
+![Cybersecurity Certifications](/assets/images/2023/cyber_certs.jpeg)_Results for "cybersecurity" jobs_
 
 * The [Certified Information Systems Security Professional (CISSP)](https://www.isc2.org/certifications/cissp) was overwhelmingly the most requested certification across all job openings surveyed. The CISSP is a very broad, vendor-neutral certification that evaluates your knowledge of 8 distinct security domains. The exam is adaptive, with students incurring anywhere between 125 to 175 multiple choice and "advanced innovative" questions over the course of 4 hours. Importantly, the CISSP requires a minimum of five verifiable years of cummulative paid work experience in two of the eight domains (although 1 year may be waived in lieu of a college degree).
 * Compared to 2022, demand for the CISM grew considerably (from 5.2% of overall jobs asking for certifications to 18.3%). By contrast, the demand for the CEH has cooled significantly (down to 7.3% from 20.8% last year).
@@ -59,13 +59,13 @@ In March 2022, [I hastily wrote a Selenium-based python script that was designed
 
 ### Penetration Tester jobs
 
-![Penetration Tester Certifications](/assets/images/ptest_certs.jpeg)_Results for "penetration tester" jobs_
+![Penetration Tester Certifications](/assets/images/2023/ptest_certs.jpeg)_Results for "penetration tester" jobs_
 
 * After the CISSP, the [Offensive Security Certified Professional (OSCP)](https://www.offsec.com/courses/pen-200/) and [Certified Ethical Hacker (CEH)](https://www.eccouncil.org/train-certify/certified-ethical-hacker-ceh/) are the most in-demand certifications for penetration testers. The OSCP tests the examinees' ability to assess and exploit vulnerabilities present in systems, networks, and applications through a multi-day practical application exam and reporting process. The CEH tests examinees' knowledge more traditionally with multiple-choice question exams.
 
 ### SOC Analyst jobs
 
-![SOC Analyst Certifications](/assets/images/soc_certs.jpeg)_Results for "SOC Analyst" jobs_
+![SOC Analyst Certifications](/assets/images/2023/soc_certs.jpeg)_Results for "SOC Analyst" jobs_
 
 * After the CISSP, the ISC2's [Certified Cloud Security Professional](https://www.isc2.org/certifications/ccsp) and EC-Council's [Certified Cloud Security Engineer](https://www.eccouncil.org/train-certify/certified-cloud-security-engineer-course/) are the most in-demand certifications for SOC Analysts. Both certifications - as the names would suggest - emphasize a vendor-neutral understanding of securing cloud environments and reflect an ongoing push to migrate on-premises environments to the cloud.
 
@@ -74,4 +74,5 @@ In March 2022, [I hastily wrote a Selenium-based python script that was designed
 I've made my **LinkedInfoSec** web-scraper open source! So you are welcome to drill into the data yourself as granularly as you'd like:
 
 https://github.com/ahessmat/LinkedInfoSec
+
 

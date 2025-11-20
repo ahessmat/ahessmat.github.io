@@ -5,7 +5,7 @@ date: 2025-02-09 00:00:00 +/-0000
 categories: [general,ctf]
 tags: [ctf,htb,binexp,binary exploitation,reverse engineering]     # TAG names should always be lowercase
 image:
-    path: /assets/images/malware.jpg
+    path: /assets/images/2025/malware.jpg
 ---
 
 This binary exploitation challenge was another exercise in performing a close reading of the source code. Rated "Very Easy" by Hack The Box, this `pwn` binary took the shortest amount of time relative to the ones looked at in the last week; having said that, I still managed to overlook what the exact vulnerability was on my first pass.
@@ -208,7 +208,7 @@ H�`����.i�N9r�hdDǃ
 ```
 Why was it that the first byte was consistently presenting itself as "H"? The pseudo-random number generator in `/dev/urandom` should make *all* of the bytes be random. The answer - it turns out - was `strcpy()` in `new_key_gen()`. For those unfamiliar, `strcpy()` appends a null byte (`\0`) to the end of whatever it copies; when I was consistently listing my key length as 0, it was writing a null byte as the first value to `random_key`. And since any value XOR'd against null is itself, each time I was calling `secure_password()` I was revealing the first character of the flag.
 
-![alt text](/assets/images/XOR-self.png)
+![alt text](/assets/images/2025/XOR-self.png)
 
 So to solve this we can either:
 

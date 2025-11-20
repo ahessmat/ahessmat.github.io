@@ -14,6 +14,6 @@ This was surprisingly challenging. While all of the exercises for the section pr
 
 This subsection was both fun and challenging, building off of the toy NodeJS app that was introduced at the start of the module. The progression here is about making more complex payloads/exploits, but the problems are quite open-ended, allowing you to concieve of your own approaches. I found that my biggest point of friction up until this moment was sorting out the quotes/double-quotes in my payload, so I ended up base64-encoding the entire thing, putting it within a b64-decoding wrapper, and passing that to the the exploit. Something to the effect of:
 
-![](/assets/images/whitebox1.png)
+![](/assets/images/2024/whitebox1.png)
 
 Overall, this was great!

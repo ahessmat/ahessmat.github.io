@@ -4,7 +4,7 @@ date: 2022-07-22 00:00:00 +/-0000
 categories: [general,certification]
 tags: [cbbh,hack the box, htb, certification, bug bounty, popular]     # TAG names should always be lowercase
 image:
-    path: /assets/images/cert-cbbh.png
+    path: /assets/images/2022/cert-cbbh.png
 ---
 
 Earlier this year, HacktheBox (HTB) announced its very first certification – making its initial steps into the world of vendor accreditations alongside other established programs like CompTIA, ISC2, and SANS GIAC.
@@ -65,4 +65,4 @@ While understanding how to code isn’t a hard prerequisite of the CBBH, your ti
 
 While I would say that CBBH is certainly easier than the OSCP, that doesn’t make the exam easy. I was challenged to think of creative approaches to problems, to innovate on top of taught approaches, and really become enmeshed in some complex techniques. It was a great learning opportunity and I highly recommend anyone looking to bolster their web app security skill set to consider it.
 
-![My CBBH Cert](/assets/images/cert-cbbh.png)_My Issued Certification_
+![My CBBH Cert](/assets/images/2022/cert-cbbh.png)_My Issued Certification_
