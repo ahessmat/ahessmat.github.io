@@ -2,7 +2,7 @@
 title: "Autonomous Pwning: Using AI Agents for Binary Exploitation"
 published: true
 date: 2025-11-07 00:00:00 +/-0000
-categories: [research,notes]
+categories: [personal,projects]
 tags: [resources, reverse engineering, binary exploitation, project, ai, agents]     # TAG names should always be lowercase
 image:
     path: /assets/images/2025/ai1.png
