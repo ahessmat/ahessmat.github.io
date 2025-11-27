@@ -78,7 +78,7 @@ npx n8n
 
 This spins-up a locally-hosted n8n server accessible along `http://localhost:5678`:
 
-![alt text](../../assets/images/2025/n8n-setup.png)
+![alt text](/assets/images/2025/n8n-setup.png)
 
 At this point, we just create an account and get cracking!
 
