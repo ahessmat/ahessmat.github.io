@@ -1,6 +1,6 @@
 ---
 title: "Using n8n to Help Solve CTF problems"
-published: false
+published: true
 date: 2025-11-19 00:00:00 +/-0000
 categories: [personal,projects]
 tags: [project, ai, agents]     # TAG names should always be lowercase
