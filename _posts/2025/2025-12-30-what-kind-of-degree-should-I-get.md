@@ -8,9 +8,7 @@ image:
     path: /assets/images/2025/gradcap.png
 ---
 
-## Intro
-
-While it's worth mentioning that [you don't necessarily need a degree in order to have a career in cybersecurity](https://bytebreach.com/posts/do-i-need-a-degree/), pursuing one significantly mitigates long-term risk to your career prospects.
+In this post, we're going to look at options to consider when pursuing a degree to support your entry into professional cybersecurity. While it's worth mentioning that [you don't necessarily need a degree in order to have a career in cybersecurity](https://bytebreach.com/posts/do-i-need-a-degree/), pursuing one significantly mitigates long-term risk to your career prospects.
 
 ## The Data
 
