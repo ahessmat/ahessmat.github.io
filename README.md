@@ -1,3 +1,13 @@
+# Spinning up local instance of project site
+Making a note of this so others don't need to look up the steps to spin it up anymore.
+
+```
+apt install ruby-bundler
+apt install build-essential ruby-dev libffi-dev libssl-dev zlib1g-dev
+bundle install
+bundle exec jekyll serve --force_polling
+```
+
 # TODO
 * Posts
   * D&D app
