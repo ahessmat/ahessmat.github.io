@@ -2,10 +2,10 @@
 title: "Understanding Game Hacking: the Basics"
 published: true
 date: 2026-01-22 00:00:00 +/-0000
-categories: [career guidance]
-tags: [jobs]     # TAG names should always be lowercase
+categories: [general, notes]
+tags: [anti-cheat, cheat]     # TAG names should always be lowercase
 image:
-    path: /assets/images/2025/htb-ctf-banner.png
+    path: /assets/images/2026/gameover.jpg
 ---
 ## Intro
 
