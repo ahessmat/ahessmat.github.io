@@ -47,7 +47,7 @@ Then we can run my ac-setup powershell script to get the Sandbox configured. Som
 
 `Cheat Engine` is where a lot of would-be game hackers start. It's a powerful piece of kit that helps trivialize a lot of the work that would go into reverse engineering a game dynamically. At the time of writing, `choco` has cheat engine available up to version 7.5 (the last edition that was open source).
 
-![alt text](../../assets/images/2026/ce1.png)
+![alt text](/assets/images/2026/ce1.png)
 
 ### Memory Modifying
 
@@ -68,11 +68,11 @@ choco install spaceinvaders
 > Note: running this remake of space invaders will prompt you to install `DirectPlay`, but that's not really necessary. We can go ahead and select "Skip this installation".
 {: .prompt-info }
 
-![alt text](../../assets/images/2026/spaceinvaders.png)
+![alt text](/assets/images/2026/spaceinvaders.png)
 
 We'll start this tutorial by attaching `Cheat Engine` to the running game process...
 
-![alt text](../../assets/images/2026/ce2.png)
+![alt text](/assets/images/2026/ce2.png)
 
 ...and then starting the game. Once the game is running, we'll choose something easy for us to track first, like the number of lives we have. At the start of the game, we know we have 3 lives, so we can set Cheat Engine to do a `New Scan` with a value of 3. Doing this has Cheat Engine scan the running process' memory for all instances where a value of "3" is stored in memory. Naturally - this turns up with a lot of results, as there might be any number of other reasons a "3" is stored in a process: save state, location telemetry, textual data, etc. This is reflected in the Address table along the left-hand side of Cheat Engine
 
@@ -81,11 +81,11 @@ The great thing about Cheat Engine however is that it allows that information to
 > Note: Space Invaders is mercifully slow. It's pretty trivial for you to hide behind a wall while the process is running to stay alive. That said, we can also pause the game (`f1`) in-between our subsequent scans.
 {: .prompt-tip }
 
-![alt text](../../assets/images/2026/ce3.png)
+![alt text](/assets/images/2026/ce3.png)
 
 Now that we've found the address, we can `right-click` on it and `Add selected addresses to the addresslist`, below. Think of this as Cheat Engine saving this particular memory address for us (as there might be any number of values in memory we want to cheat with, as we'll see later). We can update any of the fields by double-clicking on them (e.g. setting `Description` to "lives"); let's try updating the `Value` field back to 3.
 
-![alt text](../../assets/images/2026/ce4.png)
+![alt text](/assets/images/2026/ce4.png)
 
 After resuming the game, we can see the number of lives is automatically updated to 3. We can mess around with this value to be arbitrary. Make it 5, 10, 100, and so on; we can set it as large as 4294967295 (the largest size for an unsigned 32-bit integer, aka "-1"). However, values any larger than about a dozen or so causes a graphical glitch.
 
@@ -93,15 +93,15 @@ After resuming the game, we can see the number of lives is automatically updated
 
 Let's take this a step further. By right-clicking on the saved address, we can have a Windows debugger attach to the running process and watch for instances where the process accesses and/or writes to this memory address.
 
-![alt text](../../assets/images/2026/ce5.png)
+![alt text](/assets/images/2026/ce5.png)
 
 Choosing what accesses this address includes both read/write operations. Choosing what writes to this address only logs write operations. Continuing to let the game play, let's voluntarily take another hit and see what happens.
 
-![alt text](../../assets/images/2026/cegif1.gif)
+![alt text](/assets/images/2026/cegif1.gif)
 
 In this case we can see precisely the operation that decremented our number of lives. By contrast, below is a snapshot of what we might see if we were to watch for what *accesses* that address instead:
 
-![alt text](../../assets/images/2026/ce6.png)
+![alt text](/assets/images/2026/ce6.png)
 
 Now - at this stage - I don't know intrisically what's happening here, but the `mov[edx], eax` assembly operation is a kind of "store" operation, where the value currently held in the EAX register (1) is getting written to the memory address (the address we discovered earlier) pointed by the EDX register.
 
