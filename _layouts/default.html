@@ -93,5 +93,39 @@ layout: compress
     {% endif %}
 
     {% include_cached search-loader.html %}
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const gridSize = 2; // in rem
+      const remToPixels = parseFloat(getComputedStyle(document.documentElement).fontSize);
+      const gridSizeInPixels = gridSize * remToPixels;
+
+      function createAndAnimateSquare() {
+        const square = document.createElement('div');
+        square.classList.add('glow-square');
+
+        const gridWidth = window.innerWidth / gridSizeInPixels;
+        const gridHeight = window.innerHeight / gridSizeInPixels;
+
+        const randomX = Math.floor(Math.random() * gridWidth);
+        const randomY = Math.floor(Math.random() * gridHeight);
+
+        // Add current scroll position to the top                                                                                                                                                       │
+        const topPosition = window.scrollY + (randomY * gridSizeInPixels);
+        const leftPosition = randomX * gridSizeInPixels;
+
+        square.style.left = leftPosition + 'px';
+        square.style.top = topPosition + 'px';
+
+        document.body.appendChild(square);
+
+        setTimeout(() => {
+          square.remove();
+        }, 2000); // Remove after animation (2s)
+      }
+
+      setInterval(createAndAnimateSquare, 2000); // Create a new square every 500ms
+      });
+    </script>
   </body>
 </html>
