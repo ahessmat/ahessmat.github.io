@@ -7,55 +7,99 @@
 
 @media (prefers-color-scheme: light) {
     html[data-mode=dark] {
-        --main-bg: rgb(27, 27, 30);
-        --mask-bg: rgb(68, 69, 70);
-        --main-border-color: rgb(44, 45, 45);
-        --text-color: rgb(175, 176, 177);
-        --text-muted-color: #868686;
-        --text-muted-hightlight-color: #aeaeae;
-        --heading-color: #cccccc;
-        --label-color: #a7a7a7;
-        --blockquote-border-color: rgb(66, 66, 66);
-        --blockquote-text-color: #868686;
-        --link-color: rgb(138, 180, 248);
-        --link-underline-color: rgb(82, 108, 150);
-        --button-bg: #1e1e1e;
-        --btn-border-color: #2e2f31;
-        --btn-backtotop-color: var(--text-color);
-        --btn-backtotop-border-color: #212122;
-        --btn-box-shadow: var(--main-bg);
-        --card-header-bg: #292929;
-        --checkbox-color: rgb(118, 120, 121);
-        --checkbox-checked-color: var(--link-color);
-        --img-bg: radial-gradient(circle, rgb(22, 22, 24) 0%, rgb(32, 32, 32) 100%);
-        --shimmer-bg: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(58, 55, 55, 0.4) 50%, rgba(255, 255, 255, 0) 100%);
-        --site-title-color: white;
-        --site-subtitle-color: #868686;
-        --sidebar-bg: #1e1e1e;
-        --sidebar-border-color: #292929;
-        --sidebar-muted-color: #868686;
-        --sidebar-active-color: rgb(255, 255, 255, 0.95);
-        --sidebar-hover-bg: #262626;
-        --sidebar-btn-bg: #232328;
-        --sidebar-btn-color: #787878;
-        --avatar-border-color: rgb(206, 206, 206, 0.9);
-        --topbar-bg: rgb(27, 27, 30, 0.64);
-        --topbar-text-color: var(--text-color);
-        --search-border-color: rgb(55, 55, 55);
-        --search-icon-color: rgb(100, 102, 105);
-        --input-focus-border-color: rgb(112, 114, 115);
-        --post-list-text-color: rgb(175, 176, 177);
-        --btn-patinator-text-color: var(--text-color);
-        --btn-paginator-hover-color: #2e2e2e;
-        --toc-highlight: rgb(116, 178, 243);
-        --tag-hover: rgb(43, 56, 62);
-        --tb-odd-bg: #252526;
-        --tb-even-bg: rgb(31, 31, 34);
-        --tb-border-color: var(--tb-odd-bg);
-        --footnote-target-bg: rgb(63, 81, 181);
-        --btn-share-color: #6c757d;
-        --btn-share-hover-color: #bfc1ca;
-        --card-bg: #1e1e1e;
-        --card-hovor-bg: #464d51;
+        --main-bg: rgb(10, 10, 20);
+        --mask-bg: rgb(20, 20, 35);
+        --main-border-color: rgb(40, 40, 60);
+        --text-color: rgb(220, 220, 220);
+        --text-muted-color: rgb(0, 255, 255);
+        --text-muted-hightlight-color: rgb(180, 180, 200);
+        --heading-color: rgb(255, 0, 255);
+        --label-color: rgb(180, 180, 200);
+        --blockquote-border-color: rgb(255, 0, 255);
+        --blockquote-text-color: rgb(150, 150, 170);
+        --link-color: rgb(0, 255, 255);
+        --link-underline-color: rgb(0, 255, 255);
+        --button-bg: rgb(20, 20, 35);
+        --btn-border-color: rgb(255, 0, 255);
+        --btn-backtotop-color: rgb(0, 255, 255);
+        --btn-backtotop-border-color: rgb(0, 255, 255);
+        --btn-box-shadow: none;
+        --card-header-bg: rgb(20, 20, 35);
+        --checkbox-color: rgb(150, 150, 170);
+        --checkbox-checked-color: rgb(255, 0, 255);
+        --img-bg: radial-gradient(circle, rgb(15, 15, 25) 0%, rgb(10, 10, 20) 100%);
+        --shimmer-bg: linear-gradient(90deg, rgba(20, 20, 35, 0) 0%, rgba(40, 40, 60, 0.4) 50%, rgba(20, 20, 35, 0) 100%);
+        --site-title-color: rgb(0, 255, 255);
+        --site-subtitle-color: rgb(150, 150, 170);
+        --sidebar-bg: rgb(15, 15, 25);
+        --sidebar-border-color: rgb(40, 40, 60);
+        --sidebar-muted-color: rgb(150, 150, 170);
+        --sidebar-active-color: rgb(0, 255, 255);
+        --sidebar-hover-bg: rgb(25, 25, 45);
+        --sidebar-btn-bg: rgb(20, 20, 35);
+        --sidebar-btn-color: rgb(220, 220, 220);
+        --avatar-border-color: rgb(0, 255, 255);
+        --topbar-bg: rgba(10, 10, 20, 0.8);
+        --topbar-text-color: rgb(220, 220, 220);
+        --search-border-color: rgb(255, 0, 255);
+        --search-icon-color: rgb(0, 255, 255);
+        --input-focus-border-color: rgb(255, 0, 255);
+        --post-list-text-color: rgb(220, 220, 220);
+        --btn-patinator-text-color: rgb(220, 220, 220);
+        --btn-paginator-hover-color: rgb(25, 25, 45);
+        --toc-highlight: rgb(255, 0, 255);
+        --tag-hover: rgb(25, 25, 45);
+        --tb-odd-bg: rgb(15, 15, 25);
+        --tb-even-bg: rgb(20, 20, 35);
+        --tb-border-color: rgb(40, 40, 60);
+        --footnote-target-bg: rgb(255, 0, 255);
+        --btn-share-color: rgb(150, 150, 170);
+        --btn-share-hover-color: rgb(0, 255, 255);
+        --card-bg: rgb(15, 15, 25);
+
+        --card-hovor-bg: rgb(25, 25, 45);
     }
+}
+
+/* Link hover color customization */
+#page-category a:hover, #page-tag a:hover, .post-tags .post-tag:hover, .post-tail-wrapper .license-wrapper>a:hover, #search-results a:hover, #topbar #breadcrumb a:hover, .content a:not(.img-link):hover, .post-meta a:not([class]):hover, #access-lastmod a:hover, footer a:hover {
+    color: rgb(255, 0, 255) !important;
+    border-bottom: 1px solid rgb(255, 0, 255);
+    text-decoration: none;
+}
+
+/* Button outline primary customization */
+.btn-outline-primary {
+    --bs-btn-hover-bg: rgb(0, 255, 255);
+    --bs-btn-hover-color: black;
+}
+
+.btn.btn-outline-primary:not(.disabled):hover {
+    border-color: rgb(0, 255, 255);
+}
+
+.post-preview {
+    --text-muted-color: rgb(150, 150, 170);
+}
+
+.far{
+    color:rgb(0, 255, 255);
+}
+
+#sidebar .fa-fw{
+    color:rgb(0, 255, 255);
+}
+
+html[data-mode=dark] body {
+  background-image:
+    linear-gradient(rgba(0, 255, 255, 0.07) 1px, transparent 1px), /* Grid line 1 */
+    linear-gradient(90deg, rgba(0, 255, 255, 0.07) 1px, transparent 1px), /* Grid line 2 */
+    linear-gradient(to bottom, rgb(10, 10, 20), rgba(20, 0, 30, 0.8)); /* New gradient */
+  background-size: 7rem 7rem, 7rem 7rem, 100% 100%; /* Sizes for each respective background-image */
+  background-color: var(--main-bg); /* Ensure this is set */
+}
+
+footer{
+    background-color: transparent;
+    border-top: rgba(20, 0, 30, 0.8);
 }
