@@ -9,3 +9,58 @@
 ';
 
 /* append your custom style below */
+
+@media (prefers-color-scheme: light) {
+    html[data-mode=dark] {
+        --main-bg: rgb(27, 27, 30);
+        --mask-bg: rgb(68, 69, 70);
+        --main-border-color: rgb(44, 45, 45);
+        --text-color: rgb(175, 176, 177);
+        --text-muted-color: #868686;
+        --text-muted-hightlight-color: #aeaeae;
+        --heading-color: #cccccc;
+        --label-color: #a7a7a7;
+        --blockquote-border-color: rgb(66, 66, 66);
+        --blockquote-text-color: #868686;
+        --link-color: rgb(138, 180, 248);
+        --link-underline-color: rgb(82, 108, 150);
+        --button-bg: #1e1e1e;
+        --btn-border-color: #2e2f31;
+        --btn-backtotop-color: var(--text-color);
+        --btn-backtotop-border-color: #212122;
+        --btn-box-shadow: var(--main-bg);
+        --card-header-bg: #292929;
+        --checkbox-color: rgb(118, 120, 121);
+        --checkbox-checked-color: var(--link-color);
+        --img-bg: radial-gradient(circle, rgb(22, 22, 24) 0%, rgb(32, 32, 32) 100%);
+        --shimmer-bg: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(58, 55, 55, 0.4) 50%, rgba(255, 255, 255, 0) 100%);
+        --site-title-color: white;
+        --site-subtitle-color: #868686;
+        --sidebar-bg: #1e1e1e;
+        --sidebar-border-color: #292929;
+        --sidebar-muted-color: #868686;
+        --sidebar-active-color: rgb(255, 255, 255, 0.95);
+        --sidebar-hover-bg: #262626;
+        --sidebar-btn-bg: #232328;
+        --sidebar-btn-color: #787878;
+        --avatar-border-color: rgb(206, 206, 206, 0.9);
+        --topbar-bg: rgb(27, 27, 30, 0.64);
+        --topbar-text-color: var(--text-color);
+        --search-border-color: rgb(55, 55, 55);
+        --search-icon-color: rgb(100, 102, 105);
+        --input-focus-border-color: rgb(112, 114, 115);
+        --post-list-text-color: rgb(175, 176, 177);
+        --btn-patinator-text-color: var(--text-color);
+        --btn-paginator-hover-color: #2e2e2e;
+        --toc-highlight: rgb(116, 178, 243);
+        --tag-hover: rgb(43, 56, 62);
+        --tb-odd-bg: #252526;
+        --tb-even-bg: rgb(31, 31, 34);
+        --tb-border-color: var(--tb-odd-bg);
+        --footnote-target-bg: rgb(63, 81, 181);
+        --btn-share-color: #6c757d;
+        --btn-share-hover-color: #bfc1ca;
+        --card-bg: #1e1e1e;
+        --card-hovor-bg: #464d51;
+    }
+}
