@@ -7,75 +7,75 @@
 
 @media (prefers-color-scheme: light) {
     html[data-mode=dark] {
-        --main-bg: rgb(10, 10, 20);
-        --mask-bg: rgb(20, 20, 35);
-        --main-border-color: rgb(40, 40, 60);
+        --main-bg: rgb(0, 0, 0);
+        --mask-bg: rgb(20, 20, 20);
+        --main-border-color: rgb(50, 50, 50);
         --text-color: rgb(220, 220, 220);
-        --text-muted-color: rgb(0, 255, 255);
-        --text-muted-hightlight-color: rgb(180, 180, 200);
-        --heading-color: rgb(255, 0, 255);
-        --label-color: rgb(180, 180, 200);
-        --blockquote-border-color: rgb(255, 0, 255);
-        --blockquote-text-color: rgb(150, 150, 170);
-        --link-color: rgb(0, 255, 255);
-        --link-underline-color: rgb(0, 255, 255);
-        --button-bg: rgb(20, 20, 35);
-        --btn-border-color: rgb(255, 0, 255);
-        --btn-backtotop-color: rgb(0, 255, 255);
-        --btn-backtotop-border-color: rgb(0, 255, 255);
+        --text-muted-color: rgb(128, 128, 128);
+        --text-muted-hightlight-color: rgb(170, 170, 170);
+        --heading-color: rgb(255, 200, 0);
+        --label-color: rgb(170, 170, 170);
+        --blockquote-border-color: rgb(255, 200, 0);
+        --blockquote-text-color: rgb(128, 128, 128);
+        --link-color: rgb(255, 200, 0);
+        --link-underline-color: rgb(180, 140, 0 / 0%);
+        --button-bg: rgb(20, 20, 20);
+        --btn-border-color: rgb(255, 200, 0);
+        --btn-backtotop-color: rgb(255, 200, 0);
+        --btn-backtotop-border-color: rgb(255, 200, 0);
         --btn-box-shadow: none;
-        --card-header-bg: rgb(20, 20, 35);
-        --checkbox-color: rgb(150, 150, 170);
-        --checkbox-checked-color: rgb(255, 0, 255);
-        --img-bg: radial-gradient(circle, rgb(15, 15, 25) 0%, rgb(10, 10, 20) 100%);
-        --shimmer-bg: linear-gradient(90deg, rgba(20, 20, 35, 0) 0%, rgba(40, 40, 60, 0.4) 50%, rgba(20, 20, 35, 0) 100%);
-        --site-title-color: rgb(0, 255, 255);
-        --site-subtitle-color: rgb(150, 150, 170);
-        --sidebar-bg: rgb(15, 15, 25);
-        --sidebar-border-color: rgb(40, 40, 60);
-        --sidebar-muted-color: rgb(150, 150, 170);
-        --sidebar-active-color: rgb(0, 255, 255);
-        --sidebar-hover-bg: rgb(25, 25, 45);
-        --sidebar-btn-bg: rgb(20, 20, 35);
+        --card-header-bg: rgb(20, 20, 20);
+        --checkbox-color: rgb(128, 128, 128);
+        --checkbox-checked-color: rgb(255, 200, 0);
+        --img-bg: radial-gradient(circle, rgb(15, 15, 15) 0%, rgb(0, 0, 0) 100%);
+        --shimmer-bg: linear-gradient(90deg, rgba(20, 20, 20, 0) 0%, rgba(50, 50, 50, 0.4) 50%, rgba(20, 20, 20, 0) 100%);
+        --site-title-color: rgb(255, 200, 0);
+        --site-subtitle-color: rgb(128, 128, 128);
+        --sidebar-bg: rgb(10, 10, 10);
+        --sidebar-border-color: rgb(40, 40, 40);
+        --sidebar-muted-color: rgb(128, 128, 128);
+        --sidebar-active-color: rgb(255, 200, 0);
+        --sidebar-hover-bg: rgb(25, 25, 25);
+        --sidebar-btn-bg: rgb(20, 20, 20);
         --sidebar-btn-color: rgb(220, 220, 220);
-        --avatar-border-color: rgb(0, 255, 255);
-        --topbar-bg: rgba(10, 10, 20, 0.8);
+        --avatar-border-color: rgb(255, 200, 0);
+        --topbar-bg: rgba(0, 0, 0, 0.8);
         --topbar-text-color: rgb(220, 220, 220);
-        --search-border-color: rgb(255, 0, 255);
-        --search-icon-color: rgb(0, 255, 255);
-        --input-focus-border-color: rgb(255, 0, 255);
+        --search-border-color: rgb(255, 200, 0);
+        --search-icon-color: rgb(128, 128, 128);
+        --input-focus-border-color: rgb(255, 200, 0);
         --post-list-text-color: rgb(220, 220, 220);
         --btn-patinator-text-color: rgb(220, 220, 220);
-        --btn-paginator-hover-color: rgb(25, 25, 45);
-        --toc-highlight: rgb(255, 0, 255);
-        --tag-hover: rgb(25, 25, 45);
-        --tb-odd-bg: rgb(15, 15, 25);
-        --tb-even-bg: rgb(20, 20, 35);
-        --tb-border-color: rgb(40, 40, 60);
-        --footnote-target-bg: rgb(255, 0, 255);
-        --btn-share-color: rgb(150, 150, 170);
-        --btn-share-hover-color: rgb(0, 255, 255);
-        --card-bg: rgb(15, 15, 25);
+        --btn-paginator-hover-color: rgb(25, 25, 25);
+        --toc-highlight: rgb(255, 200, 0);
+        --tag-hover: rgb(25, 25, 25);
+        --tb-odd-bg: rgb(10, 10, 10);
+        --tb-even-bg: rgb(15, 15, 15);
+        --tb-border-color: rgb(40, 40, 40);
+        --footnote-target-bg: rgb(80, 60, 0);
+        --btn-share-color: rgb(128, 128, 128);
+        --btn-share-hover-color: rgb(255, 200, 0);
+        --card-bg: rgb(10, 10, 10);
 
-        --card-hovor-bg: rgb(25, 25, 45);
+        --card-hovor-bg: rgb(25, 25, 25);
     }
 }
 
 /* Link hover color customization */
 #page-category a:hover, #page-tag a:hover, .post-tags .post-tag:hover, .post-tail-wrapper .license-wrapper>a:hover, #search-results a:hover, #topbar #breadcrumb a:hover, .content a:not(.img-link):hover, .post-meta a:not([class]):hover, #access-lastmod a:hover, footer a:hover {
-    color: rgb(255, 0, 255) !important;
-    border-bottom: 1px solid rgb(255, 0, 255);
+    color: rgb(255, 200, 0) !important;
+    border-bottom: 1px solid rgb(255, 200, 0);
     text-decoration: none;
 }
 
 /* Button outline primary customization */
 .btn-outline-primary {
-    --bs-btn-hover-bg: rgb(0, 255, 255);
+    --bs-btn-hover-bg: rgb(255, 200, 0);
     --bs-btn-hover-color: black;
 }
 
 .btn.btn-outline-primary:not(.disabled):hover {
-    border-color: rgb(0, 255, 255);
+    border-color: rgb(255, 200, 0) !important;
 }
 
 .post-preview {
@@ -83,23 +83,23 @@
 }
 
 .far{
-    color:rgb(0, 255, 255);
+    color:rgb(255, 200, 0);
 }
 
 #sidebar .fa-fw{
-    color:rgb(0, 255, 255);
+    color:rgb(255, 200, 0);
 }
 
 html[data-mode=dark] body {
   background-image:
-    linear-gradient(rgba(0, 255, 255, 0.07) 1px, transparent 1px), /* Grid line 1 */
-    linear-gradient(90deg, rgba(0, 255, 255, 0.07) 1px, transparent 1px), /* Grid line 2 */
-    linear-gradient(to bottom, rgb(10, 10, 20), rgba(20, 0, 30, 0.8)); /* New gradient */
+    linear-gradient(rgba(255, 200, 0, 0.1) 1px, transparent 1px), /* Grid line 1 */
+    linear-gradient(90deg, rgba(255, 200, 0, 0.1) 1px, transparent 1px), /* Grid line 2 */
+    linear-gradient(to bottom, rgb(0, 0, 0), rgb(30, 20, 0)); /* New gradient */
   background-size: 7rem 7rem, 7rem 7rem, 100% 100%; /* Sizes for each respective background-image */
   background-color: var(--main-bg); /* Ensure this is set */
 }
 
 footer{
     background-color: transparent;
-    border-top: rgba(20, 0, 30, 0.8);
+    border-top: rgba(30, 20, 0, 0.8);
 }
