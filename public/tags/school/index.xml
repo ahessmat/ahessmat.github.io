@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>School on ByteBreach</title>
+    <link>http://localhost:1313/tags/school/</link>
+    <description>Recent content in School on ByteBreach</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>youremail@example.com (Asa Hess-Matsumoto)</managingEditor>
+    <webMaster>youremail@example.com (Asa Hess-Matsumoto)</webMaster>
+    <copyright>© 2026 Asa Hess-Matsumoto</copyright>
+    <lastBuildDate>Fri, 04 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/school/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Do I need a degree to get into cybersecurity?</title>
+      <link>http://localhost:1313/posts/2025/do-i-need-a-degree/</link>
+      <pubDate>Fri, 04 Apr 2025 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2025/do-i-need-a-degree/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2025/do-i-need-a-degree/featured-mentor.jpg" />
+    </item>
+    
+    <item>
+      <title>Investigating a Georgia Tech Phishing Attempt</title>
+      <link>http://localhost:1313/posts/2024/gatech-phishing/</link>
+      <pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2024/gatech-phishing/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2024/gatech-phishing/featured-envelope.gif" />
+    </item>
+    
+    <item>
+      <title>OMSCS Graduation Writeup</title>
+      <link>http://localhost:1313/posts/2023/omscs_writeup/</link>
+      <pubDate>Mon, 11 Dec 2023 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2023/omscs_writeup/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2023/omscs_writeup/featured-gt.png" />
+    </item>
+    
+  </channel>
+</rss>

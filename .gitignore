@@ -1,22 +1,18 @@
-# Bundler cache
-.bundle
-vendor
-Gemfile.lock
-
-# Jekyll cache
-.jekyll-cache
-_site
-
-# RubyGems
-*.gem
-
-# NPM dependencies
+#others
 node_modules
-package-lock.json
+.hugo_build.lock
 
-# IDE configurations
-.idea
-.vscode
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
 
-# Misc
-#assets/js/dist
+# Hugo
+public
+
+# Ignore Hugo/generated resources
+resources/_gen/
+# Or ignore the whole directory if you don't manually put assets there
+resources/

@@ -1,0 +1,177 @@
+{{/*
+CHAT SHORTCODE REFERENCE
+------------------------
+Usage:
+  {{< chat name="Hacker" align="right" icon="skull-crossbones" >}} Message content here {{< /chat >}}
+
+Parameters:
+  - name:      (Optional) The participant's name. Styles (Color/Icon/Align) are automatically assigned per name.
+  - align:     (Optional) "left" (default), "right", or "center". Once set, it sticks for this participant.
+  - icon:      (Optional) Name of the icon file in assets/icons (e.g., "skull-crossbones", "ghost", "bug").
+  - bgColor:   (Optional) Override background color. Supports Tailwind class (e.g. "bg-red-500") or Hex (e.g. "#ff0000").
+  - textColor: (Optional) Override text color. Supports Tailwind class (e.g. "text-white") or Hex (e.g. "#ffffff").
+
+Features:
+  - Persistent styles: Multiple participants automatically receive unique, consistent colors, icons, and alignment.
+  - Sticky settings: If you set any parameter (align/icon/color) once for a name, it sticks for all subsequent messages from them.
+  - Dynamic rounding: Bubbles adapt their corners based on alignment.
+  - Dark mode: Default colors automatically adjust for light/dark themes.
+*/}}
+
+{{ $name := .Get "name" }}
+{{ $manualAlign := .Get "align" }}
+{{ $manualBg := .Get "bgColor" }}
+{{ $manualText := .Get "textColor" }}
+{{ $manualIcon := .Get "icon" | default "comment" }}
+
+{{/* Initialize tracking for participants if it doesn't exist for this page */}}
+{{ if not (.Page.Scratch.Get "chat_participants") }}
+    {{ .Page.Scratch.Set "chat_participants" dict }}
+    {{ .Page.Scratch.Set "chat_color_index" 0 }}
+{{ end }}
+
+{{ $participants := .Page.Scratch.Get "chat_participants" }}
+{{ $index := .Page.Scratch.Get "chat_color_index" }}
+
+{{/* Rotation of color sets */}}
+{{ $colorSets := slice
+    (dict "bg" "" "text" "text-neutral-50" "hexBg" "#00574b")
+    (dict "bg" "" "text" "text-neutral-800" "darkBg" "bg-neutral-800" "darkText" "text-neutral-200" "hexBg" "#2c0000")
+    (dict "bg" "bg-primary-600" "text" "text-neutral-50")
+    (dict "bg" "bg-neutral-300" "text" "text-neutral-800" "darkBg" "bg-neutral-700" "darkText" "text-neutral-200")
+    (dict "bg" "bg-primary-200" "text" "text-neutral-800")
+}}
+
+{{/* Participant logic: Save or Update data */}}
+{{ if $name }}
+    {{ $existingParticipant := index $participants $name }}
+    
+    {{ if or (not $existingParticipant) $manualBg $manualText $manualIcon $manualAlign }}
+        {{ $newEntry := $existingParticipant | default (index $colorSets (mod $index (len $colorSets))) }}
+        
+        {{/* Handle alignment persistence */}}
+        {{ if $manualAlign }}
+            {{ $newEntry = merge $newEntry (dict "align" $manualAlign) }}
+        {{ end }}
+
+        {{/* Handle icon persistence */}}
+        {{ if $manualIcon }}
+            {{ $newEntry = merge $newEntry (dict "icon" $manualIcon) }}
+        {{ end }}
+
+        {{/* Handle manual color overrides */}}
+        {{ if $manualBg }}
+            {{ if (findRE "^#" $manualBg) }}
+                {{ $newEntry = merge $newEntry (dict "hexBg" $manualBg "bg" "") }}
+            {{ else }}
+                {{ $newEntry = merge $newEntry (dict "bg" $manualBg "hexBg" "") }}
+            {{ end }}
+        {{ end }}
+        
+        {{ if $manualText }}
+            {{ if (findRE "^#" $manualText) }}
+                {{ $newEntry = merge $newEntry (dict "hexText" $manualText "text" "") }}
+            {{ else }}
+                {{ $newEntry = merge $newEntry (dict "text" $manualText "hexText" "") }}
+            {{ end }}
+        {{ end }}
+
+        {{/* Update global state */}}
+        {{ $participants = merge $participants (dict $name $newEntry) }}
+        {{ .Page.Scratch.Set "chat_participants" $participants }}
+        
+        {{ if not $existingParticipant }}
+            {{ .Page.Scratch.Set "chat_color_index" (add $index 1) }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+
+{{/* Finalize variables for rendering */}}
+{{ $currentSet := index $participants $name | default (index $colorSets 1) }}
+{{ $align := $currentSet.align | default "left" }}
+{{ $bubbleBg := $currentSet.bg }}
+{{ $bubbleText := $currentSet.text }}
+{{ $iconName := $currentSet.icon }}
+{{ $style := "" }}
+
+{{ if $currentSet.hexBg }}{{ $style = printf "%s background-color: %s;" $style $currentSet.hexBg }}{{ end }}
+{{ if $currentSet.hexText }}{{ $style = printf "%s color: %s;" $style $currentSet.hexText }}{{ end }}
+{{ if $name }}
+    {{ if eq $align "right" }}
+        {{ $style = printf "%s border-top-right-radius: 0;" $style }}
+    {{ else if eq $align "center" }}
+        {{ $style = printf "%s border-top-left-radius: 0; border-top-right-radius: 0;" $style }}
+    {{ else }}
+        {{ $style = printf "%s border-top-left-radius: 0;" $style }}
+    {{ end }}
+{{ end }}
+
+{{/* Build the container classes */}}
+{{ $containerClass := "flex flex-col mb-4 w-full" }}
+{{ if eq $align "right" }}
+    {{ $containerClass = printf "%s items-end" $containerClass }}
+{{ else if eq $align "center" }}
+    {{ $containerClass = printf "%s items-center text-center" $containerClass }}
+{{ else }}
+    {{ $containerClass = printf "%s items-start" $containerClass }}
+{{ end }}
+
+{{/* Build the bubble classes */}}
+{{ $bubbleClass := "max-w-[80%] px-4 py-2 shadow-sm text-sm" }}
+{{ if eq $align "right" }}
+    {{ $bubbleClass = printf "%s rounded-2xl rounded-br-none" $bubbleClass }}
+{{ else if eq $align "center" }}
+    {{ $bubbleClass = printf "%s rounded-2xl" $bubbleClass }}
+{{ else }}
+    {{ $bubbleClass = printf "%s rounded-2xl rounded-bl-none" $bubbleClass }}
+{{ end }}
+
+{{/* If a tab is present, remove top rounding so it merges cleanly */}}
+{{ if $name }}
+    {{ $bubbleClass = printf "%s rounded-t-lg" $bubbleClass }}
+{{ end }}
+
+{{/* Final Tailwind class assembly */}}
+{{ with $bubbleBg }}{{ $bubbleClass = printf "%s %s" $bubbleClass . }}{{ end }}
+{{ with $bubbleText }}{{ $bubbleClass = printf "%s %s" $bubbleClass . }}{{ end }}
+
+{{/* Dark mode logic for rotation colors */}}
+{{ if not (or $currentSet.hexBg $manualBg) }}
+    {{ with $currentSet.darkBg }}{{ $bubbleClass = printf "%s dark:%s" $bubbleClass . }}{{ end }}
+{{ end }}
+{{ if not (or $currentSet.hexText $manualText) }}
+    {{ with $currentSet.darkText }}{{ $bubbleClass = printf "%s dark:%s" $bubbleClass . }}{{ end }}
+{{ end }}
+
+{{/* Build the tab (name/icon) classes */}}
+{{ $tabClass := "inline-flex items-center gap-2 px-3 py-1 text-xs font-semibold rounded-t-lg rounded-b-none shadow-sm" }}
+{{ with $bubbleBg }}{{ $tabClass = printf "%s %s" $tabClass . }}{{ end }}
+{{ with $bubbleText }}{{ $tabClass = printf "%s %s" $tabClass . }}{{ end }}
+{{ if not (or $currentSet.hexBg $manualBg) }}
+    {{ with $currentSet.darkBg }}{{ $tabClass = printf "%s dark:%s" $tabClass . }}{{ end }}
+{{ end }}
+{{ if not (or $currentSet.hexText $manualText) }}
+    {{ with $currentSet.darkText }}{{ $tabClass = printf "%s dark:%s" $tabClass . }}{{ end }}
+{{ end }}
+{{ $tabStyle := "" }}
+{{ if $currentSet.hexBg }}{{ $tabStyle = printf "%s background-color: %s;" $tabStyle $currentSet.hexBg }}{{ end }}
+{{ if $currentSet.hexText }}{{ $tabStyle = printf "%s color: %s;" $tabStyle $currentSet.hexText }}{{ end }}
+
+<div class="{{ $containerClass }}">
+{{- with $name }}
+<div class="flex {{ if eq $align "right" }}justify-end{{ else if eq $align "center" }}justify-center{{ else }}justify-start{{ end }} -mb-2 mx-2">
+<span class="{{ $tabClass }}" {{ with $tabStyle }}style="{{ . | safeCSS }}"{{ end }}>
+{{- if eq $align "right" }}
+<span>{{ . }}</span>
+{{- if $iconName }}<span class="w-4 h-4">{{ partial "icon.html" $iconName }}</span>{{ end }}
+{{- else }}
+{{- if $iconName }}<span class="w-4 h-4">{{ partial "icon.html" $iconName }}</span>{{ end }}
+<span>{{ . }}</span>
+{{- end }}
+</span>
+</div>
+{{- end }}
+<div class="{{ $bubbleClass }}" {{ with $style }}style="{{ . | safeCSS }}"{{ end }}>
+{{- .Inner | markdownify }}
+</div>
+</div>

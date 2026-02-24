@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on ByteBreach</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on ByteBreach</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>youremail@example.com (Asa Hess-Matsumoto)</managingEditor>
+    <webMaster>youremail@example.com (Asa Hess-Matsumoto)</webMaster>
+    <copyright>© 2026 Asa Hess-Matsumoto</copyright>
+    <lastBuildDate>Thu, 22 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Understanding Game Hacking: the Basics</title>
+      <link>http://localhost:1313/posts/2026/cheat-series1/</link>
+      <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2026/cheat-series1/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2026/cheat-series1/featured-gameover.jpg" />
+    </item>
+    
+    <item>
+      <title>What Type of Degree Do I Need To Work in Cybersecurity?</title>
+      <link>http://localhost:1313/posts/2025/what-kind-of-degree-should-i-get/</link>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2025/what-kind-of-degree-should-i-get/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2025/what-kind-of-degree-should-i-get/featured-gradcap.png" />
+    </item>
+    
+    <item>
+      <title>Using n8n to Help Solve CTF problems</title>
+      <link>http://localhost:1313/posts/2025/setting-up-n8n-for-ctfs/</link>
+      <pubDate>Wed, 19 Nov 2025 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2025/setting-up-n8n-for-ctfs/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2025/setting-up-n8n-for-ctfs/featured-n8n-project-diagram.png" />
+    </item>
+    
+    <item>
+      <title>Autonomous Pwning: Using AI Agents for Binary Exploitation</title>
+      <link>http://localhost:1313/posts/2025/autonomous-pwning/</link>
+      <pubDate>Fri, 07 Nov 2025 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2025/autonomous-pwning/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2025/autonomous-pwning/featured-ai1.png" />
+    </item>
+    
+    <item>
+      <title>Reverse Engineering Binaries With AI</title>
+      <link>http://localhost:1313/posts/2025/reverse-engineering-binaries-with-ai/</link>
+      <pubDate>Tue, 14 Oct 2025 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2025/reverse-engineering-binaries-with-ai/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2025/reverse-engineering-binaries-with-ai/featured-TaeJune15.jpg" />
+    </item>
+    
+    <item>
+      <title>Configuring an Anti-Cheat Dev Environment in Hyper-V</title>
+      <link>http://localhost:1313/posts/2025/hyperv-ac-setup/</link>
+      <pubDate>Tue, 24 Jun 2025 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2025/hyperv-ac-setup/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2025/hyperv-ac-setup/featured-hyperv-ac.png" />
+    </item>
+    
+    <item>
+      <title>Anti-Cheat in Video Games</title>
+      <link>http://localhost:1313/posts/2025/ac-in-video-games/</link>
+      <pubDate>Fri, 02 May 2025 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2025/ac-in-video-games/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2025/ac-in-video-games/featured-ac-banner.png" />
+    </item>
+    
+    <item>
+      <title>Do I need a degree to get into cybersecurity?</title>
+      <link>http://localhost:1313/posts/2025/do-i-need-a-degree/</link>
+      <pubDate>Fri, 04 Apr 2025 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2025/do-i-need-a-degree/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2025/do-i-need-a-degree/featured-mentor.jpg" />
+    </item>
+    
+    <item>
+      <title>Where are all of the cybersecurity jobs?</title>
+      <link>http://localhost:1313/posts/2025/where-are-all-the-cybersecurity-jobs/</link>
+      <pubDate>Wed, 12 Feb 2025 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2025/where-are-all-the-cybersecurity-jobs/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2025/where-are-all-the-cybersecurity-jobs/featured-job-hunt.jpg" />
+    </item>
+    
+    <item>
+      <title>How to Connect Your AWUS1900 Network Card with Kali Linux</title>
+      <link>http://localhost:1313/posts/2024/alfa-kali/</link>
+      <pubDate>Fri, 17 May 2024 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2024/alfa-kali/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2024/alfa-kali/featured-alfa.jpg" />
+    </item>
+    
+    <item>
+      <title>Investigating a Georgia Tech Phishing Attempt</title>
+      <link>http://localhost:1313/posts/2024/gatech-phishing/</link>
+      <pubDate>Sat, 13 Apr 2024 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2024/gatech-phishing/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2024/gatech-phishing/featured-envelope.gif" />
+    </item>
+    
+    <item>
+      <title>HTB Tier 3 Path Review</title>
+      <link>http://localhost:1313/posts/2024/htb-tier-3/</link>
+      <pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2024/htb-tier-3/</guid>
+      <description>Late in 2023, Hack The Box announced new Senior Web Penetration Tester training path along their Academy platform which aligns to their Certified Web Exploitation Expert (CWEE) certification. The CWEE - released earlier in 2024 - is the first of their certifications which included &lt;strong&gt;Tier 3&lt;/strong&gt; module content; up until now content aligned to their certifications (the CDSA, CBBH, and CPTS) all exclusively engaged &lt;strong&gt;Tier 2&lt;/strong&gt; material.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2024/htb-tier-3/featured-appsec.jpg" />
+    </item>
+    
+    <item>
+      <title>OMSCS Graduation Writeup</title>
+      <link>http://localhost:1313/posts/2023/omscs_writeup/</link>
+      <pubDate>Mon, 11 Dec 2023 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2023/omscs_writeup/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2023/omscs_writeup/featured-gt.png" />
+    </item>
+    
+    <item>
+      <title>Which Cybersecurity Certifications Should You Get?</title>
+      <link>http://localhost:1313/posts/2023/what-certifications-should-you-get/</link>
+      <pubDate>Wed, 08 Nov 2023 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2023/what-certifications-should-you-get/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2023/what-certifications-should-you-get/featured-animated-cred.gif" />
+    </item>
+    
+    <item>
+      <title>Getting Started in Cybersecurity</title>
+      <link>http://localhost:1313/posts/2023/getting-started-in-infosec/</link>
+      <pubDate>Tue, 07 Nov 2023 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2023/getting-started-in-infosec/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2023/getting-started-in-infosec/featured-animated-enter.gif" />
+    </item>
+    
+    <item>
+      <title>Passing the Certified Penetration Testing Specialist (CPTS) Certification Exam</title>
+      <link>http://localhost:1313/posts/2023/passing-the-certified-penetration-testing-specialist-cpts-certification-exam/</link>
+      <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2023/passing-the-certified-penetration-testing-specialist-cpts-certification-exam/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2023/passing-the-certified-penetration-testing-specialist-cpts-certification-exam/featured-cert-cpts.png" />
+    </item>
+    
+    <item>
+      <title>Setting up a Windows XP VM on Virtualbox</title>
+      <link>http://localhost:1313/posts/2022/setting-up-a-windows-xp-vm-on-virtualbox/</link>
+      <pubDate>Sat, 17 Dec 2022 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2022/setting-up-a-windows-xp-vm-on-virtualbox/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2022/setting-up-a-windows-xp-vm-on-virtualbox/featured-xp14.png" />
+    </item>
+    
+    <item>
+      <title>NSA Codebreaker Challenge 2022 Writeup</title>
+      <link>http://localhost:1313/posts/2022/nsa-codebreaker-challenge-2022-writeup/</link>
+      <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2022/nsa-codebreaker-challenge-2022-writeup/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2022/nsa-codebreaker-challenge-2022-writeup/featured-codebreaker-award.png" />
+    </item>
+    
+    <item>
+      <title>Passing the Certified Red Team Operator (CRTO) exam</title>
+      <link>http://localhost:1313/posts/2022/passing-the-certified-red-team-operator-crto-exam/</link>
+      <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2022/passing-the-certified-red-team-operator-crto-exam/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2022/passing-the-certified-red-team-operator-crto-exam/featured-cert-crto.png" />
+    </item>
+    
+    <item>
+      <title>Passing the Certified Bug Bounty Hunter (CBBH) Certification Exam</title>
+      <link>http://localhost:1313/posts/2022/passing-the-certified-bug-bounty-hunter-cbbh/</link>
+      <pubDate>Fri, 22 Jul 2022 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2022/passing-the-certified-bug-bounty-hunter-cbbh/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2022/passing-the-certified-bug-bounty-hunter-cbbh/featured-cert-cbbh.png" />
+    </item>
+    
+    <item>
+      <title>How to Write a Cybersecurity Resumé</title>
+      <link>http://localhost:1313/posts/2022/how-to-write-an-infosec-resume/</link>
+      <pubDate>Mon, 21 Mar 2022 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2022/how-to-write-an-infosec-resume/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2022/how-to-write-an-infosec-resume/featured-pencil.gif" />
+    </item>
+    
+    <item>
+      <title>Web Scraping With Python and Selenium</title>
+      <link>http://localhost:1313/posts/2022/web-scraping-with-python/</link>
+      <pubDate>Wed, 09 Mar 2022 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2022/web-scraping-with-python/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2022/web-scraping-with-python/featured-scrape.gif" />
+    </item>
+    
+    <item>
+      <title>Hacking Helpers</title>
+      <link>http://localhost:1313/posts/2022/hacking-helpers-learning-cybersecurity/</link>
+      <pubDate>Sun, 06 Feb 2022 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2022/hacking-helpers-learning-cybersecurity/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2022/hacking-helpers-learning-cybersecurity/featured-helper.png" />
+    </item>
+    
+  </channel>
+</rss>

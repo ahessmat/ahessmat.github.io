@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cheat on ByteBreach</title>
+    <link>http://localhost:1313/tags/cheat/</link>
+    <description>Recent content in Cheat on ByteBreach</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>youremail@example.com (Asa Hess-Matsumoto)</managingEditor>
+    <webMaster>youremail@example.com (Asa Hess-Matsumoto)</webMaster>
+    <copyright>© 2026 Asa Hess-Matsumoto</copyright>
+    <lastBuildDate>Thu, 22 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/cheat/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Understanding Game Hacking: the Basics</title>
+      <link>http://localhost:1313/posts/2026/cheat-series1/</link>
+      <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2026/cheat-series1/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2026/cheat-series1/featured-gameover.jpg" />
+    </item>
+    
+    <item>
+      <title>Configuring an Anti-Cheat Dev Environment in Hyper-V</title>
+      <link>http://localhost:1313/posts/2025/hyperv-ac-setup/</link>
+      <pubDate>Tue, 24 Jun 2025 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2025/hyperv-ac-setup/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2025/hyperv-ac-setup/featured-hyperv-ac.png" />
+    </item>
+    
+    <item>
+      <title>Anti-Cheat in Video Games</title>
+      <link>http://localhost:1313/posts/2025/ac-in-video-games/</link>
+      <pubDate>Fri, 02 May 2025 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2025/ac-in-video-games/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2025/ac-in-video-games/featured-ac-banner.png" />
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,243 @@
+<svg width="1084" height="322" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="clip">
+      <rect width="1084" height="322" />
+    </clipPath>
+    <g id="hexagon-group">
+      <polygon id="hexagon" points="50,10 100,40 100,90 50,120 0,90 0,40" />
+    </g>
+    <style>
+      .hexagon {
+        animation: fade 4s infinite;
+        stroke: #FFD700;
+        stroke-width: 2;
+        fill: #FFD700;
+      }
+      @keyframes fade {
+        0%, 100% { opacity: 0; }
+        50% { opacity: 1; }
+      }
+    </style>
+  </defs>
+
+  <g clip-path="url(#clip)">
+    <g transform="scale(0.5)">
+    <g>
+      <use href="#hexagon-group" x="0" y="-80" class="hexagon" style="animation-delay: 3.1s;"/>
+      <use href="#hexagon-group" x="100" y="-80" class="hexagon" style="animation-delay: 0.0s;"/>
+      <use href="#hexagon-group" x="200" y="-80" class="hexagon" style="animation-delay: 2.9s;"/>
+      <use href="#hexagon-group" x="300" y="-80" class="hexagon" style="animation-delay: 1.4s;"/>
+      <use href="#hexagon-group" x="400" y="-80" class="hexagon" style="animation-delay: 3.7s;"/>
+      <use href="#hexagon-group" x="500" y="-80" class="hexagon" style="animation-delay: 0.6s;"/>
+      <use href="#hexagon-group" x="600" y="-80" class="hexagon" style="animation-delay: 2.1s;"/>
+      <use href="#hexagon-group" x="700" y="-80" class="hexagon" style="animation-delay: 1.8s;"/>
+      <use href="#hexagon-group" x="800" y="-80" class="hexagon" style="animation-delay: 3.3s;"/>
+      <use href="#hexagon-group" x="900" y="-80" class="hexagon" style="animation-delay: 0.3s;"/>
+      <use href="#hexagon-group" x="1000" y="-80" class="hexagon" style="animation-delay: 2.5s;"/>
+      <use href="#hexagon-group" x="1100" y="-80" class="hexagon" style="animation-delay: 1.0s;"/>
+      <use href="#hexagon-group" x="1200" y="-80" class="hexagon" style="animation-delay: 3.9s;"/>
+      <use href="#hexagon-group" x="1300" y="-80" class="hexagon" style="animation-delay: 0.7s;"/>
+      <use href="#hexagon-group" x="1400" y="-80" class="hexagon" style="animation-delay: 2.2s;"/>
+      <use href="#hexagon-group" x="1500" y="-80" class="hexagon" style="animation-delay: 1.5s;"/>
+      <use href="#hexagon-group" x="1600" y="-80" class="hexagon" style="animation-delay: 3.6s;"/>
+      <use href="#hexagon-group" x="1700" y="-80" class="hexagon" style="animation-delay: 0.4s;"/>
+      <use href="#hexagon-group" x="1800" y="-80" class="hexagon" style="animation-delay: 2.7s;"/>
+      <use href="#hexagon-group" x="1900" y="-80" class="hexagon" style="animation-delay: 1.2s;"/>
+      <use href="#hexagon-group" x="2000" y="-80" class="hexagon" style="animation-delay: 3.4s;"/>
+      <use href="#hexagon-group" x="2100" y="-80" class="hexagon" style="animation-delay: 0.9s;"/>
+    </g>
+    <g>
+      <use href="#hexagon-group" x="-50" y="0" class="hexagon" style="animation-delay: 2.3s;"/>
+      <use href="#hexagon-group" x="50" y="0" class="hexagon" style="animation-delay: 1.1s;"/>
+      <use href="#hexagon-group" x="150" y="0" class="hexagon" style="animation-delay: 3.8s;"/>
+      <use href="#hexagon-group" x="250" y="0" class="hexagon" style="animation-delay: 0.5s;"/>
+      <use href="#hexagon-group" x="350" y="0" class="hexagon" style="animation-delay: 2.9s;"/>
+      <use href="#hexagon-group" x="450" y="0" class="hexagon" style="animation-delay: 1.7s;"/>
+      <use href="#hexagon-group" x="550" y="0" class="hexagon" style="animation-delay: 3.2s;"/>
+      <use href="#hexagon-group" x="650" y="0" class="hexagon" style="animation-delay: 0.2s;"/>
+      <use href="#hexagon-group" x="750" y="0" class="hexagon" style="animation-delay: 2.0s;"/>
+      <use href="#hexagon-group" x="850" y="0" class="hexagon" style="animation-delay: 1.4s;"/>
+      <use href="#hexagon-group" x="950" y="0" class="hexagon" style="animation-delay: 3.5s;"/>
+      <use href="#hexagon-group" x="1050" y="0" class="hexagon" style="animation-delay: 0.8s;"/>
+      <use href="#hexagon-group" x="1150" y="0" class="hexagon" style="animation-delay: 2.6s;"/>
+      <use href="#hexagon-group" x="1250" y="0" class="hexagon" style="animation-delay: 1.9s;"/>
+      <use href="#hexagon-group" x="1350" y="0" class="hexagon" style="animation-delay: 3.0s;"/>
+      <use href="#hexagon-group" x="1450" y="0" class="hexagon" style="animation-delay: 0.1s;"/>
+      <use href="#hexagon-group" x="1550" y="0" class="hexagon" style="animation-delay: 2.8s;"/>
+      <use href="#hexagon-group" x="1650" y="0" class="hexagon" style="animation-delay: 1.3s;"/>
+      <use href="#hexagon-group" x="1750" y="0" class="hexagon" style="animation-delay: 3.7s;"/>
+      <use href="#hexagon-group" x="1850" y="0" class="hexagon" style="animation-delay: 0.6s;"/>
+      <use href="#hexagon-group" x="1950" y="0" class="hexagon" style="animation-delay: 2.1s;"/>
+      <use href="#hexagon-group" x="2050" y="0" class="hexagon" style="animation-delay: 1.8s;"/>
+    </g>
+    <g>
+      <use href="#hexagon-group" x="0" y="80" class="hexagon" style="animation-delay: 3.3s;"/>
+      <use href="#hexagon-group" x="100" y="80" class="hexagon" style="animation-delay: 0.3s;"/>
+      <use href="#hexagon-group" x="200" y="80" class="hexagon" style="animation-delay: 2.5s;"/>
+      <use href="#hexagon-group" x="300" y="80" class="hexagon" style="animation-delay: 1.0s;"/>
+      <use href="#hexagon-group" x="400" y="80" class="hexagon" style="animation-delay: 3.9s;"/>
+      <use href="#hexagon-group" x="500" y="80" class="hexagon" style="animation-delay: 0.7s;"/>
+      <use href="#hexagon-group" x="600" y="80" class="hexagon" style="animation-delay: 2.2s;"/>
+      <use href="#hexagon-group" x="700" y="80" class="hexagon" style="animation-delay: 1.5s;"/>
+      <use href="#hexagon-group" x="800" y="80" class="hexagon" style="animation-delay: 3.6s;"/>
+      <use href="#hexagon-group" x="900" y="80" class="hexagon" style="animation-delay: 0.4s;"/>
+      <use href="#hexagon-group" x="1000" y="80" class="hexagon" style="animation-delay: 2.7s;"/>
+      <use href="#hexagon-group" x="1100" y="80" class="hexagon" style="animation-delay: 1.2s;"/>
+      <use href="#hexagon-group" x="1200" y="80" class="hexagon" style="animation-delay: 3.4s;"/>
+      <use href="#hexagon-group" x="1300" y="80" class="hexagon" style="animation-delay: 0.9s;"/>
+      <use href="#hexagon-group" x="1400" y="80" class="hexagon" style="animation-delay: 2.4s;"/>
+      <use href="#hexagon-group" x="1500" y="80" class="hexagon" style="animation-delay: 1.6s;"/>
+      <use href="#hexagon-group" x="1600" y="80" class="hexagon" style="animation-delay: 3.1s;"/>
+      <use href="#hexagon-group" x="1700" y="80" class="hexagon" style="animation-delay: 0.0s;"/>
+      <use href="#hexagon-group" x="1800" y="80" class="hexagon" style="animation-delay: 2.9s;"/>
+      <use href="#hexagon-group" x="1900" y="80" class="hexagon" style="animation-delay: 1.4s;"/>
+      <use href="#hexagon-group" x="2000" y="80" class="hexagon" style="animation-delay: 3.7s;"/>
+      <use href="#hexagon-group" x="2100" y="80" class="hexagon" style="animation-delay: 0.6s;"/>
+    </g>
+    <g>
+      <use href="#hexagon-group" x="-50" y="160" class="hexagon" style="animation-delay: 2.1s;"/>
+      <use href="#hexagon-group" x="50" y="160" class="hexagon" style="animation-delay: 1.8s;"/>
+      <use href="#hexagon-group" x="150" y="160" class="hexagon" style="animation-delay: 3.3s;"/>
+      <use href="#hexagon-group" x="250" y="160" class="hexagon" style="animation-delay: 0.3s;"/>
+      <use href="#hexagon-group" x="350" y="160" class="hexagon" style="animation-delay: 2.5s;"/>
+      <use href="#hexagon-group" x="450" y="160" class="hexagon" style="animation-delay: 1.0s;"/>
+      <use href="#hexagon-group" x="550" y="160" class="hexagon" style="animation-delay: 3.9s;"/>
+      <use href="#hexagon-group" x="650" y="160" class="hexagon" style="animation-delay: 0.7s;"/>
+      <use href="#hexagon-group" x="750" y="160" class="hexagon" style="animation-delay: 2.2s;"/>
+      <use href="#hexagon-group" x="850" y="160" class="hexagon" style="animation-delay: 1.5s;"/>
+      <use href="#hexagon-group" x="950" y="160" class="hexagon" style="animation-delay: 3.6s;"/>
+      <use href="#hexagon-group" x="1050" y="160" class="hexagon" style="animation-delay: 0.4s;"/>
+      <use href="#hexagon-group" x="1150" y="160" class="hexagon" style="animation-delay: 2.7s;"/>
+      <use href="#hexagon-group" x="1250" y="160" class="hexagon" style="animation-delay: 1.2s;"/>
+      <use href="#hexagon-group" x="1350" y="160" class="hexagon" style="animation-delay: 3.4s;"/>
+      <use href="#hexagon-group" x="1450" y="160" class="hexagon" style="animation-delay: 0.9s;"/>
+      <use href="#hexagon-group" x="1550" y="160" class="hexagon" style="animation-delay: 2.4s;"/>
+      <use href="#hexagon-group" x="1650" y="160" class="hexagon" style="animation-delay: 1.6s;"/>
+      <use href="#hexagon-group" x="1750" y="160" class="hexagon" style="animation-delay: 3.1s;"/>
+      <use href="#hexagon-group" x="1850" y="160" class="hexagon" style="animation-delay: 0.0s;"/>
+      <use href="#hexagon-group" x="1950" y="160" class="hexagon" style="animation-delay: 2.9s;"/>
+      <use href="#hexagon-group" x="2050" y="160" class="hexagon" style="animation-delay: 1.4s;"/>
+    </g>
+     <g>
+      <use href="#hexagon-group" x="0" y="240" class="hexagon" style="animation-delay: 3.7s;"/>
+      <use href="#hexagon-group" x="100" y="240" class="hexagon" style="animation-delay: 0.6s;"/>
+      <use href="#hexagon-group" x="200" y="240" class="hexagon" style="animation-delay: 2.1s;"/>
+      <use href="#hexagon-group" x="300" y="240" class="hexagon" style="animation-delay: 1.8s;"/>
+      <use href="#hexagon-group" x="400" y="240" class="hexagon" style="animation-delay: 3.3s;"/>
+      <use href="#hexagon-group" x="500" y="240" class="hexagon" style="animation-delay: 0.3s;"/>
+      <use href="#hexagon-group" x="600" y="240" class="hexagon" style="animation-delay: 2.5s;"/>
+      <use href="#hexagon-group" x="700" y="240" class="hexagon" style="animation-delay: 1.0s;"/>
+      <use href="#hexagon-group" x="800" y="240" class="hexagon" style="animation-delay: 3.9s;"/>
+      <use href="#hexagon-group" x="900" y="240" class="hexagon" style="animation-delay: 0.7s;"/>
+      <use href="#hexagon-group" x="1000" y="240" class="hexagon" style="animation-delay: 2.2s;"/>
+      <use href="#hexagon-group" x="1100" y="240" class="hexagon" style="animation-delay: 1.5s;"/>
+      <use href="#hexagon-group" x="1200" y="240" class="hexagon" style="animation-delay: 3.6s;"/>
+      <use href="#hexagon-group" x="1300" y="240" class="hexagon" style="animation-delay: 0.4s;"/>
+      <use href="#hexagon-group" x="1400" y="240" class="hexagon" style="animation-delay: 2.7s;"/>
+      <use href="#hexagon-group" x="1500" y="240" class="hexagon" style="animation-delay: 1.2s;"/>
+      <use href="#hexagon-group" x="1600" y="240" class="hexagon" style="animation-delay: 3.4s;"/>
+      <use href="#hexagon-group" x="1700" y="240" class="hexagon" style="animation-delay: 0.9s;"/>
+      <use href="#hexagon-group" x="1800" y="240" class="hexagon" style="animation-delay: 2.4s;"/>
+      <use href="#hexagon-group" x="1900" y="240" class="hexagon" style="animation-delay: 1.6s;"/>
+      <use href="#hexagon-group" x="2000" y="240" class="hexagon" style="animation-delay: 3.1s;"/>
+      <use href="#hexagon-group" x="2100" y="240" class="hexagon" style="animation-delay: 0.0s;"/>
+    </g>
+    <g>
+      <use href="#hexagon-group" x="-50" y="320" class="hexagon" style="animation-delay: 2.9s;"/>
+      <use href="#hexagon-group" x="50" y="320" class="hexagon" style="animation-delay: 1.4s;"/>
+      <use href="#hexagon-group" x="150" y="320" class="hexagon" style="animation-delay: 3.7s;"/>
+      <use href="#hexagon-group" x="250" y="320" class="hexagon" style="animation-delay: 0.6s;"/>
+      <use href="#hexagon-group" x="350" y="320" class="hexagon" style="animation-delay: 2.1s;"/>
+      <use href="#hexagon-group" x="450" y="320" class="hexagon" style="animation-delay: 1.8s;"/>
+      <use href="#hexagon-group" x="550" y="320" class="hexagon" style="animation-delay: 3.3s;"/>
+      <use href="#hexagon-group" x="650" y="320" class="hexagon" style="animation-delay: 0.3s;"/>
+      <use href="#hexagon-group" x="750" y="320" class="hexagon" style="animation-delay: 2.5s;"/>
+      <use href="#hexagon-group" x="850" y="320" class="hexagon" style="animation-delay: 1.0s;"/>
+      <use href="#hexagon-group" x="950" y="320" class="hexagon" style="animation-delay: 3.9s;"/>
+      <use href="#hexagon-group" x="1050" y="320" class="hexagon" style="animation-delay: 0.7s;"/>
+      <use href="#hexagon-group" x="1150" y="320" class="hexagon" style="animation-delay: 2.2s;"/>
+      <use href="#hexagon-group" x="1250" y="320" class="hexagon" style="animation-delay: 1.5s;"/>
+      <use href="#hexagon-group" x="1350" y="320" class="hexagon" style="animation-delay: 3.6s;"/>
+      <use href="#hexagon-group" x="1450" y="320" class="hexagon" style="animation-delay: 0.4s;"/>
+      <use href="#hexagon-group" x="1550" y="320" class="hexagon" style="animation-delay: 2.7s;"/>
+      <use href="#hexagon-group" x="1650" y="320" class="hexagon" style="animation-delay: 1.2s;"/>
+      <use href="#hexagon-group" x="1750" y="320" class="hexagon" style="animation-delay: 3.4s;"/>
+      <use href="#hexagon-group" x="1850" y="320" class="hexagon" style="animation-delay: 0.9s;"/>
+      <use href="#hexagon-group" x="1950" y="320" class="hexagon" style="animation-delay: 2.4s;"/>
+      <use href="#hexagon-group" x="2050" y="320" class="hexagon" style="animation-delay: 1.6s;"/>
+    </g>
+    <g>
+      <use href="#hexagon-group" x="0" y="400" class="hexagon" style="animation-delay: 3.1s;"/>
+      <use href="#hexagon-group" x="100" y="400" class="hexagon" style="animation-delay: 0.0s;"/>
+      <use href="#hexagon-group" x="200" y="400" class="hexagon" style="animation-delay: 2.9s;"/>
+      <use href="#hexagon-group" x="300" y="400" class="hexagon" style="animation-delay: 1.4s;"/>
+      <use href="#hexagon-group" x="400" y="400" class="hexagon" style="animation-delay: 3.7s;"/>
+      <use href="#hexagon-group" x="500" y="400" class="hexagon" style="animation-delay: 0.6s;"/>
+      <use href="#hexagon-group" x="600" y="400" class="hexagon" style="animation-delay: 2.1s;"/>
+      <use href="#hexagon-group" x="700" y="400" class="hexagon" style="animation-delay: 1.8s;"/>
+      <use href="#hexagon-group" x="800" y="400" class="hexagon" style="animation-delay: 3.3s;"/>
+      <use href="#hexagon-group" x="900" y="400" class="hexagon" style="animation-delay: 0.3s;"/>
+      <use href="#hexagon-group" x="1000" y="400" class="hexagon" style="animation-delay: 2.5s;"/>
+      <use href="#hexagon-group" x="1100" y="400" class="hexagon" style="animation-delay: 1.0s;"/>
+      <use href="#hexagon-group" x="1200" y="400" class="hexagon" style="animation-delay: 3.9s;"/>
+      <use href="#hexagon-group" x="1300" y="400" class="hexagon" style="animation-delay: 0.7s;"/>
+      <use href="#hexagon-group" x="1400" y="400" class="hexagon" style="animation-delay: 2.2s;"/>
+      <use href="#hexagon-group" x="1500" y="400" class="hexagon" style="animation-delay: 1.5s;"/>
+      <use href="#hexagon-group" x="1600" y="400" class="hexagon" style="animation-delay: 3.6s;"/>
+      <use href="#hexagon-group" x="1700" y="400" class="hexagon" style="animation-delay: 0.4s;"/>
+      <use href="#hexagon-group" x="1800" y="400" class="hexagon" style="animation-delay: 2.7s;"/>
+      <use href="#hexagon-group" x="1900" y="400" class="hexagon" style="animation-delay: 1.2s;"/>
+      <use href="#hexagon-group" x="2000" y="400" class="hexagon" style="animation-delay: 3.4s;"/>
+      <use href="#hexagon-group" x="2100" y="400" class="hexagon" style="animation-delay: 0.9s;"/>
+    </g>
+    <g>
+      <use href="#hexagon-group" x="-50" y="480" class="hexagon" style="animation-delay: 1.2s;"/>
+      <use href="#hexagon-group" x="50" y="480" class="hexagon" style="animation-delay: 3.4s;"/>
+      <use href="#hexagon-group" x="150" y="480" class="hexagon" style="animation-delay: 0.9s;"/>
+      <use href="#hexagon-group" x="250" y="480" class="hexagon" style="animation-delay: 2.4s;"/>
+      <use href="#hexagon-group" x="350" y="480" class="hexagon" style="animation-delay: 1.6s;"/>
+      <use href="#hexagon-group" x="450" y="480" class="hexagon" style="animation-delay: 3.1s;"/>
+      <use href="#hexagon-group" x="550" y="480" class="hexagon" style="animation-delay: 0.0s;"/>
+      <use href="#hexagon-group" x="650" y="480" class="hexagon" style="animation-delay: 2.9s;"/>
+      <use href="#hexagon-group" x="750" y="480" class="hexagon" style="animation-delay: 1.4s;"/>
+      <use href="#hexagon-group" x="850" y="480" class="hexagon" style="animation-delay: 3.7s;"/>
+      <use href="#hexagon-group" x="950" y="480" class="hexagon" style="animation-delay: 0.6s;"/>
+      <use href="#hexagon-group" x="1050" y="480" class="hexagon" style="animation-delay: 2.1s;"/>
+      <use href="#hexagon-group" x="1150" y="480" class="hexagon" style="animation-delay: 1.8s;"/>
+      <use href="#hexagon-group" x="1250" y="480" class="hexagon" style="animation-delay: 3.3s;"/>
+      <use href="#hexagon-group" x="1350" y="480" class="hexagon" style="animation-delay: 0.3s;"/>
+      <use href="#hexagon-group" x="1450" y="480" class="hexagon" style="animation-delay: 2.5s;"/>
+      <use href="#hexagon-group" x="1550" y="480" class="hexagon" style="animation-delay: 1.0s;"/>
+      <use href="#hexagon-group" x="1650" y="480" class="hexagon" style="animation-delay: 3.9s;"/>
+      <use href="#hexagon-group" x="1750" y="480" class="hexagon" style="animation-delay: 0.7s;"/>
+      <use href="#hexagon-group" x="1850" y="480" class="hexagon" style="animation-delay: 2.2s;"/>
+      <use href="#hexagon-group" x="1950" y="480" class="hexagon" style="animation-delay: 1.5s;"/>
+      <use href="#hexagon-group" x="2050" y="480" class="hexagon" style="animation-delay: 3.6s;"/>
+    </g>
+    <g>
+      <use href="#hexagon-group" x="0" y="560" class="hexagon" style="animation-delay: 3.1s;"/>
+      <use href="#hexagon-group" x="100" y="560" class="hexagon" style="animation-delay: 0.0s;"/>
+      <use href="#hexagon-group" x="200" y="560" class="hexagon" style="animation-delay: 2.9s;"/>
+      <use href="#hexagon-group" x="300" y="560" class="hexagon" style="animation-delay: 1.4s;"/>
+      <use href="#hexagon-group" x="400" y="560" class="hexagon" style="animation-delay: 3.7s;"/>
+      <use href="#hexagon-group" x="500" y="560" class="hexagon" style="animation-delay: 0.6s;"/>
+      <use href="#hexagon-group" x="600" y="560" class="hexagon" style="animation-delay: 2.1s;"/>
+      <use href="#hexagon-group" x="700" y="560" class="hexagon" style="animation-delay: 1.8s;"/>
+      <use href="#hexagon-group" x="800" y="560" class="hexagon" style="animation-delay: 3.3s;"/>
+      <use href="#hexagon-group" x="900" y="560" class="hexagon" style="animation-delay: 0.3s;"/>
+      <use href="#hexagon-group" x="1000" y="560" class="hexagon" style="animation-delay: 2.5s;"/>
+      <use href="#hexagon-group" x="1100" y="560" class="hexagon" style="animation-delay: 1.0s;"/>
+      <use href="#hexagon-group" x="1200" y="560" class="hexagon" style="animation-delay: 3.9s;"/>
+      <use href="#hexagon-group" x="1300" y="560" class="hexagon" style="animation-delay: 0.7s;"/>
+      <use href="#hexagon-group" x="1400" y="560" class="hexagon" style="animation-delay: 2.2s;"/>
+      <use href="#hexagon-group" x="1500" y="560" class="hexagon" style="animation-delay: 1.5s;"/>
+      <use href="#hexagon-group" x="1600" y="560" class="hexagon" style="animation-delay: 3.6s;"/>
+      <use href="#hexagon-group" x="1700" y="560" class="hexagon" style="animation-delay: 0.4s;"/>
+      <use href="#hexagon-group" x="1800" y="560" class="hexagon" style="animation-delay: 2.7s;"/>
+      <use href="#hexagon-group" x="1900" y="560" class="hexagon" style="animation-delay: 1.2s;"/>
+      <use href="#hexagon-group" x="2000" y="560" class="hexagon" style="animation-delay: 3.4s;"/>
+      <use href="#hexagon-group" x="2100" y="560" class="hexagon" style="animation-delay: 0.9s;"/>
+    </g>
+    </g>
+  </g>
+</svg>

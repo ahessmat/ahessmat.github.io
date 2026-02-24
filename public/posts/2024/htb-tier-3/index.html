@@ -1,0 +1,2195 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>HTB Tier 3 Path Review &middot; ByteBreach</title>
+    <meta name="title" content="HTB Tier 3 Path Review &middot; ByteBreach">
+  
+
+  
+  
+    <meta name="description" content="Late in 2023, Hack The Box announced new Senior Web Penetration Tester training path along their Academy platform which aligns to their Certified Web Exploitation Expert (CWEE) certification. The CWEE - released earlier in 2024 - is the first of their certifications which included **Tier 3** module content; up until now content aligned to their certifications (the CDSA, CBBH, and CPTS) all exclusively engaged **Tier 2** material.">
+  
+  
+    <meta name="keywords" content="resources,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/posts/2024/htb-tier-3/">
+  
+
+  
+  
+    <meta name="author" content="Asa Hess-Matsumoto">
+  
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/posts/2024/htb-tier-3/">
+  <meta property="og:site_name" content="ByteBreach">
+  <meta property="og:title" content="HTB Tier 3 Path Review">
+  <meta property="og:description" content="Late in 2023, Hack The Box announced new Senior Web Penetration Tester training path along their Academy platform which aligns to their Certified Web Exploitation Expert (CWEE) certification. The CWEE - released earlier in 2024 - is the first of their certifications which included Tier 3 module content; up until now content aligned to their certifications (the CDSA, CBBH, and CPTS) all exclusively engaged Tier 2 material.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-02-05T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-02-05T00:00:00+00:00">
+    <meta property="article:tag" content="Resources">
+    <meta property="og:image" content="http://localhost:1313/posts/2024/htb-tier-3/featured-appsec.jpg">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/posts/2024/htb-tier-3/featured-appsec.jpg">
+  <meta name="twitter:title" content="HTB Tier 3 Path Review">
+  <meta name="twitter:description" content="Late in 2023, Hack The Box announced new Senior Web Penetration Tester training path along their Academy platform which aligns to their Certified Web Exploitation Expert (CWEE) certification. The CWEE - released earlier in 2024 - is the first of their certifications which included Tier 3 module content; up until now content aligned to their certifications (the CDSA, CBBH, and CPTS) all exclusively engaged Tier 2 material.">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+  
+    
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.5a487d782649d187091c0980c3a0aeea3d84865f7f4746bf3e2bf6361aa64f913de7acc5421622c2e5f13804fafe23d56f7a39147a894d035b0c7da6e5b79c94.css"
+    integrity="sha512-Wkh9eCZJ0YcJHAmAw6Cu6j2Ehl9/R0a/Piv2NhqmT5E956zFQhYiwuXxOAT6/iPVb3o5FHqJTQNbDH2m5beclA==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.0e2e7ce1e319db5369cd4badb8265de52c78d08df54617521bdac9c8cd335eea6133a82c83f9cb19baf67b8133335130e7e8ff7cfeaf7171016648dbf5a0578a.js"
+      integrity="sha512-Di584eMZ21NpzUutuCZd5Sx40I31RhdSG9rJyM0zXuphM6gsg/nLGbr2e4EzM1Ew5&#43;j/fP6vcXEBZkjb9aBXig=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "HTB Tier 3 Path Review",
+    "headline": "HTB Tier 3 Path Review",
+    
+    "inLanguage": "en",
+    "url" : "http://localhost:1313/posts/2024/htb-tier-3/",
+    "author" : {
+      "@type": "Person",
+      "name": "Asa Hess-Matsumoto"
+    },
+    "copyrightYear": "2024",
+    "dateCreated": "2024-02-05T00:00:00\u002b00:00",
+    "datePublished": "2024-02-05T00:00:00\u002b00:00",
+    
+    "dateModified": "2024-02-05T00:00:00\u002b00:00",
+    
+    "keywords": ["resources"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "7198"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      ByteBreach
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/about/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="About"
+      title="About">
+      
+        <span class="mr-1">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z"/></svg>
+</span>
+        </span>
+      
+      
+        <span class="text-base font-medium break-normal">
+          About
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/posts/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Blog"
+      title="Posts">
+      
+        <span class="mr-1">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M421.7 220.3L188.5 453.4L154.6 419.5L158.1 416H112C103.2 416 96 408.8 96 400V353.9L92.51 357.4C87.78 362.2 84.31 368 82.42 374.4L59.44 452.6L137.6 429.6C143.1 427.7 149.8 424.2 154.6 419.5L188.5 453.4C178.1 463.8 165.2 471.5 151.1 475.6L30.77 511C22.35 513.5 13.24 511.2 7.03 504.1C.8198 498.8-1.502 489.7 .976 481.2L36.37 360.9C40.53 346.8 48.16 333.9 58.57 323.5L291.7 90.34L421.7 220.3zM492.7 58.75C517.7 83.74 517.7 124.3 492.7 149.3L444.3 197.7L314.3 67.72L362.7 19.32C387.7-5.678 428.3-5.678 453.3 19.32L492.7 58.75z"/></svg>
+</span>
+        </span>
+      
+      
+        <span class="text-base font-medium break-normal">
+          Blog
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/writeups/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Writeups"
+      title="Writeups">
+      
+        <span class="mr-1">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M352 96V99.56C352 115.3 339.3 128 323.6 128H188.4C172.7 128 159.1 115.3 159.1 99.56V96C159.1 42.98 202.1 0 255.1 0C309 0 352 42.98 352 96zM41.37 105.4C53.87 92.88 74.13 92.88 86.63 105.4L150.6 169.4C151.3 170 151.9 170.7 152.5 171.4C166.8 164.1 182.9 160 199.1 160H312C329.1 160 345.2 164.1 359.5 171.4C360.1 170.7 360.7 170 361.4 169.4L425.4 105.4C437.9 92.88 458.1 92.88 470.6 105.4C483.1 117.9 483.1 138.1 470.6 150.6L406.6 214.6C405.1 215.3 405.3 215.9 404.6 216.5C410.7 228.5 414.6 241.9 415.7 256H480C497.7 256 512 270.3 512 288C512 305.7 497.7 320 480 320H416C416 344.6 410.5 367.8 400.6 388.6C402.7 389.9 404.8 391.5 406.6 393.4L470.6 457.4C483.1 469.9 483.1 490.1 470.6 502.6C458.1 515.1 437.9 515.1 425.4 502.6L362.3 439.6C337.8 461.4 306.5 475.8 272 479.2V240C272 231.2 264.8 224 255.1 224C247.2 224 239.1 231.2 239.1 240V479.2C205.5 475.8 174.2 461.4 149.7 439.6L86.63 502.6C74.13 515.1 53.87 515.1 41.37 502.6C28.88 490.1 28.88 469.9 41.37 457.4L105.4 393.4C107.2 391.5 109.3 389.9 111.4 388.6C101.5 367.8 96 344.6 96 320H32C14.33 320 0 305.7 0 288C0 270.3 14.33 256 32 256H96.3C97.38 241.9 101.3 228.5 107.4 216.5C106.7 215.9 106 215.3 105.4 214.6L41.37 150.6C28.88 138.1 28.88 117.9 41.37 105.4H41.37z"/></svg>
+</span>
+        </span>
+      
+      
+        <span class="text-base font-medium break-normal">
+          Writeups
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/tags/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Tags"
+      title="Tags">
+      
+        <span class="mr-1">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M48 32H197.5C214.5 32 230.7 38.74 242.7 50.75L418.7 226.7C443.7 251.7 443.7 292.3 418.7 317.3L285.3 450.7C260.3 475.7 219.7 475.7 194.7 450.7L18.75 274.7C6.743 262.7 0 246.5 0 229.5V80C0 53.49 21.49 32 48 32L48 32zM112 176C129.7 176 144 161.7 144 144C144 126.3 129.7 112 112 112C94.33 112 80 126.3 80 144C80 161.7 94.33 176 112 176z"/></svg>
+</span>
+        </span>
+      
+      
+        <span class="text-base font-medium break-normal">
+          Tags
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/about/"
+        aria-label="About"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+          <span class="flex items-center justify-center h-8 w-8 text-2xl">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z"/></svg>
+</span>
+          </span>
+        
+        <span title="About" class="text-2xl font-bold tracking-tight">
+          About
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/posts/"
+        aria-label="Blog"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+          <span class="flex items-center justify-center h-8 w-8 text-2xl">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M421.7 220.3L188.5 453.4L154.6 419.5L158.1 416H112C103.2 416 96 408.8 96 400V353.9L92.51 357.4C87.78 362.2 84.31 368 82.42 374.4L59.44 452.6L137.6 429.6C143.1 427.7 149.8 424.2 154.6 419.5L188.5 453.4C178.1 463.8 165.2 471.5 151.1 475.6L30.77 511C22.35 513.5 13.24 511.2 7.03 504.1C.8198 498.8-1.502 489.7 .976 481.2L36.37 360.9C40.53 346.8 48.16 333.9 58.57 323.5L291.7 90.34L421.7 220.3zM492.7 58.75C517.7 83.74 517.7 124.3 492.7 149.3L444.3 197.7L314.3 67.72L362.7 19.32C387.7-5.678 428.3-5.678 453.3 19.32L492.7 58.75z"/></svg>
+</span>
+          </span>
+        
+        <span title="Posts" class="text-2xl font-bold tracking-tight">
+          Blog
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/writeups/"
+        aria-label="Writeups"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+          <span class="flex items-center justify-center h-8 w-8 text-2xl">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M352 96V99.56C352 115.3 339.3 128 323.6 128H188.4C172.7 128 159.1 115.3 159.1 99.56V96C159.1 42.98 202.1 0 255.1 0C309 0 352 42.98 352 96zM41.37 105.4C53.87 92.88 74.13 92.88 86.63 105.4L150.6 169.4C151.3 170 151.9 170.7 152.5 171.4C166.8 164.1 182.9 160 199.1 160H312C329.1 160 345.2 164.1 359.5 171.4C360.1 170.7 360.7 170 361.4 169.4L425.4 105.4C437.9 92.88 458.1 92.88 470.6 105.4C483.1 117.9 483.1 138.1 470.6 150.6L406.6 214.6C405.1 215.3 405.3 215.9 404.6 216.5C410.7 228.5 414.6 241.9 415.7 256H480C497.7 256 512 270.3 512 288C512 305.7 497.7 320 480 320H416C416 344.6 410.5 367.8 400.6 388.6C402.7 389.9 404.8 391.5 406.6 393.4L470.6 457.4C483.1 469.9 483.1 490.1 470.6 502.6C458.1 515.1 437.9 515.1 425.4 502.6L362.3 439.6C337.8 461.4 306.5 475.8 272 479.2V240C272 231.2 264.8 224 255.1 224C247.2 224 239.1 231.2 239.1 240V479.2C205.5 475.8 174.2 461.4 149.7 439.6L86.63 502.6C74.13 515.1 53.87 515.1 41.37 502.6C28.88 490.1 28.88 469.9 41.37 457.4L105.4 393.4C107.2 391.5 109.3 389.9 111.4 388.6C101.5 367.8 96 344.6 96 320H32C14.33 320 0 305.7 0 288C0 270.3 14.33 256 32 256H96.3C97.38 241.9 101.3 228.5 107.4 216.5C106.7 215.9 106 215.3 105.4 214.6L41.37 150.6C28.88 138.1 28.88 117.9 41.37 105.4H41.37z"/></svg>
+</span>
+          </span>
+        
+        <span title="Writeups" class="text-2xl font-bold tracking-tight">
+          Writeups
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/tags/"
+        aria-label="Tags"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+          <span class="flex items-center justify-center h-8 w-8 text-2xl">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M48 32H197.5C214.5 32 230.7 38.74 242.7 50.75L418.7 226.7C443.7 251.7 443.7 292.3 418.7 317.3L285.3 450.7C260.3 475.7 219.7 475.7 194.7 450.7L18.75 274.7C6.743 262.7 0 246.5 0 229.5V80C0 53.49 21.49 32 48 32L48 32zM112 176C129.7 176 144 161.7 144 144C144 126.3 129.7 112 112 112C94.33 112 80 126.3 80 144C80 161.7 94.33 176 112 176z"/></svg>
+</span>
+          </span>
+        
+        <span title="Tags" class="text-2xl font-bold tracking-tight">
+          Tags
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+  <script>
+    (function () {
+      var mainmenu = document.querySelector(".main-menu");
+      if (!mainmenu) return;
+
+      var path = window.location.pathname;
+      var links = mainmenu.querySelectorAll('a[href="' + path + '"]');
+
+      links.forEach(function (link) {
+        var targets = link.querySelectorAll("span");
+        targets.forEach(function (el) {
+          el.classList.add("active");
+        });
+      });
+    })();
+  </script>
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+      
+      
+      
+      
+        
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+
+
+
+  
+    
+    
+      
+      
+    
+  
+
+
+
+
+
+    <div id="hero" class="h-[150px] md:h-[200px]"></div>
+  
+  <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom">
+    
+    
+    
+    <img
+      id="background-image"
+      src="/animated-honeycomb-25-less.svg"
+      role="presentation"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      class="absolute inset-0 w-full h-full object-cover"
+      >
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal"></div>
+    <div
+      class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal"></div>
+  </div>
+
+  
+    <div
+      id="background-blur"
+      class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-xl bg-neutral-100/75 dark:bg-neutral-800/60"></div>
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/background-blur.min.605b3b942818f0ab5a717ae446135ec46b8ee5a2ad12ae56fb90dc2a76ce30c388f9fec8bcc18db15bd47e3fa8a09d779fa12aa9c184cf614a315bc72c6c163d.js"
+      integrity="sha512-YFs7lCgY8KtacXrkRhNexGuO5aKtEq5W&#43;5DcKnbOMMOI&#43;f7IvMGNsVvUfj&#43;ooJ13n6EqqcGEz2FKMVvHLGwWPQ=="
+      data-blur-id="background-blur"
+      data-image-id="background-image"
+      data-image-url="/animated-honeycomb-25-less.svg"></script>
+  
+      
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        HTB Tier 3 Path Review
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2024-02-05T00:00:00&#43;00:00">5 February 2024</time><span class="px-2 text-primary-500">&middot;</span><span>7198 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">34 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+      
+      
+        
+        
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4"
+        width="96"
+        height="96"
+        alt="Asa Hess-Matsumoto"
+        src="/animated-avatar_hu_e391172299f47252.gif"
+        data-zoom-src="/animated-avatar_hu_5fc2f32c4a85f231.gif">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Asa Hess-Matsumoto
+      </div>
+    
+    
+      <div class="text-sm text-neutral-700 dark:text-neutral-400">A little bit about you</div>
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+        <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky lg:top-10">
+            <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain bf-scrollbar rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#injection-attacks">Injection Attacks</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#introduction-to-injection-attacks">Introduction to Injection Attacks</a></li>
+            <li><a href="#xpath-injection">XPath Injection</a></li>
+            <li><a href="#ldap-injection">LDAP Injection</a></li>
+            <li><a href="#html-injection-in-pdf-generators">HTML Injection in PDF Generators</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#introduction-to-nosql-injection">Introduction to NoSQL Injection</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#basic-nosql-injection">Basic NoSQL Injection</a></li>
+            <li><a href="#blind-data-exfiltration">Blind Data Exfiltration</a></li>
+            <li><a href="#tools-of-the-trade">Tools of the Trade</a></li>
+            <li><a href="#defending-against-nosql-injection">Defending Against NoSQL Injection</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#attacking-authentication-mechanisms">Attacking Authentication Mechanisms</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#oauth">OAuth</a></li>
+            <li><a href="#saml">SAML</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#advanced-xss-and-csrf-exploitation">Advanced XSS and CSRF Exploitation</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#csrf-exploitation">CSRF Exploitation</a></li>
+            <li><a href="#xss-exploitation">XSS Exploitation</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#httpstls-attacks">HTTPs/TLS Attacks</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#padding-oracle-attacks">Padding Oracle Attacks</a></li>
+            <li><a href="#tls-compression">TLS Compression</a></li>
+            <li><a href="#heartbleed">Heartbleed</a></li>
+            <li><a href="#further-attacks">Further Attacks</a></li>
+            <li><a href="#tls-best-practices">TLS Best Practices</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#abusing-http-misconfigurations">Abusing HTTP Misconfigurations</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#web-cache-poisoning">Web Cache Poisoning</a></li>
+            <li><a href="#host-header-attacks">Host Header Attacks</a></li>
+            <li><a href="#session-puzzling">Session Puzzling</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#http-attacks">HTTP Attacks</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#http-request-smugglingdesync-attacks">HTTP Request Smuggling/Desync Attacks</a></li>
+            <li><a href="#http2-downgrading">HTTP/2 Downgrading</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#blind-sql-injection">Blind SQL Injection</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#boolean-based-sqli">Boolean-based SQLi</a></li>
+            <li><a href="#time-based-sqli">Time-based SQLi</a></li>
+            <li><a href="#mssql-specific-attacks">MSSQL-specific Attacks</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#intro-to-whitebox-pentesting">Intro to Whitebox Pentesting</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#code-review">Code Review</a></li>
+            <li><a href="#local-testing">Local Testing</a></li>
+            <li><a href="#proof-of-concept-poc">Proof of Concept (PoC)</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#modern-web-exploitation-techniques">Modern Web Exploitation Techniques</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#second-order-attacks">Second-Order Attacks</a></li>
+            <li><a href="#websocket-attacks">WebSocket Attacks</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#introduction-to-deserialization-attacks">Introduction to Deserialization Attacks</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#exploiting-python-deserialization">Exploiting Python Deserialization</a></li>
+            <li><a href="#defending-against-deserialization-attacks">Defending against Deserialization Attacks</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#whitebox-attacks">Whitebox Attacks</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#timing-attacks--race-conditions">Timing Attacks &amp; Race Conditions</a></li>
+            <li><a href="#type-juggling">Type Juggling</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#advanced-sql-injections">Advanced SQL Injections</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#exploiting-deserialization-vulnerabilities">Exploiting Deserialization Vulnerabilities</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#advanced-deserialization-attacks">Advanced Deserialization Attacks</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#injection-attacks">Injection Attacks</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#introduction-to-injection-attacks">Introduction to Injection Attacks</a></li>
+            <li><a href="#xpath-injection">XPath Injection</a></li>
+            <li><a href="#ldap-injection">LDAP Injection</a></li>
+            <li><a href="#html-injection-in-pdf-generators">HTML Injection in PDF Generators</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#introduction-to-nosql-injection">Introduction to NoSQL Injection</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#basic-nosql-injection">Basic NoSQL Injection</a></li>
+            <li><a href="#blind-data-exfiltration">Blind Data Exfiltration</a></li>
+            <li><a href="#tools-of-the-trade">Tools of the Trade</a></li>
+            <li><a href="#defending-against-nosql-injection">Defending Against NoSQL Injection</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#attacking-authentication-mechanisms">Attacking Authentication Mechanisms</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#oauth">OAuth</a></li>
+            <li><a href="#saml">SAML</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#advanced-xss-and-csrf-exploitation">Advanced XSS and CSRF Exploitation</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#csrf-exploitation">CSRF Exploitation</a></li>
+            <li><a href="#xss-exploitation">XSS Exploitation</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#httpstls-attacks">HTTPs/TLS Attacks</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#padding-oracle-attacks">Padding Oracle Attacks</a></li>
+            <li><a href="#tls-compression">TLS Compression</a></li>
+            <li><a href="#heartbleed">Heartbleed</a></li>
+            <li><a href="#further-attacks">Further Attacks</a></li>
+            <li><a href="#tls-best-practices">TLS Best Practices</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#abusing-http-misconfigurations">Abusing HTTP Misconfigurations</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#web-cache-poisoning">Web Cache Poisoning</a></li>
+            <li><a href="#host-header-attacks">Host Header Attacks</a></li>
+            <li><a href="#session-puzzling">Session Puzzling</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#http-attacks">HTTP Attacks</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#http-request-smugglingdesync-attacks">HTTP Request Smuggling/Desync Attacks</a></li>
+            <li><a href="#http2-downgrading">HTTP/2 Downgrading</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#blind-sql-injection">Blind SQL Injection</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#boolean-based-sqli">Boolean-based SQLi</a></li>
+            <li><a href="#time-based-sqli">Time-based SQLi</a></li>
+            <li><a href="#mssql-specific-attacks">MSSQL-specific Attacks</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#intro-to-whitebox-pentesting">Intro to Whitebox Pentesting</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#code-review">Code Review</a></li>
+            <li><a href="#local-testing">Local Testing</a></li>
+            <li><a href="#proof-of-concept-poc">Proof of Concept (PoC)</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#modern-web-exploitation-techniques">Modern Web Exploitation Techniques</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#second-order-attacks">Second-Order Attacks</a></li>
+            <li><a href="#websocket-attacks">WebSocket Attacks</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#introduction-to-deserialization-attacks">Introduction to Deserialization Attacks</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#exploiting-python-deserialization">Exploiting Python Deserialization</a></li>
+            <li><a href="#defending-against-deserialization-attacks">Defending against Deserialization Attacks</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#whitebox-attacks">Whitebox Attacks</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#timing-attacks--race-conditions">Timing Attacks &amp; Race Conditions</a></li>
+            <li><a href="#type-juggling">Type Juggling</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#advanced-sql-injections">Advanced SQL Injections</a>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#exploiting-deserialization-vulnerabilities">Exploiting Deserialization Vulnerabilities</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#advanced-deserialization-attacks">Advanced Deserialization Attacks</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+<script>
+  (function () {
+    'use strict'
+
+    const SCROLL_OFFSET_RATIO = 0.33
+    const TOC_SELECTOR = '#TableOfContents'
+    const ANCHOR_SELECTOR = '.anchor'
+    const TOC_LINK_SELECTOR = 'a[href^="#"]'
+    const NESTED_LIST_SELECTOR = 'li ul'
+    const ACTIVE_CLASS = 'active'
+    let isJumpingToAnchor = false
+
+    function getActiveAnchorId(anchors, offsetRatio) {
+      const threshold = window.scrollY + window.innerHeight * offsetRatio
+      const tocLinks = [...document.querySelectorAll('#TableOfContents a[href^="#"]')]
+      const tocIds = new Set(tocLinks.map(link => link.getAttribute('href').substring(1)))
+
+      if (isJumpingToAnchor) {
+        for (let i = 0; i < anchors.length; i++) {
+          const anchor = anchors[i]
+          if (!tocIds.has(anchor.id)) continue
+          const top = anchor.getBoundingClientRect().top + window.scrollY
+          if (Math.abs(window.scrollY - top) < 100) {
+            return anchor.id
+          }
+        }
+      }
+
+      for (let i = anchors.length - 1; i >= 0; i--) {
+        const top = anchors[i].getBoundingClientRect().top + window.scrollY
+        if (top <= threshold && tocIds.has(anchors[i].id)) {
+          return anchors[i].id
+        }
+      }
+      return anchors.find(anchor => tocIds.has(anchor.id))?.id || ''
+    }
+
+    function updateTOC({ toc, anchors, links, scrollOffset, collapseInactive }) {
+      const activeId = getActiveAnchorId(anchors, scrollOffset)
+      if (!activeId) return
+
+      links.forEach(link => {
+        const isActive = link.getAttribute('href') === `#${activeId}`
+        link.classList.toggle(ACTIVE_CLASS, isActive)
+
+        if (collapseInactive) {
+          const ul = link.closest('li')?.querySelector('ul')
+          if (ul) ul.style.display = isActive ? '' : 'none'
+        }
+      })
+
+      if (collapseInactive) {
+        const activeLink = toc.querySelector(`a[href="#${CSS.escape(activeId)}"]`)
+        let el = activeLink
+        while (el && el !== toc) {
+          if (el.tagName === 'UL') el.style.display = ''
+          if (el.tagName === 'LI') el.querySelector('ul')?.style.setProperty('display', '')
+          el = el.parentElement
+        }
+      }
+    }
+
+    function initTOC() {
+      const toc = document.querySelector(TOC_SELECTOR)
+      if (!toc) return
+
+      const collapseInactive = false
+      const anchors = [...document.querySelectorAll(ANCHOR_SELECTOR)]
+      const links = [...toc.querySelectorAll(TOC_LINK_SELECTOR)]
+
+      if (collapseInactive) {
+        toc.querySelectorAll(NESTED_LIST_SELECTOR).forEach(ul => ul.style.display = 'none')
+      }
+
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          isJumpingToAnchor = true
+        })
+      })
+
+      const config = {
+        toc,
+        anchors,
+        links,
+        scrollOffset: SCROLL_OFFSET_RATIO,
+        collapseInactive
+      }
+
+      window.addEventListener('scroll', () => updateTOC(config), { passive: true })
+      window.addEventListener('hashchange', () => updateTOC(config), { passive: true })
+
+      updateTOC(config)
+    }
+
+    document.readyState === 'loading'
+      ? document.addEventListener('DOMContentLoaded', initTOC)
+      : initTOC()
+  })()
+</script>
+
+
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          <style>
+  /*This is code to make the dropdown menu a little more aesthetically pleasing*/
+  @keyframes details-show {
+  from {
+    opacity:0;
+    transform: var(--details-translate, translateY(-0.5em));
+  }
+}
+details[open] > *:not(summary) {
+  animation: details-show 150ms ease-in-out;
+}
+
+</style>
+
+<h2 class="relative group">Introduction
+    <div id="introduction" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#introduction" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Late in 2023, Hack The Box announced new Senior Web Penetration Tester training path along their Academy platform which aligns to their Certified Web Exploitation Expert (CWEE) certification. The CWEE - released earlier in 2024 - is the first of their certifications which included <strong>Tier 3</strong> module content; up until now content aligned to their certifications (the CDSA, CBBH, and CPTS) all exclusively engaged <strong>Tier 2</strong> material.</p>
+<center>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">New level unlocked 🔓 <br>Introducing the Senior Web Penetration Tester job role path on <a href="https://twitter.com/hashtag/HTB?src=hash&amp;ref_src=twsrc%5Etfw">#HTB</a> Academy! 15 modules will walk you through identifying advanced and hard-to-find <a href="https://twitter.com/hashtag/web?src=hash&amp;ref_src=twsrc%5Etfw">#web</a> vulnerabilities to take your expertise to the next level.<br><br>⭐️ You can now access the path with the new… <a href="https://t.co/7n3HRE5PWR">pic.twitter.com/7n3HRE5PWR</a></p>&mdash; Hack The Box (@hackthebox_eu) <a href="https://twitter.com/hackthebox_eu/status/1735706734704886220?ref_src=twsrc%5Etfw">December 15, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center>
+<p>Implicitly, the release of the path was meant to suggest that this training would be more challenging and I was eager to see how. At-a-glance, the path is composed of the following modules:</p>
+<ul>
+<li>Injection Attacks</li>
+<li>Introduction to NoSQL Injection</li>
+<li>Attacking Authentication Mechanisms</li>
+<li>Advanced XSS and CSRF Exploitation</li>
+<li>HTTPs/TLS Attacks</li>
+<li>Abusing HTTP Misconfigurations</li>
+<li>HTTP Attacks</li>
+<li>Blind SQL Injection</li>
+<li>Intro to Whitebox Pentesting</li>
+<li>Modern Web Exploitation Techniques</li>
+<li>Introduction to Deserialization Attacks</li>
+<li>Whitebox Attacks</li>
+<li>Advanced SQL Injections</li>
+<li>Advanced Deserialization Attacks</li>
+<li>Parameter Logic Bugs</li>
+</ul>
+<p>This blog post is a review and summary of the Tier 3 training path that aligns to the CWEE certification. It speaks to questions like &ldquo;what do you learn?&rdquo; and &ldquo;what can I expect?&rdquo;. It is not a walkthrough of the material, nor does it speak to the answers for each of the modules&rsquo; questions and their respective &ldquo;Skills Assessments&rdquo;. In alignment with Hack The Box&rsquo;s terms of service, I encourage you to engage their Discord and Forums for aid in that regard. However, I do highlight fixes to administrative issues I encountered throughout, as I believe these are not deliberately built into the respective lesson objectives and do not otherwise detract from the learning experience. In addition to the brief summaries below, you can click on the dropdown menus to view my feedback on the individual modules&rsquo; sections.</p>
+
+<h2 class="relative group">Injection Attacks
+    <div id="injection-attacks" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#injection-attacks" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>This module is very quick to complete. Unlike the Tier 2 <strong>Command Injections</strong> module, which covers injection testing methodologies more broadly, <strong>Injection Attacks</strong> more narrowly focuses on three technologies and how they specifically can lead to vulnerabilities in an application. While this deepens your understanding of the attacks against them specifically, I think that this module is erroneously titled, focusing on XPath and LDAP Injections more particularly and bolting-on attacks on PDF-generators at the end.</p>
+<hr>
+<div class="custom-dropdown">
+<details markdown=block>
+<summary markdown=span>Module Details</summary>
+
+<h4 class="relative group">Introduction to Injection Attacks
+    <div id="introduction-to-injection-attacks" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#introduction-to-injection-attacks" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>This module kicks off with more narrowly framing the lesson to a particular set of technologies: XML Path Language (XPath), Lightweight Directory Access Protocol (LDAP), and PDF-generators. For folks more interested in command injection more broadly, the Academy offers a distinct <code>Command Injection</code> module.</p>
+
+<h4 class="relative group">XPath Injection
+    <div id="xpath-injection" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#xpath-injection" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>The section is the longest in the module, describing a variety of ways that the XML language can lend itself to abuse. However, some of the methods feel relatively derivative: the <strong>XPath - Authentication Bypass</strong> was <em>very</em> similar to SQL injection (albeit with some minor syntactic differences) and  <strong>XPath - Data Exfiltration</strong> was likewise similar (albeit with a little LFI thrown in).</p>
+<p>The <strong>XPath -Advanced Data Exfiltration</strong> and <strong>XPath - Blind Exploitation</strong> subsections were where the real learning value of the module resides. There is a lot of really interesting material to mull over and perform in the respective exercises that make them really worthwhile.</p>
+
+<h4 class="relative group">LDAP Injection
+    <div id="ldap-injection" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#ldap-injection" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>This section was likewise pretty straightforward to perform; I think the real value to me was having some handy references to LDAP syntax, which I often trip over and lose a lot of time on in formatting.</p>
+
+<h4 class="relative group">HTML Injection in PDF Generators
+    <div id="html-injection-in-pdf-generators" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#html-injection-in-pdf-generators" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>This section felt pretty niche to me; interesting to be sure, but niche all the same. The gist of it revolves around exploiting vulnerable PDF generation capabilities that may be present in web apps such that input is interpreted/executed as JavaScript code. The kinds of attacks you can perform are therefore likewise derivative to whatever you can maliciously perform with injected javascript (e.g. Server-Side XSS, SSRF, LFI, data exfiltration, etc.). I thought this was interesting, but wasn&rsquo;t really sure how applicable testing for this vulnerability might be outside of Hack The Box&rsquo;s gamified environments.</p>
+</details>
+</div>
+
+<h2 class="relative group">Introduction to NoSQL Injection
+    <div id="introduction-to-nosql-injection" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#introduction-to-nosql-injection" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>I thought this module was pretty cool, being familiar to the idea of non-relational databases but without having extensively tested against them. To that end, this module was filled with some pretty neat content that was easy to follow along with but nuanced enough to appreciate the technical complexity. My only complaint here - which is fairly consistent with the Academy at-large - is that the tools they provide/suggest aren&rsquo;t always intuitive or helpful; however, there&rsquo;s plenty of open source alternatives available that I engaged which made this module altogether a more pleasant experience.</p>
+<hr>
+<div class="custom-dropdown">
+<details markdown=block>
+<summary markdown=span>Module Details</summary>
+#### Introduction
+<p>This section describes some differences between relational databases (e.g. Oracle, MySQL, etc.) and non-relational databases, the latter of which are the module&rsquo;s focus. To help orient us, we&rsquo;re introduced to using <strong>MongoDB</strong> and the syntax for engaging it, which becomes important later for performing exploits. The only exercise for this section involves understanding how to efficiently query MongoDB, which can make the experience anywhere from simple to a little time-consuming, depending on on how well you take to the lessons.</p>
+
+<h4 class="relative group">Basic NoSQL Injection
+    <div id="basic-nosql-injection" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#basic-nosql-injection" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>For me, this section introduced something that was paradigm-shifting: altering web request parameters. In the past, these values have always been absolute. However, discovering that I could change something like <code>password=something</code> to <code>password[$ne]=something</code> for NoSQL testing was really interesting. The accompanying exercises can be followed-along almost word-for-word.</p>
+
+<h4 class="relative group">Blind Data Exfiltration
+    <div id="blind-data-exfiltration" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#blind-data-exfiltration" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>This section is very reminiscent of learning Blind SQL injection techniques more generally; the idea here is that you&rsquo;re relying on indirect indicators to tease out information piece-by-piece. The examples provided by the exercises can be performed either using the custom python scripts they provide (to help with automation) or via Burp Suite Intruder. The section also goes on to show how NoSQL injections can be paired with certain Javascript vulnerabilities for interesting effects.</p>
+
+<h4 class="relative group">Tools of the Trade
+    <div id="tools-of-the-trade" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#tools-of-the-trade" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>This section is brief, surveying a few tools that can be used including <strong>wfuzz</strong>, <strong>NoSQLMap</strong>, and an extension to Burp called <strong>Burp-NoSQLiScanner</strong>.</p>
+
+<h4 class="relative group">Defending Against NoSQL Injection
+    <div id="defending-against-nosql-injection" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#defending-against-nosql-injection" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>This section - like other similar sections offered throughout offensively-oriented modules - is strictly dedicated to defensive countermeasures to the aforementioned attacks. Unfortunately, it offers no exercises.</p>
+</details>
+</div>
+
+<h2 class="relative group">Attacking Authentication Mechanisms
+    <div id="attacking-authentication-mechanisms" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#attacking-authentication-mechanisms" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>This module builds off of what is learned in the <strong>Broken Authentication</strong> module. However, where <strong>Broken Authentication</strong> focuses on basic attacks more generally (e.g. brute forcing, password inference, etc.), this module more narrowly examines technical vulnerabilities present in particular authentication mechanisms. Namely: JWT, OAuth, and SAML-supported SSO. I thought this module was pretty good, however the exercises didn&rsquo;t always help with solidfying comprehension.</p>
+<hr>
+<div class="custom-dropdown">
+<details markdown=block>
+<summary markdown=span>Module Details</summary>
+#### JWT
+<p>If you&rsquo;ve never encountered a JSON Web Token (JWT) before, then this is the section for you. It goes over what it is and the common misconfigurations/vulnerabilities that can stem from them. However, I think this section - with the exception of <strong>Insecure KID Parameter Processing</strong> - isn&rsquo;t Tier 3 content. What&rsquo;s covered isn&rsquo;t difficult to comprehend nor novel; unlike other modules, you&rsquo;re not really being presented anything new or in a way that isn&rsquo;t covered just as well/succintly elsewhere, which was a little disappointing. The exercises are straightforward and simple enough to complete.</p>
+
+<h4 class="relative group">OAuth
+    <div id="oauth" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#oauth" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>OAuth is a subject that always seems to trip people up, myself included. This is clear when half of the subsections are dedicated just to explaining OAuth&rsquo;s nuances before you arrive at a practical application exercise. Even still, I think that the exercises are presented in the wrong order; I would suggest users do the <strong>Open Redirect</strong> subsection <em>before</em> the <strong>redirect_uri misconfiguration</strong> - it&rsquo;s a simpler exercise and more effectually eases you into the practical application.</p>
+
+<h4 class="relative group">SAML
+    <div id="saml" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#saml" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>The SAML section was interesting to me. I had never used <strong>SAML Raider</strong> as a Burp extension before; consequentially, there was a fair amount of back-and-forth where I didn&rsquo;t understand what was happening and was encountering errors that I found to be frustrating. While the subsections like <strong>Weak Public/Private Keys</strong> do a great job of providing many screenshots to step-by-step you through the process, there were still times where I got hung-up on troubleshooting an issue. For example, I didn&rsquo;t realize I needed to navigate away from the SAML Raider pane and then return back again in Burp Repeater after configuring an updated cert for it to refresh properly. I made a note to seek out additional training concerning SAML in the future; I think the Academy does a good job of describing the vulnerability, but the exercises themselves didn&rsquo;t help solidify the knowledge - I felt very tool-bound by the section&rsquo;s end (i.e. if the tool fails, I wouldn&rsquo;t know what to do).</p>
+</details>
+</div>
+
+<h2 class="relative group">Advanced XSS and CSRF Exploitation
+    <div id="advanced-xss-and-csrf-exploitation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#advanced-xss-and-csrf-exploitation" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>This module was both one of the most rewarding along the path and the most frustrating. It&rsquo;s unique in providing some supporting architectural elements (i.e. an exploit &amp; exfiltration server); these elements generally help with streamlining the learning experience - allowing users who don&rsquo;t possess more expensive licensed software like <strong>Burp Suite Pro</strong> access to the training. However, these learning aids come with some inconsistent application and hiccups which can be really frustrating. More than once I found myself battling the architecture vs. just engaging the problem; this is something I think is bound to happen when instruction isn&rsquo;t transparent about where/how victim users are artificially being simulated.</p>
+<p>However, once you get past that the details and exercises that accompany the training are really great. There&rsquo;s a lot of practical application to be had all throughout the module, which affords some good opportunities to really sink your teeth into a kind of vulnerability that typically lacks nuance in its surface-level understanding; you go well beyond simply passing <code>&lt;script&gt;alert(1);&lt;/script&gt;</code> into form fields.</p>
+<hr>
+<div class="custom-dropdown">
+<details markdown=block>
+<summary markdown=span>Module Details</summary>
+#### Introduction to Advanced CSRF & XSS Exploitation
+<p>This module is unique in that it supplies you a number of supporting malicious architecture upfront: an exfiltration server and an exploit server. The exfiltration server is intended to log inbound GET requests, which you can make use of in extracting various data from the exercise targets (e.g. cookies, web page contents, etc.). The exploit server is a staging area for malicious payloads that you craft.</p>
+<p>Throughout the module, you use these two resources extensively - forcibly navigating victims to your exploit server and (as situations call for) routing responses back to your exfiltration server for observation. This section of the module is geared towards walking you through using the resources more generally with some easy XSS exercises.</p>
+
+<h4 class="relative group">CSRF Exploitation
+    <div id="csrf-exploitation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#csrf-exploitation" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>This section is pretty beefy, being composed of 5 subsections all about <strong>CSRF</strong> and <strong>CORS</strong>. It starts by recapping what Cross-Site Request Forgery (CSRF) is, then denotes a number of defenses used to protect against it including <strong>CSRF Tokens</strong>, <strong>HTTP Origin/Referer Headers</strong>, <strong>Same-Origin Policy &amp; CORS</strong>, and <strong>SameSite Cookies</strong>; the rest of the section is dedicated to learning how you might subvert those controls. Most of the exercises are phenomenal, but there are a handful of situations that logistically made things tricky.</p>
+<p>More generally, the module inconsistently applies when you should suspend your sense of disbelief about how the victim receives your malicious payload. Sometimes - like in the &ldquo;Introduction to Advanced CSRF &amp; XSS Exploitation&rdquo; section - you actually need to find an XSS vulnerability within the app and plant your payload; under these circumstances, the exercise(s) have an automated script that artificially has the victim user navigate to the page and trigger the payload. Other times however, you are permitted (or obligated) to handwaive that step and forcefully supply your malicious payload by way of the <strong>Deliver Payload</strong> functionality within the exploit server. This inconsistent application was frustrating, because if something&rsquo;s not working, you&rsquo;re unsure whether its a problem with the payload, your comprehension of the problem, the delivery channel, etc. This section in particular was made very frustrating by this.</p>
+<p>The second issue comes with troubleshooting payloads; the Academy recommends you test your payloads with you own browser (navigating to the exploit yourself and seeing how it behaves) to determine what problems may exist before pushing the payload to the victim user. However, modern browsers have a number of additional controls in place to mitigate XSS/CSRF. For example, Firefox (the default browser in a number of distributions used by HTB users, including Kali and Parrot) has a &ldquo;Privacy &amp; Security&rdquo; setting which blocks cookies from being transmitted by XHR requests by default with the &ldquo;Standard&rdquo; setting (this is configured by default in the Pwnbox). This means ocassionally the exploits <em>as written</em> won&rsquo;t work on your browser, but <em>will work</em> against the victim user. This discrepancy was <em>enormously</em> frustrating for me - I wasted a considerable amount of time trying to figure out a payload that would run against my own machine when said non-functioning payloads would work perfectly well against the adversary.</p>
+
+<h4 class="relative group">XSS Exploitation
+    <div id="xss-exploitation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#xss-exploitation" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>This section is the longest in the module and the last before the Skills Assessment. Assuming you came to understand the troubles described in the previous section, this one is pretty straightforward with some really creative applications of XSS. For example, they show how XSS can be used to enumerate hidden pages/content, chained together with other vulnerabilities like LFI &amp; Command Injection, and even lead to SQL injection and internal network mapping. The exercises are great and the provided example payloads I was grateful to add to my collection.</p>
+</details>
+</div>
+
+<h2 class="relative group">HTTPs/TLS Attacks
+    <div id="httpstls-attacks" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#httpstls-attacks" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Unlike a lot of other content/training offered by Hack The Box, this module felt quite &ldquo;academic&rdquo;. A lot of the vulnerabilities, exploits, and tools you engage with in this module aren&rsquo;t directly performed; most of the time, you&rsquo;re reading about a particular vulnerability or observing its effects in a provided PCAP file. On occasion you&rsquo;re given an exercise that has you perform the attacks described, with the heavy lifting performed by just a couple of tools introduced: <strong>padbuster</strong> and <strong>TLS-Breaker</strong>. The module shies away from getting into the math and proofs that undergird the research in the cryptographic attacks, opting instead to keep discussions at a high-level in observing protocol exchanges. Because of this, I think the module&rsquo;s author(s) may have been hamstrung in what they could showcase. Overall however, the descriptions of what&rsquo;s transpiring are excellently laid out for the lay-person, with those few exercises that you do perform the attacks being excellent.</p>
+<hr>
+<div class="custom-dropdown">
+<details markdown=block>
+<summary markdown=span>Module Details</summary>
+#### Introduction to HTTPs/TLs
+<p>This module starts pretty simple and can be completed quite quickly. You&rsquo;re introduced to the concept of certificates, certificate authorities, and using <strong>OpenSSL</strong> early on. From there, the training segways to describing different versions of the TLS protocol and using <strong>Wireshark</strong> to examine some small PCAP files for details about the handshake. Overall, this portion of the module should feel like a brief catch-up for those who have never been formally taught about these matters, but executing the tasks presented is trivial.</p>
+
+<h4 class="relative group">Padding Oracle Attacks
+    <div id="padding-oracle-attacks" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#padding-oracle-attacks" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>This portion of the module introduces some interesting tools such as <strong>padbuster</strong> and <strong>TLS-Breaker</strong>, but the exercises are likewise quick to step through in comparison to the rather academic content. The <strong>POODLE &amp; BEAST</strong> exercise in particular is pretty trivial, since you&rsquo;re asked more generally to replicate the padding format on paper rather than perform anything practical.</p>
+<p>I was annoyed at the <strong>Bleichenbacher &amp; Drown</strong> section; I got hung-up on tool setup and configuration, initially being stymied by getting <strong>TLS-Breaker</strong> setup (needing to alter the <strong>pom.xml</strong> file to point towards where the <strong>javadoc</strong> binary was on my machine). Then after that I was frustrated by this error message:</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt=""
+    src="/assets/images/2024/bleichenbacher.PNG"
+    ></figure>
+<p>While the module section specifies you need Java to use <strong>TLS-Breaker</strong>, it&rsquo;s <a href="https://github.com/tls-attacker/TLS-Breaker/wiki/1.-TLS_Breaker-Configuration"  target="_blank" rel="noreferrer">only in the wiki</a> that we learn you explicitly need JDK 11 (the above errors being thrown by my default JDK 17). Changing this fixed the errors.</p>
+<p>There&rsquo;s still some challenges to work through after this however, but these stray into the deliberate efforts organized by Academy, so I will not go further into detail about troubleshooting them. Hack The Box must be aware of how frustrating these efforts are however, because they offer to give you the plaintext <strong>premaster secret</strong> if you were to click on the &ldquo;Reveal the Answer&rdquo; button. If you are paying for lab time (i.e. limited availability to the in-browser Pwnbox) you should absolutely do this; running the attack in full takes a <em>very</em> long time (the Academy hints at upwards of 30 minutes - it took me quite a bit longer than that) where you&rsquo;re ultimately sitting around doing nothing else while waiting for the value to arrive.</p>
+
+<h4 class="relative group">TLS Compression
+    <div id="tls-compression" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#tls-compression" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>This section is a breeze, having no testable questions about it.</p>
+
+<h4 class="relative group">Heartbleed
+    <div id="heartbleed" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#heartbleed" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>This section is straightforward, assuming you installed the <strong>TLS-breaker</strong> tool earlier in the &ldquo;Padding Oracle Attacks&rdquo; section. You just need to run the provided commands. However, you may need to run it several times before reading in the requisite area of memory (such is the nature of the vulnerability).</p>
+
+<h4 class="relative group">Further Attacks
+    <div id="further-attacks" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#further-attacks" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>This section opens with with examining <strong>ARP spoofing</strong> and <strong>SSL Stripping</strong>, which has a trivial question affiliated with it. You also examine some documented <strong>Cryptographic Attacks</strong>, but only at a surface-level. The section closes out with <strong>Downgrade Attacks</strong>, which force a victim to use insecure configurations of TLS; however, like the rest of this section, you don&rsquo;t really end up doing anything practical (vs. examining PCAP files of traffic <em>suggesting</em> a downgrade attack).</p>
+
+<h4 class="relative group">TLS Best Practices
+    <div id="tls-best-practices" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#tls-best-practices" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>This section just goes over assorted TLS configurations for various technologies like Apache and Nginx. It then closes out by introducing you to <strong>testssl.sh</strong>, a script for scanning/enumerating TLS vulnerabilities before having you run the tool in order to answer some of the questions.</p>
+</details>
+</div>
+
+<h2 class="relative group">Abusing HTTP Misconfigurations
+    <div id="abusing-http-misconfigurations" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#abusing-http-misconfigurations" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>This was a great module along the <strong>Senior Web Penetration Tester</strong> path. It thoroughly covered <strong>web cache poisoning</strong>, <strong>host header attacks</strong>, and <strong>session puzzling</strong>, all of which were really interesting to read-up on and learn about. The section questions presented a lot of variation and hands-on work to better understand the vulnerabilities, but also doesn&rsquo;t shy away from providing thorough briefs on the underlying technologies that can be the source for these exploitable vulnerabilities. Overall, this was one of the more enjoyable/worthwhile modules of the path and is appropriate at Tier 3.</p>
+<hr>
+<div class="custom-dropdown">
+<details markdown=block>
+<summary markdown=span>Module Details</summary>
+#### Introduction to HTTP Misconfigurations
+<p>This part of the module is just a high level preview of the content to come: Web Cache Poisoning, Host Header Attacks, and Session Puzzling. There are no associated exercises.</p>
+
+<h4 class="relative group">Web Cache Poisoning
+    <div id="web-cache-poisoning" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#web-cache-poisoning" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>This is a phenomenal section in the module, thoroughly covering details of the attack. <strong>Advanced Cache Poisoning Techniques</strong> had good exercises in particular; the exercises that were presented were very similar to the walkthrough material, but had just enough variation so as to force you to step through the discovery process from square 1. My one sticking point was during <strong>Tools &amp; Prevention</strong>, where you&rsquo;re required to download and use the <strong>Web-Cache-Vulnerability-Scanner (WCVS)</strong>. At the time, my version of ParrotOS was tied with GLIBC version 2.31 (you can likewise discover your version by running the <code>ldd --version</code> command); unfortunately, the latest binary release of WCVS would throw errors as a result, calling for GLIBC_2.34 at least.</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt=""
+    src="/assets/images/2024/wcvs1.PNG"
+    ></figure>
+<p>Fortunately, the Github repo provides a number of alternative ways to install/run the tool. I opted to install it using Go, which lead to learning some other things. First, installing WCVS with <code>go</code> requires version 1.21 or higher. I was running 1.19, so I needed an updated version (you can discover your own version by running the <code>go version</code> command). To do this, I downloaded the latest version of <code>go</code> at the time (1.22) from <code>golang.org/doc/install</code>, then followed to appropriate instructions to unpack and install the archive along <code>/usr/local/go</code>.</p>
+<p>In order to add the <code>go</code> binary to my PATH variable, I then updated my <code>~/.zshrc</code> file with the following lines:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">GOROOT</span><span class="o">=</span>/usr/local/go
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">GOPATH</span><span class="o">=</span><span class="nv">$HOME</span>/go
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$GOPATH</span>/bin:<span class="nv">$GOROOT</span>/bin:<span class="nv">$PATH</span></span></span></code></pre></div></div>
+<p>Finally, this let me install the latest version of WCVS with:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">go install -v github.com/Hackmanit/Web-Cache-Vulnerability-Scanner@latest</span></span></code></pre></div></div>
+<p>And then the tool could be run like so:</p>
+<div class="highlight-wrapper"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">~/go/bin/Web-Cache-Vulnerability-Scanner -h</span></span></code></pre></div></div>
+
+<h4 class="relative group">Host Header Attacks
+    <div id="host-header-attacks" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#host-header-attacks" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>This was another interesting section that I thought was pretty engaging. It shows a variety of ways where tampering with the <code>Host</code> HTTP header can lead to all sorts of vulnerabilities in an application. Improper/unsafe handling of the host header can lead to authentication bypasses, logic errors, and more. I got hung up on a handful of the exercises, but not because of a logistical issue (but for want of creativity on my part). All-in-all this was a well-written and thoughtfully assembled section.</p>
+
+<h4 class="relative group">Session Puzzling
+    <div id="session-puzzling" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#session-puzzling" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>This section is all about examining what might be done with session ID cookies. More generally, it examines potential logic errors that can arise if certain only certain facets of a user&rsquo;s session cookie is considered at different points of the logic flow. We might - for example - be able to affiliate a particular username to a session ID using one part of the application, then submit that cookie to directly access some other part of the application elsewhere without ever having to authenticate. Overall, this section feels a <em>little</em> strung-out, since it very much feels like it&rsquo;s (re)presenting the same vulnerability several different ways, but that&rsquo;s still pretty useful for comprehension.</p>
+</details>
+</div>
+
+<h2 class="relative group">HTTP Attacks
+    <div id="http-attacks" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#http-attacks" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>After a small break in my training schedule, this was a great module to return back in with. Though named &ldquo;HTTP Attacks&rdquo;, it really was focused on 2 different kinds of vulnerabilities: CRLF injection as well as <strong>Content-Length</strong> and/or <strong>Transfer-Encoding</strong> tampering. Despite having a third category (&ldquo;HTTP/2 Downgrading&rdquo;), in practice it really felt derivative of the Request Smuggling portion of the module, which exhaustively showed how tampering with the <strong>Content-Length</strong> and/or <strong>Transfer-Encoding</strong> headers could lead to all kinds of mischief. Despite that, the training was still very good and appropriate to the Tier it aligns with. The particularly challenging subsections included <strong>HTTP Response Splitting</strong> and <strong>TE.CL</strong>, both of which had exercises that very creatively innovated on the concepts their respective material introduced.</p>
+<hr>
+<div class="custom-dropdown">
+<details markdown=block>
+<summary markdown=span>Module Details</summary>
+#### CRLF Injection
+<p>I&rsquo;ll admit, I thought that this section was pretty weak from the onset. The <strong>Log Injection</strong> subsection felt very derivative from the Log Poisoning training presented in the Tier 2 <strong>File Inclusion</strong> module and the enumeration strategies presented in the Tier 2 <strong>Command Injection</strong> module. However, the <strong>HTTP Response Splitting</strong> subsection was unexpectedly challenging and - I feel - a good example of how Hack The Box presents material in a fundamental way and then is able to build upon it in creative fashions in its questions/challenges; in the course of completing that particular subsection, I learned more about HTTP Response headers and using XHR than what I would have expected in just what the subsection suggests is needed. The section wraps up with <strong>SMTP Header Injections</strong> - the accompanying exercise can be completed by a close reading of the material, though the solution is not a literal copy/paste of what&rsquo;s presented.</p>
+
+<h4 class="relative group">HTTP Request Smuggling/Desync Attacks
+    <div id="http-request-smugglingdesync-attacks" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#http-request-smugglingdesync-attacks" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>This section was pretty challenging in the way that the section author(s) structured the exercises, but the content itself was pretty good. On its face, the material provides you several different ways of how subtle differences in layered technologies can desynchronize HTTP requests from responses. Specifically, it looks at how they interpret where the end of a given HTTP request is (creating confusion between headers like <strong>Content-Length</strong> and <strong>Transfer-Encoding</strong>, which both can specify how long a message is, but may not correctly be handled by RFC standards correctly for a given proxy/web server configuration). While the material was sufficient in its coverage, the challenge to the exercises came from what went unspoken (e.g. changing HTTP verbs and/or combining multiple different <strong>TE.TE</strong> techniques together).</p>
+
+<h4 class="relative group">HTTP/2 Downgrading
+    <div id="http2-downgrading" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#http2-downgrading" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>This section has some interesting content, but only 1 exercise (which is fairly straightforward to perform given the examples). The section primarily denotes a number of ways where differences in protocols between layered components can introduce vulnerabilities. The exercise specifically focuses on instances where an intermediary proxy receives requests in <strong>HTTP/2</strong>, but then passes along requests in <strong>HTTP/1.1</strong> (e.g. <strong>H2.CL</strong> vulnerability). This is a real shame, considering the variations they put forward in <strong>Further H2 Vulnerabilities</strong>; in the future, I would hope that additional exercises are introduced to reflect these other vulnerabilities as well. Alternatvely, it wouldn&rsquo;t surprise me to learn that some of the techniques described in the &ldquo;Further H2 Vulnerabilities&rdquo; are instead reserved for the CWEE exam.</p>
+</details>
+</div>
+
+<h2 class="relative group">Blind SQL Injection
+    <div id="blind-sql-injection" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#blind-sql-injection" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>If anyone is familiar with boolean-based and/or time-based SQLi, then this module should be relatively trivial. While the module does introduce some neat python scripts that can be tailored for various encounters, I&rsquo;d argue that functionally the material is just an alternative to using SQLmap to attain the same outcomes (albeit with much greater granularity of control and stripped down in its capabilities). There is also a brief introduction to working with <strong>Microsoft SQL</strong> (MSSQL), including some elements of leveraging privileged commands to achieve RCE. Overall however, this module didn&rsquo;t feel quite up to the level of Tier 3 training as some of the other modules along the <strong>Senior Web Penetration Tester</strong> path (and I&rsquo;d contend this could reasonably be bumped down to a Tier 2 module). Overall, the module isn&rsquo;t lacking in the quality of its training or its exercises, but the material covered didn&rsquo;t feel sufficiently &ldquo;advanced&rdquo; enough as to warrant its price-point.</p>
+<hr>
+<div class="custom-dropdown">
+<details markdown=block>
+<summary markdown=span>Module Details</summary>
+#### Introduction to MSSQL/SQL Server
+<p>This section is just a primer for the content to follow. It highlights different tools for interacting with MSSQL databases specifically, namely <code>SQLCMD</code> (Windows) and <code>MSSQLClient.py</code> (Linux). The section has a single exercise which engages the student&rsquo;s ability to perform nuanced MSSQL queries. This is a trivial section, especially if you&rsquo;re already familiar with MSSQL.</p>
+
+<h4 class="relative group">Boolean-based SQLi
+    <div id="boolean-based-sqli" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#boolean-based-sqli" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>If you&rsquo;ve never been introduced to the topic of boolean-based SQLi, then there&rsquo;s some good learning to be had here. Otherwise, this section should feel pretty familiar and be executed pretty quickly. The exercises are relatively trivial to perform, especially since they provide some python scripting to automate retrieving the answers for you. For me, I really liked having the <code>Optimizing</code> subsection, which discussed ways for speeding up the query process (and introduces some little Computer Science algorithmic considerations in the process).</p>
+
+<h4 class="relative group">Time-based SQLi
+    <div id="time-based-sqli" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#time-based-sqli" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>I&rsquo;ll admit, I was really hesitant about going into this section; previous encounters with time-based SQLi have always been a drag, especially using SQLmap. They usually amount to some agonizing exercises of wait-and-see. Fortunately, this section was really nicely laid out and - with the deliberate absence of SQLmap - made quite quick. I think the longest subsection were the <strong>Out-of-Band DNS</strong> exercises, but that&rsquo;s only because I took some time to try and mess around with the multiple alternative options presented by the section as a kind of self-imposed &ldquo;extra mile&rdquo; set of exercises. Altogether, this is a pretty neatly crafted section.</p>
+
+<h4 class="relative group">MSSQL-specific Attacks
+    <div id="mssql-specific-attacks" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#mssql-specific-attacks" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>This module looks at some specific (mis)configurations that MSSQL can have that can be exploited to perform additional attacks on the server. Most of what&rsquo;s covered here I&rsquo;ve seen in other trainings (e.g. ZeroPointSecurity&rsquo;s CRTO); that said, the <strong>File Read</strong> subsection introduced some functionality I hadn&rsquo;t been previously introduced to which enables appropriately-permissioned users to read arbitrary files from a system. That was really neat to learn!</p>
+</details>
+</div>
+
+<h2 class="relative group">Intro to Whitebox Pentesting
+    <div id="intro-to-whitebox-pentesting" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#intro-to-whitebox-pentesting" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>I&rsquo;ll admit, when I first started this module I was prepared for it to be a cake walk; after all, you&rsquo;re provided all of the source code (which doesn&rsquo;t change at all until the Skills Assessment), it uses the same framework (<strong>NodeJS</strong>), and the codebase itself is pretty small and intuitive. However, I ended up finding that this module was my favorite of all the modules leading up to it, since its exercises are so permissively open-ended in their applied solutions. Each subsection talks about a different way the same app could be exploited, focusing not just on the exploit, but the process of analysis that could lend to you arriving at discovering said exploit (the latter of which is arguably more important in a whitebox assessment). For each exercise, you&rsquo;re using the same NodeJS code that you can host as a localized server to test against before launching your complete exploit against the HackTheBox-hosted version of the same code.</p>
+<p>It felt really nice to exercise some creativity in how to go about engaging the problem, and it felt satisfying to apply lessons from other modules in iterating those approaches. For example, one of the problems the module grapples with is data extraction (suggesting either hijacking the response body, the error message body, or inferring the content via time-based blind attacks) - in the process of going about the module, I worked on applying a different method altogether: out-of-band messaging, encoding responses into outbound requests (which worked locally, but failed in the exercise due to dockerized connectivity constraints). Altogether, this module took longer than others and - in my opinion - was one of the most enjoyable.</p>
+<hr>
+<div class="custom-dropdown">
+<details markdown=block>
+<summary markdown=span>Module Details</summary>
+#### Whitebox Pentesting Process
+<p>This section of the module does not have any exercises. However, as tempting as it might be to click through the material, I&rsquo;d urge students to pause a minute and read through what&rsquo;s listed. A lot of what&rsquo;s described covers processes similar to what I&rsquo;ve encountered professionally either as a penetration tester or in application security engineering. I feel like this portion of the module and others like it (e.g. <strong>Documentation &amp; Reporting</strong>) are glazed over as they distract from the &ldquo;fun&rdquo; of technical exploitation.</p>
+
+<h4 class="relative group">Code Review
+    <div id="code-review" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#code-review" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>For me, this was an interesting section since my job involves a considerable amount of code review. I think there were some great points made, including highlighting some of the strengths/weaknesses of utilizing vs. over-relying on services like <strong>Github Copilot</strong>. There&rsquo;s also a cursory dip into running <strong>Node.js</strong> applications (although far from anything you&rsquo;d need to be proficient). Since the instructions are rather sparse on installing it on Kali linux systems, <a href="https://deb.nodesource.com/"  target="_blank" rel="noreferrer">I&rsquo;ll include a nice link here that will take care of you</a>.</p>
+
+<h4 class="relative group">Local Testing
+    <div id="local-testing" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#local-testing" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>This was surprisingly challenging. While all of the exercises for the section provide either hints of &ldquo;Reveal Answer&rdquo; buttons, the challenge is less in arriving at the correct answers (which is trivial), but in arriving at the correct payloads to achieve those answers. There was a lot of frustrating elements to understanding why particular methods of execution worked and others did not. For example, I knew commands were running with <code>exec</code>, but couldn&rsquo;t see the output until I substituted it with <code>execSync</code> paired with the <code>toString()</code> method. By-and-large, if you&rsquo;re stuck in a subsection, look ahead at the next one and you&rsquo;ll generally arrive at the commands necessary to achieve the correct answers.</p>
+
+<h4 class="relative group">Proof of Concept (PoC)
+    <div id="proof-of-concept-poc" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#proof-of-concept-poc" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>This subsection was both fun and challenging, building off of the toy NodeJS app that was introduced at the start of the module. The progression here is about making more complex payloads/exploits, but the problems are quite open-ended, allowing you to concieve of your own approaches. I found that my biggest point of friction up until this moment was sorting out the quotes/double-quotes in my payload, so I ended up base64-encoding the entire thing, putting it within a b64-decoding wrapper, and passing that to the the exploit. Something to the effect of:</p>
+<figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="low"
+    alt=""
+    src="/assets/images/2024/whitebox1.png"
+    ></figure>
+<p>Overall, this was great!</p>
+</details>
+</div>
+
+<h2 class="relative group">Modern Web Exploitation Techniques
+    <div id="modern-web-exploitation-techniques" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#modern-web-exploitation-techniques" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>From the onset, this looked like a really long module, with 3 sections containing 5-6 subsections each. In actuality, most of the module&rsquo;s section are pretty quick/trivial to step through (I got hung-up on only one subsection related to <strong>WebSockets</strong>). Altogether, this module felt pretty lackluster in comparison to some of the others HTB has put together at the Tier 3 level. The one truly novel attack that&rsquo;s showcased is <strong>DNS rebinding</strong>, but its unfortunate how little practical application exercises are designed around it. The <strong>Second-Order Attacks</strong> section content could have probably been rolled into other pre-existing Tier 2 modules that cover the respective XSS, LFI, and Command Injection attacks in greater detail. While I did learn some things from the module, it was ultimately a bit of a let-down considering its pricepoint. This module felt like a kind of dumping ground for sections that wouldn&rsquo;t otherwise fit anywhere else (with the notable exception of the <strong>Second-Order Attacks</strong>, which feels included only to give the section more material to work with).</p>
+<hr>
+<div class="custom-dropdown">
+<details markdown=block>
+<summary markdown=span>Module Details</summary>
+#### DNS Rebinding
+<p>This section talks about how - in principal - an attacker in control of a DNS server can rapidly reconfigure which IPv4 address a given URL resolves to; this allows for some interesting bypasses when a victim application interacts with the malicious URL. For a really interesting/complex attack, it was disappointing to see only 2 exercises allocated to the section. Worse still, one of those excersises was just a rehash of SSRF (which has a whole other Tier 2 module dedicated to it: <strong>Server-side Attacks</strong>). Reading through some of the other subsections provides some insight as to how it would be challenging to support multiple exercises, but it&rsquo;s still a a bit of a let-down (especially if DNS rebinding were to later show up in the CWEE exam).</p>
+
+<h4 class="relative group">Second-Order Attacks
+    <div id="second-order-attacks" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#second-order-attacks" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>This section describes so-called &ldquo;second-order attacks&rdquo;, which capitalize on manifesting exploits in latent ways; they are not standalone vulnerabilities, but rather describe ways that other vulnerabilities might manifest (e.g. malicious data input at point A might not be problematic until later at point B). As such, the section as a whole doesn&rsquo;t really introduce anything particularly novel that isn&rsquo;t covered in greater depth/detail in other Tier 2 modules (e.g. <strong>Web Attacks</strong>, <strong>Command Injections</strong>, etc.). Instead, it showcases ways how data input in different ways can come together in creative fashions. Altogether, I found this section disappointing, redundant, and at times felt more in-line with CTF-like conditions (vs. instructing to something more applicable); I think the real takeaway someone might learn from this section is the need to creatively apply/arrive at various vulnerabilities, but I&rsquo;m dubious that the particular techniques shown are of much use outside of Hack The Box.</p>
+
+<h4 class="relative group">WebSocket Attacks
+    <div id="websocket-attacks" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#websocket-attacks" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>I thought this section presented some new and interesting information in talking about WebSocket connections, denoted by the <code>ws://</code> and <code>wss://</code> protocol schemes. The section is really a showcase of how to operatively work with newer protocols (including HTML5) and less about a new attack, couching the provided exercises in performing things like XSS and SQLi (but through WebSocket connections). I got hung-up on the <strong>Exploiting XSS via WebSockets</strong> exercise for a minute because - in the course of testing different payloads - the backend ended up enqueuing my XSS payloads; consequentially payloads that <em>would</em> have worked ended up not working at all (much to my confusion/frustration). The easy fix to this was to simply reset the machine, but I did lose a considerable amount of time troubleshooting this.</p>
+<p>It was also interesting to note that - for reasons unknown to me - while SQLmap <em>did</em> work in some of the section&rsquo;s/module&rsquo;s exercises, it would not always return back the totality of results; while working through one problem with a partner, we learned that SQLmap failed to list <em>all</em> of the column names from a particular table (whereas I - going through the process manually - did find them). This was an interesting learning point in-the-moment, though I&rsquo;m uncertain how much of it is related to <strong>WebSockets</strong> vs. being an exercise in trust-but-verify methodologies in tool usage/enumeration.</p>
+</details>
+</div>
+
+<h2 class="relative group">Introduction to Deserialization Attacks
+    <div id="introduction-to-deserialization-attacks" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#introduction-to-deserialization-attacks" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>I really liked this section. It covers the premise of deserialization attacks in not 1 but 2 different implementations (<code>PHP</code> and <code>Python</code>) as well as including a more robust remediation section (vs. a tagged-on single subsection at the end of the module, which is the case for most offensively-oriented modules in the Academy). I wasn&rsquo;t keenly familiar with deserialization attacks from the onset, but I felt like the module was really well crafted and covered the highlights of the vulnerability class quite well. While there were many exercises throughout the module, their were a handful of topics that I felt deliberately did not include an exercise (e.g. <code>JSONpickle</code>) which I presumed were reserved for either the exam. The path does feature a follow-up <code>Advanced Deserialization Attacks</code> module that&rsquo;s meant to be covered after this one.</p>
+<hr>
+<div class="custom-dropdown">
+<details markdown=block>
+<summary markdown=span>Module Details</summary>
+#### Exploiting PHP Deserialization
+<p>This section was pretty straightforward. Since values from deserialized data get passed to various other functions in code, this section focused on showing how malicious values in that deserialized data can flow into PHP code to do harm. Some of the vulnerabilities are demonstrated as manipulated logic (i.e. <code>Object Injection</code>) others as malicious code injection (being passed to functions like <code>shell_exec()</code> for RCE or <code>mysqli_query()</code> for SQLi). The section also looks at deserialization through PHAR archives (very neat, though somewhat niche) and some tools to help automate the malicious serialization process. The section closes out by highlighting an interesting tool - <code>phpggc</code> - which can automate the process of crafting malicious serialized PHP payloads.</p>
+
+<h4 class="relative group">Exploiting Python Deserialization
+    <div id="exploiting-python-deserialization" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#exploiting-python-deserialization" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>This section parallels the previous one, but this time looking at the <code>pickle</code> library more narrowly.</p>
+
+<h4 class="relative group">Defending against Deserialization Attacks
+    <div id="defending-against-deserialization-attacks" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#defending-against-deserialization-attacks" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>This section is brief (containing only 2 subsections), with only one exercise that you can trivially perform without needing to download the supplied source code (or really go through the motions described). I think that this section would benefit from a better set of exercises, because being able to effectively remediate these issues is pretty important in the professional space.</p>
+</details>
+</div>
+
+<h2 class="relative group">Whitebox Attacks
+    <div id="whitebox-attacks" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#whitebox-attacks" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>This was an extraordinary section that I felt lived up to its Tier in difficulty and value. The module looks at <code>prototype pollution</code>, <code>timing attacks &amp; race conditions</code>, and <code>type juggling</code> vulnerabilities, with plenty of exercises devoted to each. I found it took me quite a bit of time to ingest/learn this module&rsquo;s content; there were a number of subsections that I spent several hours on working through. The &ldquo;Whitebox&rdquo; portion of this module is subtle; it&rsquo;s easy to more narrowly focus on the vulnerabilities and less on the practice of performing a source-code assessment. But I urge students engaging this module to slow down and actually read through the code, if only to develop a good habit.</p>
+<hr>
+<div class="custom-dropdown">
+<details markdown=block>
+<summary markdown=span>Module Details</summary>
+#### Prototype Pollution
+<p>This section was was great. It talked about some really interesting mechanisms for attacking a web application by way of JavaScript Objects and - more specifically - prototypes. There are three exercises to the section, each engaging the content in a new and interesting way. I found the exercises to be a little frustrating at parts; for someone entirely new to this kind of vulnerability, there&rsquo;s enough information present in the section to conceptually grasp at what&rsquo;s being talked about but just enough omitted that you will likely have to consult some outside material to supplement it. One of my favorite tool-takeaways that was introduced was BurpSuite&rsquo;s <strong>DOM Invader</strong>.</p>
+
+<h4 class="relative group">Timing Attacks &amp; Race Conditions
+    <div id="timing-attacks--race-conditions" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#timing-attacks--race-conditions" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>This section was well written. It begins with orienting the student more generally on race conditions that they might recognize from other CTF-like challenges at the OS-level, then demonstrates how such Time-of-Check, Time-of-Use (<code>TOCTOU</code>) vulnerabilities might emerge within web applications. Along the way, students are provided some example python scripting to tool about with, as well as a <code>BurpSuite</code> extension (<code>Turbo Intruder</code>).</p>
+
+<h4 class="relative group">Type Juggling
+    <div id="type-juggling" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#type-juggling" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>Like the other sections before it, this was a really well-developed section within the module. <code>Type Juggling</code> vulnerabilities arise when loose comparisons are made (and data type values are assumed - i.e. <code>0 == null</code>); this can lead to some interesting bypasses and other issues. While couching the lessons in PHP, efforts are made throughout the module to highlight syntactic differences that exist in other languages as well. One of the really valuable resources supplied is a table of equivalent values interpreted by PHP; this was really useful for a number of the exercises.</p>
+</details>
+</div>
+
+<h2 class="relative group">Advanced SQL Injections
+    <div id="advanced-sql-injections" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#advanced-sql-injections" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>This was a really good, but really frustrating section. Like many other sections in this training path, the emphasis for this module was on Whitebox code analysis; the SQL injection was merely a vehicle for engaging such analysis, introducing some nuances unique to PostgreSQL (vs. MSSQL, MySQL, or NoSQL injection - covered in their corresponding modules, respectively). While the training was good, I found that there were certain logistical issues that impeded the training - <a href="https://discord.com/channels/473760315293696010/1236757191676002384/1236757191676002384"  target="_blank" rel="noreferrer">including one instance where the source code was incorrect in a really important way</a>, ambiguous instructions for setting up dynamic analysis, and a frustrating lack of support in configuring our test environments for using downgraded versions of PostgreSQL; all of these issues felt less deliberate in their training value and more like oversights that could be readily fixed. If you move past those issues however, you&rsquo;ll find a module that is chock-full of engaging content and worthwhile lessons on the subject matter, including some useful python scripts to add to your toolbox.</p>
+<hr>
+<div class="custom-dropdown">
+<details markdown=block>
+<summary markdown=span>Module Details</summary>
+#### Identifying Deserialization Vulnerabilities
+<p>This section was a little heavy for me, having not worked extensively with .NET applications very much. Consequentially, there was a lot of tangents and documentation that were pulled up to get oriented more generally. The module provides a minimal job of orienting you as a student to the tech stack, so if you&rsquo;re like me you might do a lot of pausing through this subsection to figure out architecturally what&rsquo;s happening.</p>
+<p>Moving past that, this section introduces working with Jet Brains dotPeek and/or ILSpy for decompiling .NET applications from their intermediate MSIL format. Initially, I was pretty retiscent about standing-up a dedicated Windows 10 VM just to facilitate the module; as such I reached for a clone of ILSpy for Linux that I could run on Kali: <code>https://github.com/icsharpcode/AvaloniaILSpy</code>. In time I found however that standing up such a VM was the most practical for me (vs. using the supplied one given at the <strong>Decompiling .NET Applications</strong> subsection), given how slowly I progressed through the module overall; this let me walk away and return to the training hours (or days) at-a-time without losing progress such a configuration also helped facilitate troubleshooting malicious payloads (i.e. if a payload worked on a defaultly-configured Windows 10 VM out-of-the-box, I figured it would reasonably work in most cases on HTB).</p>
+<p>Most of the exercises are pretty trivial to perform, with the one exception being what&rsquo;s found in <strong>Debugging .NET Applications</strong>, which requires <em>considerable</em> setup in order to facilitate. That said, the exercise is pretty well spelled-out step-by-step in the subsection. So while it&rsquo;s complicated and nuanced, it&rsquo;s relatively straightforward.</p>
+
+<h4 class="relative group">Exploiting Deserialization Vulnerabilities
+    <div id="exploiting-deserialization-vulnerabilities" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#exploiting-deserialization-vulnerabilities" aria-label="Anchor">#</a>
+    </span>
+    
+</h4>
+<p>This section was where having a dedicated Windows 10 VM setup on an internal network with my Kali VM really paid off. The first exercise presented in</p>
+</details>
+</div>
+
+<h2 class="relative group">Advanced Deserialization Attacks
+    <div id="advanced-deserialization-attacks" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#advanced-deserialization-attacks" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+
+      
+      
+        
+        
+          
+          
+        
+        
+        
+        <script
+          type="text/javascript"
+          src="/js/page.min.54b6f4371722649edbe871e431d8670d670878c22be8f36e229fe53cc9b786fe25a834def5e6de621f7a3e37b72bc8cd73839aa5ed907ed6cbd45cd3e1b0fa20.js"
+          integrity="sha512-VLb0NxciZJ7b6HHkMdhnDWcIeMIr6PNuIp/lPMm3hv4lqDTe9ebeYh96Pje3K8jNc4Oape2QftbL1FzT4bD6IA=="
+          data-oid="views_posts/2024/htb-tier-3/index.md"
+          data-oid-likes="likes_posts/2024/htb-tier-3/index.md"></script>
+      
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/2023/omscs_writeup/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;OMSCS Graduation Writeup
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2023-12-11T00:00:00&#43;00:00">11 December 2023</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/2024/gatech-phishing/">
+              <span class="leading-6">
+                Investigating a Georgia Tech Phishing Attempt&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2024-04-13T00:00:00&#43;00:00">13 April 2024</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Asa Hess-Matsumoto
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js"
+    integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+    <br>
+<div style="width: 150px; margin-left: 0;">
+<a href="https://notbyai.fyi" target="_blank" rel="noopener noreferrer">
+<img src="https://notbyai.fyi/img/en/written-by-human-not-by-ai-white.svg" alt="notbyai logo">
+</a>
+</div>
+<br>
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

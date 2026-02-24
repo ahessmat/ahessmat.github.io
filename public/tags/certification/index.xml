@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Certification on ByteBreach</title>
+    <link>http://localhost:1313/tags/certification/</link>
+    <description>Recent content in Certification on ByteBreach</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>youremail@example.com (Asa Hess-Matsumoto)</managingEditor>
+    <webMaster>youremail@example.com (Asa Hess-Matsumoto)</webMaster>
+    <copyright>© 2026 Asa Hess-Matsumoto</copyright>
+    <lastBuildDate>Fri, 22 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/certification/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Passing the Certified Penetration Testing Specialist (CPTS) Certification Exam</title>
+      <link>http://localhost:1313/posts/2023/passing-the-certified-penetration-testing-specialist-cpts-certification-exam/</link>
+      <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2023/passing-the-certified-penetration-testing-specialist-cpts-certification-exam/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2023/passing-the-certified-penetration-testing-specialist-cpts-certification-exam/featured-cert-cpts.png" />
+    </item>
+    
+    <item>
+      <title>Passing the Certified Red Team Operator (CRTO) exam</title>
+      <link>http://localhost:1313/posts/2022/passing-the-certified-red-team-operator-crto-exam/</link>
+      <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2022/passing-the-certified-red-team-operator-crto-exam/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2022/passing-the-certified-red-team-operator-crto-exam/featured-cert-crto.png" />
+    </item>
+    
+    <item>
+      <title>Passing the Certified Bug Bounty Hunter (CBBH) Certification Exam</title>
+      <link>http://localhost:1313/posts/2022/passing-the-certified-bug-bounty-hunter-cbbh/</link>
+      <pubDate>Fri, 22 Jul 2022 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2022/passing-the-certified-bug-bounty-hunter-cbbh/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2022/passing-the-certified-bug-bounty-hunter-cbbh/featured-cert-cbbh.png" />
+    </item>
+    
+  </channel>
+</rss>
