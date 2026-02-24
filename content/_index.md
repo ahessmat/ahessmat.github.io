@@ -11,10 +11,9 @@ draft = false
   breakLines=false
   loop=true >}}
 
-Welcome, weary traveler.
-Come and take a seat.
-Add some logs to the fire.
-Look around.
+Stay awhile and listen.
+Attention is all you need.
+Smashing the stack for fun and profit.
 Do you hear it?
 I wish I could make this.
 This website is so cool.
@@ -39,7 +38,7 @@ The things we see?
 The things we feel?
 The things we think?
 _random quotes here_
-I wish this could never end.
+New Achievement!
 MY EYES!
 Damn, I wonder how many of these I can come up with.
 I'm sure you'll find me someday.
