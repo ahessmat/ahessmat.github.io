@@ -9,7 +9,17 @@
     <managingEditor>youremail@example.com (Asa Hess-Matsumoto)</managingEditor>
     <webMaster>youremail@example.com (Asa Hess-Matsumoto)</webMaster>
     <copyright>© 2026 Asa Hess-Matsumoto</copyright>
-    <lastBuildDate>Mon, 23 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>AI Security: Prompt Injection</title>
+      <link>http://localhost:1313/posts/2026/ai-security-prompt-injection/</link>
+      <pubDate>Wed, 25 Feb 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2026/ai-security-prompt-injection/</guid>
+      <description>Exploring prompt injection attacks on large language models and strategies for mitigation.</description>
+      
+    </item>
     
     <item>
       <title>Relaunching the Blog with Hugo</title>
@@ -29,6 +39,36 @@
       <guid>http://localhost:1313/posts/2026/cheat-series1/</guid>
       <description>TEST</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2026/cheat-series1/featured-gameover.jpg" />
+    </item>
+    
+    <item>
+      <title>Writeup: Gray Swan Arena: Safeguards - First Attack Phase</title>
+      <link>http://localhost:1313/writeups/grayswan-safeguards-wave1-attackphase/</link>
+      <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/writeups/grayswan-safeguards-wave1-attackphase/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/writeups/grayswan-safeguards-wave1-attackphase/featured-safeguards.png" />
+    </item>
+    
+    <item>
+      <title>Writeup: Grey Swan Arena - Wave 1</title>
+      <link>http://localhost:1313/posts/2026/greyswan-wave1/</link>
+      <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2026/greyswan-wave1/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2026/greyswan-wave1/featured-gray-swan-og-image.png" />
+    </item>
+    
+    <item>
+      <title>Writeup: Grey Swan Arena - Wave 1</title>
+      <link>http://localhost:1313/writeups/test/</link>
+      <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/writeups/test/</guid>
+      <description>TEST</description>
+      
     </item>
     
     <item>
@@ -149,6 +189,16 @@
       <guid>http://localhost:1313/posts/2024/htb-tier-3/</guid>
       <description>Late in 2023, Hack The Box announced new Senior Web Penetration Tester training path along their Academy platform which aligns to their Certified Web Exploitation Expert (CWEE) certification. The CWEE - released earlier in 2024 - is the first of their certifications which included &lt;strong&gt;Tier 3&lt;/strong&gt; module content; up until now content aligned to their certifications (the CDSA, CBBH, and CPTS) all exclusively engaged &lt;strong&gt;Tier 2&lt;/strong&gt; material.</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2024/htb-tier-3/featured-appsec.jpg" />
+    </item>
+    
+    <item>
+      <title>Java Application Security Examples</title>
+      <link>http://localhost:1313/posts/2024/appsec-basics/</link>
+      <pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2024/appsec-basics/</guid>
+      <description>In this post, we are going to go over some of the classic vulnerabilities that can emerge in Java code and what we might do to help mitigate them. Through this survey, you should be able to better understand how certain misconfigurations/oversights can lead to security compromises of Java your applications.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2024/appsec-basics/featured-appsec.jpg" />
     </item>
     
     <item>

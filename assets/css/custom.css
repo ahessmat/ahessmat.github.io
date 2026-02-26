@@ -1,0 +1,15 @@
+@media (min-width: 1024px) {
+  #single_header,
+  .article-content,
+  #single_header ~ footer {
+    max-width: 78ch;
+  }
+}
+
+@media (min-width: 1440px) and (min-aspect-ratio: 16/10) {
+  #single_header,
+  .article-content,
+  #single_header ~ footer {
+    max-width: 88ch;
+  }
+}

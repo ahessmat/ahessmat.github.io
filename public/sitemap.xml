@@ -3,8 +3,14 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
+    <loc>http://localhost:1313/posts/2026/ai-security-prompt-injection/</loc>
+    <lastmod>2026-02-25T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2026-02-23T00:00:00+00:00</lastmod>
+    <lastmod>2026-02-25T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>
@@ -16,6 +22,30 @@
   </url>
   <url>
     <loc>http://localhost:1313/posts/2026/cheat-series1/</loc>
+    <lastmod>2026-01-22T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/writeups/grayswan-safeguards-wave1-attackphase/</loc>
+    <lastmod>2026-01-22T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/posts/2026/greyswan-wave1/</loc>
+    <lastmod>2026-01-22T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/writeups/test/</loc>
+    <lastmod>2026-01-22T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>http://localhost:1313/writeups/</loc>
     <lastmod>2026-01-22T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
@@ -93,6 +123,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>http://localhost:1313/posts/2024/appsec-basics/</loc>
+    <lastmod>2024-02-05T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://localhost:1313/</loc>
     <lastmod>2024-01-21T14:24:36-05:00</lastmod>
     <changefreq>daily</changefreq>
@@ -161,11 +197,6 @@
   <url>
     <loc>http://localhost:1313/posts/2022/hacking-helpers-learning-cybersecurity/</loc>
     <lastmod>2022-02-06T00:00:00+00:00</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>http://localhost:1313/writeups/</loc>
     <changefreq>daily</changefreq>
     <priority>0.5</priority>
   </url>

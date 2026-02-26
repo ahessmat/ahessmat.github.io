@@ -107,7 +107,7 @@ Features:
 {{ end }}
 
 {{/* Build the container classes */}}
-{{ $containerClass := "flex flex-col mb-4 w-full" }}
+{{ $containerClass := "flex flex-col mb-2 w-full" }}
 {{ if eq $align "right" }}
     {{ $containerClass = printf "%s items-end" $containerClass }}
 {{ else if eq $align "center" }}

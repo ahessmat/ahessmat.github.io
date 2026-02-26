@@ -9,7 +9,47 @@
     <managingEditor>youremail@example.com (Asa Hess-Matsumoto)</managingEditor>
     <webMaster>youremail@example.com (Asa Hess-Matsumoto)</webMaster>
     <copyright>© 2026 Asa Hess-Matsumoto</copyright>
-    <lastBuildDate>Mon, 15 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 25 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>AI Security: Prompt Injection</title>
+      <link>http://localhost:1313/posts/2026/ai-security-prompt-injection/</link>
+      <pubDate>Wed, 25 Feb 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2026/ai-security-prompt-injection/</guid>
+      <description>Exploring prompt injection attacks on large language models and strategies for mitigation.</description>
+      
+    </item>
+    
+    <item>
+      <title>Writeup: Gray Swan Arena: Safeguards - First Attack Phase</title>
+      <link>http://localhost:1313/writeups/grayswan-safeguards-wave1-attackphase/</link>
+      <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/writeups/grayswan-safeguards-wave1-attackphase/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/writeups/grayswan-safeguards-wave1-attackphase/featured-safeguards.png" />
+    </item>
+    
+    <item>
+      <title>Writeup: Grey Swan Arena - Wave 1</title>
+      <link>http://localhost:1313/posts/2026/greyswan-wave1/</link>
+      <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2026/greyswan-wave1/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2026/greyswan-wave1/featured-gray-swan-og-image.png" />
+    </item>
+    
+    <item>
+      <title>Writeup: Grey Swan Arena - Wave 1</title>
+      <link>http://localhost:1313/writeups/test/</link>
+      <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/writeups/test/</guid>
+      <description>TEST</description>
+      
+    </item>
     
     <item>
       <title>NSA Codebreaker Challenge 2022 Writeup</title>

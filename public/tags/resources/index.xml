@@ -82,6 +82,16 @@
     </item>
     
     <item>
+      <title>Java Application Security Examples</title>
+      <link>http://localhost:1313/posts/2024/appsec-basics/</link>
+      <pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2024/appsec-basics/</guid>
+      <description>In this post, we are going to go over some of the classic vulnerabilities that can emerge in Java code and what we might do to help mitigate them. Through this survey, you should be able to better understand how certain misconfigurations/oversights can lead to security compromises of Java your applications.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2024/appsec-basics/featured-appsec.jpg" />
+    </item>
+    
+    <item>
       <title>Which Cybersecurity Certifications Should You Get?</title>
       <link>http://localhost:1313/posts/2023/what-certifications-should-you-get/</link>
       <pubDate>Wed, 08 Nov 2023 00:00:00 +0000</pubDate>
