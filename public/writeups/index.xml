@@ -1,1 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Writeups on ByteBreach</title><link>http://localhost/writeups/</link><description>Recent content in Writeups on ByteBreach</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>youremail@example.com (Asa Hess-Matsumoto)</managingEditor><webMaster>youremail@example.com (Asa Hess-Matsumoto)</webMaster><copyright>© 2026 Asa Hess-Matsumoto</copyright><atom:link href="http://localhost/writeups/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Writeups on ByteBreach</title>
+    <link>http://localhost:1313/writeups/</link>
+    <description>Recent content in Writeups on ByteBreach</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>youremail@example.com (Asa Hess-Matsumoto)</managingEditor>
+    <webMaster>youremail@example.com (Asa Hess-Matsumoto)</webMaster>
+    <copyright>© 2026 Asa Hess-Matsumoto</copyright>
+    <lastBuildDate>Mon, 06 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/writeups/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Writeup: Gandalf - Password Reveal</title>
+      <link>http://localhost:1313/writeups/gandalf-password-reveal/</link>
+      <pubDate>Mon, 06 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/writeups/gandalf-password-reveal/</guid>
+      <description>Exploring prompt injection attacks on large language models and strategies for mitigation.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/writeups/gandalf-password-reveal/featured-gandalf-the-white.jpg" />
+    </item>
+    
+  </channel>
+</rss>

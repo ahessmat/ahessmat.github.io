@@ -1,6 +1,6 @@
 ---
 title: "HTB Tier 3 Path Review"
-draft: false
+draft: true
 date: 2024-02-05
 summary: "Late in 2023, Hack The Box announced new Senior Web Penetration Tester training path along their Academy platform which aligns to their Certified Web Exploitation Expert (CWEE) certification. The CWEE - released earlier in 2024 - is the first of their certifications which included **Tier 3** module content; up until now content aligned to their certifications (the CDSA, CBBH, and CPTS) all exclusively engaged **Tier 2** material."
 tags: [resources]

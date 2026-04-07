@@ -1,1 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Wifi on ByteBreach</title><link>http://localhost/tags/wifi/</link><description>Recent content in Wifi on ByteBreach</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>youremail@example.com (Asa Hess-Matsumoto)</managingEditor><webMaster>youremail@example.com (Asa Hess-Matsumoto)</webMaster><copyright>© 2026 Asa Hess-Matsumoto</copyright><lastBuildDate>Fri, 17 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost/tags/wifi/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Connect Your AWUS1900 Network Card with Kali Linux</title><link>http://localhost/posts/2024/alfa-kali/</link><pubDate>Fri, 17 May 2024 00:00:00 +0000</pubDate><author>youremail@example.com (Asa Hess-Matsumoto)</author><guid>http://localhost/posts/2024/alfa-kali/</guid><description>TEST</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost/posts/2024/alfa-kali/featured-alfa.jpg"/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wifi on ByteBreach</title>
+    <link>http://localhost:1313/tags/wifi/</link>
+    <description>Recent content in Wifi on ByteBreach</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>youremail@example.com (Asa Hess-Matsumoto)</managingEditor>
+    <webMaster>youremail@example.com (Asa Hess-Matsumoto)</webMaster>
+    <copyright>© 2026 Asa Hess-Matsumoto</copyright>
+    <lastBuildDate>Fri, 17 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/wifi/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How to Connect Your AWUS1900 Network Card with Kali Linux</title>
+      <link>http://localhost:1313/posts/2024/alfa-kali/</link>
+      <pubDate>Fri, 17 May 2024 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2024/alfa-kali/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2024/alfa-kali/featured-alfa.jpg" />
+    </item>
+    
+  </channel>
+</rss>

@@ -42,16 +42,6 @@
     </item>
     
     <item>
-      <title>Writeup: Grey Swan Arena - Wave 1</title>
-      <link>http://localhost:1313/posts/2026/greyswan-wave1/</link>
-      <pubDate>Thu, 22 Jan 2026 00:00:00 +0000</pubDate>
-      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
-      <guid>http://localhost:1313/posts/2026/greyswan-wave1/</guid>
-      <description>TEST</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2026/greyswan-wave1/featured-gray-swan-og-image.png" />
-    </item>
-    
-    <item>
       <title>What Type of Degree Do I Need To Work in Cybersecurity?</title>
       <link>http://localhost:1313/posts/2025/what-kind-of-degree-should-i-get/</link>
       <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
@@ -149,26 +139,6 @@
       <guid>http://localhost:1313/posts/2024/gatech-phishing/</guid>
       <description>TEST</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2024/gatech-phishing/featured-envelope.gif" />
-    </item>
-    
-    <item>
-      <title>HTB Tier 3 Path Review</title>
-      <link>http://localhost:1313/posts/2024/htb-tier-3/</link>
-      <pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate>
-      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
-      <guid>http://localhost:1313/posts/2024/htb-tier-3/</guid>
-      <description>Late in 2023, Hack The Box announced new Senior Web Penetration Tester training path along their Academy platform which aligns to their Certified Web Exploitation Expert (CWEE) certification. The CWEE - released earlier in 2024 - is the first of their certifications which included &lt;strong&gt;Tier 3&lt;/strong&gt; module content; up until now content aligned to their certifications (the CDSA, CBBH, and CPTS) all exclusively engaged &lt;strong&gt;Tier 2&lt;/strong&gt; material.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2024/htb-tier-3/featured-appsec.jpg" />
-    </item>
-    
-    <item>
-      <title>Java Application Security Examples</title>
-      <link>http://localhost:1313/posts/2024/appsec-basics/</link>
-      <pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate>
-      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
-      <guid>http://localhost:1313/posts/2024/appsec-basics/</guid>
-      <description>In this post, we are going to go over some of the classic vulnerabilities that can emerge in Java code and what we might do to help mitigate them. Through this survey, you should be able to better understand how certain misconfigurations/oversights can lead to security compromises of Java your applications.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2024/appsec-basics/featured-appsec.jpg" />
     </item>
     
     <item>

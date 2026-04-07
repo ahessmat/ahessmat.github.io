@@ -1,1 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Windows on ByteBreach</title><link>http://localhost/tags/windows/</link><description>Recent content in Windows on ByteBreach</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>youremail@example.com (Asa Hess-Matsumoto)</managingEditor><webMaster>youremail@example.com (Asa Hess-Matsumoto)</webMaster><copyright>© 2026 Asa Hess-Matsumoto</copyright><lastBuildDate>Sat, 17 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost/tags/windows/index.xml" rel="self" type="application/rss+xml"/><item><title>Setting up a Windows XP VM on Virtualbox</title><link>http://localhost/posts/2022/setting-up-a-windows-xp-vm-on-virtualbox/</link><pubDate>Sat, 17 Dec 2022 00:00:00 +0000</pubDate><author>youremail@example.com (Asa Hess-Matsumoto)</author><guid>http://localhost/posts/2022/setting-up-a-windows-xp-vm-on-virtualbox/</guid><description>TEST</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost/posts/2022/setting-up-a-windows-xp-vm-on-virtualbox/featured-xp14.png"/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows on ByteBreach</title>
+    <link>http://localhost:1313/tags/windows/</link>
+    <description>Recent content in Windows on ByteBreach</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>youremail@example.com (Asa Hess-Matsumoto)</managingEditor>
+    <webMaster>youremail@example.com (Asa Hess-Matsumoto)</webMaster>
+    <copyright>© 2026 Asa Hess-Matsumoto</copyright>
+    <lastBuildDate>Sat, 17 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Setting up a Windows XP VM on Virtualbox</title>
+      <link>http://localhost:1313/posts/2022/setting-up-a-windows-xp-vm-on-virtualbox/</link>
+      <pubDate>Sat, 17 Dec 2022 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2022/setting-up-a-windows-xp-vm-on-virtualbox/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2022/setting-up-a-windows-xp-vm-on-virtualbox/featured-xp14.png" />
+    </item>
+    
+  </channel>
+</rss>

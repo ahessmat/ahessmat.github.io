@@ -1,1 +1,45 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ctf on ByteBreach</title><link>http://localhost/tags/ctf/</link><description>Recent content in Ctf on ByteBreach</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>youremail@example.com (Asa Hess-Matsumoto)</managingEditor><webMaster>youremail@example.com (Asa Hess-Matsumoto)</webMaster><copyright>© 2026 Asa Hess-Matsumoto</copyright><lastBuildDate>Mon, 15 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost/tags/ctf/index.xml" rel="self" type="application/rss+xml"/><item><title>NSA Codebreaker Challenge 2022 Writeup</title><link>http://localhost/posts/2022/nsa-codebreaker-challenge-2022-writeup/</link><pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate><author>youremail@example.com (Asa Hess-Matsumoto)</author><guid>http://localhost/posts/2022/nsa-codebreaker-challenge-2022-writeup/</guid><description>TEST</description><media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost/posts/2022/nsa-codebreaker-challenge-2022-writeup/featured-codebreaker-award.png"/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ctf on ByteBreach</title>
+    <link>http://localhost:1313/tags/ctf/</link>
+    <description>Recent content in Ctf on ByteBreach</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>youremail@example.com (Asa Hess-Matsumoto)</managingEditor>
+    <webMaster>youremail@example.com (Asa Hess-Matsumoto)</webMaster>
+    <copyright>© 2026 Asa Hess-Matsumoto</copyright>
+    <lastBuildDate>Mon, 06 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/ctf/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Writeup: Gandalf - Password Reveal</title>
+      <link>http://localhost:1313/writeups/gandalf-password-reveal/</link>
+      <pubDate>Mon, 06 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/writeups/gandalf-password-reveal/</guid>
+      <description>Exploring prompt injection attacks on large language models and strategies for mitigation.</description>
+      
+    </item>
+    
+    <item>
+      <title>AI Security: Direct Prompt Injection Payload Templates</title>
+      <link>http://localhost:1313/posts/2026/ai-security-prompt-injection/</link>
+      <pubDate>Wed, 25 Feb 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2026/ai-security-prompt-injection/</guid>
+      <description>Exploring prompt injection attacks on large language models and strategies for mitigation.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2026/ai-security-prompt-injection/featured-ai.jpg" />
+    </item>
+    
+    <item>
+      <title>NSA Codebreaker Challenge 2022 Writeup</title>
+      <link>http://localhost:1313/posts/2022/nsa-codebreaker-challenge-2022-writeup/</link>
+      <pubDate>Mon, 15 Aug 2022 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2022/nsa-codebreaker-challenge-2022-writeup/</guid>
+      <description>TEST</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2022/nsa-codebreaker-challenge-2022-writeup/featured-codebreaker-award.png" />
+    </item>
+    
+  </channel>
+</rss>

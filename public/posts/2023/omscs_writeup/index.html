@@ -1,27 +1,1536 @@
-<!doctype html><html lang=en dir=ltr class=scroll-smooth data-default-appearance=dark data-auto-appearance=true><head><meta charset=utf-8><meta http-equiv=content-language content="en"><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="ie=edge"><meta name=theme-color><title>OMSCS Graduation Writeup &#183; ByteBreach</title><meta name=title content="OMSCS Graduation Writeup &#183; ByteBreach"><meta name=description content="TEST"><meta name=keywords content="gatech,school,"><link rel=canonical href=http://localhost/posts/2023/omscs_writeup/><meta name=author content="Asa Hess-Matsumoto"><meta property="og:url" content="http://localhost/posts/2023/omscs_writeup/"><meta property="og:site_name" content="ByteBreach"><meta property="og:title" content="OMSCS Graduation Writeup"><meta property="og:description" content="TEST"><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2023-12-11T00:00:00+00:00"><meta property="article:modified_time" content="2023-12-11T00:00:00+00:00"><meta property="article:tag" content="Gatech"><meta property="article:tag" content="School"><meta property="og:image" content="http://localhost/posts/2023/omscs_writeup/featured-gt.png"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="http://localhost/posts/2023/omscs_writeup/featured-gt.png"><meta name=twitter:title content="OMSCS Graduation Writeup"><meta name=twitter:description content="TEST"><link type=text/css rel=stylesheet href=/css/main.bundle.min.eeac801bce9570bd96e0eb6ea345390edf0022cc9928e550c2ed1cd94fdb1b2e5555c296e8a023e5e267e49383b5eb4959a12222e62bb492939e0357ae2b3970.css integrity="sha512-7qyAG86VcL2W4Otuo0U5Dt8AIsyZKOVQwu0c2U/bGy5VVcKW6KAj5eJn5JODtetJWaEiIuYrtJKTngNXris5cA=="><script type=text/javascript src=/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js integrity="sha512-b0EXSzoFtoCCD+CMrb+l+3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script><script src=/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7+kfJ6kKCJxQGC+8wm+Bz9JucDjDTGNew=="></script><script defer type=text/javascript id=script-bundle src=/js/main.bundle.min.bdda7dece6cbaf08deef7d254f7f842f3261c2524d247905127c9a20decc03f1011a2950048464c79272c1ce0705a49a41147f39f2b95163bb71d404b33263ef.js integrity="sha512-vdp97ObLrwje730lT3+ELzJhwlJNJHkFEnyaIN7MA/EBGilQBIRkx5Jywc4HBaSaQRR/OfK5UWO7cdQEszJj7w==" data-copy=Copy data-copied=Copied></script><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=manifest href=/site.webmanifest><script type=application/ld+json>[{"@context":"https://schema.org","@type":"Article","articleSection":"Posts","name":"OMSCS Graduation Writeup","headline":"OMSCS Graduation Writeup","inLanguage":"en","url":"http://localhost/posts/2023/omscs_writeup/","author":{"@type":"Person","name":"Asa Hess-Matsumoto"},"copyrightYear":"2023","dateCreated":"2023-12-11T00:00:00\u002b00:00","datePublished":"2023-12-11T00:00:00\u002b00:00","dateModified":"2023-12-11T00:00:00\u002b00:00","keywords":["gatech","school"],"mainEntityOfPage":"true","wordCount":"5879"}]</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-7N6MCCR29S"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-7N6MCCR29S")</script></head><body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar"><div id=the-top class="absolute flex self-center"><a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600" href=#main-content><span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
-Skip to main content</a></div><div class="main-menu flex items-center w-full gap-2 p-1 pl-0"><a href=/ class="text-base font-medium truncate min-w-0 shrink">ByteBreach</a><div class="flex items-center ms-auto"><div class="hidden md:flex"><nav class="flex items-center gap-x-5 h-12"><a href=/about/ class="flex items-center bf-icon-color-hover" aria-label=About title=About><span class=mr-1><span class="relative block icon"><svg viewBox="0 0 512 512"><path fill="currentColor" d="M256 0C114.6.0.0 114.6.0 256s114.6 256 256 256 256-114.6 256-256S397.4.0 256 0zm0 128c17.67.0 32 14.33 32 32 0 17.67-14.33 32-32 32s-32-14.3-32-32 14.3-32 32-32zm40 256h-80c-13.2.0-24-10.7-24-24s10.75-24 24-24h16v-64h-8c-13.25.0-24-10.75-24-24s10.8-24 24-24h32c13.25.0 24 10.75 24 24v88h16c13.25.0 24 10.75 24 24s-10.7 24-24 24z"/></svg>
-</span></span><span class="text-base font-medium break-normal">About
-</span></a><a href=/posts/ class="flex items-center bf-icon-color-hover" aria-label=Blog title=Posts><span class=mr-1><span class="relative block icon"><svg viewBox="0 0 512 512"><path fill="currentColor" d="M421.7 220.3 188.5 453.4l-33.9-33.9 3.5-3.5H112C103.2 416 96 408.8 96 4e2V353.9l-3.49 3.5C87.78 362.2 84.31 368 82.42 374.4L59.44 452.6l78.16-23C143.1 427.7 149.8 424.2 154.6 419.5l33.9 33.9c-10.4 10.4-23.3 18.1-37.4 22.2L30.77 511C22.35 513.5 13.24 511.2 7.03 504.1.8198 498.8-1.502 489.7.976 481.2L36.37 360.9c4.16-14.1 11.79-27 22.2-37.4L291.7 90.34l130 129.96zm71-161.55C517.7 83.74 517.7 124.3 492.7 149.3l-48.4 48.4-130-129.98 48.4-48.4c25-24.998 65.6-24.998 90.6.0l39.4 39.43z"/></svg>
-</span></span><span class="text-base font-medium break-normal">Blog
-</span></a><a href=/writeups/ class="flex items-center bf-icon-color-hover" aria-label=Writeups title=Writeups><span class=mr-1><span class="relative block icon"><svg viewBox="0 0 512 512"><path fill="currentColor" d="M352 96v3.56C352 115.3 339.3 128 323.6 128H188.4c-15.7.0-29.3-12.7-29.3-28.44V96c0-53.02 43-96 96-96C309 0 352 42.98 352 96zM41.37 105.4c12.5-12.52 32.76-12.52 45.26.0l63.97 64C151.3 170 151.9 170.7 152.5 171.4 166.8 164.1 182.9 160 199.1 160H312C329.1 160 345.2 164.1 359.5 171.4 360.1 170.7 360.7 170 361.4 169.4l64-64c12.5-12.52 32.7-12.52 45.2.0 12.5 12.5 12.5 32.7.0 45.2l-64 64C405.1 215.3 405.3 215.9 404.6 216.5 410.7 228.5 414.6 241.9 415.7 256H480c17.7.0 32 14.3 32 32s-14.3 32-32 32H416c0 24.6-5.5 47.8-15.4 68.6C402.7 389.9 404.8 391.5 406.6 393.4l64 64c12.5 12.5 12.5 32.7.0 45.2s-32.7 12.5-45.2.0l-63.1-63c-24.5 21.8-55.8 36.2-90.3 39.6V240C272 231.2 264.8 224 255.1 224 247.2 224 239.1 231.2 239.1 240V479.2C205.5 475.8 174.2 461.4 149.7 439.6l-63.07 63c-12.5 12.5-32.76 12.5-45.26.0-12.49-12.5-12.49-32.7.0-45.2l64.03-64C107.2 391.5 109.3 389.9 111.4 388.6 101.5 367.8 96 344.6 96 320H32c-17.67.0-32-14.3-32-32s14.33-32 32-32H96.3c1.08-14.1 5-27.5 11.1-39.5C106.7 215.9 106 215.3 105.4 214.6l-64.03-64c-12.49-12.5-12.49-32.7.0-45.2h0z"/></svg>
-</span></span><span class="text-base font-medium break-normal">Writeups
-</span></a><a href=/tags/ class="flex items-center bf-icon-color-hover" aria-label=Tags title=Tags><span class=mr-1><span class="relative block icon"><svg viewBox="0 0 448 512"><path fill="currentColor" d="M48 32H197.5c17 0 33.2 6.74 45.2 18.75l176 175.95c25 25 25 65.6.0 90.6L285.3 450.7c-25 25-65.6 25-90.6.0L18.75 274.7C6.743 262.7.0 246.5.0 229.5V80C0 53.49 21.49 32 48 32zm64 144c17.7.0 32-14.3 32-32 0-17.7-14.3-32-32-32-17.67.0-32 14.3-32 32s14.33 32 32 32z"/></svg>
-</span></span><span class="text-base font-medium break-normal">Tags
-</span></a><button id=search-button aria-label=Search class="text-base bf-icon-color-hover" title="Search (/)">
-<span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7 405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9.0 208 0S0 93.1.0 208s93.1 208 208 208c48.3.0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9.0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7.0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7.0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg></span></button><div class="flex items-center"><button id=appearance-switcher aria-label="Dark mode switcher" type=button class="text-base bf-icon-color-hover"><div class="flex items-center justify-center dark:hidden"><span class="relative block icon"><svg viewBox="0 0 512 512"><path fill="currentColor" d="M32 256C32 132.2 132.3 32 255.8 32c11.36.0 29.7 1.668 40.9 3.746 9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3 9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480 132.1 480 32 379.6 32 256z"/></svg></span></div><div class="items-center justify-center hidden dark:flex"><span class="relative block icon"><svg viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02.0-95.1 42.98-95.1 95.1s41.2 96.9 95.1 96.9 95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347l-63.2-91.9 63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89 164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6 12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256 2.74 347.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7 19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109 109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69.0-127.1-57.31-127.1-127.1.0-70.69 57.31-127.1 127.1-127.1S383.1 186.2 383.1 256c0 70.7-56.4 127.1-127.1 127.1z"/></svg></span></div></button></div></nav></div><div class="flex md:hidden"><div class="flex items-center h-14 gap-4"><button id=search-button-mobile aria-label=Search class="flex items-center justify-center bf-icon-color-hover" title="Search (/)">
-<span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7 405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9.0 208 0S0 93.1.0 208s93.1 208 208 208c48.3.0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9.0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7.0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7.0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
-</span></button>
-<button id=appearance-switcher-mobile type=button aria-label="Dark mode switcher" class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400"><div class=dark:hidden><span class="relative block icon"><svg viewBox="0 0 512 512"><path fill="currentColor" d="M32 256C32 132.2 132.3 32 255.8 32c11.36.0 29.7 1.668 40.9 3.746 9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3 9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480 132.1 480 32 379.6 32 256z"/></svg></span></div><div class="hidden dark:block"><span class="relative block icon"><svg viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02.0-95.1 42.98-95.1 95.1s41.2 96.9 95.1 96.9 95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347l-63.2-91.9 63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89 164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6 12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256 2.74 347.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7 19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109 109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69.0-127.1-57.31-127.1-127.1.0-70.69 57.31-127.1 127.1-127.1S383.1 186.2 383.1 256c0 70.7-56.4 127.1-127.1 127.1z"/></svg></span></div></button>
-<input type=checkbox id=mobile-menu-toggle autocomplete=off class="hidden peer">
-<label for=mobile-menu-toggle class="flex items-center justify-center cursor-pointer bf-icon-color-hover"><span class="relative block icon"><svg viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416c17.7.0 32 14.33 32 32 0 17.7-14.3 32-32 32H32C14.33 128 0 113.7.0 96zM0 256c0-17.7 14.33-32 32-32H416c17.7.0 32 14.3 32 32s-14.3 32-32 32H32c-17.67.0-32-14.3-32-32zM416 448H32c-17.67.0-32-14.3-32-32s14.33-32 32-32H416c17.7.0 32 14.3 32 32s-14.3 32-32 32z"/></svg></span></label><div role=dialog aria-modal=true style=scrollbar-gutter:stable class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
-bf-scrollbar"><label for=mobile-menu-toggle class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900"><span class="relative block icon"><svg viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75.0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3 54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75.0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75.0-45.25s32.75-12.5 45.25.0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25.0s12.5 32.75.0 45.25l-105.4 105.4L310.6 361.4z"/></svg></span></label><nav class="mx-auto max-w-md space-y-6"><div class=px-2><a href=/about/ aria-label=About class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200"><span class="flex items-center justify-center h-8 w-8 text-2xl"><span class="relative block icon"><svg viewBox="0 0 512 512"><path fill="currentColor" d="M256 0C114.6.0.0 114.6.0 256s114.6 256 256 256 256-114.6 256-256S397.4.0 256 0zm0 128c17.67.0 32 14.33 32 32 0 17.67-14.33 32-32 32s-32-14.3-32-32 14.3-32 32-32zm40 256h-80c-13.2.0-24-10.7-24-24s10.75-24 24-24h16v-64h-8c-13.25.0-24-10.75-24-24s10.8-24 24-24h32c13.25.0 24 10.75 24 24v88h16c13.25.0 24 10.75 24 24s-10.7 24-24 24z"/></svg>
-</span></span><span title=About class="text-2xl font-bold tracking-tight">About</span></a></div><div class=px-2><a href=/posts/ aria-label=Blog class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200"><span class="flex items-center justify-center h-8 w-8 text-2xl"><span class="relative block icon"><svg viewBox="0 0 512 512"><path fill="currentColor" d="M421.7 220.3 188.5 453.4l-33.9-33.9 3.5-3.5H112C103.2 416 96 408.8 96 4e2V353.9l-3.49 3.5C87.78 362.2 84.31 368 82.42 374.4L59.44 452.6l78.16-23C143.1 427.7 149.8 424.2 154.6 419.5l33.9 33.9c-10.4 10.4-23.3 18.1-37.4 22.2L30.77 511C22.35 513.5 13.24 511.2 7.03 504.1.8198 498.8-1.502 489.7.976 481.2L36.37 360.9c4.16-14.1 11.79-27 22.2-37.4L291.7 90.34l130 129.96zm71-161.55C517.7 83.74 517.7 124.3 492.7 149.3l-48.4 48.4-130-129.98 48.4-48.4c25-24.998 65.6-24.998 90.6.0l39.4 39.43z"/></svg>
-</span></span><span title=Posts class="text-2xl font-bold tracking-tight">Blog</span></a></div><div class=px-2><a href=/writeups/ aria-label=Writeups class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200"><span class="flex items-center justify-center h-8 w-8 text-2xl"><span class="relative block icon"><svg viewBox="0 0 512 512"><path fill="currentColor" d="M352 96v3.56C352 115.3 339.3 128 323.6 128H188.4c-15.7.0-29.3-12.7-29.3-28.44V96c0-53.02 43-96 96-96C309 0 352 42.98 352 96zM41.37 105.4c12.5-12.52 32.76-12.52 45.26.0l63.97 64C151.3 170 151.9 170.7 152.5 171.4 166.8 164.1 182.9 160 199.1 160H312C329.1 160 345.2 164.1 359.5 171.4 360.1 170.7 360.7 170 361.4 169.4l64-64c12.5-12.52 32.7-12.52 45.2.0 12.5 12.5 12.5 32.7.0 45.2l-64 64C405.1 215.3 405.3 215.9 404.6 216.5 410.7 228.5 414.6 241.9 415.7 256H480c17.7.0 32 14.3 32 32s-14.3 32-32 32H416c0 24.6-5.5 47.8-15.4 68.6C402.7 389.9 404.8 391.5 406.6 393.4l64 64c12.5 12.5 12.5 32.7.0 45.2s-32.7 12.5-45.2.0l-63.1-63c-24.5 21.8-55.8 36.2-90.3 39.6V240C272 231.2 264.8 224 255.1 224 247.2 224 239.1 231.2 239.1 240V479.2C205.5 475.8 174.2 461.4 149.7 439.6l-63.07 63c-12.5 12.5-32.76 12.5-45.26.0-12.49-12.5-12.49-32.7.0-45.2l64.03-64C107.2 391.5 109.3 389.9 111.4 388.6 101.5 367.8 96 344.6 96 320H32c-17.67.0-32-14.3-32-32s14.33-32 32-32H96.3c1.08-14.1 5-27.5 11.1-39.5C106.7 215.9 106 215.3 105.4 214.6l-64.03-64c-12.49-12.5-12.49-32.7.0-45.2h0z"/></svg>
-</span></span><span title=Writeups class="text-2xl font-bold tracking-tight">Writeups</span></a></div><div class=px-2><a href=/tags/ aria-label=Tags class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200"><span class="flex items-center justify-center h-8 w-8 text-2xl"><span class="relative block icon"><svg viewBox="0 0 448 512"><path fill="currentColor" d="M48 32H197.5c17 0 33.2 6.74 45.2 18.75l176 175.95c25 25 25 65.6.0 90.6L285.3 450.7c-25 25-65.6 25-90.6.0L18.75 274.7C6.743 262.7.0 246.5.0 229.5V80C0 53.49 21.49 32 48 32zm64 144c17.7.0 32-14.3 32-32 0-17.7-14.3-32-32-32-17.67.0-32 14.3-32 32s14.33 32 32 32z"/></svg>
-</span></span><span title=Tags class="text-2xl font-bold tracking-tight">Tags</span></a></div></nav></div></div></div></div></div><script>(function(){var t,n,e=document.querySelector(".main-menu");if(!e)return;t=window.location.pathname,n=e.querySelectorAll('a[href="'+t+'"]'),n.forEach(function(e){var t=e.querySelectorAll("span");t.forEach(function(e){e.classList.add("active")})})})()</script><div class="relative flex flex-col grow"><main id=main-content class=grow><article><div id=hero class="h-[150px] md:h-[200px]"></div><div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"><img id=background-image src=/animated-honeycomb-25-less.svg role=presentation loading=eager decoding=async fetchpriority=high class="absolute inset-0 w-full h-full object-cover"><div class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal"></div><div class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal"></div></div><div id=background-blur class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-xl bg-neutral-100/75 dark:bg-neutral-800/60"></div><script type=text/javascript src=/js/background-blur.min.605b3b942818f0ab5a717ae446135ec46b8ee5a2ad12ae56fb90dc2a76ce30c388f9fec8bcc18db15bd47e3fa8a09d779fa12aa9c184cf614a315bc72c6c163d.js integrity="sha512-YFs7lCgY8KtacXrkRhNexGuO5aKtEq5W+5DcKnbOMMOI+f7IvMGNsVvUfj+ooJ13n6EqqcGEz2FKMVvHLGwWPQ==" data-blur-id=background-blur data-image-id=background-image data-image-url=/animated-honeycomb-25-less.svg></script><header id=single_header class="mt-5 max-w-prose"><h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">OMSCS Graduation Writeup</h1><div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden"><div class="flex flex-row flex-wrap items-center"><time datetime=2023-12-11T00:00:00+00:00>11 December 2023</time><span class="px-2 text-primary-500">&#183;</span><span>5879 words</span><span class="px-2 text-primary-500">&#183;</span><span title="Reading time">28 mins</span></div></div><div class="flex author"><img class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4" width=96 height=96 alt="Asa Hess-Matsumoto" src=/animated-avatar_hu_e391172299f47252.gif data-zoom-src=/animated-avatar_hu_5fc2f32c4a85f231.gif><div class=place-self-center><div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">Author</div><div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">Asa Hess-Matsumoto</div><div class="text-sm text-neutral-700 dark:text-neutral-400">A little bit about you</div><div class="text-2xl sm:text-lg"></div></div></div><div class=mb-5></div></header><section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row"><div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs"><div class="toc ps-5 print:hidden lg:sticky lg:top-10"><details open id=TOCView class="toc-right mt-0 overflow-y-auto overscroll-contain bf-scrollbar rounded-lg -ms-5 ps-5 pe-2 hidden lg:block"><summary class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">Table of Contents</summary><div class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600"><nav id=TableOfContents><ul><li><a href=#boilerplate-general-information><strong>BOILERPLATE GENERAL INFORMATION</strong></a></li><li><a href=#applicationadmission><strong>APPLICATION/ADMISSION</strong></a></li><li><a href=#omscs-courses-taken--experiences><strong>OMSCS COURSES TAKEN & EXPERIENCES</strong></a><ul><li><a href=#1-cs6262-network-security>1. CS6262: Network Security</a></li><li><a href=#2-cs6200-graduate-intro-to-os>2. CS6200: Graduate Intro to OS</a></li><li><a href=#3-cs6250-computer-networks>3. CS6250: Computer Networks</a></li><li><a href=#4-cs6290-high-performance-computer-architectures>4. CS6290: High Performance Computer Architectures</a></li><li><a href=#5-cs6515-intro-to-graduate-algorithms>5. CS6515: Intro to Graduate Algorithms</a></li><li><a href=#6-cs6035-intro-to-info-security>6. CS6035: Intro to Info Security</a></li><li><a href=#7-cs6265-info-sec-lab---binary-exploitation>7. CS6265: Info Sec Lab - Binary Exploitation</a></li><li><a href=#8-cs8803-quantum-computing--cs8001-usable-privacy-and-security-seminar>8. CS8803: Quantum Computing & CS8001: Usable Privacy and Security (Seminar)</a></li><li><a href=#9-cs6747-advanced-malware-analysis>9. CS6747: Advanced Malware Analysis</a></li><li><a href=#10-cs6601-artificial-intelligence>10. CS6601: Artificial Intelligence</a></li></ul></li><li><a href=#reflections><strong>REFLECTIONS</strong></a></li><li><a href=#outcomes><strong>OUTCOMES</strong></a></li></ul></nav></div></details><details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden"><summary class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">Table of Contents</summary><div class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600"><nav id=TableOfContents><ul><li><a href=#boilerplate-general-information><strong>BOILERPLATE GENERAL INFORMATION</strong></a></li><li><a href=#applicationadmission><strong>APPLICATION/ADMISSION</strong></a></li><li><a href=#omscs-courses-taken--experiences><strong>OMSCS COURSES TAKEN & EXPERIENCES</strong></a><ul><li><a href=#1-cs6262-network-security>1. CS6262: Network Security</a></li><li><a href=#2-cs6200-graduate-intro-to-os>2. CS6200: Graduate Intro to OS</a></li><li><a href=#3-cs6250-computer-networks>3. CS6250: Computer Networks</a></li><li><a href=#4-cs6290-high-performance-computer-architectures>4. CS6290: High Performance Computer Architectures</a></li><li><a href=#5-cs6515-intro-to-graduate-algorithms>5. CS6515: Intro to Graduate Algorithms</a></li><li><a href=#6-cs6035-intro-to-info-security>6. CS6035: Intro to Info Security</a></li><li><a href=#7-cs6265-info-sec-lab---binary-exploitation>7. CS6265: Info Sec Lab - Binary Exploitation</a></li><li><a href=#8-cs8803-quantum-computing--cs8001-usable-privacy-and-security-seminar>8. CS8803: Quantum Computing & CS8001: Usable Privacy and Security (Seminar)</a></li><li><a href=#9-cs6747-advanced-malware-analysis>9. CS6747: Advanced Malware Analysis</a></li><li><a href=#10-cs6601-artificial-intelligence>10. CS6601: Artificial Intelligence</a></li></ul></li><li><a href=#reflections><strong>REFLECTIONS</strong></a></li><li><a href=#outcomes><strong>OUTCOMES</strong></a></li></ul></nav></div></details><script>(function(){"use strict";const s=.33,o="#TableOfContents",i=".anchor",a='a[href^="#"]',r="li ul",c="active";let t=!1;function l(e,n){const o=window.scrollY+window.innerHeight*n,i=[...document.querySelectorAll('#TableOfContents a[href^="#"]')],s=new Set(i.map(e=>e.getAttribute("href").substring(1)));if(t)for(let t=0;t<e.length;t++){const n=e[t];if(!s.has(n.id))continue;const o=n.getBoundingClientRect().top+window.scrollY;if(Math.abs(window.scrollY-o)<100)return n.id}for(let t=e.length-1;t>=0;t--){const n=e[t].getBoundingClientRect().top+window.scrollY;if(n<=o&&s.has(e[t].id))return e[t].id}return e.find(e=>s.has(e.id))?.id||""}function e({toc:e,anchors:t,links:n,scrollOffset:s,collapseInactive:o}){const i=l(t,s);if(!i)return;if(n.forEach(e=>{const t=e.getAttribute("href")===`#${i}`;if(e.classList.toggle(c,t),o){const n=e.closest("li")?.querySelector("ul");n&&(n.style.display=t?"":"none")}}),o){const n=e.querySelector(`a[href="#${CSS.escape(i)}"]`);let t=n;for(;t&&t!==e;)t.tagName==="UL"&&(t.style.display=""),t.tagName==="LI"&&t.querySelector("ul")?.style.setProperty("display",""),t=t.parentElement}}function n(){const n=document.querySelector(o);if(!n)return;const l=!1,u=[...document.querySelectorAll(i)],d=[...n.querySelectorAll(a)];l&&n.querySelectorAll(r).forEach(e=>e.style.display="none"),d.forEach(e=>{e.addEventListener("click",()=>{t=!0})});const c={toc:n,anchors:u,links:d,scrollOffset:s,collapseInactive:l};window.addEventListener("scroll",()=>e(c),{passive:!0}),window.addEventListener("hashchange",()=>e(c),{passive:!0}),e(c)}document.readyState==="loading"?document.addEventListener("DOMContentLoaded",n):n()})()</script></div></div><div class="min-w-0 min-h-0 max-w-fit"><div class="article-content max-w-prose mb-20"><p>I&rsquo;m finally graduating from <a href=https://omscs.gatech.edu/home target=_blank rel=noreferrer>Georgia Tech&rsquo;s Online Master of Science Computer Science (OMSCS)</a>. For those of you interested, I&rsquo;ve summarized my venture below (including pre-application preparatory actions for the many prospective students who lurk about <a href=https://old.reddit.com/r/OMSCS/ target=_blank rel=noreferrer>the subreddit</a>). For those of you wanting to jump straight to the course impressions, skip down to the &ldquo;OMSCS COURSES TAKEN & EXPERIENCES&rdquo; section; for those of you wanting a more broader take about the program as a whole, skip down to &ldquo;REFLECTIONS&rdquo;. You can also skip all the way to the bottom to &ldquo;OUTCOMES&rdquo; if you just want to know the pre- and post-OMSCS impacts.</p><h2 class="relative group"><strong>BOILERPLATE GENERAL INFORMATION</strong><div id=boilerplate-general-information class=anchor></div><span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"><a class="text-primary-300 dark:text-neutral-700 !no-underline" href=#boilerplate-general-information aria-label=Anchor>#</a></span></h2><p>In an effort to be helpful to those getting oriented to the program in general, here&rsquo;s a list of resources that you may find value in that I personally referenced relatively frequently:</p><ul><li><a href=https://docs.google.com/spreadsheets/d/e/2PACX-1vRyHrRhH2V52bsYFEtm-8oJDaFOlyGYz6AKXm8WwsthN3fNP3KGkEx7O7D9ZHV3j2iKnzU2XHqoh4pQ/pubhtml target=_blank rel=noreferrer>List of associated Slack Channels and amplifying info for classes</a></li><li><a href=https://omscs.gatech.edu/sites/default/files/documents/Other_docs/historical-course-offerings-sp23.pdf target=_blank rel=noreferrer>Historical data for when select courses have been (not) available semester-by-semester.</a></li><li><a href=https://omscs.gatech.edu/current-courses target=_blank rel=noreferrer>The list of courses currently offered by OMSCS</a></li><li><a href=https://www.reddit.com/r/OMSCS/comments/hiqlf8/course_abbreviations_cheat_sheet/ target=_blank rel=noreferrer>List of course abbreviations/shorthands</a>; these help explain what abbreviations like &ldquo;GA&rdquo;, &ldquo;DC&rdquo;, or &ldquo;IIS&rdquo; mean, for example.</li><li><a href=https://registrar.gatech.edu/calendar/ target=_blank rel=noreferrer>The GaTech Academic Calendar</a></li><li><a href=https://www.omscentral.com/ target=_blank rel=noreferrer>Peer reviews of OMSCS courses</a></li><li><a href=https://www.omshub.org/ target=_blank rel=noreferrer>Alternative option for peer reviews</a>.</li><li><a href=https://status.gatech.edu/ target=_blank rel=noreferrer>GaTech IT status conditions</a>; as an online student, it&rsquo;s helpful to understand when an outage is taking place (vs. your own user error).</li></ul><h2 class="relative group"><strong>APPLICATION/ADMISSION</strong><div id=applicationadmission class=anchor></div><span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"><a class="text-primary-300 dark:text-neutral-700 !no-underline" href=#applicationadmission aria-label=Anchor>#</a></span></h2><p>Prospective applicants frequently get hung-up on the minutiae of their program application. There&rsquo;s a lot of &ldquo;am I good enough&rdquo; or &ldquo;is this program right for me&rdquo; -type questions that get asked. In service to those concerns, I want to be transparent with where I was and the steps I took in order to feel qualified as a candidate; my hope is that this context can help inform you of your own next steps if you&rsquo;re considering applying. While I&rsquo;m not a member of GaTech&rsquo;s admissions staff (nor do I have any real insight into the process that goes on therein), my hope is that this transparency serves to help level-set applicant expectations (especially for those coming from an entirely unrelated, non-STEM -based background like mine).</p><p>At the time I learned of OMSCS, my applicant profile could be summarized as:</p><ul><li>Prior U.S. military, unrelated non-technical job function.</li><li>B.A. undergraduate degree in the social sciences (namely: Political Science)</li><li>12 years since having last engaged academic math coursework</li><li>8 years since having completed undergraduate degree</li><li>Married (first child born just months before start of 1st semester of OMSCS)</li></ul><p>I was moving on from active duty military service in an effort to focus on family life; I had determined that I wanted to pivot my career into Tech more generally, but hadn&rsquo;t really understood what that meant at the time. Of the options available, I thought a Masters degree would be preferable, but I knew that there&rsquo;d be some significant upfront work needed before I could pursue that. My (tangentially) pertinent undergraduate coursework included:</p><ul><li>Precalculus [2008, grade: B], as a high school student enrolled in preemptive university coursework.</li><li>Computer Engineering Ethics [2009, grade A-], a course that was heavier on the philosophy of decision-making than anything technically substantive.</li><li>Intro to CompSci [2009, grade B+], which I don&rsquo;t remember anything about, outside of the wood panelling in the lecture hall looking neat.</li></ul><p>Based on information available from the program and other student posts/blogs, I settled on enrolling in <a href=https://asuonline.asu.edu/online-degree-programs/undergraduate/bachelor-science-software-engineering/ target=_blank rel=noreferrer>ASU&rsquo;s online Software Engineering undergraduate program</a> as an intermediary step. I also managed to pickup work in a cybersecurity Governance, Risk, and Compliance (GRC) position for a DoD contractor. The coursework I took to prepare for OMSCS through ASU included (in order):</p><ul><li>Principles of Programming [grade A]</li><li>Object-Oriented Program & Data Structures [grade A]</li><li>Calculus for Engineers I [grade A]</li><li>Calculus for Engineers II [grade A]</li><li>Intro to Programming Languages [grade B+]</li><li>Modern Differential Equations [grade A]</li><li>Applied Linear Algebra [grade A]</li><li>Discrete Math Structures [grade B+]</li><li>Computer Systems Fundamentals [grade A-]</li><li>Computer Organization & Assembly Language Programming [grade A]</li><li>Design & Analysis of Data Structures and Algorithms [grade A]</li></ul><p>My application statement of purpose was something to the effect of exploring the intersectionality of cybersecurity with emergent AI techniques as a means of addressing the ongoing staffing shortages reported in industry. My letters of recommendation I requested included one from my immediate supervisor, one from my manager, and one from a former military officer I reported to (however, I have reason to believe one of my references never sent their letter). I had not maintained contact with any of my former professors from my undergraduate program and I felt my online-only ASU instruction would be too impersonal to request a letter of rec from. If you&rsquo;re really hurting for letters, you could do worse than <a href=https://old.reddit.com/r/OMSCS/comments/173fow3/georgia_tech_omscs_hard_to_get_into/k4357h3/ target=_blank rel=noreferrer>getting one from Dr. Joyner himself</a> (the <a href=https://www.cc.gatech.edu/people/david-joyner target=_blank rel=noreferrer>executive director of OMSCS</a>) by enrolling in his &ldquo;<a href=https://www.edx.org/professional-certificate/introduction-to-python-programming target=_blank rel=noreferrer>Introduction to Python Programming</a>&rdquo; course.</p><p>After being admitted into OMSCS, I suspended my enrollment at ASU indefinitely. I wanted to highlight ASU due to its acceptance of me as a post-bacc applicant and its online asychronous course delivery; however, I recognize that there are many alternatives available to applicants that may be preferrable, more affordable, more accessible, etc. (popular options named on the OMSCS subreddit include Foothill College and Oakton College, for example - although I cannot testify to their offerings). One of the others I had applied to - but was denied from - included <a href=https://ecampus.oregonstate.edu/online-degrees/undergraduate/computer-science-postbacc/ target=_blank rel=noreferrer>OSU&rsquo;s Post-Bacc program</a>.</p><p>As a career-changer from an unrelated, non-technical discipline the preparatory steps I took were - at times - excruciating, especially considering the hiatus in academic mathematics coursework. Making up for both the time and content of the requisite background materiel was a non-trivial, grueling effort. There is some speculation over whether <a href=https://omscs.gatech.edu/preparing-yourself-omscs target=_blank rel=noreferrer>the preparatory actions outlined by Georgia Tech</a> in-and-of themselves would be sufficient; my impression for <em>my circumstances</em> was that my application needed to demonstrate that I could stand up to the rigor/intensity of formal classroom instruction - not a MOOC. OMSCS admissions doesn&rsquo;t offer prescriptive transparency about where <em>your</em> particular admissions acceptance threshold may be; perhaps I didn&rsquo;t need all of the classes I named above to be accepted - I can only speculate. However, the transformative steps in developing my academic aptitude in CompSci from an entirely unrelated academic/professional background is meant to suggest a path (or at least a baseline) for those likewise wondering if such a venture is possible. The short version: it is, but it&rsquo;s not without significant cost and personal investment, and all of this occurs before you even take your first OMSCS class. You&rsquo;ll have a hard time getting in (and a harder time making it to graduation) if you&rsquo;re not adequately prepared.</p><h2 class="relative group"><strong>OMSCS COURSES TAKEN & EXPERIENCES</strong><div id=omscs-courses-taken--experiences class=anchor></div><span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"><a class="text-primary-300 dark:text-neutral-700 !no-underline" href=#omscs-courses-taken--experiences aria-label=Anchor>#</a></span></h2><p>Unless otherwise noted, classes were taken sequentially one-per-semester (Fall, Spring, Summer). No semesters were skipped.</p><ol><li>CS6262 (Network Security [NetSec])</li><li>CS6200 (Graduate Intro to OS [GIOS])</li><li>CS6250 (Computer Networks [CN])</li><li>CS6290 (High Performance Computer Architectures [HPCA])</li><li>CS6515 (Intro to Graduate Algorithms [GA])</li><li>CS6035 (Intro to Info Security [IIS])</li><li>CS6265 (Info Sec Lab: Binary Exploitation [ISL])</li><li>CS8803 (Quantum Computing [QC]) & CS8001 (Seminar: Usable Privacy and Security)</li><li>CS6747 (Advanced Malware Analysis [AMA])</li><li>CS6601 (Artificial Intelligence [AI])</li></ol><p><figure><img class="my-0 rounded-md" loading=lazy decoding=async fetchpriority=auto alt="OMSCS graphic" width=1511 height=783 src=/posts/2023/omscs_writeup/omscs_graph_hu_5b596305d9ebae59.PNG srcset="/posts/2023/omscs_writeup/omscs_graph_hu_5b596305d9ebae59.PNG 800w, /posts/2023/omscs_writeup/omscs_graph_hu_6649f7ddc22c9b91.PNG 1280w" sizes="(min-width: 768px) 50vw, 65vw" data-zoom-src=/posts/2023/omscs_writeup/omscs_graph.PNG></figure><em>Graphical overview of my OMSCS experience</em></p><p>The graphic above is meant to be a succinct summary of my OMSCS experience, including notable life events for context. I tracked the relative amount of effort I felt I had to put in for a class (blue), how happy I was with my course experience (red), how tired I was going <em>into</em> the semester (yellow), and how valuable I found the class to be coming <em>out of</em> it (green). In brief:</p><ul><li>Generally speaking, I slated easier courses for Summer semesters (CN, IIS).</li><li>I found I was generally happier with my Free electives (ISL, QC, AMA) than my other courses.</li><li>I had more energy for OMSCS earlier on in my program experience than towards the end of it. This was aggravated by life&rsquo;s externalities (chiefly: parenthood).</li><li>As I have worked in cybersecurity throughout the program, I generally found the courses related to such subject-matter less challenging, more rewarding, and more pragmatic.</li></ul><h3 class="relative group">1. CS6262: Network Security<div id=1-cs6262-network-security class=anchor></div><span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"><a class="text-primary-300 dark:text-neutral-700 !no-underline" href=#1-cs6262-network-security aria-label=Anchor>#</a></span></h3><p>At the time of starting the program, I was already working in cybersecurity. I was anxious about the difficulty of the program and my first child had been born just a few months earlier. Based on the limited courses that were available at the time of enrollment, I picked this up to help ease in. I&rsquo;m a few years removed from when I originally took it, but I remember enjoying most of the experience. My one stickler was some ambiguity surrounding generating unique XSS payloads to bypass an unknown filter - I had asked for clarity on what was considered sufficiently &ldquo;unique&rdquo; and was summarily chastised by a TA. This should be taken as an exceptional instance of TA engagement throughout the program, however; by-and-large, I&rsquo;ve had really positive experiences working with the TAs.</p><div class="admonition relative overflow-hidden rounded-lg border-l-4 my-3 px-4 py-3 shadow-sm" data-type=tip><div class="flex items-center gap-2 font-semibold text-inherit"><div class="flex shrink-0 h-5 w-5 items-center justify-center text-lg"><span class="relative block icon"><svg viewBox="0 0 384 512"><path fill="currentColor" d="M112.1 454.3c0 6.297 1.816 12.44 5.284 17.69l17.14 25.69c5.25 7.875 17.17 14.28 26.64 14.28h61.67c9.438.0 21.36-6.401 26.61-14.28l17.08-25.68c2.938-4.438 5.348-12.37 5.348-17.7L272 415.1H112L112.1 454.3zM191.4.0132C89.44.3257 16 82.97 16 175.1c0 44.38 16.44 84.84 43.56 115.8 16.53 18.84 42.34 58.23 52.22 91.45.0313.25.0938.5166.125.7823h160.2c.0313-.2656.0938-.5166.125-.7823 9.875-33.22 35.69-72.61 52.22-91.45C351.6 260.8 368 220.4 368 175.1 368 78.61 288.9-.2837 191.4.0132zM192 96.01c-44.13.0-80 35.89-80 79.1.0 9.69-7.2 16.89-16 16.89S80 184.8 80 176c0-61.76 50.25-111.1 112-111.1 8.844.0 16 7.159 16 16S200.8 96.01 192 96.01z"/></svg></span></div><div class=grow>Tip</div></div><div class="admonition-content mt-3 text-base leading-relaxed text-inherit"><p><strong>admin note for those unfamiliar with the program:</strong> your seniority grants you earlier enrollment tickets, which means as a new graduate student you&rsquo;re left with whatever&rsquo;s open for your first semester. There&rsquo;s generally a good breadth of offerings still available, but it&rsquo;s worth knowing that you shouldn&rsquo;t have your heart set on any particular course-ordering just in case the class you were hoping for is full by the time your enrollment ticket opens up. Look up the many related posts on this topic, including those mentioning &ldquo;Free-for-all Friday&rdquo;.</p></div></div><h3 class="relative group">2. CS6200: Graduate Intro to OS<div id=2-cs6200-graduate-intro-to-os class=anchor></div><span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"><a class="text-primary-300 dark:text-neutral-700 !no-underline" href=#2-cs6200-graduate-intro-to-os aria-label=Anchor>#</a></span></h3><p>As a career-changer, I took to heart some of the guidance offered in this subreddit and determined that the Computing Systems specialty was more to my benefit than the machine learning (ML) path I had originally envisioned. As such, I was really attracted to this course for its repeated descriptions of being a high value-add to non-CS backgrounds. However, this was my first real gut-check to the OMSCS program. I was wholely unfamiliar with multi-threading/concurrency and was immensely perplexed by gRPC. That said, none of the concepts were so far out-of-reach from comprehension that consulting outside materials to understand the technologies couldn&rsquo;t help. It turns out that our peers were right; there is a lot of value in the fundamental take-aways taught by this course. As an external factor, I started a new job during this class, still in cybersecurity.</p><div class="admonition relative overflow-hidden rounded-lg border-l-4 my-3 px-4 py-3 shadow-sm" data-type=tip><div class="flex items-center gap-2 font-semibold text-inherit"><div class="flex shrink-0 h-5 w-5 items-center justify-center text-lg"><span class="relative block icon"><svg viewBox="0 0 384 512"><path fill="currentColor" d="M112.1 454.3c0 6.297 1.816 12.44 5.284 17.69l17.14 25.69c5.25 7.875 17.17 14.28 26.64 14.28h61.67c9.438.0 21.36-6.401 26.61-14.28l17.08-25.68c2.938-4.438 5.348-12.37 5.348-17.7L272 415.1H112L112.1 454.3zM191.4.0132C89.44.3257 16 82.97 16 175.1c0 44.38 16.44 84.84 43.56 115.8 16.53 18.84 42.34 58.23 52.22 91.45.0313.25.0938.5166.125.7823h160.2c.0313-.2656.0938-.5166.125-.7823 9.875-33.22 35.69-72.61 52.22-91.45C351.6 260.8 368 220.4 368 175.1 368 78.61 288.9-.2837 191.4.0132zM192 96.01c-44.13.0-80 35.89-80 79.1.0 9.69-7.2 16.89-16 16.89S80 184.8 80 176c0-61.76 50.25-111.1 112-111.1 8.844.0 16 7.159 16 16S200.8 96.01 192 96.01z"/></svg></span></div><div class=grow>Tip</div></div><div class="admonition-content mt-3 text-base leading-relaxed text-inherit"><p><strong>admin note for those unfamiliar with the program:</strong> in order to graduate from OMSCS, you need to complete one of the <a href=https://omscs.gatech.edu/program-info/specializations target=_blank rel=noreferrer>five &ldquo;specializations&rdquo; offered by the program</a>. Each necessitates picking from a limited menu for about 5-6 of your 10 classes needed to graduate, with the remaining 4-5 classes open-ended as your choice of electives from the <a href=https://omscs.gatech.edu/current-courses target=_blank rel=noreferrer>CS/CSE/ECE/IYSE offerings</a>.</p></div></div><h3 class="relative group">3. CS6250: Computer Networks<div id=3-cs6250-computer-networks class=anchor></div><span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"><a class="text-primary-300 dark:text-neutral-700 !no-underline" href=#3-cs6250-computer-networks aria-label=Anchor>#</a></span></h3><p>Entering a shorter Summer session, I wanted an easier course to compensate. Computer Networks was appropriate. I learned some interesting concepts, applied some algorithms that I had heard of but never really understood, and made concrete various facets of networking that I had been exposed to but hadn&rsquo;t formally been taught. That said, I don&rsquo;t necessarily feel any more competent in Software Defined Networking or understanding BGP and ASNs than I was before I started, but at least I&rsquo;m more aware that they are a thing. In the list of pros/cons of taking this course, its strongest assets for me were being a comfortable Summer course offering coupled with satisfying one of my Computing Systems specialization requirements.</p><div class="admonition relative overflow-hidden rounded-lg border-l-4 my-3 px-4 py-3 shadow-sm" data-type=tip><div class="flex items-center gap-2 font-semibold text-inherit"><div class="flex shrink-0 h-5 w-5 items-center justify-center text-lg"><span class="relative block icon"><svg viewBox="0 0 384 512"><path fill="currentColor" d="M112.1 454.3c0 6.297 1.816 12.44 5.284 17.69l17.14 25.69c5.25 7.875 17.17 14.28 26.64 14.28h61.67c9.438.0 21.36-6.401 26.61-14.28l17.08-25.68c2.938-4.438 5.348-12.37 5.348-17.7L272 415.1H112L112.1 454.3zM191.4.0132C89.44.3257 16 82.97 16 175.1c0 44.38 16.44 84.84 43.56 115.8 16.53 18.84 42.34 58.23 52.22 91.45.0313.25.0938.5166.125.7823h160.2c.0313-.2656.0938-.5166.125-.7823 9.875-33.22 35.69-72.61 52.22-91.45C351.6 260.8 368 220.4 368 175.1 368 78.61 288.9-.2837 191.4.0132zM192 96.01c-44.13.0-80 35.89-80 79.1.0 9.69-7.2 16.89-16 16.89S80 184.8 80 176c0-61.76 50.25-111.1 112-111.1 8.844.0 16 7.159 16 16S200.8 96.01 192 96.01z"/></svg></span></div><div class=grow>Tip</div></div><div class="admonition-content mt-3 text-base leading-relaxed text-inherit"><p><strong>admin note for those unfamiliar with the program:</strong> the summer semesters are 4 weeks shorter than the Fall/Spring semesters; some courses cut content to compensate, many do not. Other courses are simply not available to take during the Summer semester; you can view <a href=https://omscs.gatech.edu/sites/default/files/documents/Other_docs/historical-course-offerings-sp23.pdf target=_blank rel=noreferrer>the program&rsquo;s historical offerings here</a> to evaluate the likelihood of its offering a given course in the future. Assuming you don&rsquo;t skip Summer semesters, you would do well to identify a handful of courses ahead of time that can be appropriately held-off for these abbreviated periods.</p></div></div><h3 class="relative group">4. CS6290: High Performance Computer Architectures<div id=4-cs6290-high-performance-computer-architectures class=anchor></div><span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"><a class="text-primary-300 dark:text-neutral-700 !no-underline" href=#4-cs6290-high-performance-computer-architectures aria-label=Anchor>#</a></span></h3><p>For me personally, this course was another gut-check. If I hadn&rsquo;t taken GIOS earlier, I would not have as readily understood the concepts that were being talked about. There&rsquo;s a lot of technical abstractions spoken to including caching, virtualized memory, and pagination (that again, I do believe necessary and fundamental to a CS education), which really made things difficult for me. It&rsquo;s not a terribly complex course, but it was a lot for me to learn. I particularly appreciated the distinctions made between multi-processing vs. multi-threading as well as the unit on memory, storage, and fault tolerance; I also got the distinct impression that far more effort has gone into advancing memory and caching than I previously had an appreciation for (i.e. it&rsquo;s a problem domain that people build careers around).</p><h3 class="relative group">5. CS6515: Intro to Graduate Algorithms<div id=5-cs6515-intro-to-graduate-algorithms class=anchor></div><span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"><a class="text-primary-300 dark:text-neutral-700 !no-underline" href=#5-cs6515-intro-to-graduate-algorithms aria-label=Anchor>#</a></span></h3><p>I hadn&rsquo;t expected to take this course this early in my course-ordering (many in the subreddit report not being able to get a seat until their 10th and final course), but when it was my time to enroll I got lucky and saw an open seat, jumping on it. I won&rsquo;t extoll anymore than what people have already said about the course - there are many opinions/reviews out there and I share in most of them. The stress (more than the actual difficulty of the class material) is what I remember. As someone who had the unusual opportunity to take it earlier in their program experience, I&rsquo;d strongly advocate for others to do the same (given the opportunity). I also changed employers during this time, doing the same work but now 100% remote.</p><div class="admonition relative overflow-hidden rounded-lg border-l-4 my-3 px-4 py-3 shadow-sm" data-type=tip><div class="flex items-center gap-2 font-semibold text-inherit"><div class="flex shrink-0 h-5 w-5 items-center justify-center text-lg"><span class="relative block icon"><svg viewBox="0 0 384 512"><path fill="currentColor" d="M112.1 454.3c0 6.297 1.816 12.44 5.284 17.69l17.14 25.69c5.25 7.875 17.17 14.28 26.64 14.28h61.67c9.438.0 21.36-6.401 26.61-14.28l17.08-25.68c2.938-4.438 5.348-12.37 5.348-17.7L272 415.1H112L112.1 454.3zM191.4.0132C89.44.3257 16 82.97 16 175.1c0 44.38 16.44 84.84 43.56 115.8 16.53 18.84 42.34 58.23 52.22 91.45.0313.25.0938.5166.125.7823h160.2c.0313-.2656.0938-.5166.125-.7823 9.875-33.22 35.69-72.61 52.22-91.45C351.6 260.8 368 220.4 368 175.1 368 78.61 288.9-.2837 191.4.0132zM192 96.01c-44.13.0-80 35.89-80 79.1.0 9.69-7.2 16.89-16 16.89S80 184.8 80 176c0-61.76 50.25-111.1 112-111.1 8.844.0 16 7.159 16 16S200.8 96.01 192 96.01z"/></svg></span></div><div class=grow>Tip</div></div><div class="admonition-content mt-3 text-base leading-relaxed text-inherit"><p><strong>admin note for those unfamiliar with the program:</strong> there are select &ldquo;bottle-neck&rdquo; courses for the various specialties in the program that students must take in order to graduate. Because there are no other options around taking them (or because they are so popular), the enrollment demand is incredibly high and most aren&rsquo;t able to secure a seat until they near graduation; see earlier admin note concerning seniority and enrollment tickets. GA is one such class for several specializations, making it very in-demand.</p></div></div><h3 class="relative group">6. CS6035: Intro to Info Security<div id=6-cs6035-intro-to-info-security class=anchor></div><span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"><a class="text-primary-300 dark:text-neutral-700 !no-underline" href=#6-cs6035-intro-to-info-security aria-label=Anchor>#</a></span></h3><p>I hadn&rsquo;t ever planned on taking this course, but going into this semester I knew my 2nd child was due to be born around the window of final exams. Knowing this, I wanted a course that would lean into my existing professional expertise and had flexibility around the end of the semester; this granted me both. It was also liberating knowing I&rsquo;d be completely finished with my <a href=https://omscs.gatech.edu/specialization-computing-systems target=_blank rel=noreferrer>Computing Systems specialty requirements</a> by the semester&rsquo;s end. I actually enjoyed the content, finding it neither overly challenging nor redundant. In fact, I enjoyed the content so much that I applied and was offered a TA position at the end of the semester. But my very-pregnant wife gently reminded me that I worked full-time, was a part-time student, and would have 2 children &lt;= 2yo; I turned down the offer.</p><h3 class="relative group">7. CS6265: Info Sec Lab - Binary Exploitation<div id=7-cs6265-info-sec-lab---binary-exploitation class=anchor></div><span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"><a class="text-primary-300 dark:text-neutral-700 !no-underline" href=#7-cs6265-info-sec-lab---binary-exploitation aria-label=Anchor>#</a></span></h3><p>Again, I leaned into my professional expertise when selecting this course since I had a newborn on my hands at the start of this semester. I was really excited to be enrolled in this class, since I had long been wanting to develop my competencies with reverse engineering and binary exploitation. This class delivered it in spades. It&rsquo;s also an exam-less class, so I didn&rsquo;t have to exhaust myself in late-night studies for midterms/finals with a baby and a toddler. That said, the course&rsquo;s material is anything but easy, especially if you aren&rsquo;t already familiar with capture-the-flag (CTF) stylized cybersecurity challenges. You&rsquo;re not going to be provided overt instruction on how to do the week-by-week work, the whole point is that you need to figure it out on your own; understandably, those unfamiliar with this kind of format did not handle it well - especially when they were likewise unfamiliar with the tools at hand. I loved it, but it&rsquo;s not for everyone. Incidentally, taking this class in the Fall (as I did) has the semester&rsquo;s 10th and final lab coincide with the <a href=https://nsa-codebreaker.org/challenge target=_blank rel=noreferrer>NSA&rsquo;s Codebreaker Challenge</a> - which in itself was an amazing learning opportunity; of the 4300+ competitors nationwide, <a href=http://localhost/posts/2022/nsa-codebreaker-challenge-2022-writeup/>I was one of about 100 that completed the Codebreaker Challenge</a> (1 of 19 at GaTech that year).</p><h3 class="relative group">8. CS8803: Quantum Computing & CS8001: Usable Privacy and Security (Seminar)<div id=8-cs8803-quantum-computing--cs8001-usable-privacy-and-security-seminar class=anchor></div><span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"><a class="text-primary-300 dark:text-neutral-700 !no-underline" href=#8-cs8803-quantum-computing--cs8001-usable-privacy-and-security-seminar aria-label=Anchor>#</a></span></h3><p>I had a crisis of class selection going into this Spring semester; at this point in the program I knew that I had 2 full semesters (including this one) and 1 Summer semester left. I had wanted to take ECE-8843 (Side-Channels & Their Role in Cybersecurity), but it <a href=https://www.reddit.com/r/OMSCS/comments/z27i9l/no_ece8843_sidechannels/ target=_blank rel=noreferrer>turned out to be unceremoniously dropped from being offered that semester</a> as was CS6264 (Information Security Lab: Network Defenses), which had been my backup (admin note: these courses are still offered through OMSCS, they just were pulled that semester due to low enrollment numbers). I waffled back-and-forth on taking CS6210 (AOS) or CS6601 (AI), but some self-inflection had me realize how tired I was between school, work, and the kids, so I caved on the perceived &ldquo;easier&rdquo; option: Quantum Computing. It was a really neat class that - out of all my classes - felt the closest to learning about the bleeding edge; quantum computing has an incredible amount of transformative potential and it was a great learning experience.</p><p>Between 1st phase and 2nd phase enrollment I also saw an announcement of a new 1 credit-hour seminar being offered: &ldquo;Usable Privacy and Security&rdquo; with Youngwook Do and Yuxi Wu. I had passed over some of the other seminars GTU had offered in earlier semesters - they seemed topically uninteresting and wouldn&rsquo;t otherwise progress me towards graduation any faster. However, this one sounded both manageable and in my wheelhouse. Ultimately, we ended up reading between 2-5 academic research papers each week, meeting together to talk about them the subsequent week; there were also three brief (2 page) papers that we wrote. The biggest incentive I&rsquo;d name for taking a given seminar are the smaller cohorts: assuming you&rsquo;re interested in the subject-matter, you have an opportunity to critically engage with your peers that you just won&rsquo;t find outside of courses with group projects.</p><div class="admonition relative overflow-hidden rounded-lg border-l-4 my-3 px-4 py-3 shadow-sm" data-type=tip><div class="flex items-center gap-2 font-semibold text-inherit"><div class="flex shrink-0 h-5 w-5 items-center justify-center text-lg"><span class="relative block icon"><svg viewBox="0 0 384 512"><path fill="currentColor" d="M112.1 454.3c0 6.297 1.816 12.44 5.284 17.69l17.14 25.69c5.25 7.875 17.17 14.28 26.64 14.28h61.67c9.438.0 21.36-6.401 26.61-14.28l17.08-25.68c2.938-4.438 5.348-12.37 5.348-17.7L272 415.1H112L112.1 454.3zM191.4.0132C89.44.3257 16 82.97 16 175.1c0 44.38 16.44 84.84 43.56 115.8 16.53 18.84 42.34 58.23 52.22 91.45.0313.25.0938.5166.125.7823h160.2c.0313-.2656.0938-.5166.125-.7823 9.875-33.22 35.69-72.61 52.22-91.45C351.6 260.8 368 220.4 368 175.1 368 78.61 288.9-.2837 191.4.0132zM192 96.01c-44.13.0-80 35.89-80 79.1.0 9.69-7.2 16.89-16 16.89S80 184.8 80 176c0-61.76 50.25-111.1 112-111.1 8.844.0 16 7.159 16 16S200.8 96.01 192 96.01z"/></svg></span></div><div class=grow>Tip</div></div><div class="admonition-content mt-3 text-base leading-relaxed text-inherit"><p><strong>admin note for those unfamiliar with the program:</strong> currently enrolled students - in addition to having earlier time tickets to pick classes - also get an early window of opportunity (1st phase) to enroll; newly admitted students don&rsquo;t get issued enrollment tickets until the 2nd phase. Students who have already completed a course get issued time tickets for both phases. Check out the <a href=https://registrar.gatech.edu/calendar target=_blank rel=noreferrer>Academic Calendar</a> to get a better understanding of when these phases take place.</p></div></div><div class="admonition relative overflow-hidden rounded-lg border-l-4 my-3 px-4 py-3 shadow-sm" data-type=tip><div class="flex items-center gap-2 font-semibold text-inherit"><div class="flex shrink-0 h-5 w-5 items-center justify-center text-lg"><span class="relative block icon"><svg viewBox="0 0 384 512"><path fill="currentColor" d="M112.1 454.3c0 6.297 1.816 12.44 5.284 17.69l17.14 25.69c5.25 7.875 17.17 14.28 26.64 14.28h61.67c9.438.0 21.36-6.401 26.61-14.28l17.08-25.68c2.938-4.438 5.348-12.37 5.348-17.7L272 415.1H112L112.1 454.3zM191.4.0132C89.44.3257 16 82.97 16 175.1c0 44.38 16.44 84.84 43.56 115.8 16.53 18.84 42.34 58.23 52.22 91.45.0313.25.0938.5166.125.7823h160.2c.0313-.2656.0938-.5166.125-.7823 9.875-33.22 35.69-72.61 52.22-91.45C351.6 260.8 368 220.4 368 175.1 368 78.61 288.9-.2837 191.4.0132zM192 96.01c-44.13.0-80 35.89-80 79.1.0 9.69-7.2 16.89-16 16.89S80 184.8 80 176c0-61.76 50.25-111.1 112-111.1 8.844.0 16 7.159 16 16S200.8 96.01 192 96.01z"/></svg></span></div><div class=grow>Tip</div></div><div class="admonition-content mt-3 text-base leading-relaxed text-inherit"><p><strong>admin note for those unfamiliar with the program:</strong> as of Fall 2021, seminars became a new addition for OMSCS students; seminars go by the course number CS8001, they are 1 credit hour each (proportionally priced w.r.t. tuition), and do not count toward your graduation requirements. They are less formal classes structured around discussing and interacting on novel topics. Some seminars may be repeatedly offered semester-over-semester, but there is no guarantee that any given seminar will be available again in the future.</p></div></div><h3 class="relative group">9. CS6747: Advanced Malware Analysis<div id=9-cs6747-advanced-malware-analysis class=anchor></div><span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"><a class="text-primary-300 dark:text-neutral-700 !no-underline" href=#9-cs6747-advanced-malware-analysis aria-label=Anchor>#</a></span></h3><p>Entering my final Summer Semester, I was weighing the pragmatism of engaging in more cybersecurity-centric coursework (which was pertinent to my profession) and my personal interest in more inter-disciplinary subjects (e.g. AI/ML topics, which I originally had enrolled in the program for). Pragmatism won out; this course was appealing because - like CS6265 - there are no exams. Being a project-based course made things really pleasant and predictable for planning Summer trips with the family. It also extended what I had picked up on in CS6265, diving immediately into scrutinizing assembly-level code. That said, while the course is certainly doable in the Summer, there just wasn&rsquo;t enough time to meaningfully digest the course&rsquo;s material in its entirety; some of the research papers and lecture content I really wanted to chew-on, but there simply wasn&rsquo;t enough time to do so; time/labor had to be prioritized towards completing the projects. In retrospect, I wish I had allocated a Spring/Fall semester to the course so that I could have engaged it more; I enjoyed the class that much! I also changed employers again, now working as a Sr. Application Security Engineer.</p><h3 class="relative group">10. CS6601: Artificial Intelligence<div id=10-cs6601-artificial-intelligence class=anchor></div><span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"><a class="text-primary-300 dark:text-neutral-700 !no-underline" href=#10-cs6601-artificial-intelligence aria-label=Anchor>#</a></span></h3><p>I really was unsure about getting into this course this late into my OMSCS experience; the reviews and impressions of the course material was a little intimidating, and I felt the strong temptation to simply &ldquo;coast&rdquo; out on some more approachable subject-matter. Since none of my other courses really fed-into or otherwise overlapped with CS6601 (e.g. ML4T or KBAI), it was hard for me to evaluate my own aptitude going in. Ultimately however, I ended up going with AI to close out my program experience. The course is consistently quite a bit of work, with the underlying mathematics comprehension and need for numpy-based vectorization optimization escalating as the semester progresses; that said, I did come away with a more general understanding of classical AI algorithms. I ended up front-loading my work, completing the first five projects and abandoning the sixth (the course drops your lowest project grade). This effectively gave me a month off between when I finished project 5 and the final exam, which was nice. I didn&rsquo;t care for how the course was administratively handled; things felt adversarial between staff and students, possibly a consequence of the sheer class size (there were 706 students remaining by my semester&rsquo;s end). Administrative policies aside, I&rsquo;m not sure this course was the best fit for my broader educational objectives in cybersecurity, nor effectively interesting enough to stave-off the pervasive &ldquo;senior-itis&rdquo; as graduation loomed. It had its moments, but I was both leery about enrolling in it at the onset and glad for it to be over when I was finished.</p><h2 class="relative group"><strong>REFLECTIONS</strong><div id=reflections class=anchor></div><span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"><a class="text-primary-300 dark:text-neutral-700 !no-underline" href=#reflections aria-label=Anchor>#</a></span></h2><p>When I was initially interested in OMSCS, I had envisioned a future where I could execute a transformative pivot into performing AI/ML work from my unrelated military career. As life progressed, pragmatism suggested that I&rsquo;d be better served professionally by emphasizing general CompSci studies more broadly (and - given my career trajectory both then and now - cybersecurity coursework more narrowly). In this respect, the program was less a career-changing lynchpin and more of a means of creating momentum for pre-existing efforts I was already undertaking; I wasn&rsquo;t sold on cybersecurity as being my definitive transition into tech at the beginning of OMSCS (a reason why I did not originally apply to OMSCybersecurity), but over the course of the program through to graduation, I ended up taking complementing classes to that end. This has proven to be practical in my case, but I don&rsquo;t want to discourage those applicants in considering the other specializations OMSCS offers or to the program&rsquo;s efficacy in being able to redirect your own career trajectory (vs. strictly reinforcing it).</p><p>I also became a parent roughly around the same time I enrolled into OMSCS. Through that, the pandemic (which also kicked-off at roughly the same time), and both my spouse and I working throughout, we were stretched pretty thin at times. I am enormously grateful for having the support structure at home that I do: my spouse who was always supportive, parents/in-laws to help periodically watch the kids, employers who afforded me the flexibility to action what I needed, etc. In my circumstances, working full-time and having 2 young children didn&rsquo;t make the program prohibitive, but it did have a hand in guiding my enrollment decisions semester-by-semester. Additionally, there were some self-preserving actions I took at times during semesters as well: the pandemic and transition into parenthood were pretty intense experiences during my first semester, so I elected to skip the final exam altogether and start my break early (i.e. taking a 0 on the exam and settling for a B in the class overall); later when I had my second child midway through, I likewise calculated the cutoff score for passing in that class and preemptively haulted my engagement once I met that threshold (although I ended up getting sucked into the NSA Codebreaker challenge, which elevated the overall grade to an A); other examples can be found in my course experiences above. More academically-intensive courses were probably manageable, but would have placed an undue burden on that support structure and my children - being absent both mentally and physically; I think I still got a phenomenal return on my investment in OMSCS, but a number of concessions were made that I think our peers at different points in their lives wouldn&rsquo;t have to.</p><p><figure><img class="my-0 rounded-md" loading=lazy decoding=async fetchpriority=auto alt="OMSCS Stats" width=1200 height=450 src=/posts/2023/omscs_writeup/omscs_stats_2022-3_hu_da86de4c6910dc81.jpg srcset="/posts/2023/omscs_writeup/omscs_stats_2022-3_hu_da86de4c6910dc81.jpg 800w, /posts/2023/omscs_writeup/omscs_stats_2022-3.jpg 1280w" sizes="(min-width: 768px) 50vw, 65vw" data-zoom-src=/posts/2023/omscs_writeup/omscs_stats_2022-3.jpg></figure><em>Source: <a href=https://omscs.gatech.edu/ target=_blank rel=noreferrer>https://omscs.gatech.edu/</a></em></p><p>Hindsight being what it is, I wish I had taken CS8803 (Compilers), CS6210 (AOS), and CS6211 (SDCC); I think that those courses offer some really phenomenal value to the broader CompSci education; and while I could delay graduation to accomodate, I have access to alternative resources that can help me learn what I want from those courses (just not with the same structure/staff/rigor/support that&rsquo;s available in graduate school). I saw diminished returns in value in CS6250 (CN) and CS6035 (IIS), but they both were irreplaceable at their points in time relative to where I was in the program (being easier Summer semester courses, satisfying my specialization requirements, and - in the case of CS6035 - flexible for family and playing to my professional strengths); that said, I don&rsquo;t regret taking them nor do I discourage you from considering them. They&rsquo;re good courses - especially if you&rsquo;re a CompSci career-changer like myself or otherwise unfamiliar with the material; they just weren&rsquo;t as transformative/enthralling to me in juxtaposition to other courses I took.</p><p>The program more broadly speaking has some phenomenal content for instructing you in various CompSci topics. However, it won&rsquo;t hand-hold you through to graduation; most of the courses involved a considerable amount of independent external research, looking beyond the lecture material, reading, etc. But that&rsquo;s a facet of graduate school (vs. something geared more towards the layperson, such as a trade school or bootcamp). If you want it and are able to meet the expectations, it&rsquo;s there for you. Generally speaking, I found my peers that struggled to adapt or complained about the program&mldr;</p><ul><li>Failed to adjust their instructional paradigm to align with either the remote nature (the &ldquo;O&rdquo; in OMSCS) or graduate-level work-ethic (the &ldquo;M&rdquo; in OMSCS).</li><li>Didn&rsquo;t utilize the resources that were made available by staff, including office hours and the assorted engagement platforms, such as the Ed Discussion forums, Slack Channels, Email correspondence, etc.</li><li>Couldn&rsquo;t be bothered to ensure their assumptions about the program aligned with the realities/expectations set forward by staff (i.e. didn&rsquo;t allocate reasonable time windows for responses to questions, didn&rsquo;t read the syllabus or project documentation, didn&rsquo;t begin working on projects/homework until the submission deadline loomed, etc.).</li></ul><p><figure><img class="my-0 rounded-md" loading=lazy decoding=async fetchpriority=auto alt="Canvas Screenshot" width=1101 height=770 src=/posts/2023/omscs_writeup/canvas_screenshot_hu_2ee258de607cede3.PNG srcset="/posts/2023/omscs_writeup/canvas_screenshot_hu_2ee258de607cede3.PNG 800w, /posts/2023/omscs_writeup/canvas_screenshot.PNG 1280w" sizes="(min-width: 768px) 50vw, 65vw" data-zoom-src=/posts/2023/omscs_writeup/canvas_screenshot.PNG></figure><em>Screenshot of the Canvas platform, which most courses are administered through</em></p><p>In juxtaposition to my brick-and-mortar undergraduate experience, being online-only didn&rsquo;t really instill/engender any sense of identity with the school or my peers; I never set foot on the campus, never bought a student ID, and didn&rsquo;t go to the graduation ceremony. I forwarded all of my student emails to my personal account, didn&rsquo;t meet any of our peers/staff in-person, and spent a considerable amount of time looking into external resources outside of buzzport/canvas to supplement the lesson materials. Someone in a job interview once responded to my student status with &ldquo;Go Yellow Jackets!&rdquo; and it took me a second to realize that - notionally - I was one. For me OMSCS felt like a distinct, bottled experience; there wasn&rsquo;t anyone in my immediate circles to really talk to about it while I was a student and - when finished - there wasn&rsquo;t anyone interested in talking about it after. Having said that, I will acknowledge that Georgia Tech does <em>try</em> to create spaces for more interactive discourse to occur: there are semester-by-semester showcases of student work through the Canvas-based Student Center, nominations for <a href=https://omscs.gatech.edu/student-spotlight-asa-hess-matsumoto target=_blank rel=noreferrer>student spotlights</a>, smaller seminar cohorts, etc. Moreover some of the students do <a href="https://old.reddit.com/r/OMSCS/search?q=meetup&amp;restrict_sr=on&amp;sort=relevance&amp;t=all" target=_blank rel=noreferrer>independently make efforts to meet their local peers</a>. Overall however, these opportunities to network felt superficial and tenuous to me (which undercut my notion that this program really helps with professional networking). That&rsquo;s okay for me, but it may be important for you depending on what you want out of your time in university (in which case, you&rsquo;re probably better off not pursuing an online program).</p><p>By extension, my experiences with our online peers - both in my preparatory coursework through ASU and in smaller study sessions with OMSCS - turned me off of <a href="https://www.reddit.com/r/OMSCS/comments/11ysfea/a_list_of_classes_with_group_work/?share_id=0tLTmCUB4zmLyNp7wCpdt&amp;utm_content=2&amp;utm_medium=android_app&amp;utm_name=androidcss&amp;utm_source=share&amp;utm_term=1" target=_blank rel=noreferrer>all courses that required groupwork</a>. Coordinating schedules across multiple timezones, lackadaisical engagement, and disproportionate/inconsistent buy-in from peers is - in my opinion - too much added overhead on top of the testable learning objectives from graduate school, full-time employment, and life&rsquo;s other demands; the uncertainty of whether or not I&rsquo;d have a positive experience of a class being based largely on the efforts of other people I&rsquo;d never met wasn&rsquo;t something I wanted to roll the dice on; even in courses where splitting the work amongst peers was optional (e.g. CS6747), I elected not to do so. All told, I preferred my work to be evaluated for what it was: mine alone. My intention isn&rsquo;t to discourage you from enrolling in courses with groupwork - as there is some really interesting, enriching, and fun content for you to explore (such as CS7643: Deep Learning or CS6457: Video Game Design); moreover, much of the above can be mitigated by coordinating with your peers ahead of enrollment (thereby pre-establishing who you&rsquo;ll partner up with before the semester begins). Rather, I&rsquo;m just highlighting that my chosen courses were deliberately tailored to avoid them out of personal preference (and that such a path to graduation is possible).</p><p>This experience is incredibly demanding of your time and effort; in exchange, you&rsquo;re provided really insightful opportunities to learn about Computer Science and other related tangents, as well as a relatively strong credential to supplement your employability. The courses I enjoyed the most weren&rsquo;t necessarily the ones that instructed me best; conversely, the presence/absence of academic rigor was not necessarily a marker for instruction quality either. Academic intensity necessitated in-depth research, which in turn promoted longer-lasting retention of subject matter; but engagement from staff/peers, cohesion between lesson/exam/project materials, and the impact on my life outside the program - be it personal flexibility or professional pragmatism - was what fostered my interest.</p><p>The program itself was also subject to changes throughout the years I was a student:</p><ul><li>Several classes were added, including Quantum Computing, Intro to Computer Law, Digital Health Equity, Global Entrepreneurship, and Natural Language Processing.</li><li>A new specialization was offered (Human-Computer Interaction).</li><li>Seminars were introduced.</li><li>Grade substitution policies were enacted (i.e. how to &lsquo;undo&rsquo; an &ldquo;F&rdquo; in a class as it relates to your GPA).</li><li>Changes to the admissions process were made (notably: the removal of the essay-format admission statement).</li><li><a href=https://www.classcentral.com/report/georgia-tech-omscs-cost-decrease/ target=_blank rel=noreferrer>Tuition actually <em>decreased</em></a>.</li><li>A number of course materials were overhauled/modernized and there was some turnover in staff (most notably Dr. Isbell).</li></ul><p>All of the above goes to show the dynamism and ongoing re-investment Georgia Tech has in its OMSCS offering. I hadn&rsquo;t expected the breadth and depth of changes that would be made while I was a student there, so I was pleasantly surprised; I&rsquo;d expect your experience with the program will encounter even more positive changes yet to come.</p><h2 class="relative group"><strong>OUTCOMES</strong><div id=outcomes class=anchor></div><span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"><a class="text-primary-300 dark:text-neutral-700 !no-underline" href=#outcomes aria-label=Anchor>#</a></span></h2><p>Quantifying/qualifying the impact of OMSCS on me personally and professionally is a bit challenging as there are a number of contextual factors that muddy attribution.</p><ul><li>I am making significantly more money now than I was at the start of the program (however, I changed employers a number of times and accrued several YoE in my field - both of which I consider more probable causes).</li><li>I regularly have recruiters/headhunters reaching out to me directly (although it isn&rsquo;t apparent that it is due to my affiliation with Georgia Tech).</li><li>I have made a career as a technical subject matter expert in ways that do touch on the lessons I learned through OMSCS (however, I already had a foothold in the industry prior to my application and accrued a number of other <a href=http://localhost/posts/2023/what-certifications-should-you-get/>security-centric trainings/credentials</a> in parallel that have arguably been more applicable/pertinent).</li><li>I&rsquo;ve jockeyed for better benefits across my lines of employment (although, the pandemic largely contributed to WFH privileges industry-wide and incentives improved in that time with the so-called &ldquo;Great Resignation&rdquo;).</li><li>I&rsquo;m more open to the idea of presenting/contributing to research (yet the more influential venues/publications in cybersecurity are not necessarily in-line with the traditional academic channels prescribed by Georgia Tech).</li><li>On a comedic downbeat, I&rsquo;m also exhausted and physically less in-shape (however, I became a parent twice over and have worked-from-home at a desk throughout).</li></ul><p>There&rsquo;s also a slew of externalities that have gone without mention that no doubt have had varying macro- and micro-impacts including (but not limited to): a looming recession, the war in Ukraine, cybersecurity breaches (e.g. the Colonial Pipeline), web3 investments tied to cryptocurrency booms (and busts), my U.S. citizenship, my proximity to a major metropolitan area, my military veterancy, etc. All told, it&rsquo;s challenging for me to definitively attribute changes in the quality of my personal/professional life to OMSCS - though perhaps some distance in time/space from the program will make those attributions more defined.</p><p>Truth be told, I felt like I needed the degree a whole lot less as my time in OMSCS progressed; at the onset, my employability was pretty thin so I felt like at a minimum I needed a relevant degree in case I lost my job (or couldn&rsquo;t otherwise find work); by graduation, my resume was a lot more filled-out and the degree - in terms of my employability - felt more incidental (its purpose more about academic exploration than strictly aptitude and employability). But regardless of whether or not OMSCS was causal in these changes, the outcomes are observable (and largely positive): I&rsquo;m better compensated than I was before OMSCS by a significant margin, I&rsquo;m involved in more engaging and technical work, and I have significantly better comprehension with the technologies I face/work with. For what it&rsquo;s worth, I certainly <em>feel</em> more qualified to work in my profession thanks to OMSCS.</p><p>Now that I&rsquo;m on the other side of this program, I&rsquo;m really grateful for the opportunity to have been a part of it. Looking forward, this probably marks my last engagement with academia as a student - I have no plans now or in the future of pursuing a PhD and am unlikely to consider another graduate-level degree (such as an MBA). I&rsquo;m a better engineer, I&rsquo;m better at my research, and I&rsquo;m more capable at solving problems that I couldn&rsquo;t before. And although I&rsquo;m not working in AI/ML or as a SWE (both of which had been my original intentions when starting the program), I was able to make the program serve my professional interests all the same in the cybersecurity space (all-the-while being remote in a way that enabled me to be with my family).</p><p>Best of luck to you all, gang!</p></div></div></section><footer class="pt-8 max-w-prose print:hidden"><div class=pt-8><hr class="border-dotted border-neutral-300 dark:border-neutral-600"><div class="flex justify-between pt-3"><span class="flex flex-col"><a class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400" href=/posts/2023/what-certifications-should-you-get/><span class=leading-6><span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Which Cybersecurity Certifications Should You Get?
-</span></a><span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400"><time datetime=2023-11-08T00:00:00+00:00>8 November 2023</time>
-</span></span><span class="flex flex-col items-end"><a class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400" href=/posts/2024/htb-tier-3/><span class=leading-6>HTB Tier 3 Path Review&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
-</span></a><span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400"><time datetime=2024-02-05T00:00:00+00:00>5 February 2024</time></span></span></div></div></footer></article><div id=scroll-to-top class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200"><a href=#the-top class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400" aria-label="Scroll to top" title="Scroll to top">&uarr;</a></div></main><footer id=site-footer class="py-10 print:hidden"><div class="flex items-center justify-between"><p class="text-sm text-neutral-500 dark:text-neutral-400">&copy;
-2026
-Asa Hess-Matsumoto</p><p class="text-xs text-neutral-500 dark:text-neutral-400">Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href=https://gohugo.io/ target=_blank rel="noopener noreferrer">Hugo</a> & <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500" href=https://blowfish.page/ target=_blank rel="noopener noreferrer">Blowfish</a></p></div><script>mediumZoom(document.querySelectorAll("img:not(.nozoom)"),{margin:24,background:"rgba(0,0,0,0.5)",scrollOffset:0})</script><br><div style=width:150px;margin-left:0><a href=https://notbyai.fyi target=_blank rel="noopener noreferrer"><img src=https://notbyai.fyi/img/en/written-by-human-not-by-ai-white.svg alt="notbyai logo"></a></div><br></footer><div id=search-wrapper class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500" data-url=http://localhost/><div id=search-modal class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800"><header class="relative z-10 flex items-center justify-between flex-none px-2"><form class="flex items-center flex-auto min-w-0"><div class="flex items-center justify-center w-8 h-8 text-neutral-400"><span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7 405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9.0 208 0S0 93.1.0 208s93.1 208 208 208c48.3.0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9.0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7.0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7.0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg></span></div><input type=search id=search-query class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent" placeholder=Search tabindex=0></form><button id=close-search-button class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400" title="Close (Esc)">
-<span class="relative block icon"><svg viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75.0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3 54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75.0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75.0-45.25s32.75-12.5 45.25.0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25.0s12.5 32.75.0 45.25l-105.4 105.4L310.6 361.4z"/></svg></span></button></header><section class="flex-auto px-2 overflow-auto"><ul id=search-results></ul></section></div></div></div></body></html>
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>OMSCS Graduation Writeup &middot; ByteBreach</title>
+    <meta name="title" content="OMSCS Graduation Writeup &middot; ByteBreach">
+  
+
+  
+  
+    <meta name="description" content="TEST">
+  
+  
+    <meta name="keywords" content="gatech,school,">
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/posts/2023/omscs_writeup/">
+  
+
+  
+  
+    <meta name="author" content="Asa Hess-Matsumoto">
+  
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/posts/2023/omscs_writeup/">
+  <meta property="og:site_name" content="ByteBreach">
+  <meta property="og:title" content="OMSCS Graduation Writeup">
+  <meta property="og:description" content="TEST">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-12-11T00:00:00+00:00">
+    <meta property="article:modified_time" content="2023-12-11T00:00:00+00:00">
+    <meta property="article:tag" content="Gatech">
+    <meta property="article:tag" content="School">
+    <meta property="og:image" content="http://localhost:1313/posts/2023/omscs_writeup/featured-gt.png">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/posts/2023/omscs_writeup/featured-gt.png">
+  <meta name="twitter:title" content="OMSCS Graduation Writeup">
+  <meta name="twitter:description" content="TEST">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+  
+    
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.eeac801bce9570bd96e0eb6ea345390edf0022cc9928e550c2ed1cd94fdb1b2e5555c296e8a023e5e267e49383b5eb4959a12222e62bb492939e0357ae2b3970.css"
+    integrity="sha512-7qyAG86VcL2W4Otuo0U5Dt8AIsyZKOVQwu0c2U/bGy5VVcKW6KAj5eJn5JODtetJWaEiIuYrtJKTngNXris5cA==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.6f41174b3a05b680820fe08cadbfa5fb7a7ca347b76a0955cdc68b9d8aca1ce24f0547e138cea33bcc7904d551a90afcb1cc7f2d9fe8557075d501419046c08c.js"
+    integrity="sha512-b0EXSzoFtoCCD&#43;CMrb&#43;l&#43;3p8o0e3aglVzcaLnYrKHOJPBUfhOM6jO8x5BNVRqQr8scx/LZ/oVXB11QFBkEbAjA=="></script>
+  
+  
+  
+  
+  
+  
+    
+    <script src="/lib/zoom/zoom.min.umd.a527109b68c082a70f3697716dd72a9d5aa8b545cf800cecbbc7399f2ca6f6e0ce3e431f2062b48bbfa47c9ea42822714060bef309be073f49b9c0e30d318d7b.js" integrity="sha512-pScQm2jAgqcPNpdxbdcqnVqotUXPgAzsu8c5nyym9uDOPkMfIGK0i7&#43;kfJ6kKCJxQGC&#43;8wm&#43;Bz9JucDjDTGNew=="></script>
+  
+
+  
+  
+  
+    
+  
+  
+    
+  
+  
+    
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.bdda7dece6cbaf08deef7d254f7f842f3261c2524d247905127c9a20decc03f1011a2950048464c79272c1ce0705a49a41147f39f2b95163bb71d404b33263ef.js"
+      integrity="sha512-vdp97ObLrwje730lT3&#43;ELzJhwlJNJHkFEnyaIN7MA/EBGilQBIRkx5Jywc4HBaSaQRR/OfK5UWO7cdQEszJj7w=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "OMSCS Graduation Writeup",
+    "headline": "OMSCS Graduation Writeup",
+    
+    "inLanguage": "en",
+    "url" : "http://localhost:1313/posts/2023/omscs_writeup/",
+    "author" : {
+      "@type": "Person",
+      "name": "Asa Hess-Matsumoto"
+    },
+    "copyrightYear": "2023",
+    "dateCreated": "2023-12-11T00:00:00\u002b00:00",
+    "datePublished": "2023-12-11T00:00:00\u002b00:00",
+    
+    "dateModified": "2023-12-11T00:00:00\u002b00:00",
+    
+    "keywords": ["gatech","school"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "5879"
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+  
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    
+    
+      <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      ByteBreach
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/about/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="About"
+      title="About">
+      
+        <span class="mr-1">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z"/></svg>
+</span>
+        </span>
+      
+      
+        <span class="text-base font-medium break-normal">
+          About
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/posts/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Blog"
+      title="Posts">
+      
+        <span class="mr-1">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M421.7 220.3L188.5 453.4L154.6 419.5L158.1 416H112C103.2 416 96 408.8 96 400V353.9L92.51 357.4C87.78 362.2 84.31 368 82.42 374.4L59.44 452.6L137.6 429.6C143.1 427.7 149.8 424.2 154.6 419.5L188.5 453.4C178.1 463.8 165.2 471.5 151.1 475.6L30.77 511C22.35 513.5 13.24 511.2 7.03 504.1C.8198 498.8-1.502 489.7 .976 481.2L36.37 360.9C40.53 346.8 48.16 333.9 58.57 323.5L291.7 90.34L421.7 220.3zM492.7 58.75C517.7 83.74 517.7 124.3 492.7 149.3L444.3 197.7L314.3 67.72L362.7 19.32C387.7-5.678 428.3-5.678 453.3 19.32L492.7 58.75z"/></svg>
+</span>
+        </span>
+      
+      
+        <span class="text-base font-medium break-normal">
+          Blog
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/writeups/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Writeups"
+      title="Writeups">
+      
+        <span class="mr-1">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M352 96V99.56C352 115.3 339.3 128 323.6 128H188.4C172.7 128 159.1 115.3 159.1 99.56V96C159.1 42.98 202.1 0 255.1 0C309 0 352 42.98 352 96zM41.37 105.4C53.87 92.88 74.13 92.88 86.63 105.4L150.6 169.4C151.3 170 151.9 170.7 152.5 171.4C166.8 164.1 182.9 160 199.1 160H312C329.1 160 345.2 164.1 359.5 171.4C360.1 170.7 360.7 170 361.4 169.4L425.4 105.4C437.9 92.88 458.1 92.88 470.6 105.4C483.1 117.9 483.1 138.1 470.6 150.6L406.6 214.6C405.1 215.3 405.3 215.9 404.6 216.5C410.7 228.5 414.6 241.9 415.7 256H480C497.7 256 512 270.3 512 288C512 305.7 497.7 320 480 320H416C416 344.6 410.5 367.8 400.6 388.6C402.7 389.9 404.8 391.5 406.6 393.4L470.6 457.4C483.1 469.9 483.1 490.1 470.6 502.6C458.1 515.1 437.9 515.1 425.4 502.6L362.3 439.6C337.8 461.4 306.5 475.8 272 479.2V240C272 231.2 264.8 224 255.1 224C247.2 224 239.1 231.2 239.1 240V479.2C205.5 475.8 174.2 461.4 149.7 439.6L86.63 502.6C74.13 515.1 53.87 515.1 41.37 502.6C28.88 490.1 28.88 469.9 41.37 457.4L105.4 393.4C107.2 391.5 109.3 389.9 111.4 388.6C101.5 367.8 96 344.6 96 320H32C14.33 320 0 305.7 0 288C0 270.3 14.33 256 32 256H96.3C97.38 241.9 101.3 228.5 107.4 216.5C106.7 215.9 106 215.3 105.4 214.6L41.37 150.6C28.88 138.1 28.88 117.9 41.37 105.4H41.37z"/></svg>
+</span>
+        </span>
+      
+      
+        <span class="text-base font-medium break-normal">
+          Writeups
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/tags/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Tags"
+      title="Tags">
+      
+        <span class="mr-1">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M48 32H197.5C214.5 32 230.7 38.74 242.7 50.75L418.7 226.7C443.7 251.7 443.7 292.3 418.7 317.3L285.3 450.7C260.3 475.7 219.7 475.7 194.7 450.7L18.75 274.7C6.743 262.7 0 246.5 0 229.5V80C0 53.49 21.49 32 48 32L48 32zM112 176C129.7 176 144 161.7 144 144C144 126.3 129.7 112 112 112C94.33 112 80 126.3 80 144C80 161.7 94.33 176 112 176z"/></svg>
+</span>
+        </span>
+      
+      
+        <span class="text-base font-medium break-normal">
+          Tags
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      <div class="flex items-center h-14 gap-4">
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Dark mode switcher"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label for="mobile-menu-toggle" class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      role="dialog"
+      aria-modal="true"
+      style="scrollbar-gutter: stable;"
+      class="fixed inset-0 z-50 invisible overflow-y-auto px-6 py-20 opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100 bg-neutral-50/97 dark:bg-neutral-900/99
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        class="fixed end-8 top-5 flex items-center justify-center z-50 h-12 w-12 cursor-pointer select-none rounded-full bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <a
+        href="/about/"
+        aria-label="About"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+          <span class="flex items-center justify-center h-8 w-8 text-2xl">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 128c17.67 0 32 14.33 32 32c0 17.67-14.33 32-32 32S224 177.7 224 160C224 142.3 238.3 128 256 128zM296 384h-80C202.8 384 192 373.3 192 360s10.75-24 24-24h16v-64H224c-13.25 0-24-10.75-24-24S210.8 224 224 224h32c13.25 0 24 10.75 24 24v88h16c13.25 0 24 10.75 24 24S309.3 384 296 384z"/></svg>
+</span>
+          </span>
+        
+        <span title="About" class="text-2xl font-bold tracking-tight">
+          About
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/posts/"
+        aria-label="Blog"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+          <span class="flex items-center justify-center h-8 w-8 text-2xl">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M421.7 220.3L188.5 453.4L154.6 419.5L158.1 416H112C103.2 416 96 408.8 96 400V353.9L92.51 357.4C87.78 362.2 84.31 368 82.42 374.4L59.44 452.6L137.6 429.6C143.1 427.7 149.8 424.2 154.6 419.5L188.5 453.4C178.1 463.8 165.2 471.5 151.1 475.6L30.77 511C22.35 513.5 13.24 511.2 7.03 504.1C.8198 498.8-1.502 489.7 .976 481.2L36.37 360.9C40.53 346.8 48.16 333.9 58.57 323.5L291.7 90.34L421.7 220.3zM492.7 58.75C517.7 83.74 517.7 124.3 492.7 149.3L444.3 197.7L314.3 67.72L362.7 19.32C387.7-5.678 428.3-5.678 453.3 19.32L492.7 58.75z"/></svg>
+</span>
+          </span>
+        
+        <span title="Posts" class="text-2xl font-bold tracking-tight">
+          Blog
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/writeups/"
+        aria-label="Writeups"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+          <span class="flex items-center justify-center h-8 w-8 text-2xl">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M352 96V99.56C352 115.3 339.3 128 323.6 128H188.4C172.7 128 159.1 115.3 159.1 99.56V96C159.1 42.98 202.1 0 255.1 0C309 0 352 42.98 352 96zM41.37 105.4C53.87 92.88 74.13 92.88 86.63 105.4L150.6 169.4C151.3 170 151.9 170.7 152.5 171.4C166.8 164.1 182.9 160 199.1 160H312C329.1 160 345.2 164.1 359.5 171.4C360.1 170.7 360.7 170 361.4 169.4L425.4 105.4C437.9 92.88 458.1 92.88 470.6 105.4C483.1 117.9 483.1 138.1 470.6 150.6L406.6 214.6C405.1 215.3 405.3 215.9 404.6 216.5C410.7 228.5 414.6 241.9 415.7 256H480C497.7 256 512 270.3 512 288C512 305.7 497.7 320 480 320H416C416 344.6 410.5 367.8 400.6 388.6C402.7 389.9 404.8 391.5 406.6 393.4L470.6 457.4C483.1 469.9 483.1 490.1 470.6 502.6C458.1 515.1 437.9 515.1 425.4 502.6L362.3 439.6C337.8 461.4 306.5 475.8 272 479.2V240C272 231.2 264.8 224 255.1 224C247.2 224 239.1 231.2 239.1 240V479.2C205.5 475.8 174.2 461.4 149.7 439.6L86.63 502.6C74.13 515.1 53.87 515.1 41.37 502.6C28.88 490.1 28.88 469.9 41.37 457.4L105.4 393.4C107.2 391.5 109.3 389.9 111.4 388.6C101.5 367.8 96 344.6 96 320H32C14.33 320 0 305.7 0 288C0 270.3 14.33 256 32 256H96.3C97.38 241.9 101.3 228.5 107.4 216.5C106.7 215.9 106 215.3 105.4 214.6L41.37 150.6C28.88 138.1 28.88 117.9 41.37 105.4H41.37z"/></svg>
+</span>
+          </span>
+        
+        <span title="Writeups" class="text-2xl font-bold tracking-tight">
+          Writeups
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <a
+        href="/tags/"
+        aria-label="Tags"
+        
+        class="flex items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+        
+          <span class="flex items-center justify-center h-8 w-8 text-2xl">
+            <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M48 32H197.5C214.5 32 230.7 38.74 242.7 50.75L418.7 226.7C443.7 251.7 443.7 292.3 418.7 317.3L285.3 450.7C260.3 475.7 219.7 475.7 194.7 450.7L18.75 274.7C6.743 262.7 0 246.5 0 229.5V80C0 53.49 21.49 32 48 32L48 32zM112 176C129.7 176 144 161.7 144 144C144 126.3 129.7 112 112 112C94.33 112 80 126.3 80 144C80 161.7 94.33 176 112 176z"/></svg>
+</span>
+          </span>
+        
+        <span title="Tags" class="text-2xl font-bold tracking-tight">
+          Tags
+        </span>
+        
+      </a>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+  <script>
+    (function () {
+      var mainmenu = document.querySelector(".main-menu");
+      if (!mainmenu) return;
+
+      var path = window.location.pathname;
+      var links = mainmenu.querySelectorAll('a[href="' + path + '"]');
+
+      links.forEach(function (link) {
+        var targets = link.querySelectorAll("span");
+        targets.forEach(function (el) {
+          el.classList.add("active");
+        });
+      });
+    })();
+  </script>
+
+
+    
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  <article>
+    
+    
+      
+      
+      
+      
+        
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+    
+  
+    
+  
+    
+  
+
+
+
+
+
+
+  
+    
+    
+      
+      
+    
+  
+
+
+
+
+
+    <div id="hero" class="h-[150px] md:h-[200px]"></div>
+  
+  <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom">
+    
+    
+    
+    <img
+      id="background-image"
+      src="/animated-honeycomb-25-less.svg"
+      role="presentation"
+      loading="eager"
+      decoding="async"
+      fetchpriority="high"
+      class="absolute inset-0 w-full h-full object-cover"
+      >
+    <div
+      class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal"></div>
+    <div
+      class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal"></div>
+  </div>
+
+  
+    <div
+      id="background-blur"
+      class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-xl bg-neutral-100/75 dark:bg-neutral-800/60"></div>
+    
+    
+    <script
+      type="text/javascript"
+      src="/js/background-blur.min.605b3b942818f0ab5a717ae446135ec46b8ee5a2ad12ae56fb90dc2a76ce30c388f9fec8bcc18db15bd47e3fa8a09d779fa12aa9c184cf614a315bc72c6c163d.js"
+      integrity="sha512-YFs7lCgY8KtacXrkRhNexGuO5aKtEq5W&#43;5DcKnbOMMOI&#43;f7IvMGNsVvUfj&#43;ooJ13n6EqqcGEz2FKMVvHLGwWPQ=="
+      data-blur-id="background-blur"
+      data-image-id="background-image"
+      data-image-url="/animated-honeycomb-25-less.svg"></script>
+  
+      
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        OMSCS Graduation Writeup
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <time datetime="2023-12-11T00:00:00&#43;00:00">11 December 2023</time><span class="px-2 text-primary-500">&middot;</span><span>5879 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">28 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+    
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+      
+      
+        
+        
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4"
+        width="96"
+        height="96"
+        alt="Asa Hess-Matsumoto"
+        src="/animated-avatar_hu_e391172299f47252.gif"
+        data-zoom-src="/animated-avatar_hu_5fc2f32c4a85f231.gif">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Asa Hess-Matsumoto
+      </div>
+    
+    
+      <div class="text-sm text-neutral-700 dark:text-neutral-400">A little bit about you</div>
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+  
+
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+        <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky lg:top-10">
+            <details
+  open
+  id="TOCView"
+  class="toc-right mt-0 overflow-y-auto overscroll-contain bf-scrollbar rounded-lg -ms-5 ps-5 pe-2 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#boilerplate-general-information"><strong>BOILERPLATE GENERAL INFORMATION</strong></a></li>
+    <li><a href="#applicationadmission"><strong>APPLICATION/ADMISSION</strong></a></li>
+    <li><a href="#omscs-courses-taken--experiences"><strong>OMSCS COURSES TAKEN &amp; EXPERIENCES</strong></a>
+      <ul>
+        <li><a href="#1-cs6262-network-security">1. CS6262: Network Security</a></li>
+        <li><a href="#2-cs6200-graduate-intro-to-os">2. CS6200: Graduate Intro to OS</a></li>
+        <li><a href="#3-cs6250-computer-networks">3. CS6250: Computer Networks</a></li>
+        <li><a href="#4-cs6290-high-performance-computer-architectures">4. CS6290: High Performance Computer Architectures</a></li>
+        <li><a href="#5-cs6515-intro-to-graduate-algorithms">5. CS6515: Intro to Graduate Algorithms</a></li>
+        <li><a href="#6-cs6035-intro-to-info-security">6. CS6035: Intro to Info Security</a></li>
+        <li><a href="#7-cs6265-info-sec-lab---binary-exploitation">7. CS6265: Info Sec Lab - Binary Exploitation</a></li>
+        <li><a href="#8-cs8803-quantum-computing--cs8001-usable-privacy-and-security-seminar">8. CS8803: Quantum Computing &amp; CS8001: Usable Privacy and Security (Seminar)</a></li>
+        <li><a href="#9-cs6747-advanced-malware-analysis">9. CS6747: Advanced Malware Analysis</a></li>
+        <li><a href="#10-cs6601-artificial-intelligence">10. CS6601: Artificial Intelligence</a></li>
+      </ul>
+    </li>
+    <li><a href="#reflections"><strong>REFLECTIONS</strong></a></li>
+    <li><a href="#outcomes"><strong>OUTCOMES</strong></a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg -ms-5 ps-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 -ms-5 ps-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 border-s-1 -ms-5 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#boilerplate-general-information"><strong>BOILERPLATE GENERAL INFORMATION</strong></a></li>
+    <li><a href="#applicationadmission"><strong>APPLICATION/ADMISSION</strong></a></li>
+    <li><a href="#omscs-courses-taken--experiences"><strong>OMSCS COURSES TAKEN &amp; EXPERIENCES</strong></a>
+      <ul>
+        <li><a href="#1-cs6262-network-security">1. CS6262: Network Security</a></li>
+        <li><a href="#2-cs6200-graduate-intro-to-os">2. CS6200: Graduate Intro to OS</a></li>
+        <li><a href="#3-cs6250-computer-networks">3. CS6250: Computer Networks</a></li>
+        <li><a href="#4-cs6290-high-performance-computer-architectures">4. CS6290: High Performance Computer Architectures</a></li>
+        <li><a href="#5-cs6515-intro-to-graduate-algorithms">5. CS6515: Intro to Graduate Algorithms</a></li>
+        <li><a href="#6-cs6035-intro-to-info-security">6. CS6035: Intro to Info Security</a></li>
+        <li><a href="#7-cs6265-info-sec-lab---binary-exploitation">7. CS6265: Info Sec Lab - Binary Exploitation</a></li>
+        <li><a href="#8-cs8803-quantum-computing--cs8001-usable-privacy-and-security-seminar">8. CS8803: Quantum Computing &amp; CS8001: Usable Privacy and Security (Seminar)</a></li>
+        <li><a href="#9-cs6747-advanced-malware-analysis">9. CS6747: Advanced Malware Analysis</a></li>
+        <li><a href="#10-cs6601-artificial-intelligence">10. CS6601: Artificial Intelligence</a></li>
+      </ul>
+    </li>
+    <li><a href="#reflections"><strong>REFLECTIONS</strong></a></li>
+    <li><a href="#outcomes"><strong>OUTCOMES</strong></a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+
+<script>
+  (function () {
+    'use strict'
+
+    const SCROLL_OFFSET_RATIO = 0.33
+    const TOC_SELECTOR = '#TableOfContents'
+    const ANCHOR_SELECTOR = '.anchor'
+    const TOC_LINK_SELECTOR = 'a[href^="#"]'
+    const NESTED_LIST_SELECTOR = 'li ul'
+    const ACTIVE_CLASS = 'active'
+    let isJumpingToAnchor = false
+
+    function getActiveAnchorId(anchors, offsetRatio) {
+      const threshold = window.scrollY + window.innerHeight * offsetRatio
+      const tocLinks = [...document.querySelectorAll('#TableOfContents a[href^="#"]')]
+      const tocIds = new Set(tocLinks.map(link => link.getAttribute('href').substring(1)))
+
+      if (isJumpingToAnchor) {
+        for (let i = 0; i < anchors.length; i++) {
+          const anchor = anchors[i]
+          if (!tocIds.has(anchor.id)) continue
+          const top = anchor.getBoundingClientRect().top + window.scrollY
+          if (Math.abs(window.scrollY - top) < 100) {
+            return anchor.id
+          }
+        }
+      }
+
+      for (let i = anchors.length - 1; i >= 0; i--) {
+        const top = anchors[i].getBoundingClientRect().top + window.scrollY
+        if (top <= threshold && tocIds.has(anchors[i].id)) {
+          return anchors[i].id
+        }
+      }
+      return anchors.find(anchor => tocIds.has(anchor.id))?.id || ''
+    }
+
+    function updateTOC({ toc, anchors, links, scrollOffset, collapseInactive }) {
+      const activeId = getActiveAnchorId(anchors, scrollOffset)
+      if (!activeId) return
+
+      links.forEach(link => {
+        const isActive = link.getAttribute('href') === `#${activeId}`
+        link.classList.toggle(ACTIVE_CLASS, isActive)
+
+        if (collapseInactive) {
+          const ul = link.closest('li')?.querySelector('ul')
+          if (ul) ul.style.display = isActive ? '' : 'none'
+        }
+      })
+
+      if (collapseInactive) {
+        const activeLink = toc.querySelector(`a[href="#${CSS.escape(activeId)}"]`)
+        let el = activeLink
+        while (el && el !== toc) {
+          if (el.tagName === 'UL') el.style.display = ''
+          if (el.tagName === 'LI') el.querySelector('ul')?.style.setProperty('display', '')
+          el = el.parentElement
+        }
+      }
+    }
+
+    function initTOC() {
+      const toc = document.querySelector(TOC_SELECTOR)
+      if (!toc) return
+
+      const collapseInactive = false
+      const anchors = [...document.querySelectorAll(ANCHOR_SELECTOR)]
+      const links = [...toc.querySelectorAll(TOC_LINK_SELECTOR)]
+
+      if (collapseInactive) {
+        toc.querySelectorAll(NESTED_LIST_SELECTOR).forEach(ul => ul.style.display = 'none')
+      }
+
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          isJumpingToAnchor = true
+        })
+      })
+
+      const config = {
+        toc,
+        anchors,
+        links,
+        scrollOffset: SCROLL_OFFSET_RATIO,
+        collapseInactive
+      }
+
+      window.addEventListener('scroll', () => updateTOC(config), { passive: true })
+      window.addEventListener('hashchange', () => updateTOC(config), { passive: true })
+
+      updateTOC(config)
+    }
+
+    document.readyState === 'loading'
+      ? document.addEventListener('DOMContentLoaded', initTOC)
+      : initTOC()
+  })()
+</script>
+
+
+          </div>
+        </div>
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          <p>I&rsquo;m finally graduating from <a href="https://omscs.gatech.edu/home"  target="_blank" rel="noreferrer">Georgia Tech&rsquo;s Online Master of Science Computer Science (OMSCS)</a>. For those of you interested, I&rsquo;ve summarized my venture below (including pre-application preparatory actions for the many prospective students who lurk about <a href="https://old.reddit.com/r/OMSCS/"  target="_blank" rel="noreferrer">the subreddit</a>). For those of you wanting to jump straight to the course impressions, skip down to the &ldquo;OMSCS COURSES TAKEN &amp; EXPERIENCES&rdquo; section; for those of you wanting a more broader take about the program as a whole, skip down to &ldquo;REFLECTIONS&rdquo;. You can also skip all the way to the bottom to &ldquo;OUTCOMES&rdquo; if you just want to know the pre- and post-OMSCS impacts.</p>
+
+<h2 class="relative group"><strong>BOILERPLATE GENERAL INFORMATION</strong>
+    <div id="boilerplate-general-information" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#boilerplate-general-information" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>In an effort to be helpful to those getting oriented to the program in general, here&rsquo;s a list of resources that you may find value in that I personally referenced relatively frequently:</p>
+<ul>
+<li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vRyHrRhH2V52bsYFEtm-8oJDaFOlyGYz6AKXm8WwsthN3fNP3KGkEx7O7D9ZHV3j2iKnzU2XHqoh4pQ/pubhtml"  target="_blank" rel="noreferrer">List of associated Slack Channels and amplifying info for classes</a></li>
+<li><a href="https://omscs.gatech.edu/sites/default/files/documents/Other_docs/historical-course-offerings-sp23.pdf"  target="_blank" rel="noreferrer">Historical data for when select courses have been (not) available semester-by-semester.</a></li>
+<li><a href="https://omscs.gatech.edu/current-courses"  target="_blank" rel="noreferrer">The list of courses currently offered by OMSCS</a></li>
+<li><a href="https://www.reddit.com/r/OMSCS/comments/hiqlf8/course_abbreviations_cheat_sheet/"  target="_blank" rel="noreferrer">List of course abbreviations/shorthands</a>; these help explain what abbreviations like &ldquo;GA&rdquo;, &ldquo;DC&rdquo;, or &ldquo;IIS&rdquo; mean, for example.</li>
+<li><a href="https://registrar.gatech.edu/calendar/"  target="_blank" rel="noreferrer">The GaTech Academic Calendar</a></li>
+<li><a href="https://www.omscentral.com/"  target="_blank" rel="noreferrer">Peer reviews of OMSCS courses</a></li>
+<li><a href="https://www.omshub.org/"  target="_blank" rel="noreferrer">Alternative option for peer reviews</a>.</li>
+<li><a href="https://status.gatech.edu/"  target="_blank" rel="noreferrer">GaTech IT status conditions</a>; as an online student, it&rsquo;s helpful to understand when an outage is taking place (vs. your own user error).</li>
+</ul>
+
+<h2 class="relative group"><strong>APPLICATION/ADMISSION</strong>
+    <div id="applicationadmission" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#applicationadmission" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Prospective applicants frequently get hung-up on the minutiae of their program application. There&rsquo;s a lot of &ldquo;am I good enough&rdquo; or &ldquo;is this program right for me&rdquo; -type questions that get asked. In service to those concerns, I want to be transparent with where I was and the steps I took in order to feel qualified as a candidate; my hope is that this context can help inform you of your own next steps if you&rsquo;re considering applying. While I&rsquo;m not a member of GaTech&rsquo;s admissions staff (nor do I have any real insight into the process that goes on therein), my hope is that this transparency serves to help level-set applicant expectations (especially for those coming from an entirely unrelated, non-STEM -based background like mine).</p>
+<p>At the time I learned of OMSCS, my applicant profile could be summarized as:</p>
+<ul>
+<li>Prior U.S. military, unrelated non-technical job function.</li>
+<li>B.A. undergraduate degree in the social sciences (namely: Political Science)</li>
+<li>12 years since having last engaged academic math coursework</li>
+<li>8 years since having completed undergraduate degree</li>
+<li>Married (first child born just months before start of 1st semester of OMSCS)</li>
+</ul>
+<p>I was moving on from active duty military service in an effort to focus on family life; I had determined that I wanted to pivot my career into Tech more generally, but hadn&rsquo;t really understood what that meant at the time. Of the options available, I thought a Masters degree would be preferable, but I knew that there&rsquo;d be some significant upfront work needed before I could pursue that. My (tangentially) pertinent undergraduate coursework included:</p>
+<ul>
+<li>Precalculus [2008, grade: B], as a high school student enrolled in preemptive university coursework.</li>
+<li>Computer Engineering Ethics [2009, grade A-], a course that was heavier on the philosophy of decision-making than anything technically substantive.</li>
+<li>Intro to CompSci [2009, grade B+], which I don&rsquo;t remember anything about, outside of the wood panelling in the lecture hall looking neat.</li>
+</ul>
+<p>Based on information available from the program and other student posts/blogs, I settled on enrolling in <a href="https://asuonline.asu.edu/online-degree-programs/undergraduate/bachelor-science-software-engineering/"  target="_blank" rel="noreferrer">ASU&rsquo;s online Software Engineering undergraduate program</a> as an intermediary step. I also managed to pickup work in a cybersecurity Governance, Risk, and Compliance (GRC) position for a DoD contractor. The coursework I took to prepare for OMSCS through ASU included (in order):</p>
+<ul>
+<li>Principles of Programming [grade A]</li>
+<li>Object-Oriented Program &amp; Data Structures [grade A]</li>
+<li>Calculus for Engineers I [grade A]</li>
+<li>Calculus for Engineers II [grade A]</li>
+<li>Intro to Programming Languages [grade B+]</li>
+<li>Modern Differential Equations [grade A]</li>
+<li>Applied Linear Algebra [grade A]</li>
+<li>Discrete Math Structures [grade B+]</li>
+<li>Computer Systems Fundamentals [grade A-]</li>
+<li>Computer Organization &amp; Assembly Language Programming [grade A]</li>
+<li>Design &amp; Analysis of Data Structures and Algorithms [grade A]</li>
+</ul>
+<p>My application statement of purpose was something to the effect of exploring the intersectionality of cybersecurity with emergent AI techniques as a means of addressing the ongoing staffing shortages reported in industry. My letters of recommendation I requested included one from my immediate supervisor, one from my manager, and one from a former military officer I reported to (however, I have reason to believe one of my references never sent their letter). I had not maintained contact with any of my former professors from my undergraduate program and I felt my online-only ASU instruction would be too impersonal to request a letter of rec from. If you&rsquo;re really hurting for letters, you could do worse than <a href="https://old.reddit.com/r/OMSCS/comments/173fow3/georgia_tech_omscs_hard_to_get_into/k4357h3/"  target="_blank" rel="noreferrer">getting one from Dr. Joyner himself</a> (the <a href="https://www.cc.gatech.edu/people/david-joyner"  target="_blank" rel="noreferrer">executive director of OMSCS</a>) by enrolling in his &ldquo;<a href="https://www.edx.org/professional-certificate/introduction-to-python-programming"  target="_blank" rel="noreferrer">Introduction to Python Programming</a>&rdquo; course.</p>
+<p>After being admitted into OMSCS, I suspended my enrollment at ASU indefinitely. I wanted to highlight ASU due to its acceptance of me as a post-bacc applicant and its online asychronous course delivery; however, I recognize that there are many alternatives available to applicants that may be preferrable, more affordable, more accessible, etc. (popular options named on the OMSCS subreddit include Foothill College and Oakton College, for example - although I cannot testify to their offerings). One of the others I had applied to - but was denied from - included <a href="https://ecampus.oregonstate.edu/online-degrees/undergraduate/computer-science-postbacc/"  target="_blank" rel="noreferrer">OSU&rsquo;s Post-Bacc program</a>.</p>
+<p>As a career-changer from an unrelated, non-technical discipline the preparatory steps I took were - at times - excruciating, especially considering the hiatus in academic mathematics coursework. Making up for both the time and content of the requisite background materiel was a non-trivial, grueling effort. There is some speculation over whether <a href="https://omscs.gatech.edu/preparing-yourself-omscs"  target="_blank" rel="noreferrer">the preparatory actions outlined by Georgia Tech</a> in-and-of themselves would be sufficient; my impression for <em>my circumstances</em> was that my application needed to demonstrate that I could stand up to the rigor/intensity of formal classroom instruction - not a MOOC. OMSCS admissions doesn&rsquo;t offer prescriptive transparency about where <em>your</em> particular admissions acceptance threshold may be; perhaps I didn&rsquo;t need all of the classes I named above to be accepted - I can only speculate. However, the transformative steps in developing my academic aptitude in CompSci from an entirely unrelated academic/professional background is meant to suggest a path (or at least a baseline) for those likewise wondering if such a venture is possible. The short version: it is, but it&rsquo;s not without significant cost and personal investment, and all of this occurs before you even take your first OMSCS class. You&rsquo;ll have a hard time getting in (and a harder time making it to graduation) if you&rsquo;re not adequately prepared.</p>
+
+<h2 class="relative group"><strong>OMSCS COURSES TAKEN &amp; EXPERIENCES</strong>
+    <div id="omscs-courses-taken--experiences" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#omscs-courses-taken--experiences" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Unless otherwise noted, classes were taken sequentially one-per-semester (Fall, Spring, Summer). No semesters were skipped.</p>
+<ol>
+<li>CS6262 (Network Security [NetSec])</li>
+<li>CS6200 (Graduate Intro to OS [GIOS])</li>
+<li>CS6250 (Computer Networks [CN])</li>
+<li>CS6290 (High Performance Computer Architectures [HPCA])</li>
+<li>CS6515 (Intro to Graduate Algorithms [GA])</li>
+<li>CS6035 (Intro to Info Security [IIS])</li>
+<li>CS6265 (Info Sec Lab: Binary Exploitation [ISL])</li>
+<li>CS8803 (Quantum Computing [QC]) &amp; CS8001 (Seminar: Usable Privacy and Security)</li>
+<li>CS6747 (Advanced Malware Analysis [AMA])</li>
+<li>CS6601 (Artificial Intelligence [AI])</li>
+</ol>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="OMSCS graphic"
+    width="1511"
+    height="783"
+    src="/posts/2023/omscs_writeup/omscs_graph_hu_5b596305d9ebae59.PNG"
+    srcset="/posts/2023/omscs_writeup/omscs_graph_hu_5b596305d9ebae59.PNG 800w, /posts/2023/omscs_writeup/omscs_graph_hu_6649f7ddc22c9b91.PNG 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/posts/2023/omscs_writeup/omscs_graph.PNG"></figure>
+<em>Graphical overview of my OMSCS experience</em></p>
+<p>The graphic above is meant to be a succinct summary of my OMSCS experience, including notable life events for context. I tracked the relative amount of effort I felt I had to put in for a class (blue), how happy I was with my course experience (red), how tired I was going <em>into</em> the semester (yellow), and how valuable I found the class to be coming <em>out of</em> it (green). In brief:</p>
+<ul>
+<li>Generally speaking, I slated easier courses for Summer semesters (CN, IIS).</li>
+<li>I found I was generally happier with my Free electives (ISL, QC, AMA) than my other courses.</li>
+<li>I had more energy for OMSCS earlier on in my program experience than towards the end of it. This was aggravated by life&rsquo;s externalities (chiefly: parenthood).</li>
+<li>As I have worked in cybersecurity throughout the program, I generally found the courses related to such subject-matter less challenging, more rewarding, and more pragmatic.</li>
+</ul>
+
+<h3 class="relative group">1. CS6262: Network Security
+    <div id="1-cs6262-network-security" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#1-cs6262-network-security" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>At the time of starting the program, I was already working in cybersecurity. I was anxious about the difficulty of the program and my first child had been born just a few months earlier. Based on the limited courses that were available at the time of enrollment, I picked this up to help ease in. I&rsquo;m a few years removed from when I originally took it, but I remember enjoying most of the experience. My one stickler was some ambiguity surrounding generating unique XSS payloads to bypass an unknown filter - I had asked for clarity on what was considered sufficiently &ldquo;unique&rdquo; and was summarily chastised by a TA. This should be taken as an exceptional instance of TA engagement throughout the program, however; by-and-large, I&rsquo;ve had really positive experiences working with the TAs.</p>
+<div class="admonition relative overflow-hidden rounded-lg border-l-4 my-3 px-4 py-3 shadow-sm" data-type="tip">
+      <div class="flex items-center gap-2 font-semibold text-inherit">
+        <div class="flex shrink-0 h-5 w-5 items-center justify-center text-lg"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M112.1 454.3c0 6.297 1.816 12.44 5.284 17.69l17.14 25.69c5.25 7.875 17.17 14.28 26.64 14.28h61.67c9.438 0 21.36-6.401 26.61-14.28l17.08-25.68c2.938-4.438 5.348-12.37 5.348-17.7L272 415.1h-160L112.1 454.3zM191.4 .0132C89.44 .3257 16 82.97 16 175.1c0 44.38 16.44 84.84 43.56 115.8c16.53 18.84 42.34 58.23 52.22 91.45c.0313 .25 .0938 .5166 .125 .7823h160.2c.0313-.2656 .0938-.5166 .125-.7823c9.875-33.22 35.69-72.61 52.22-91.45C351.6 260.8 368 220.4 368 175.1C368 78.61 288.9-.2837 191.4 .0132zM192 96.01c-44.13 0-80 35.89-80 79.1C112 184.8 104.8 192 96 192S80 184.8 80 176c0-61.76 50.25-111.1 112-111.1c8.844 0 16 7.159 16 16S200.8 96.01 192 96.01z"/></svg>
+</span></div>
+        <div class="grow">
+          Tip
+        </div>
+      </div><div class="admonition-content mt-3 text-base leading-relaxed text-inherit"><p><strong>admin note for those unfamiliar with the program:</strong> your seniority grants you earlier enrollment tickets, which means as a new graduate student you&rsquo;re left with whatever&rsquo;s open for your first semester. There&rsquo;s generally a good breadth of offerings still available, but it&rsquo;s worth knowing that you shouldn&rsquo;t have your heart set on any particular course-ordering just in case the class you were hoping for is full by the time your enrollment ticket opens up. Look up the many related posts on this topic, including those mentioning &ldquo;Free-for-all Friday&rdquo;.</p></div></div>
+<h3 class="relative group">2. CS6200: Graduate Intro to OS
+    <div id="2-cs6200-graduate-intro-to-os" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#2-cs6200-graduate-intro-to-os" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>As a career-changer, I took to heart some of the guidance offered in this subreddit and determined that the Computing Systems specialty was more to my benefit than the machine learning (ML) path I had originally envisioned. As such, I was really attracted to this course for its repeated descriptions of being a high value-add to non-CS backgrounds. However, this was my first real gut-check to the OMSCS program. I was wholely unfamiliar with multi-threading/concurrency and was immensely perplexed by gRPC. That said, none of the concepts were so far out-of-reach from comprehension that consulting outside materials to understand the technologies couldn&rsquo;t help. It turns out that our peers were right; there is a lot of value in the fundamental take-aways taught by this course. As an external factor, I started a new job during this class, still in cybersecurity.</p>
+<div class="admonition relative overflow-hidden rounded-lg border-l-4 my-3 px-4 py-3 shadow-sm" data-type="tip">
+      <div class="flex items-center gap-2 font-semibold text-inherit">
+        <div class="flex shrink-0 h-5 w-5 items-center justify-center text-lg"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M112.1 454.3c0 6.297 1.816 12.44 5.284 17.69l17.14 25.69c5.25 7.875 17.17 14.28 26.64 14.28h61.67c9.438 0 21.36-6.401 26.61-14.28l17.08-25.68c2.938-4.438 5.348-12.37 5.348-17.7L272 415.1h-160L112.1 454.3zM191.4 .0132C89.44 .3257 16 82.97 16 175.1c0 44.38 16.44 84.84 43.56 115.8c16.53 18.84 42.34 58.23 52.22 91.45c.0313 .25 .0938 .5166 .125 .7823h160.2c.0313-.2656 .0938-.5166 .125-.7823c9.875-33.22 35.69-72.61 52.22-91.45C351.6 260.8 368 220.4 368 175.1C368 78.61 288.9-.2837 191.4 .0132zM192 96.01c-44.13 0-80 35.89-80 79.1C112 184.8 104.8 192 96 192S80 184.8 80 176c0-61.76 50.25-111.1 112-111.1c8.844 0 16 7.159 16 16S200.8 96.01 192 96.01z"/></svg>
+</span></div>
+        <div class="grow">
+          Tip
+        </div>
+      </div><div class="admonition-content mt-3 text-base leading-relaxed text-inherit"><p><strong>admin note for those unfamiliar with the program:</strong> in order to graduate from OMSCS, you need to complete one of the <a href="https://omscs.gatech.edu/program-info/specializations"  target="_blank" rel="noreferrer">five &ldquo;specializations&rdquo; offered by the program</a>. Each necessitates picking from a limited menu for about 5-6 of your 10 classes needed to graduate, with the remaining 4-5 classes open-ended as your choice of electives from the <a href="https://omscs.gatech.edu/current-courses"  target="_blank" rel="noreferrer">CS/CSE/ECE/IYSE offerings</a>.</p></div></div>
+<h3 class="relative group">3. CS6250: Computer Networks
+    <div id="3-cs6250-computer-networks" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#3-cs6250-computer-networks" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Entering a shorter Summer session, I wanted an easier course to compensate. Computer Networks was appropriate. I learned some interesting concepts, applied some algorithms that I had heard of but never really understood, and made concrete various facets of networking that I had been exposed to but hadn&rsquo;t formally been taught. That said, I don&rsquo;t necessarily feel any more competent in Software Defined Networking or understanding BGP and ASNs than I was before I started, but at least I&rsquo;m more aware that they are a thing. In the list of pros/cons of taking this course, its strongest assets for me were being a comfortable Summer course offering coupled with satisfying one of my Computing Systems specialization requirements.</p>
+<div class="admonition relative overflow-hidden rounded-lg border-l-4 my-3 px-4 py-3 shadow-sm" data-type="tip">
+      <div class="flex items-center gap-2 font-semibold text-inherit">
+        <div class="flex shrink-0 h-5 w-5 items-center justify-center text-lg"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M112.1 454.3c0 6.297 1.816 12.44 5.284 17.69l17.14 25.69c5.25 7.875 17.17 14.28 26.64 14.28h61.67c9.438 0 21.36-6.401 26.61-14.28l17.08-25.68c2.938-4.438 5.348-12.37 5.348-17.7L272 415.1h-160L112.1 454.3zM191.4 .0132C89.44 .3257 16 82.97 16 175.1c0 44.38 16.44 84.84 43.56 115.8c16.53 18.84 42.34 58.23 52.22 91.45c.0313 .25 .0938 .5166 .125 .7823h160.2c.0313-.2656 .0938-.5166 .125-.7823c9.875-33.22 35.69-72.61 52.22-91.45C351.6 260.8 368 220.4 368 175.1C368 78.61 288.9-.2837 191.4 .0132zM192 96.01c-44.13 0-80 35.89-80 79.1C112 184.8 104.8 192 96 192S80 184.8 80 176c0-61.76 50.25-111.1 112-111.1c8.844 0 16 7.159 16 16S200.8 96.01 192 96.01z"/></svg>
+</span></div>
+        <div class="grow">
+          Tip
+        </div>
+      </div><div class="admonition-content mt-3 text-base leading-relaxed text-inherit"><p><strong>admin note for those unfamiliar with the program:</strong> the summer semesters are 4 weeks shorter than the Fall/Spring semesters; some courses cut content to compensate, many do not. Other courses are simply not available to take during the Summer semester; you can view <a href="https://omscs.gatech.edu/sites/default/files/documents/Other_docs/historical-course-offerings-sp23.pdf"  target="_blank" rel="noreferrer">the program&rsquo;s historical offerings here</a> to evaluate the likelihood of its offering a given course in the future. Assuming you don&rsquo;t skip Summer semesters, you would do well to identify a handful of courses ahead of time that can be appropriately held-off for these abbreviated periods.</p></div></div>
+<h3 class="relative group">4. CS6290: High Performance Computer Architectures
+    <div id="4-cs6290-high-performance-computer-architectures" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#4-cs6290-high-performance-computer-architectures" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>For me personally, this course was another gut-check. If I hadn&rsquo;t taken GIOS earlier, I would not have as readily understood the concepts that were being talked about. There&rsquo;s a lot of technical abstractions spoken to including caching, virtualized memory, and pagination (that again, I do believe necessary and fundamental to a CS education), which really made things difficult for me. It&rsquo;s not a terribly complex course, but it was a lot for me to learn. I particularly appreciated the distinctions made between multi-processing vs. multi-threading as well as the unit on memory, storage, and fault tolerance; I also got the distinct impression that far more effort has gone into advancing memory and caching than I previously had an appreciation for (i.e. it&rsquo;s a problem domain that people build careers around).</p>
+
+<h3 class="relative group">5. CS6515: Intro to Graduate Algorithms
+    <div id="5-cs6515-intro-to-graduate-algorithms" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#5-cs6515-intro-to-graduate-algorithms" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>I hadn&rsquo;t expected to take this course this early in my course-ordering (many in the subreddit report not being able to get a seat until their 10th and final course), but when it was my time to enroll I got lucky and saw an open seat, jumping on it. I won&rsquo;t extoll anymore than what people have already said about the course - there are many opinions/reviews out there and I share in most of them. The stress (more than the actual difficulty of the class material) is what I remember. As someone who had the unusual opportunity to take it earlier in their program experience, I&rsquo;d strongly advocate for others to do the same (given the opportunity). I also changed employers during this time, doing the same work but now 100% remote.</p>
+<div class="admonition relative overflow-hidden rounded-lg border-l-4 my-3 px-4 py-3 shadow-sm" data-type="tip">
+      <div class="flex items-center gap-2 font-semibold text-inherit">
+        <div class="flex shrink-0 h-5 w-5 items-center justify-center text-lg"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M112.1 454.3c0 6.297 1.816 12.44 5.284 17.69l17.14 25.69c5.25 7.875 17.17 14.28 26.64 14.28h61.67c9.438 0 21.36-6.401 26.61-14.28l17.08-25.68c2.938-4.438 5.348-12.37 5.348-17.7L272 415.1h-160L112.1 454.3zM191.4 .0132C89.44 .3257 16 82.97 16 175.1c0 44.38 16.44 84.84 43.56 115.8c16.53 18.84 42.34 58.23 52.22 91.45c.0313 .25 .0938 .5166 .125 .7823h160.2c.0313-.2656 .0938-.5166 .125-.7823c9.875-33.22 35.69-72.61 52.22-91.45C351.6 260.8 368 220.4 368 175.1C368 78.61 288.9-.2837 191.4 .0132zM192 96.01c-44.13 0-80 35.89-80 79.1C112 184.8 104.8 192 96 192S80 184.8 80 176c0-61.76 50.25-111.1 112-111.1c8.844 0 16 7.159 16 16S200.8 96.01 192 96.01z"/></svg>
+</span></div>
+        <div class="grow">
+          Tip
+        </div>
+      </div><div class="admonition-content mt-3 text-base leading-relaxed text-inherit"><p><strong>admin note for those unfamiliar with the program:</strong> there are select &ldquo;bottle-neck&rdquo; courses for the various specialties in the program that students must take in order to graduate. Because there are no other options around taking them (or because they are so popular), the enrollment demand is incredibly high and most aren&rsquo;t able to secure a seat until they near graduation; see earlier admin note concerning seniority and enrollment tickets. GA is one such class for several specializations, making it very in-demand.</p></div></div>
+<h3 class="relative group">6. CS6035: Intro to Info Security
+    <div id="6-cs6035-intro-to-info-security" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#6-cs6035-intro-to-info-security" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>I hadn&rsquo;t ever planned on taking this course, but going into this semester I knew my 2nd child was due to be born around the window of final exams. Knowing this, I wanted a course that would lean into my existing professional expertise and had flexibility around the end of the semester; this granted me both. It was also liberating knowing I&rsquo;d be completely finished with my <a href="https://omscs.gatech.edu/specialization-computing-systems"  target="_blank" rel="noreferrer">Computing Systems specialty requirements</a> by the semester&rsquo;s end. I actually enjoyed the content, finding it neither overly challenging nor redundant. In fact, I enjoyed the content so much that I applied and was offered a TA position at the end of the semester. But my very-pregnant wife gently reminded me that I worked full-time, was a part-time student, and would have 2 children &lt;= 2yo; I turned down the offer.</p>
+
+<h3 class="relative group">7. CS6265: Info Sec Lab - Binary Exploitation
+    <div id="7-cs6265-info-sec-lab---binary-exploitation" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#7-cs6265-info-sec-lab---binary-exploitation" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Again, I leaned into my professional expertise when selecting this course since I had a newborn on my hands at the start of this semester. I was really excited to be enrolled in this class, since I had long been wanting to develop my competencies with reverse engineering and binary exploitation. This class delivered it in spades. It&rsquo;s also an exam-less class, so I didn&rsquo;t have to exhaust myself in late-night studies for midterms/finals with a baby and a toddler. That said, the course&rsquo;s material is anything but easy, especially if you aren&rsquo;t already familiar with capture-the-flag (CTF) stylized cybersecurity challenges. You&rsquo;re not going to be provided overt instruction on how to do the week-by-week work, the whole point is that you need to figure it out on your own; understandably, those unfamiliar with this kind of format did not handle it well - especially when they were likewise unfamiliar with the tools at hand. I loved it, but it&rsquo;s not for everyone. Incidentally, taking this class in the Fall (as I did) has the semester&rsquo;s 10th and final lab coincide with the <a href="https://nsa-codebreaker.org/challenge"  target="_blank" rel="noreferrer">NSA&rsquo;s Codebreaker Challenge</a> - which in itself was an amazing learning opportunity; of the 4300+ competitors nationwide, <a href="http://localhost:1313/posts/2022/nsa-codebreaker-challenge-2022-writeup/" >I was one of about 100 that completed the Codebreaker Challenge</a> (1 of 19 at GaTech that year).</p>
+
+<h3 class="relative group">8. CS8803: Quantum Computing &amp; CS8001: Usable Privacy and Security (Seminar)
+    <div id="8-cs8803-quantum-computing--cs8001-usable-privacy-and-security-seminar" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#8-cs8803-quantum-computing--cs8001-usable-privacy-and-security-seminar" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>I had a crisis of class selection going into this Spring semester; at this point in the program I knew that I had 2 full semesters (including this one) and 1 Summer semester left. I had wanted to take ECE-8843 (Side-Channels &amp; Their Role in Cybersecurity), but it <a href="https://www.reddit.com/r/OMSCS/comments/z27i9l/no_ece8843_sidechannels/"  target="_blank" rel="noreferrer">turned out to be unceremoniously dropped from being offered that semester</a> as was CS6264 (Information Security Lab: Network Defenses), which had been my backup (admin note: these courses are still offered through OMSCS, they just were pulled that semester due to low enrollment numbers). I waffled back-and-forth on taking CS6210 (AOS) or CS6601 (AI), but some self-inflection had me realize how tired I was between school, work, and the kids, so I caved on the perceived &ldquo;easier&rdquo; option: Quantum Computing. It was a really neat class that - out of all my classes - felt the closest to learning about the bleeding edge; quantum computing has an incredible amount of transformative potential and it was a great learning experience.</p>
+<p>Between 1st phase and 2nd phase enrollment I also saw an announcement of a new 1 credit-hour seminar being offered: &ldquo;Usable Privacy and Security&rdquo; with Youngwook Do and Yuxi Wu. I had passed over some of the other seminars GTU had offered in earlier semesters - they seemed topically uninteresting and wouldn&rsquo;t otherwise progress me towards graduation any faster. However, this one sounded both manageable and in my wheelhouse. Ultimately, we ended up reading between 2-5 academic research papers each week, meeting together to talk about them the subsequent week; there were also three brief (2 page) papers that we wrote. The biggest incentive I&rsquo;d name for taking a given seminar are the smaller cohorts: assuming you&rsquo;re interested in the subject-matter, you have an opportunity to critically engage with your peers that you just won&rsquo;t find outside of courses with group projects.</p>
+<div class="admonition relative overflow-hidden rounded-lg border-l-4 my-3 px-4 py-3 shadow-sm" data-type="tip">
+      <div class="flex items-center gap-2 font-semibold text-inherit">
+        <div class="flex shrink-0 h-5 w-5 items-center justify-center text-lg"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M112.1 454.3c0 6.297 1.816 12.44 5.284 17.69l17.14 25.69c5.25 7.875 17.17 14.28 26.64 14.28h61.67c9.438 0 21.36-6.401 26.61-14.28l17.08-25.68c2.938-4.438 5.348-12.37 5.348-17.7L272 415.1h-160L112.1 454.3zM191.4 .0132C89.44 .3257 16 82.97 16 175.1c0 44.38 16.44 84.84 43.56 115.8c16.53 18.84 42.34 58.23 52.22 91.45c.0313 .25 .0938 .5166 .125 .7823h160.2c.0313-.2656 .0938-.5166 .125-.7823c9.875-33.22 35.69-72.61 52.22-91.45C351.6 260.8 368 220.4 368 175.1C368 78.61 288.9-.2837 191.4 .0132zM192 96.01c-44.13 0-80 35.89-80 79.1C112 184.8 104.8 192 96 192S80 184.8 80 176c0-61.76 50.25-111.1 112-111.1c8.844 0 16 7.159 16 16S200.8 96.01 192 96.01z"/></svg>
+</span></div>
+        <div class="grow">
+          Tip
+        </div>
+      </div><div class="admonition-content mt-3 text-base leading-relaxed text-inherit"><p><strong>admin note for those unfamiliar with the program:</strong> currently enrolled students - in addition to having earlier time tickets to pick classes - also get an early window of opportunity (1st phase) to enroll; newly admitted students don&rsquo;t get issued enrollment tickets until the 2nd phase. Students who have already completed a course get issued time tickets for both phases. Check out the <a href="https://registrar.gatech.edu/calendar"  target="_blank" rel="noreferrer">Academic Calendar</a> to get a better understanding of when these phases take place.</p></div></div><div class="admonition relative overflow-hidden rounded-lg border-l-4 my-3 px-4 py-3 shadow-sm" data-type="tip">
+      <div class="flex items-center gap-2 font-semibold text-inherit">
+        <div class="flex shrink-0 h-5 w-5 items-center justify-center text-lg"><span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M112.1 454.3c0 6.297 1.816 12.44 5.284 17.69l17.14 25.69c5.25 7.875 17.17 14.28 26.64 14.28h61.67c9.438 0 21.36-6.401 26.61-14.28l17.08-25.68c2.938-4.438 5.348-12.37 5.348-17.7L272 415.1h-160L112.1 454.3zM191.4 .0132C89.44 .3257 16 82.97 16 175.1c0 44.38 16.44 84.84 43.56 115.8c16.53 18.84 42.34 58.23 52.22 91.45c.0313 .25 .0938 .5166 .125 .7823h160.2c.0313-.2656 .0938-.5166 .125-.7823c9.875-33.22 35.69-72.61 52.22-91.45C351.6 260.8 368 220.4 368 175.1C368 78.61 288.9-.2837 191.4 .0132zM192 96.01c-44.13 0-80 35.89-80 79.1C112 184.8 104.8 192 96 192S80 184.8 80 176c0-61.76 50.25-111.1 112-111.1c8.844 0 16 7.159 16 16S200.8 96.01 192 96.01z"/></svg>
+</span></div>
+        <div class="grow">
+          Tip
+        </div>
+      </div><div class="admonition-content mt-3 text-base leading-relaxed text-inherit"><p><strong>admin note for those unfamiliar with the program:</strong> as of Fall 2021, seminars became a new addition for OMSCS students; seminars go by the course number CS8001, they are 1 credit hour each (proportionally priced w.r.t. tuition), and do not count toward your graduation requirements. They are less formal classes structured around discussing and interacting on novel topics. Some seminars may be repeatedly offered semester-over-semester, but there is no guarantee that any given seminar will be available again in the future.</p></div></div>
+<h3 class="relative group">9. CS6747: Advanced Malware Analysis
+    <div id="9-cs6747-advanced-malware-analysis" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#9-cs6747-advanced-malware-analysis" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>Entering my final Summer Semester, I was weighing the pragmatism of engaging in more cybersecurity-centric coursework (which was pertinent to my profession) and my personal interest in more inter-disciplinary subjects (e.g. AI/ML topics, which I originally had enrolled in the program for). Pragmatism won out; this course was appealing because - like CS6265 - there are no exams. Being a project-based course made things really pleasant and predictable for planning Summer trips with the family. It also extended what I had picked up on in CS6265, diving immediately into scrutinizing assembly-level code. That said, while the course is certainly doable in the Summer, there just wasn&rsquo;t enough time to meaningfully digest the course&rsquo;s material in its entirety; some of the research papers and lecture content I really wanted to chew-on, but there simply wasn&rsquo;t enough time to do so; time/labor had to be prioritized towards completing the projects. In retrospect, I wish I had allocated a Spring/Fall semester to the course so that I could have engaged it more; I enjoyed the class that much! I also changed employers again, now working as a Sr. Application Security Engineer.</p>
+
+<h3 class="relative group">10. CS6601: Artificial Intelligence
+    <div id="10-cs6601-artificial-intelligence" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#10-cs6601-artificial-intelligence" aria-label="Anchor">#</a>
+    </span>
+    
+</h3>
+<p>I really was unsure about getting into this course this late into my OMSCS experience; the reviews and impressions of the course material was a little intimidating, and I felt the strong temptation to simply &ldquo;coast&rdquo; out on some more approachable subject-matter. Since none of my other courses really fed-into or otherwise overlapped with CS6601 (e.g. ML4T or KBAI), it was hard for me to evaluate my own aptitude going in. Ultimately however, I ended up going with AI to close out my program experience. The course is consistently quite a bit of work, with the underlying mathematics comprehension and need for numpy-based vectorization optimization escalating as the semester progresses; that said, I did come away with a more general understanding of classical AI algorithms. I ended up front-loading my work, completing the first five projects and abandoning the sixth (the course drops your lowest project grade). This effectively gave me a month off between when I finished project 5 and the final exam, which was nice. I didn&rsquo;t care for how the course was administratively handled; things felt adversarial between staff and students, possibly a consequence of the sheer class size (there were 706 students remaining by my semester&rsquo;s end). Administrative policies aside, I&rsquo;m not sure this course was the best fit for my broader educational objectives in cybersecurity, nor effectively interesting enough to stave-off the pervasive &ldquo;senior-itis&rdquo; as graduation loomed. It had its moments, but I was both leery about enrolling in it at the onset and glad for it to be over when I was finished.</p>
+
+<h2 class="relative group"><strong>REFLECTIONS</strong>
+    <div id="reflections" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#reflections" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>When I was initially interested in OMSCS, I had envisioned a future where I could execute a transformative pivot into performing AI/ML work from my unrelated military career. As life progressed, pragmatism suggested that I&rsquo;d be better served professionally by emphasizing general CompSci studies more broadly (and - given my career trajectory both then and now - cybersecurity coursework more narrowly). In this respect, the program was less a career-changing lynchpin and more of a means of creating momentum for pre-existing efforts I was already undertaking; I wasn&rsquo;t sold on cybersecurity as being my definitive transition into tech at the beginning of OMSCS (a reason why I did not originally apply to OMSCybersecurity), but over the course of the program through to graduation, I ended up taking complementing classes to that end. This has proven to be practical in my case, but I don&rsquo;t want to discourage those applicants in considering the other specializations OMSCS offers or to the program&rsquo;s efficacy in being able to redirect your own career trajectory (vs. strictly reinforcing it).</p>
+<p>I also became a parent roughly around the same time I enrolled into OMSCS. Through that, the pandemic (which also kicked-off at roughly the same time), and both my spouse and I working throughout, we were stretched pretty thin at times. I am enormously grateful for having the support structure at home that I do: my spouse who was always supportive, parents/in-laws to help periodically watch the kids, employers who afforded me the flexibility to action what I needed, etc. In my circumstances, working full-time and having 2 young children didn&rsquo;t make the program prohibitive, but it did have a hand in guiding my enrollment decisions semester-by-semester. Additionally, there were some self-preserving actions I took at times during semesters as well: the pandemic and transition into parenthood were pretty intense experiences during my first semester, so I elected to skip the final exam altogether and start my break early (i.e. taking a 0 on the exam and settling for a B in the class overall); later when I had my second child midway through, I likewise calculated the cutoff score for passing in that class and preemptively haulted my engagement once I met that threshold (although I ended up getting sucked into the NSA Codebreaker challenge, which elevated the overall grade to an A); other examples can be found in my course experiences above. More academically-intensive courses were probably manageable, but would have placed an undue burden on that support structure and my children - being absent both mentally and physically; I think I still got a phenomenal return on my investment in OMSCS, but a number of concessions were made that I think our peers at different points in their lives wouldn&rsquo;t have to.</p>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="OMSCS Stats"
+    width="1200"
+    height="450"
+    src="/posts/2023/omscs_writeup/omscs_stats_2022-3_hu_da86de4c6910dc81.jpg"
+    srcset="/posts/2023/omscs_writeup/omscs_stats_2022-3_hu_da86de4c6910dc81.jpg 800w, /posts/2023/omscs_writeup/omscs_stats_2022-3.jpg 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/posts/2023/omscs_writeup/omscs_stats_2022-3.jpg"></figure>
+<em>Source: <a href="https://omscs.gatech.edu/"  target="_blank" rel="noreferrer">https://omscs.gatech.edu/</a></em></p>
+<p>Hindsight being what it is, I wish I had taken CS8803 (Compilers), CS6210 (AOS), and CS6211 (SDCC); I think that those courses offer some really phenomenal value to the broader CompSci education; and while I could delay graduation to accomodate, I have access to alternative resources that can help me learn what I want from those courses (just not with the same structure/staff/rigor/support that&rsquo;s available in graduate school). I saw diminished returns in value in CS6250 (CN) and CS6035 (IIS), but they both were irreplaceable at their points in time relative to where I was in the program (being easier Summer semester courses, satisfying my specialization requirements, and - in the case of CS6035 - flexible for family and playing to my professional strengths); that said, I don&rsquo;t regret taking them nor do I discourage you from considering them. They&rsquo;re good courses - especially if you&rsquo;re a CompSci career-changer like myself or otherwise unfamiliar with the material; they just weren&rsquo;t as transformative/enthralling to me in juxtaposition to other courses I took.</p>
+<p>The program more broadly speaking has some phenomenal content for instructing you in various CompSci topics. However, it won&rsquo;t hand-hold you through to graduation; most of the courses involved a considerable amount of independent external research, looking beyond the lecture material, reading, etc. But that&rsquo;s a facet of graduate school (vs. something geared more towards the layperson, such as a trade school or bootcamp). If you want it and are able to meet the expectations, it&rsquo;s there for you. Generally speaking, I found my peers that struggled to adapt or complained about the program&hellip;</p>
+<ul>
+<li>Failed to adjust their instructional paradigm to align with either the remote nature (the &ldquo;O&rdquo; in OMSCS) or graduate-level work-ethic (the &ldquo;M&rdquo; in OMSCS).</li>
+<li>Didn&rsquo;t utilize the resources that were made available by staff, including office hours and the assorted engagement platforms, such as the Ed Discussion forums, Slack Channels, Email correspondence, etc.</li>
+<li>Couldn&rsquo;t be bothered to ensure their assumptions about the program aligned with the realities/expectations set forward by staff (i.e. didn&rsquo;t allocate reasonable time windows for responses to questions, didn&rsquo;t read the syllabus or project documentation, didn&rsquo;t begin working on projects/homework until the submission deadline loomed, etc.).</li>
+</ul>
+<p><figure><img
+    class="my-0 rounded-md"
+    loading="lazy"
+    decoding="async"
+    fetchpriority="auto"
+    alt="Canvas Screenshot"
+    width="1101"
+    height="770"
+    src="/posts/2023/omscs_writeup/canvas_screenshot_hu_2ee258de607cede3.PNG"
+    srcset="/posts/2023/omscs_writeup/canvas_screenshot_hu_2ee258de607cede3.PNG 800w, /posts/2023/omscs_writeup/canvas_screenshot.PNG 1280w"
+    sizes="(min-width: 768px) 50vw, 65vw"
+    data-zoom-src="/posts/2023/omscs_writeup/canvas_screenshot.PNG"></figure>
+<em>Screenshot of the Canvas platform, which most courses are administered through</em></p>
+<p>In juxtaposition to my brick-and-mortar undergraduate experience, being online-only didn&rsquo;t really instill/engender any sense of identity with the school or my peers; I never set foot on the campus, never bought a student ID, and didn&rsquo;t go to the graduation ceremony. I forwarded all of my student emails to my personal account, didn&rsquo;t meet any of our peers/staff in-person, and spent a considerable amount of time looking into external resources outside of buzzport/canvas to supplement the lesson materials. Someone in a job interview once responded to my student status with &ldquo;Go Yellow Jackets!&rdquo; and it took me a second to realize that - notionally - I was one. For me OMSCS felt like a distinct, bottled experience; there wasn&rsquo;t anyone in my immediate circles to really talk to about it while I was a student and - when finished - there wasn&rsquo;t anyone interested in talking about it after. Having said that, I will acknowledge that Georgia Tech does <em>try</em> to create spaces for more interactive discourse to occur: there are semester-by-semester showcases of student work through the Canvas-based Student Center, nominations for <a href="https://omscs.gatech.edu/student-spotlight-asa-hess-matsumoto"  target="_blank" rel="noreferrer">student spotlights</a>, smaller seminar cohorts, etc. Moreover some of the students do <a href="https://old.reddit.com/r/OMSCS/search?q=meetup&amp;restrict_sr=on&amp;sort=relevance&amp;t=all"  target="_blank" rel="noreferrer">independently make efforts to meet their local peers</a>. Overall however, these opportunities to network felt superficial and tenuous to me (which undercut my notion that this program really helps with professional networking). That&rsquo;s okay for me, but it may be important for you depending on what you want out of your time in university (in which case, you&rsquo;re probably better off not pursuing an online program).</p>
+<p>By extension, my experiences with our online peers - both in my preparatory coursework through ASU and in smaller study sessions with OMSCS - turned me off of <a href="https://www.reddit.com/r/OMSCS/comments/11ysfea/a_list_of_classes_with_group_work/?share_id=0tLTmCUB4zmLyNp7wCpdt&amp;utm_content=2&amp;utm_medium=android_app&amp;utm_name=androidcss&amp;utm_source=share&amp;utm_term=1"  target="_blank" rel="noreferrer">all courses that required groupwork</a>. Coordinating schedules across multiple timezones, lackadaisical engagement, and disproportionate/inconsistent buy-in from peers is - in my opinion - too much added overhead on top of the testable learning objectives from graduate school, full-time employment, and life&rsquo;s other demands; the uncertainty of whether or not I&rsquo;d have a positive experience of a class being based largely on the efforts of other people I&rsquo;d never met wasn&rsquo;t something I wanted to roll the dice on; even in courses where splitting the work amongst peers was optional (e.g. CS6747), I elected not to do so. All told, I preferred my work to be evaluated for what it was: mine alone. My intention isn&rsquo;t to discourage you from enrolling in courses with groupwork - as there is some really interesting, enriching, and fun content for you to explore (such as CS7643: Deep Learning or CS6457: Video Game Design); moreover, much of the above can be mitigated by coordinating with your peers ahead of enrollment (thereby pre-establishing who you&rsquo;ll partner up with before the semester begins). Rather, I&rsquo;m just highlighting that my chosen courses were deliberately tailored to avoid them out of personal preference (and that such a path to graduation is possible).</p>
+<p>This experience is incredibly demanding of your time and effort; in exchange, you&rsquo;re provided really insightful opportunities to learn about Computer Science and other related tangents, as well as a relatively strong credential to supplement your employability. The courses I enjoyed the most weren&rsquo;t necessarily the ones that instructed me best; conversely, the presence/absence of academic rigor was not necessarily a marker for instruction quality either. Academic intensity necessitated in-depth research, which in turn promoted longer-lasting retention of subject matter; but engagement from staff/peers, cohesion between lesson/exam/project materials, and the impact on my life outside the program - be it personal flexibility or professional pragmatism - was what fostered my interest.</p>
+<p>The program itself was also subject to changes throughout the years I was a student:</p>
+<ul>
+<li>Several classes were added, including Quantum Computing, Intro to Computer Law, Digital Health Equity, Global Entrepreneurship, and Natural Language Processing.</li>
+<li>A new specialization was offered (Human-Computer Interaction).</li>
+<li>Seminars were introduced.</li>
+<li>Grade substitution policies were enacted (i.e. how to &lsquo;undo&rsquo; an &ldquo;F&rdquo; in a class as it relates to your GPA).</li>
+<li>Changes to the admissions process were made (notably: the removal of the essay-format admission statement).</li>
+<li><a href="https://www.classcentral.com/report/georgia-tech-omscs-cost-decrease/"  target="_blank" rel="noreferrer">Tuition actually <em>decreased</em></a>.</li>
+<li>A number of course materials were overhauled/modernized and there was some turnover in staff (most notably Dr. Isbell).</li>
+</ul>
+<p>All of the above goes to show the dynamism and ongoing re-investment Georgia Tech has in its OMSCS offering. I hadn&rsquo;t expected the breadth and depth of changes that would be made while I was a student there, so I was pleasantly surprised; I&rsquo;d expect your experience with the program will encounter even more positive changes yet to come.</p>
+
+<h2 class="relative group"><strong>OUTCOMES</strong>
+    <div id="outcomes" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#outcomes" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Quantifying/qualifying the impact of OMSCS on me personally and professionally is a bit challenging as there are a number of contextual factors that muddy attribution.</p>
+<ul>
+<li>I am making significantly more money now than I was at the start of the program (however, I changed employers a number of times and accrued several YoE in my field - both of which I consider more probable causes).</li>
+<li>I regularly have recruiters/headhunters reaching out to me directly (although it isn&rsquo;t apparent that it is due to my affiliation with Georgia Tech).</li>
+<li>I have made a career as a technical subject matter expert in ways that do touch on the lessons I learned through OMSCS (however, I already had a foothold in the industry prior to my application and accrued a number of other <a href="http://localhost:1313/posts/2023/what-certifications-should-you-get/" >security-centric trainings/credentials</a> in parallel that have arguably been more applicable/pertinent).</li>
+<li>I&rsquo;ve jockeyed for better benefits across my lines of employment (although, the pandemic largely contributed to WFH privileges industry-wide and incentives improved in that time with the so-called &ldquo;Great Resignation&rdquo;).</li>
+<li>I&rsquo;m more open to the idea of presenting/contributing to research (yet the more influential venues/publications in cybersecurity are not necessarily in-line with the traditional academic channels prescribed by Georgia Tech).</li>
+<li>On a comedic downbeat, I&rsquo;m also exhausted and physically less in-shape (however, I became a parent twice over and have worked-from-home at a desk throughout).</li>
+</ul>
+<p>There&rsquo;s also a slew of externalities that have gone without mention that no doubt have had varying macro- and micro-impacts including (but not limited to): a looming recession, the war in Ukraine, cybersecurity breaches (e.g. the Colonial Pipeline), web3 investments tied to cryptocurrency booms (and busts), my U.S. citizenship, my proximity to a major metropolitan area, my military veterancy, etc. All told, it&rsquo;s challenging for me to definitively attribute changes in the quality of my personal/professional life to OMSCS - though perhaps some distance in time/space from the program will make those attributions more defined.</p>
+<p>Truth be told, I felt like I needed the degree a whole lot less as my time in OMSCS progressed; at the onset, my employability was pretty thin so I felt like at a minimum I needed a relevant degree in case I lost my job (or couldn&rsquo;t otherwise find work); by graduation, my resume was a lot more filled-out and the degree - in terms of my employability - felt more incidental (its purpose more about academic exploration than strictly aptitude and employability). But regardless of whether or not OMSCS was causal in these changes, the outcomes are observable (and largely positive): I&rsquo;m better compensated than I was before OMSCS by a significant margin, I&rsquo;m involved in more engaging and technical work, and I have significantly better comprehension with the technologies I face/work with. For what it&rsquo;s worth, I certainly <em>feel</em> more qualified to work in my profession thanks to OMSCS.</p>
+<p>Now that I&rsquo;m on the other side of this program, I&rsquo;m really grateful for the opportunity to have been a part of it. Looking forward, this probably marks my last engagement with academia as a student - I have no plans now or in the future of pursuing a PhD and am unlikely to consider another graduate-level degree (such as an MBA). I&rsquo;m a better engineer, I&rsquo;m better at my research, and I&rsquo;m more capable at solving problems that I couldn&rsquo;t before. And although I&rsquo;m not working in AI/ML or as a SWE (both of which had been my original intentions when starting the program), I was able to make the program serve my professional interests all the same in the cybersecurity space (all-the-while being remote in a way that enabled me to be with my family).</p>
+<p>Best of luck to you all, gang!</p>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/2023/what-certifications-should-you-get/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Which Cybersecurity Certifications Should You Get?
+              </span>
+            </a>
+            
+              <span class="ms-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2023-11-08T00:00:00&#43;00:00">8 November 2023</time>
+              </span>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+            <a
+              class="flex text-right text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/posts/2024/gatech-phishing/">
+              <span class="leading-6">
+                Investigating a Georgia Tech Phishing Attempt&ensp;<span class="inline-block rtl:rotate-180">&rarr;</span>
+              </span>
+            </a>
+            
+              <span class="me-6 mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                <time datetime="2024-04-13T00:00:00&#43;00:00">13 April 2024</time>
+              </span>
+            
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Asa Hess-Matsumoto
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  
+  
+  
+    <br>
+<div style="width: 150px; margin-left: 0;">
+<a href="https://notbyai.fyi" target="_blank" rel="noopener noreferrer">
+<img src="https://notbyai.fyi/img/en/written-by-human-not-by-ai-white.svg" alt="notbyai logo">
+</a>
+</div>
+<br>
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="http://localhost:1313/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+  </body>
+  
+</html>

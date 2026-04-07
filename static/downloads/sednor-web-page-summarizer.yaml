@@ -1,0 +1,393 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >
+  Web page summarizer using Amazon Bedrock, AWS Lambda, and API Gateway HTTP API.
+  Modeled after Sednor's step-by-step guide.
+
+Parameters:
+  ApiName:
+    Type: String
+    Default: WebSummarizerAPI
+  LambdaFunctionName:
+    Type: String
+    Default: summarize_web_page
+  BedrockRegion:
+    Type: String
+    Default: us-east-1
+    Description: Region where your Bedrock model access is enabled.
+  BedrockModelId:
+    Type: String
+    Default: amazon.nova-micro-v1:0
+    Description: Active model ID to invoke via Converse API.
+  AllowedOrigin:
+    Type: String
+    Default: "*"
+    Description: CORS origin for your frontend. Use a specific domain in production.
+  LambdaTimeoutSeconds:
+    Type: Number
+    Default: 60
+    MinValue: 3
+    MaxValue: 900
+  LogRetentionDays:
+    Type: Number
+    Default: 14
+    AllowedValues: [1, 3, 5, 7, 14, 30, 60, 90, 120, 150, 180, 365, 400, 545, 731, 1827, 3653]
+
+Resources:
+  LambdaExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: BedrockAndLoggingPolicy
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - bedrock:InvokeModel
+                Resource: "*"
+              - Effect: Allow
+                Action:
+                  - aws-marketplace:ViewSubscriptions
+                  - aws-marketplace:Subscribe
+                  - aws-marketplace:Unsubscribe
+                Resource: "*"
+              - Effect: Allow
+                Action:
+                  - logs:CreateLogStream
+                  - logs:PutLogEvents
+                Resource: !Sub arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/${LambdaFunctionName}:*
+
+  SummarizerFunctionLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub /aws/lambda/${LambdaFunctionName}
+      RetentionInDays: !Ref LogRetentionDays
+
+  SummarizerFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: !Ref LambdaFunctionName
+      Runtime: nodejs20.x
+      Handler: index.handler
+      Role: !GetAtt LambdaExecutionRole.Arn
+      Timeout: !Ref LambdaTimeoutSeconds
+      MemorySize: 512
+      Environment:
+        Variables:
+          BEDROCK_REGION: !Ref BedrockRegion
+          MODEL_ID: !Ref BedrockModelId
+          ALLOWED_ORIGIN: !Ref AllowedOrigin
+      Code:
+        ZipFile: |
+          const { BedrockRuntimeClient, ConverseCommand } = require("@aws-sdk/client-bedrock-runtime");
+
+          const bedrockClient = new BedrockRuntimeClient({ region: process.env.BEDROCK_REGION });
+
+          const buildResponse = (statusCode, payload) => ({
+            statusCode,
+            headers: {
+              "Content-Type": "application/json",
+              "Access-Control-Allow-Origin": process.env.ALLOWED_ORIGIN || "*",
+            },
+            body: JSON.stringify(payload),
+          });
+
+          const buildHtmlResponse = (html) => ({
+            statusCode: 200,
+            headers: {
+              "Content-Type": "text/html; charset=utf-8",
+            },
+            body: html,
+          });
+
+          const demoPageHtml = `<!doctype html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Web Page Summarizer Demo</title>
+            <style>
+              :root {
+                color-scheme: light;
+                --bg: #f7fafc;
+                --card: #ffffff;
+                --ink: #1f2937;
+                --muted: #6b7280;
+                --accent: #0f766e;
+                --accent-2: #14b8a6;
+                --line: #e5e7eb;
+              }
+              * { box-sizing: border-box; }
+              body {
+                margin: 0;
+                font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+                background: linear-gradient(145deg, #eef6ff 0%, var(--bg) 45%, #f0fdfa 100%);
+                color: var(--ink);
+                min-height: 100vh;
+                display: grid;
+                place-items: center;
+                padding: 24px;
+              }
+              .card {
+                width: min(860px, 100%);
+                background: var(--card);
+                border: 1px solid var(--line);
+                border-radius: 16px;
+                padding: 24px;
+                box-shadow: 0 16px 48px rgba(15, 23, 42, 0.08);
+              }
+              h1 {
+                margin: 0 0 8px 0;
+                font-size: 1.5rem;
+              }
+              p {
+                margin: 0 0 16px 0;
+                color: var(--muted);
+              }
+              .row {
+                display: grid;
+                grid-template-columns: 1fr auto;
+                gap: 10px;
+              }
+              input {
+                width: 100%;
+                border: 1px solid var(--line);
+                border-radius: 10px;
+                padding: 12px 14px;
+                font-size: 0.95rem;
+              }
+              button {
+                border: 0;
+                border-radius: 10px;
+                padding: 12px 18px;
+                color: #fff;
+                font-weight: 600;
+                background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+                cursor: pointer;
+              }
+              button:disabled { opacity: 0.65; cursor: wait; }
+              #status {
+                min-height: 20px;
+                margin-top: 12px;
+                color: var(--muted);
+                font-size: 0.92rem;
+              }
+              #results {
+                margin-top: 16px;
+                border: 1px solid var(--line);
+                border-radius: 10px;
+                padding: 14px 16px;
+                background: #fcfcfd;
+              }
+              ol { margin: 0; padding-left: 20px; }
+              li { margin-bottom: 8px; line-height: 1.4; }
+              pre {
+                margin: 0;
+                white-space: pre-wrap;
+                word-break: break-word;
+              }
+            </style>
+          </head>
+          <body>
+            <main class="card">
+              <h1>Web Page Summarizer</h1>
+              <p>Enter a public URL and this app will summarize it into five bullets using Amazon Bedrock.</p>
+              <div class="row">
+                <input id="url" type="url" placeholder="https://example.com/article" />
+                <button id="go">Summarize</button>
+              </div>
+              <div id="status"></div>
+              <section id="results"><pre>Results will appear here.</pre></section>
+            </main>
+            <script>
+              const button = document.getElementById("go");
+              const input = document.getElementById("url");
+              const status = document.getElementById("status");
+              const results = document.getElementById("results");
+
+              const render = (payload) => {
+                if (Array.isArray(payload)) {
+                  const items = payload.map((t) => \`<li>\${t.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</li>\`).join("");
+                  results.innerHTML = \`<ol>\${items}</ol>\`;
+                } else {
+                  results.innerHTML = \`<pre>\${JSON.stringify(payload, null, 2)}</pre>\`;
+                }
+              };
+
+              button.addEventListener("click", async () => {
+                const url = input.value.trim();
+                if (!url) {
+                  status.textContent = "Enter a URL first.";
+                  return;
+                }
+                button.disabled = true;
+                status.textContent = "Summarizing...";
+                results.innerHTML = "<pre>Working...</pre>";
+                try {
+                  const response = await fetch("/summarize-web-page", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ url }),
+                  });
+                  const payload = await response.json();
+                  render(payload);
+                  status.textContent = response.ok ? "Done." : "Request failed.";
+                } catch (err) {
+                  results.innerHTML = \`<pre>\${String(err)}</pre>\`;
+                  status.textContent = "Network error.";
+                } finally {
+                  button.disabled = false;
+                }
+              });
+            </script>
+          </body>
+          </html>`;
+
+          const fetchWebPageText = async (url) => {
+            const response = await fetch(url, { redirect: "follow" });
+            if (!response.ok) {
+              throw new Error(`Failed to fetch URL (${response.status})`);
+            }
+
+            const html = await response.text();
+            const withoutScripts = html
+              .replace(/<script[\s\S]*?<\/script>/gi, " ")
+              .replace(/<style[\s\S]*?<\/style>/gi, " ");
+
+            return withoutScripts
+              .replace(/<[^>]*>/g, " ")
+              .replace(/\s+/g, " ")
+              .trim()
+              .split(" ")
+              .slice(0, 1000)
+              .join(" ");
+          };
+
+          const buildPromptText = (text) => `"${text}"
+          Summarize the above web page content in 5 bullet points.
+          Start each bullet point with a *.`;
+
+          const parseResponse = (responseText) =>
+            responseText
+              .trim()
+              .split("*")
+              .map((item) => item.trim())
+              .filter(Boolean);
+
+          exports.handler = async (event) => {
+            try {
+              const method = event?.requestContext?.http?.method || "";
+              const rawPath = event?.rawPath || "";
+              if (method === "GET" && rawPath === "/") {
+                return buildHtmlResponse(demoPageHtml);
+              }
+
+              const body = typeof event.body === "string" ? JSON.parse(event.body) : (event.body || {});
+              if (!body.url) {
+                return buildResponse(400, { error: "Request body must include 'url'." });
+              }
+
+              const parsed = new URL(body.url);
+              if (!["http:", "https:"].includes(parsed.protocol)) {
+                return buildResponse(400, { error: "Only http/https URLs are allowed." });
+              }
+
+              const text = await fetchWebPageText(body.url);
+              const promptText = buildPromptText(text);
+
+              const command = new ConverseCommand({
+                modelId: process.env.MODEL_ID,
+                messages: [
+                  {
+                    role: "user",
+                    content: [{ text: promptText }],
+                  },
+                ],
+                inferenceConfig: {
+                  maxTokens: 700,
+                  temperature: 0.4,
+                  topP: 0.9,
+                },
+              });
+
+              const responseData = await bedrockClient.send(command);
+              const raw = (responseData?.output?.message?.content || [])
+                .map((part) => part?.text || "")
+                .join("\n")
+                .trim();
+
+              const bullets = parseResponse(raw);
+              return buildResponse(200, bullets.length ? bullets : [raw]);
+            } catch (error) {
+              console.error(error);
+              return buildResponse(500, { error: "Failed to summarize web page." });
+            }
+          };
+
+  WebSummarizerApi:
+    Type: AWS::ApiGatewayV2::Api
+    Properties:
+      Name: !Ref ApiName
+      ProtocolType: HTTP
+      CorsConfiguration:
+        AllowOrigins:
+          - !Ref AllowedOrigin
+        AllowMethods:
+          - POST
+          - OPTIONS
+        AllowHeaders:
+          - content-type
+
+  LambdaIntegration:
+    Type: AWS::ApiGatewayV2::Integration
+    Properties:
+      ApiId: !Ref WebSummarizerApi
+      IntegrationType: AWS_PROXY
+      IntegrationUri: !Sub arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${SummarizerFunction.Arn}/invocations
+      PayloadFormatVersion: "2.0"
+
+  SummarizeRoute:
+    Type: AWS::ApiGatewayV2::Route
+    Properties:
+      ApiId: !Ref WebSummarizerApi
+      RouteKey: "POST /summarize-web-page"
+      Target: !Sub integrations/${LambdaIntegration}
+
+  DemoRoute:
+    Type: AWS::ApiGatewayV2::Route
+    Properties:
+      ApiId: !Ref WebSummarizerApi
+      RouteKey: "GET /"
+      Target: !Sub integrations/${LambdaIntegration}
+
+  ApiStage:
+    Type: AWS::ApiGatewayV2::Stage
+    Properties:
+      ApiId: !Ref WebSummarizerApi
+      StageName: "$default"
+      AutoDeploy: true
+
+  LambdaPermissionForApi:
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: lambda:InvokeFunction
+      FunctionName: !Ref SummarizerFunction
+      Principal: apigateway.amazonaws.com
+      SourceArn: !Sub arn:aws:execute-api:${AWS::Region}:${AWS::AccountId}:${WebSummarizerApi}/*/*/*
+
+Outputs:
+  DemoURL:
+    Description: Open this URL to use the in-browser demo page.
+    Value: !Sub https://${WebSummarizerApi}.execute-api.${AWS::Region}.amazonaws.com/
+  InvokeURL:
+    Description: 'POST this endpoint with JSON body: {"url":"https://example.com"}'
+    Value: !Sub https://${WebSummarizerApi}.execute-api.${AWS::Region}.amazonaws.com/summarize-web-page
+  LambdaName:
+    Value: !Ref SummarizerFunction
