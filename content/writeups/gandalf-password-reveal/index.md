@@ -14,6 +14,8 @@ Large Language Models (LLMs) are inherently insecure because they cannot disting
 
 The Gandalf challenge series arranges itself as an increasingly difficult series of prompt injection challenges with the same goal: leak the secret password. Each challenge has an updated set of controls, demonstrating their effectiveness (or lack thereof).
 
+One thing to note in this writeup is that LLMs are inherently non-deterministic. What they output can vary on a wide-variety of conditions, including model temperature (which determines how much random deviation might be considered in a response). It's possible (likely even) that you may need to run my example prompts many times before it outputs a similar satisfactory result. That's just the way these go.
+
 ### Level 1
 
 There is no protection put in place here; all you need to do is simply request the password.
@@ -134,7 +136,7 @@ Now because model responses are inherently non-deterministic, your individual re
 This one was *very* tricky. If I'm being candid, I think it was made artificially difficult to an unrealistic (or at least, not useful in a production environment) extent. More on this in a minute.
 
 > [!NOTE]
-> I believe that the maintainers of the `Gandalf` challenge series (Lakera.ai) use this challenge to refine their own AI security service. [Other posts](https://jacobtender.net/blog/passing-gandalf/) suspect the same. 
+> I believe that the maintainers of the `Gandalf` challenge series (Lakera.ai) use this challenge to refine their own AI security service. [Other posts](https://jacobtender.net/blog/passing-gandalf/) suspect the same; [Lakera likewise has a disclaimer that's suggestive of that](https://gandalf.lakera.ai/pinj/#hints). 
 
 Most of my time on this exercise was spent inferring what might not work (or what the model would allude to).
 

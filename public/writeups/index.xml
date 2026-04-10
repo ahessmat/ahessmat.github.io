@@ -9,7 +9,17 @@
     <managingEditor>youremail@example.com (Asa Hess-Matsumoto)</managingEditor>
     <webMaster>youremail@example.com (Asa Hess-Matsumoto)</webMaster>
     <copyright>© 2026 Asa Hess-Matsumoto</copyright>
-    <lastBuildDate>Mon, 06 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/writeups/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Apr 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/writeups/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Writeup: Gandalf - Agent Breaker</title>
+      <link>http://localhost:1313/writeups/gandalf-agent-breaker/</link>
+      <pubDate>Tue, 07 Apr 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/writeups/gandalf-agent-breaker/</guid>
+      <description>Exploring prompt injection attacks on large language models and strategies for mitigation.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/writeups/gandalf-agent-breaker/featured-gandalf-the-white.jpg" />
+    </item>
     
     <item>
       <title>Writeup: Gandalf - Password Reveal</title>
