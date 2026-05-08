@@ -280,6 +280,9 @@ information_schema (JSON):
 Go figure! With points that close, I figured I could just try and bank on the non-determinism to get the points.
 
 ### Thingularity 5
+{{< badge >}}
+Score: 56/100
+{{< /badge >}}
 
 This was just as annoying as the [Final Gandalf level for Password Reveals]({{< relref "/writeups/gandalf-password-reveal/#final-flag-bonus" >}}). The controls put in place were *way* overtuned to be meaningfully helpful, rendering the product as being deliberately obtuse as an end unto itself. Basic queries could set the automatic blocking response off:
 

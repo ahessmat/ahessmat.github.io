@@ -9,7 +9,17 @@
     <managingEditor>youremail@example.com (Asa Hess-Matsumoto)</managingEditor>
     <webMaster>youremail@example.com (Asa Hess-Matsumoto)</webMaster>
     <copyright>© 2026 Asa Hess-Matsumoto</copyright>
-    <lastBuildDate>Tue, 30 Dec 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/resources/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/resources/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>The BLS, NPR, and Me</title>
+      <link>http://localhost:1313/posts/2026/future-proofing-cybersecurity/</link>
+      <pubDate>Fri, 08 May 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2026/future-proofing-cybersecurity/</guid>
+      <description>NPR&amp;rsquo;s Darian Woods interviewed me for a cybersecurity jobs-growth related story.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2026/future-proofing-cybersecurity/featured-the-indicator.jpg" />
+    </item>
     
     <item>
       <title>What Type of Degree Do I Need To Work in Cybersecurity?</title>
