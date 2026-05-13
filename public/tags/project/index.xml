@@ -9,7 +9,17 @@
     <managingEditor>youremail@example.com (Asa Hess-Matsumoto)</managingEditor>
     <webMaster>youremail@example.com (Asa Hess-Matsumoto)</webMaster>
     <copyright>© 2026 Asa Hess-Matsumoto</copyright>
-    <lastBuildDate>Mon, 23 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/project/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 13 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/project/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Literature Review: May</title>
+      <link>http://localhost:1313/posts/2026/may-literature-review/</link>
+      <pubDate>Wed, 13 May 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2026/may-literature-review/</guid>
+      <description>A review of some academic papers read/reviewed this month</description>
+      
+    </item>
     
     <item>
       <title>Relaunching the Blog with Hugo</title>
