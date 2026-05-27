@@ -9,7 +9,17 @@
     <managingEditor>youremail@example.com (Asa Hess-Matsumoto)</managingEditor>
     <webMaster>youremail@example.com (Asa Hess-Matsumoto)</webMaster>
     <copyright>© 2026 Asa Hess-Matsumoto</copyright>
-    <lastBuildDate>Fri, 22 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/htb/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 21 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/htb/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Passing the Certified Offensive AI Expert (COAE) Certification Exam</title>
+      <link>http://localhost:1313/posts/2026/passing-the-certified-offensive-ai-expert-exam/</link>
+      <pubDate>Thu, 21 May 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2026/passing-the-certified-offensive-ai-expert-exam/</guid>
+      <description>A brief writeup on the experience of passing HacktheBox&amp;rsquo;s latest certification exam</description>
+      
+    </item>
     
     <item>
       <title>Passing the Certified Penetration Testing Specialist (CPTS) Certification Exam</title>
