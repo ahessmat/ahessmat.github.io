@@ -1,6 +1,6 @@
 ---
 title: "Studying for the CISSP: Domain 1"
-draft: false
+draft: true
 date: 2026-05-25
 summary: "My notes on studying for the CISSP, domain 1"
 tags: [exam,certification,resources]     # TAG names should always be lowercase
@@ -16,105 +16,123 @@ To that end, I'm going to catalog my lessons learned from the [Destination CISSP
 
 So, without further ado...
 
-## Domain 1
-
-Domain 1, *Security and Risk Management* takes me back to my GRC functionary days. It's full of quasi-useful abstractions and concepts for organizing how we present and frame cybersecurity in ways that - I feel - tortuously contort the engineering discipline into more business-compatible terminology. I have read (and re-read) this section ad nauseaum because it's dominated by a bunch of very forgettable and similarly-named terms; you'd be forgiven (by me, not by the CISSP exam) for mixing up the 44 different acronyms introduced in this domain alone.
-
-> [!NOTE]+ See how many you can recognize!
-> CIA, CSP, ITAR, EAR, GDPR, 3P, IP, SD, PII, PHI, PCI, SPI, OECD, SA, GLBA, HIPAA, SOX, COPPA, CCPA, PIPEDA, PDPL, PIPA, DPIA, NERC CIP, NIST, ISO, BIA, NDA, NCA, SLA, ALE, SLE, AV, EF, ARO. PDCA, RMF, COSO, ERM, STRIDE, PASTA, DREAD, SCRM, and SLR
-
-Some of these I'm quite familiar with, either as a result of having studied the acronym in the past or having had direct work experience with, but there's several that have quite a bit of depth that - I feel - are probably worth teasing out.
-
-## Due Care vs. Due Diligence
-
-Not an acronym, I know. But gun-to-my-head: I always mix these two up (and whenever they are referenced in professional context, they're usually interchangeable or said as a pair), but the exam *really* cares about the distinction.
-
-### Due Care
-
-Accountable protection of assets based on goals/objectives of the organization.
-
-**THINK**: ACTIONS.
-
-An example is the act of doing a pentest and remediating the findings.
-
-### Due Diligence
-
-Ability to prove due care to stakeholders.
-
-**THINK**: PROOF.
-
-An example is the paperwork and audit trail showing that findings are remediated in a cost-effective manner.
-
-## The Legal Ones
-
-Out of all the acronyms relating to laws/regulations, DCISSP calls out only `GDPR`, `SA`, `DPIA`/`PIA` and `OECD` as worth knowing in detail. In brief: **The GDPR is an EU bellwether privacy law wherein data subjects have the right to lodge a complaint with independent supervisory authorities (SA), with guidelines for privacy established by the Organization of Economic Cooperation and Development (OECD)**. Article 35 of the GDPR includes a provision for **Data Protection Impact Assessments (DPIA)**, to determine if personal data is being protected appropriately and to minimize risks.
-
-DCISSP then provides an enormous table on Privacy Impact Assessment steps, but I'm going to just set that aside for my first pass on this material.
-
-While we're at it, there's also pages dedicated to delineating the conceptual differences between `polices`, `procedures`, `standards`, `baselines`, and `guidelines`. From my time working GRC, policy and procedures I understand pretty well, so I'll focus on the last 3:
-
-* A `standard` is a specific hardware/software solution, mechanism, or product (i.e. using a certain anti-virus solution might be considered an organizational standard).
-* A `baseline` is a minimal configuration for security mechanisms/products (i.e. an OS image must be at least baselined against a select criteria).
-* A `guideline` is just a suggestion or recommended action, but not an enforceable one.
-
-## Risk Management Terms
-
-Again, a lot of my existing work history is doing a lot of the heavy-lifting in familiarity with the content. I feel comfortable delineating differences and relationships between threats, vulnerabilities, and risk. Things take a nosedive however when it comes to recalling the **Annualized Loss Expectancy Calculation**.
-
-```
-ALE = SLE (AV x EF) x ARO
-```
-
-At a high-level, I get what these variables are standing in for: its an equation that produces an (estimated) dollar value of the cost to the organization of risks materializing across the year. The math is pretty straightforward:
-
-* You get the dollar value of your assets - the asset value (`AV`).
-* You multiply AV by the percentage of those assets that would be affected (i.e. if a snowstorm takes out 3 of 5 facilities, then that asset would be considered 60% exposed - the `exposure factor`).
-  * The product of AV x EF is the single-loss expectancy (`SLE`): the cost of a single event happening.
-* Finally, we multiply the `SLE` by the number of times we expect it to occur (aka the annualized rate of occurence or `ARO`).
-  * The product of SLE x ARO is the annualized loss expectancy (`ALE`).
-
-## Controls
-
-DCISSP defines 7 different types of controls that can all be classified 3 different ways (Administrative, Logical/Technical, and Physical). Several of the 7 types of controls are pretty intuitive to me (e.g. Directive, Preventative, Detective, Recovery); but I do tend to hung-up on the remaining ones:
-
-* A `deterrent` discourages violation of security.
-* A `corrective` control minimizes harm done when controls fail. It is distinct from `recovery` insofar as blunting damage done (vs. restoration).
-* A `compensating` control is a bit of a cop-out in terms of nomenclature to me: it's a control deployed in conjunction with other controls (like hardware IPS with network IPS). I think that's more confusing than just saying there are multiple X types of controls deployed; case-in-point: the DCISSP example for a compensating physical control is simply "layered defense".
-  * EDIT: After practice questions, compensating controls are used when primary controls cannot be implemented and are not a core category in a comprehensive strategy.
-
-## Threat Modeling
-
-This is an area I've been trying to get a better handle on in my day-to-day job as I've been taking on more security architecture responsibilities, but it's still pretty fresh for me in terms of exposure.
-
-I feel reasonably confident with understanding the parts of STRIDE (spoofing, tampering, repudiation, information disclosure, DoS, and elevation of privilege). So I'll focus on drafting PASTA and DREAD (whose acronyms I recall, but not what they stand for or the steps involved).
-
-### PASTA
-
-Short for **Process for Attack Simulation and Threat Analysis**, PASTA is a 7-stage threat modeling method:
-
-1. `Define Objectives`
-2. `Define Technical Scope`
-3. `Application Decomposition`
-4. `Threat Analysis`
-5. `Vulnerability and Weakness Analysis`
-6. `Attack Modeling`
-7. `Risk and Impact Analysis`
-
-### DREAD
-
-A threat modeling method that ranks the severity of threats. Each letter reflects a scorable measure of the threat.
-
-1. `Damage`
-2. `Reproducability`
-3. `Exploitability`
-4. `Affected Users`
-5. `Discoverability`
-
-Honestly, I think (2) and (5) have a lot of overlap between them.
-
 ## Study log
 
-* `26 May 2026`: 75% on practice questions
+* `26 May 2026`: 75% on DCISSP Domain 1 practice questions
   * Was thrown by the number of blockchain-related questions.
   * Got a competing definition of compensating controls
   * Didn't think through the ALE calculation correctly
+
+* `26 May 2026` 70% on DCISSP Domain 2 Practice Quiz
+  * Mistook the advantage of using AI/ML as favoring automation (vs. accuracy) when applied to destruction.
+  * DCISSP didn't cover data `tokenization`: It replaces sensitive data with unique tokens that preserve data format and relationships, allowing for accurate testing while safeguarding the original information.
+  * It isn't explicitly stated, but data `destruction` would be the most challenging of the data life cycle steps to securely perform in diverse international jurisdictions. Implicitly, this makes sense owing to different technological infrastructures and data destruction resource availability.
+  * I got a question concerning which algoritm is best for data in-transit, which ultimately was AES. While I should know better given my experience, I do note that cryptography isn't covered until Domain 3.
+
+* `29 May 2026` 75% on DCISSP Domain 3 Practice Quiz
+  * Messed up on 2 lighting-related questions
+  * Need to lookup what `Service Workers` are.
+  * Need to lookup what Over-the-Air (OTA) updates involve
+
+* `29 May 2026` 80% on DCISSP Overall Practice Quiz
+
+* `29 May 2026` 76% Domain 1 Official Practice
+  * Hadn't heard of `the prudent man rule`. It requires senior executives to take personal responsibility for ensuring the due care that ordinary, prudent individuals would exercise in the same situation.
+  * Canon IV of CISSP allows any certified or licensed professional to bring ethics charges agains other CISSP holders.
+  * The `Gramm-Leach-Bliley Act (GLBA)` contains laws specifically to financial institutions. By contrast, the `Sarbanes Oxley (SOX)` Act regulates the financial reporting activities of publicly traded companies.
+  * The `Federal Information Security Management Act (FISMA)` specifically applies to government contracts. `GISRA` predates FISMA and was effectively replaced by the latter.
+  * The `Economic Espionage Act` imposes fines/jail sentences on anyone found guilty of stealing trade secrets from a US corporation.
+  * It's important to distinguish a `business continuity plan` apart from a `disaster recovery plan`. The former keeps operations going during a disruption, the latter is a subset of the BCP for restoring services after an event.
+  * A `security controls assessment (SCA)` often refers to a formal US gov't process, typically paired with a `Security Test and Evaluation (ST&E)`.
+  * The `Code of Federal Regulations (CFR)` contains the text of all admin law promulgated by federal agencies.
+  * The `Risk Maturity Model (RMM)` is specifically designed for the purpose of assessing enterprise risk management programs.
+  * The `Children's Online PRivacy Protection Act (COPPA)` requires websites obtain avdvance parental consent for children under the age of 13.
+
+* `1 June 2026` 68% Domain 2 Official Practice
+  * `Business Owners` are a data management role; they balance security controls against business reqs.
+  * `Adminitrators` are a data management role; they grant permissions to access/handle data.
+  * `Data Processors` are typiucally third parties that process data.
+  * A `data retention policy` helps reduce liabilities by ensuring uneeded data isn't retained.
+  * `Clearing` describes preparing media for reuse (writing over all addressable locations for same security level of use).
+  * `Erasing` describes deleting files (but may not get all data).
+  * `Purging` describes intensive clearing for reuse in lower-security areas.
+  * `Sanitization` describes a series of processes that removes data while ensuring its unrecoverable.
+  * `DLP` detects for data in-transit, not data at-rest (that would need a sensitive data scanning tool).
+  * Industry security ratings from highest-to-lowest: `Proprietary`/`Confidential`, `Private` (e.g. PHI), `Sensitive` (internal), `Public` (who cares)
+  * `Scoping`: selecting control appropriate for your system.
+  * `Tailoring`: matches org's mission to controls from a baseline.
+  * `Baselining`: configuring a system to match a baseline (or building the baseline)
+  * `EOS`: ending support, ready for secure disposal, destruction, or resale. Comes after EOL.
+  * `EOL`: no longer made/supported, including via patches, upgrades, or org mx.
+  * Downgrading a secure system for reuse is risky and expensive; it's hard to assure that no remnant data exists.
+  * The best method for sanitizing SSDs is physical destruction.
+
+* `1 June 2026` 72% Domain 3 Official Practice
+  * `Brewer-Nash`: model allows access controls to change dynamically based upon user's actions (Chinese Firewall). Blocks lower-classified objects from accessing higher-classified objects (CONFIDENTIALITY)
+  * `Biba`: model focuses only on protecting integrity (INTEGRITY), emphasizes external threats and assumes internal threats are addressed programmatically. 
+  * `Clark-Wilson`: model uses security labels to grant access to objects via transformation procedures and a restricted interface model.
+  * `Graham-Denning`: model focuses on secure creation/deletion of subjects and objects using 8 primary protection rules.
+  * Fires may be detected at the incipient stage (pre-smoke).
+  * In an `m` of `n` control system, at least m of n possible escrow agents must collaborate to retrieve an encryption key from the escrow database.
+  * The `Simple Integrity Property`: an individual may not read file classified at a lower security level than their own.
+  * The `*-Security Property`: individual maybit write to a file at a lower classification than their own.
+  * The `*-Integrity Property`: subject cannot modify an object at a higher integrity level than their own.
+  * A preaction fire suppression system activates in 2 steps. The pipes fill with water once the early sigs of fire are detected. The system does not dispense water until heat sensors on sprinkler heads trigger.
+  * The `Encapsulating Security Payload (ESP)` protocol provides confidentiality/integrity for packet contents.
+  * `Kerckhoff's principle`: cryptographic system should be secure even if everything about the system (except key) is public knowledge.
+  * `System High Mode`: user must have a valid security clearance for all infor on system, access aproval for all info processed by the system, and a valid need to know for some (but not all) info processed by the system.
+  * `Transposition`: every plaintext character is shifted, but retained (i.e. a word's letters get shuffled but not replaced/substituted)
+  * `2DES` is vulnerable to `Meet-in-the-Middle`.
+  * Data center humidity should be maintained between 40-60 percent
+  * `Fault Injection Attack`: attacker attempts to comproimise integrity of a cryptographic device by causing some type of external fault.
+
+* `2 June 2026` 55% Domain 4 Official Practice
+  * `BitTorrent`: peer-to-peer CDN - usually used for distribute files
+  * `Lightweight Extensible Auth Protocol (LEAP)`: Cisco protocol that fixes TKIP, but is vulnerable.
+  * `PEAP`: provides encryption for EAP methods and can provide auth. Does not implement CCMP.
+  * `802.11ac`: directly connects 2 clients in an `ad hoc` mode. `Infrastructure` mode connects endpoints to a central network. `wired extension` mode uses a wireless AP to link clients to a wired network.
+  * `Collision domain`: set of systems that could cause a collision if transmitted simultaneously.
+  * Need to review the 802.* protocols
+  * Need to review protocols/artifacts of OSI layers
+  * Need to review physical cable length speeds
+  * `Challenge Handshake Auth Protocol (CHAP)`: used by PPP servers to auth remote clients encrypting username + pass.
+  * `Session Initialization Protocol (SIP)` can be secured.
+  * `X-tier firewall`: the depth/number of zones protected by the firewall
+  * `Distance-Vector Protocol`: use metrics like directions + distance in hops to remote networks. By contrast, `link-state protocol` considers the shortest distance.
+  * `FCoE`: Fibre Channel over Ethernet, a storage protocol
+  * `SD-WAN`: Software-defined WAN.
+  * `LiFi`: uses light to transmit data at high speeds.
+  * `Zigbee`: low-poer wireless protocol.Uses AES.
+  * `WPA3`: an upgrade over WPA2; SAE mode allows for secure auth between clients and network without enterprise user accounts.
+  * SMS messages are not encrypted.
+  * `iSCI`: converged protocol that allows location-independent file services over traditional network.
+  * `Multi-layer protocols`: they conceal covert channels, filters can be bypassed, and logical boundaries put in place by network segments can be bypassed under some circumstances. They allow encryption at various layers.
+  * `Converged protocols`: combine specialized protocols with standard protocols like TCP/IP.
+  * `IPsec`: provides encrption, access control, nonrepudiation, and message auth.
+  * `Port security`: prevents unrecognized/unpermitted systems from connecting to a network port based on MAC address.
+  * Common VPN protocols: PPTP, L2F, L2TP, TLS, and IPsec.
+  * `VXLAN`: encapsulation protocol that carries VLAN across routable networks, making 2 network locations appear to be in the same segment.
+  * Pre-admit, client-based NAC?
+
+|802.* standard|Data rates|Frequencies|Notes|
+|-|-|-|-|
+|802.11|2Mbps|2.4||
+|802.11a|54Mbps|5||
+|802.11b|11Mbps|2.4||
+|802.11g|54Mbps|2.4||
+|802.11n|600Mbps|2.4 or 5||
+|802.11ac|3.5Gbps|5|Supports direct connection between 2 hosts in `ad hoc` mode|
+|802.11ax|9.6Gbps|1-7.125Gbps||
+|802.11be|40Gbps|1-7.25||
+
+*"Please Do Not Throw Sausage Pizza Away"*
+
+|Layer|Container|Devices & Protocols|TCP/IP|
+|-|-|-|-|
+|Application|Protocol data unit|Application Firewall, HTTP, DNS, SSH, SNMP, FTP|Application|
+|Presentation|Protocol data unit|XML, JPEG, ANSI||
+|Session|Proocol data unit|Circuit Proxy Firewalls||
+|Transport|Segment / Datagram|TCP/UDP, iSCSI|Transport|
+|Network|Packet|Routers, Packet Filtering Firewalls, IP addresses, ICMP, NAT|Internet|
+|Data Link|Frame|Switches, bridges, MAC addresses, L2TP, PPTP|Link|
+|Physical|Bits|Hubs, NICs, Network media||

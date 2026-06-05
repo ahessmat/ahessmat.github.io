@@ -9,12 +9,12 @@
     <managingEditor>youremail@example.com (Asa Hess-Matsumoto)</managingEditor>
     <webMaster>youremail@example.com (Asa Hess-Matsumoto)</webMaster>
     <copyright>© 2026 Asa Hess-Matsumoto</copyright>
-    <lastBuildDate>Mon, 25 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Certification</title>
       <link>http://localhost:1313/tags/certification/</link>
-      <pubDate>Mon, 25 May 2026 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 05 Jun 2026 00:00:00 +0000</pubDate>
       <author>youremail@example.com (Asa Hess-Matsumoto)</author>
       <guid>http://localhost:1313/tags/certification/</guid>
       <description></description>
@@ -24,9 +24,19 @@
     <item>
       <title>Exam</title>
       <link>http://localhost:1313/tags/exam/</link>
-      <pubDate>Mon, 25 May 2026 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 05 Jun 2026 00:00:00 +0000</pubDate>
       <author>youremail@example.com (Asa Hess-Matsumoto)</author>
       <guid>http://localhost:1313/tags/exam/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Htb</title>
+      <link>http://localhost:1313/tags/htb/</link>
+      <pubDate>Fri, 05 Jun 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/tags/htb/</guid>
       <description></description>
       
     </item>
@@ -37,16 +47,6 @@
       <pubDate>Mon, 25 May 2026 00:00:00 +0000</pubDate>
       <author>youremail@example.com (Asa Hess-Matsumoto)</author>
       <guid>http://localhost:1313/tags/resources/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Htb</title>
-      <link>http://localhost:1313/tags/htb/</link>
-      <pubDate>Thu, 21 May 2026 00:00:00 +0000</pubDate>
-      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
-      <guid>http://localhost:1313/tags/htb/</guid>
       <description></description>
       
     </item>

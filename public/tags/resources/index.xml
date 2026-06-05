@@ -18,6 +18,26 @@
       <author>youremail@example.com (Asa Hess-Matsumoto)</author>
       <guid>http://localhost:1313/posts/2026/cissp-domain-1/</guid>
       <description>My notes on studying for the CISSP, domain 1</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2026/cissp-domain-1/featured-cissp.png" />
+    </item>
+    
+    <item>
+      <title>Studying for the CISSP: Domain 2</title>
+      <link>http://localhost:1313/posts/2026/cissp-domain-2/</link>
+      <pubDate>Mon, 25 May 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2026/cissp-domain-2/</guid>
+      <description>My notes on studying for the CISSP, domain 2</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2026/cissp-domain-2/featured-cissp.png" />
+    </item>
+    
+    <item>
+      <title>Studying for the CISSP: Domain 3</title>
+      <link>http://localhost:1313/posts/2026/cissp-domain-3-part1/</link>
+      <pubDate>Mon, 25 May 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2026/cissp-domain-3-part1/</guid>
+      <description>My notes on studying for the CISSP, domain 3 - part 1</description>
       
     </item>
     
