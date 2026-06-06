@@ -61,7 +61,9 @@ One thing you shouldn't expect to have integrated into the training (and is larg
 
 ## COAE: The Exam
 
-{{< figure src="badge.png" alt="Certified Offensive AI Expert badge" caption="I was one of the first 100 people to earn this certification; go me!" figureClass="flex flex-col items-center" >}}
+<p align="center">
+  <img src="badge.png" alt="I was one of the first 100 people to earn this certification; go me!">
+</p>
 
 HTB's terms of service explicitly prohibit me from disclosing details about the exam that they don't otherwise share themselves; as such, there's not much more I can say that others haven't. If you've taken any of HTB's other exams, their format should be quite familiar to you: you're put into a scenario with a fictional customer who - through a detailed Letter of Engagement - scopes the work you're meant to perform. Benchmarking that work are a series of tasks (which are met through the attainment of CTF-like flags), which help point you in the direction your work is meant to take you. Each flag is worth a certain number of points, with the minimum passing threshold being 85 out of 100 points. In addition to simply scoring points, you are required to submit an after-action report (not unlike what you might for a real-world test engagement) detailing your various findings and exploit chains. Each exam voucher you purchase entitles you to **two** attempts at passing the exam (this is standard across all of Hack The Box's certification exams); even if you fail on your first attempt, Hack The Box's reviewing staff provide feedback on where/how you could improve your performance based on the content of your report.
 
@@ -83,17 +85,15 @@ I also felt that the overall scenario architecture was more convoluted with the 
 
 [Julian Gomez mentioned this in his own review of the exam](https://juliangr.com/blog/certification-review-htb-coae/#environment-and-exam-stability), but I had to actively battle the test environment itself while conducting my exam. BurpSuite - for whatever reason - regularly drops requests in its proxied browser (rendering its classic white-and-orange site with a "No response from server" message coming back). While refreshing the page was often remedy enough, it made for quite a frustrating experience in enumerating content served over the web.
 
-Another issue I encountered was that my test environment was actually broken at one point; without going into too much detail, a key backend service had become downed and I was unaware of whether that was deliberately the case or not. I lost a whole day enumerating the exam environment trying to figure out what had happened - and even got assurances from HTB's own support staff that nothing was wrong - before resetting my exam environment and resolving the issue.
-
-{{< figure src="help-ticket.png" alt="HTB support ticket" figureClass="flex flex-col items-center" >}}
-
-Arguably, this was user-error on my part; this wasn't the first exam I'd come across that has had issues fixed by an environment reset (hence why I had suspicions that resetting might work to begin with). However, it's worth calling out just in case you might likewise encounter such trouble. I have little doubt that - in time - HTB will be able to iron-out these issues.
+Another issue I encountered was that my test environment was actually broken at one point; without going into too much detail, a key backend service had become downed and I was unaware of whether that was deliberately the case or not. I lost a whole day enumerating the exam environment trying to figure out what had happened - and even got assurances from HTB's own support staff that nothing was wrong - before resetting my exam environment and resolving the issue. Having said that, I have little doubt that - in time - HTB will be able to iron-out these issues.
 
 #### Report Writing
 
 **Do not shirk writing the report**. As embarassing as it is to admit, I actually failed my first attempt at the exam not because I didn't have enough points to pass (I did), but because apparently the quality of my report was lacking. Let me serve as a cautionary warning that Hack The Box is willing to fail someone who obtains a passing score but doesn't have a report that rises to their standard of quality. I was definitely annoyed at that. If that had been my final attempt of the two alloted per exam voucher, I probably wouldn't have bothered purchasing another voucher to re-attempt the exam again.
 
-> Let me serve as a cautionary warning that Hack The Box is willing to fail someone who obtains a passing score but doesn't have a report that rises to their standard of quality.
+<p align="center">
+  <img src="fail.png" alt="A disapointing oucome from my first attempt">
+</p>
 
 While I wish I could share what my report had looked like for others to benchmark against, I can't - as that would go against the vendor's Terms of Service. However, I can generalize for you all:
 
