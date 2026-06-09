@@ -9,7 +9,17 @@
     <managingEditor>youremail@example.com (Asa Hess-Matsumoto)</managingEditor>
     <webMaster>youremail@example.com (Asa Hess-Matsumoto)</webMaster>
     <copyright>© 2026 Asa Hess-Matsumoto</copyright>
-    <lastBuildDate>Mon, 25 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/resources/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/resources/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>2026 State of Cybersecurity Workforce</title>
+      <link>http://localhost:1313/posts/2026/state-of-cybersecurity-workforce/</link>
+      <pubDate>Fri, 05 Jun 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2026/state-of-cybersecurity-workforce/</guid>
+      <description>A condensed snapshot of how the job hunt looks like in 2026</description>
+      
+    </item>
     
     <item>
       <title>Studying for the CISSP: Domain 1</title>

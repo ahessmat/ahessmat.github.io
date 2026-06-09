@@ -3,6 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
+    <loc>http://localhost:1313/posts/2026/state-of-cybersecurity-workforce/</loc>
+    <lastmod>2026-06-05T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>http://localhost:1313/posts/2026/passing-the-certified-offensive-ai-expert-exam/</loc>
     <lastmod>2026-06-05T00:00:00+00:00</lastmod>
     <changefreq>daily</changefreq>

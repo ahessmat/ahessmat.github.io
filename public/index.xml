@@ -12,6 +12,16 @@
     <lastBuildDate>Fri, 05 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>2026 State of Cybersecurity Workforce</title>
+      <link>http://localhost:1313/posts/2026/state-of-cybersecurity-workforce/</link>
+      <pubDate>Fri, 05 Jun 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2026/state-of-cybersecurity-workforce/</guid>
+      <description>A condensed snapshot of how the job hunt looks like in 2026</description>
+      
+    </item>
+    
+    <item>
       <title>Passing the Certified Offensive AI Expert (COAE) Certification Exam</title>
       <link>http://localhost:1313/posts/2026/passing-the-certified-offensive-ai-expert-exam/</link>
       <pubDate>Fri, 05 Jun 2026 00:00:00 +0000</pubDate>
