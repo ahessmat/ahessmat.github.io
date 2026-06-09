@@ -1,7 +1,7 @@
 ---
 title: "Plight of the Early-Career Cybersecurity Worker"
-draft: true
-date: 2026-06-05
+draft: false
+date: 2026-06-08
 summary: "A condensed snapshot of how the job hunt looks like in 2026"
 tags: [resources]     # TAG names should always be lowercase
 ---
