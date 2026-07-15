@@ -9,16 +9,26 @@
     <managingEditor>youremail@example.com (Asa Hess-Matsumoto)</managingEditor>
     <webMaster>youremail@example.com (Asa Hess-Matsumoto)</webMaster>
     <copyright>© 2026 Asa Hess-Matsumoto</copyright>
-    <lastBuildDate>Fri, 05 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>2026 State of Cybersecurity Workforce</title>
-      <link>http://localhost:1313/posts/2026/state-of-cybersecurity-workforce/</link>
-      <pubDate>Fri, 05 Jun 2026 00:00:00 +0000</pubDate>
+      <title>BlueDot: AI Safety Made Accessible</title>
+      <link>http://localhost:1313/posts/2026/bluedot-impact/</link>
+      <pubDate>Tue, 14 Jul 2026 00:00:00 +0000</pubDate>
       <author>youremail@example.com (Asa Hess-Matsumoto)</author>
-      <guid>http://localhost:1313/posts/2026/state-of-cybersecurity-workforce/</guid>
+      <guid>http://localhost:1313/posts/2026/bluedot-impact/</guid>
+      <description>A review of BlueDot Impact&amp;rsquo;s available coursework</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2026/bluedot-impact/featured-bluedot.jpg" />
+    </item>
+    
+    <item>
+      <title>Plight of the Early-Career Cybersecurity Worker</title>
+      <link>http://localhost:1313/posts/2026/plight-of-the-early-career-worker/</link>
+      <pubDate>Mon, 08 Jun 2026 00:00:00 +0000</pubDate>
+      <author>youremail@example.com (Asa Hess-Matsumoto)</author>
+      <guid>http://localhost:1313/posts/2026/plight-of-the-early-career-worker/</guid>
       <description>A condensed snapshot of how the job hunt looks like in 2026</description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/2026/plight-of-the-early-career-worker/featured-job-hunt.jpg" />
     </item>
     
     <item>

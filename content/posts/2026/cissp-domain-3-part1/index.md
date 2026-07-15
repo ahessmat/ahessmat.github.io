@@ -181,3 +181,23 @@ The key difference lies in the trade-off between flexibility and consistency.
 * `29 May 2026` 80% 50q overall quiz
 
 * `29 May 2026` 76% Domain 1 Official Practice
+
+* `29 June 2026` 53% Domain 5 Official Practice
+  * Need to refresh on Kerberos
+    * Key distribution center (KDC) provides auth
+    * ticket-granting-tickets (TGTs) provide proof that subject has authenticated
+    * Authentication services (AS) are part of KDC
+  * Need to refresh on RADIUS
+    * Defaults to use UDP and only encrypts passwords
+  * Discretionary Access Control (DAC): `I allow you to access X`
+  * Role BAC: `My subject role lets me access X`
+  * Rule BAC: `Check rules list to access X`
+  * Mandatory Access Control
+    * Based on lattice model
+    * Use a matrix of classifcation labels
+    * `Biba` is an example
+  * Resource based AC
+    * Match permissions to resources (e.g. storage volume)
+  * `False Acceptance Rate` (FAR)
+  * `False Rejection Rate` (FRR)
+  * `Crossover Error Rate` (CER); the point where FAR/FRR meet
